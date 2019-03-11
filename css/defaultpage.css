@@ -125,6 +125,33 @@ a{
     width:150px;
     float:left;
 }
+.ram{
+    height:90%;
+    width:150px;
+    float:left;
+}
+.gpu{
+    height:90%;
+    width:150px;
+    float:left;
+}
+.ssd{
+    height:90%;
+    width:150px;
+    float:left;
+}
+
+.ssd:hover {
+        color:red;
+    }
+
+.gpu:hover {
+        color:red;
+    }
+
+.ram:hover {
+        color:red;
+    }
 
 .mb:hover {
         color:red;

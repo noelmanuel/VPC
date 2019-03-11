@@ -65,11 +65,24 @@
                     </div></a>
 
                     <a href="#"> <div class="hd">
-                        <img src="images/hd.jpg" height="105px" width="130px" style="margin-left:5%; margin-top:20px;" />
+                        <img src="images/hd.jpg" height="105px" width="120px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Hard disk</h5>
                     </div></a>
 
+                    <a href="#"> <div class="ram">
+                        <img src="images/ram.jpg" height="105px" width="120px" style="margin-left:10%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">RAM</h5>
+                    </div></a>
 
+                    <a href="#"> <div class="gpu">
+                        <img src="images/gpu.jpg" height="105px" width="140px" style="margin-left:10%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">GPU</h5>
+                    </div></a>
+
+                    <a href="#"> <div class="ssd">
+                        <img src="images/ssd.jpg" height="105px" width="140px" style="margin-left:10%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">SSD</h5>
+                    </div></a>
                 </div>
 
 
