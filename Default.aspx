@@ -13,11 +13,11 @@
             <div class="first_rec"></div>
             <div class="logo_rec">
                 <div class="logo_sec">
-                    <img src="images/LOGO.jpg" height="40px" width="300px" />
+                    <a href=""><img src="images/LOGO.jpg" height="40px" width="300px" /></a>
                 </div>
                 <div class="login_box">
-                    <a href="#" style=" border-right:1px solid grey; text-decoration:none; color:black;">Login &nbsp</a>
-                    <a href="#" style="text-decoration:none;color:black;">&nbsp Register</a>
+                    <a href="#" id="login">Login &nbsp</a>
+                    <a href="#" id="reg">&nbsp Register</a>
                 </div>
 
 
@@ -100,7 +100,7 @@
                          </div></a>
 
                           <a href="#"> <div class="sound">
-                        <img src="images/sound.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
+                        <img src="images/sound.jpg" height="105px" width="130px" style="margin-left:8%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Sound Card</h5>
                     </div></a>
                     
@@ -108,7 +108,53 @@
 
 
                 <h3 style="margin-left:10%;">SHOP BY BRAND</h3>
-                <div class="cata_comp"></div>
+                <div class="cata_comp">
+
+                 <a href="#"> <div class="acer">
+                        <img src="images/acer.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                 <a href="#"> <div class="asus">
+                        <img src="images/asus.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                 <a href="#"> <div class="sam">
+                        <img src="images/sam.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                 <a href="#"> <div class="com">
+                        <img src="images/com.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                <a href="#"> <div class="len">
+                        <img src="images/len.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                 <a href="#"> <div class="tob">
+                        <img src="images/tob.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                 <a href="#"> <div class="vio">
+                        <img src="images/vio.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                 <a href="#"> <div class="apple">
+                        <img src="images/apple.jpg" height="120px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
+                <a href="#"> <div class="hi">
+                        <img src="images/hi.jpg" height="100px" width="150px" style="margin-top:20px;" />
+                        
+                    </div></a>
+
             </div>
 
         </section>

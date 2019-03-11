@@ -208,8 +208,105 @@ a{
     background-color:white;
     
 }
+
+.cata_comp::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.acer{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:10%;
+}
+
+.asus{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:1%;
+
+}
+
+.sam{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:1%;
+
+}
+
+.com{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:1%;
+
+}
+.len{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:1%;
+
+}
+
+.tob{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:1%;
+
+}
+
+.vio{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:1%;
+
+}
+
+.apple {
+    height: 90%;
+    width: 150px;
+    float: left;
+    margin-left: 1%;
+}
+
+.hi{
+    height:90%;
+    width:150px;
+    float:left;
+    margin-left:1%;
+
+}
+
+
+
 .foot_rec{
     width:100%;
     height:250px;
     background-color:#172437;
 }
+
+#login{
+
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    border-right:1px solid grey;
+}
+
+#reg{
+
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    
+}
+
+#login:hover{color:green;}
+#reg:hover{color:red;}
