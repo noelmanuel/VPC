@@ -83,6 +83,27 @@
                         <img src="images/ssd.jpg" height="105px" width="140px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">SSD</h5>
                     </div></a>
+
+                     <a href="#"> <div class="cd">
+                        <img src="images/cd.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">CD Drive</h5>
+                    </div></a>
+
+                     <a href="#"> <div class="smps">
+                        <img src="images/smps.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">SMPS</h5>
+                    </div></a>
+
+                     <a href="#"> <div class="cool">
+                        <img src="images/cool.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">Coolent</h5>
+                         </div></a>
+
+                          <a href="#"> <div class="sound">
+                        <img src="images/sound.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">Sound Card</h5>
+                    </div></a>
+                    
                 </div>
 
 

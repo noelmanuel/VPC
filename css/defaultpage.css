@@ -141,6 +141,45 @@ a{
     float:left;
 }
 
+.cd{
+    height:90%;
+    width:150px;
+    float:left;
+}
+
+.cd:hover {
+        color:red;
+    }
+
+.smps{
+    height:90%;
+    width:150px;
+    float:left;
+}
+
+.smps:hover {
+        color:red;
+    }
+
+.cool{
+    height:90%;
+    width:150px;
+    float:left;
+}
+
+.sound{
+    height:90%;
+    width:150px;
+    float:left;
+}
+
+.sound:hover {
+        color:red;
+    }
+.cool:hover {
+        color:red;
+    }
+
 .ssd:hover {
         color:red;
     }
