@@ -118,7 +118,11 @@ a{
 .pro{
     height:90%;
     width:150px;
-    
+    float:left;
+}
+.hd{
+    height:90%;
+    width:150px;
     float:left;
 }
 
@@ -126,6 +130,9 @@ a{
         color:red;
     }
 .pro:hover {
+        color:red;
+    }
+.hd:hover {
         color:red;
     }
 

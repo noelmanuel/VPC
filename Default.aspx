@@ -64,7 +64,10 @@
                         <h5 style="font-size:smaller; text-align:center;">Processor</h5>
                     </div></a>
 
-
+                    <a href="#"> <div class="hd">
+                        <img src="images/hd.jpg" height="105px" width="130px" style="margin-left:5%; margin-top:20px;" />
+                        <h5 style="font-size:smaller; text-align:center;">Hard disk</h5>
+                    </div></a>
 
 
                 </div>
