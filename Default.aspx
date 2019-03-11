@@ -158,9 +158,53 @@
             </div>
 
         </section>
+
         <footer>
             <div class="foot_rec">
+                <div id="logo_footer">
+                    <img src="images/logofo.jpg" height="40" width="250" id="logofo" />
+                    <h5>©2019 PCPart Mart, LLC. All rights reserved.</h5>
+                </div>
+                <div id="footer_middle">
+                    <p>ABOUT US</p>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Contact us</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">About us</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Careers</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Stories</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Press</p></a>
+                    
+                    
+                </div>
 
+                <div class="logo_mid">
+                    <p>SOCIAL</p>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Facebook</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Whatsapp</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Google plus</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Linkdin</p></a>
+                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Youtube</p></a>
+                </div>
+
+                <div class="logo_last">
+                    <p style="text-align:left; margin-left:12%;">MAIL US</p>
+                    <p style="text-align:left; font-size:smaller; color:#e1e1e1; margin-left:12%;">PCPARTS Mart Internet Pvt Ltd Block B (Begonia),
+                        Ground Floor, Embassy Tech Village,
+                        Bengaluru District,
+                        Karnataka, India, 560103.</p>
+
+                </div>
+
+                <div class="logo_last1">
+                    <p style="text-align:left; margin-left:12%;">REGISTERED OFFICE ADDRESS</p>
+                    <p style="text-align:left; font-size:smaller; color:#e1e1e1; margin-left:12%;">PCPARTS Mart Internet Pvt Ltd Block B (Begonia),
+                        Ground Floor, Embassy Tech Village,
+                        Bengaluru District,
+                        Karnataka, India, 560103.
+                        </br><br />
+                        Telephone: 1800 208 9898
+                    </p>
+
+                </div>
             </div>
         </footer>
     
