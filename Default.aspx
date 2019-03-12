@@ -13,10 +13,10 @@
             <div class="first_rec"></div>
             <div class="logo_rec">
                 <div class="logo_sec">
-                    <a href=""><img src="images/LOGO.jpg" height="40px" width="300px" /></a>
+                    <a href="#"><img src="images/LOGO.jpg" height="40px" width="300px" /></a>
                 </div>
                 <div class="login_box">
-                    <a href="#" id="login">Login &nbsp</a>
+                    <a href="login/Login_v1/login.aspx" id="login">Login &nbsp</a>
                     <a href="#" id="reg">&nbsp Register</a>
                 </div>
 
