@@ -21,7 +21,13 @@ public partial class register_company_compreg : System.Web.UI.Page
     protected void btn_subb(object sender, EventArgs e)
     {
 
-        Console.WriteLine("noel");
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string insertQuery = "insert into compregn(compusname,compname,comppass,compweb,comploc,compemail,compphone,compques,compans,status) values('" + TextBoxun.Text + "','" + TextBoxname.Text + "','" + TextBox3pass.Text + "','" + TextBoxweb.Text + "','" + TextBoxloc.Text + "','" + TextBoxem.Text + "','" + TextBoxph.Text + "','" + DropDownList2.SelectedItem + "','" + TextBoxans.Text + "','pending')";
+        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+        cmd.ExecuteNonQuery();
+        conn.Close();
+        Response.Write(" <script>window.alert('REGISTRATION WAS SUCCESSFULL'); window.location='register.aspx';</script>");
 
     }
 

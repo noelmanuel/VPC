@@ -17,7 +17,7 @@
                 </div>
                 <div class="login_box">
                     <a href="login/Login_v1/login.aspx" id="login">Login &nbsp</a>
-                    <a href="#" id="reg">&nbsp Register</a>
+                    <a href="register/user/register.aspx" id="reg">&nbsp Register</a>
                 </div>
 
 
