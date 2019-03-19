@@ -11,4 +11,11 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
 
     }
+
+
+
+    protected void com_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/companyapprove.aspx");
+    }
 }

@@ -27,7 +27,7 @@ public partial class register_company_compreg : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand(insertQuery, conn);
         cmd.ExecuteNonQuery();
         conn.Close();
-        Response.Write(" <script>window.alert('REGISTRATION WAS SUCCESSFULL'); window.location='register.aspx';</script>");
+        Response.Write(" <script>window.alert('REGISTRATION WAS SUCCESSFULL'); window.location='comregn.aspx';</script>");
 
     }
 
