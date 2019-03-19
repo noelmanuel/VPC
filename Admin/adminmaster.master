@@ -4,17 +4,71 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    
+<asp:ContentPlaceHolder id="head" runat="server">
+
     </asp:ContentPlaceHolder>
+        <link rel="stylesheet" type="text/css" href="../css/adminmaster.css"/>
+        <link rel="stylesheet" href="../css/responsive.css"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    <div id="container">
+     <form id="form1" runat="server">
+        <header>
+            <div class="first_rec"></div>
+            <div class="logo_rec">
+                <div class="logo_sec">
+                    <a href="#"><img src="../images/LOGO.jpg" height="40px" width="300px" /></a>
+                </div>
+                <div class="login_box">
+                    <a href="../login/Login_v1/login.aspx" id="login">Home &nbsp</a>
+                    <a href="../register/user/register.aspx" id="reg">&nbsp Sign out</a>
+                </div>
+
+
+            </div>
+            <div class="option_rec">
+                <div class="option1">
+                    <a href="#"><img src="../images/start.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    
+                    
+                    
+                </div>
+                <div class="option2">
+
+                    <a href="#"><img src="../images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+
+                <div class="option3">
+
+                    <a href="#"><img src="../images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+
+                <div class="option4">
+
+                    <a href="#"><img src="../images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+            </div>
+
+        </header>
+         <section>
+           
+            
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    
+                 </asp:ContentPlaceHolder>
         
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
+               
+        </section>
+
+         <footer>
+            <div class="foot_rec">
+             </div>
+             </footer>
+
+</form>
+   </div>
 </body>
 </html>
