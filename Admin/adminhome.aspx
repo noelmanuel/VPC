@@ -22,7 +22,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div class="section_backgound">
                 
-         <h3 style="padding-top:20px; margin-left:10%;">APPROVAL</h3>
+         <h3 style="padding-top:17px; margin-left:10%;">APPROVAL</h3>
          
          <div class="cata_parts">
              <div class="approval">
@@ -31,7 +31,7 @@
              </div>
              </div>
 
-         <h3 style="padding-top:20px; margin-left:10%;">PRODUCT MANAGEMENT</h3>
+         <h3 style="padding-top:17px; margin-left:10%;">PRODUCT MANAGEMENT</h3>
          <div class="cata_parts">
              
              <div class="approval">
@@ -44,7 +44,7 @@
              </div>
 
 
-         <h3 style="padding-top:20px; margin-left:10%;">COMPANY MANAGEMENT</h3>
+         <h3 style="padding-top:17px; margin-left:10%;">COMPANY MANAGEMENT</h3>
          <div class="cata_parts">
              
              <div class="approval">
@@ -56,7 +56,7 @@
              </div>
              </div>
 
-         <h3 style="padding-top:20px; margin-left:10%;">USER MANAGEMENT</h3>
+         <h3 style="padding-top:17px; margin-left:10%;">USER MANAGEMENT</h3>
          <div class="cata_parts">
              
              <div class="approval">
