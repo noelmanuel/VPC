@@ -18,4 +18,8 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/companyapprove.aspx");
     }
+    protected void user_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/userapprove.aspx");
+    }
 }

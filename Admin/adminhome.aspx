@@ -13,6 +13,7 @@
         cursor:pointer;
        margin-left:20px;
        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       outline:none;
         
        
 
@@ -27,7 +28,7 @@
          <div class="cata_parts">
              <div class="approval">
              <asp:Button ID="com" CssClass="btn_com" runat="server" Text="Company" OnClick="com_Click" /> 
-             <asp:Button ID="user" CssClass="btn_com" runat="server" Text="User" />
+             <asp:Button ID="user" CssClass="btn_com" runat="server" Text="User" OnClick="user_Click" />
              </div>
              </div>
 
