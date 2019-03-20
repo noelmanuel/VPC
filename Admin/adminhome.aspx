@@ -36,7 +36,7 @@
          <div class="cata_parts">
              
              <div class="approval">
-             <asp:Button ID="Button1" CssClass="btn_com" runat="server" Text="Add" /> 
+             <asp:Button ID="Button1" CssClass="btn_com" runat="server" Text="Add" OnClick="proadd_Click" /> 
              <asp:Button ID="Button2" CssClass="btn_com" runat="server" Text="Update" />
              <asp:Button ID="Button3" CssClass="btn_com" runat="server" Text="Delete" />
              <asp:Button ID="Button4" CssClass="btn_com" runat="server" Text="View" />
