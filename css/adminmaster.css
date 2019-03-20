@@ -148,11 +148,30 @@ h3{
   clear: both;
   display: table;
 }
+.cata_parts1{
+    width:100%;
+    
+    background-color:white;
+    
+}
+.cata_parts1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 .approval{
     height:90%;
     width:80%;
      padding-left:9%;
     padding-top:20px;
+    
+}
+.approval1
+{
+    height:90%;
+    width:80%;
+     padding-left:9%;
+    padding-top:30px;
     
 }
 
