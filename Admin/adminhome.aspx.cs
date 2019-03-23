@@ -24,6 +24,6 @@ public partial class Admin_adminhome : System.Web.UI.Page
     }
     protected void proadd_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Admin/Product admin/addmotherboard.aspx");
+        Response.Redirect("~/Admin/addproduct.aspx");
     }
 }
