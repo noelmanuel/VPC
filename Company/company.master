@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="company.master.cs" Inherits="Company_company" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+<asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+        <link rel="stylesheet" type="text/css" href="/css/companymaster.css"/>
+        <link rel="stylesheet" href="/css/responsive.css"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div id="container">
+     <form id="form1" runat="server">
+        <header>
+            <div class="first_rec"></div>
+            <div class="logo_rec">
+                <div class="logo_sec">
+                    <a href="#"><img src="/images/LOGO.jpg" height="40px" width="300px" /></a>
+                </div>
+                <div class="login_box">
+                    <a href="/Company/companyhome.aspx" id="login">Home &nbsp</a>
+                    <a href="/Default.aspx" id="reg">&nbsp Sign out</a>
+                </div>
+
+
+            </div>
+            <div class="option_rec">
+                <div class="option1">
+                    <a href="#"><img src="/images/start.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    
+                    
+                    
+                </div>
+                <div class="option2">
+
+                    <a href="#"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+
+                <div class="option3">
+
+                    <a href="#"><img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+
+                <div class="option4">
+
+                    <a href="#"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+            </div>
+
+        </header>
+         <section>
+             <div class="sec_row1">
+                 <div class="col1">
+                     <asp:Image ID="Image1" runat="server" Height="100" Width="209" CssClass="ff" />
+                     <asp:Panel ID="Panel1" runat="server">
+                     <asp:FileUpload ID="FileUpload1" runat="server" Height="30" Width="200" />
+                     <asp:Button ID="Button1" runat="server" Text="Button" OnClick="img_click" Height="30" Width="200" CssClass="imgbtn" />
+                         </asp:Panel>
+                     <br />
+                     <asp:Button ID="Button2" runat="server" Text="LOGO CHANGE" Height="50" Width="200" CssClass="imgbtnn" OnClick="Button2_Click" />
+                 </div>
+             </div>
+           
+            
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    
+                 </asp:ContentPlaceHolder>
+        
+               
+        </section>
+
+         <footer>
+            <div class="foot_rec">
+             </div>
+             </footer>
+
+</form>
+   </div>
+</body>
+</html>
+

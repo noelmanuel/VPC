@@ -24,7 +24,7 @@
                 </div>
                 <div class="login_box">
                     <a href="/Admin/adminhome.aspx" id="login">Home &nbsp</a>
-                    <a href="/Admin/Default.aspx" id="reg">&nbsp Sign out</a>
+                    <a href="/Default.aspx" id="reg">&nbsp Sign out</a>
                 </div>
 
 

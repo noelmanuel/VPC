@@ -38,19 +38,19 @@ public partial class login : System.Web.UI.Page
             {
                 Response.Redirect("~/Admin/adminhome.aspx");
             }
-            else
+            else if (no == "company")
             {
-                Console.WriteLine("No rows found.");
+                Session["comp"] = txtuname.Value;
+
+                Response.Redirect("~/Company/companyhome.aspx");
+
+
             }
 
-
-            conn.Close();
         }
 
+
     }
-
-
-
 
 }
 

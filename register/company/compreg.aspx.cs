@@ -12,6 +12,8 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using System.IO;
+
 public partial class register_company_compreg : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -20,6 +22,7 @@ public partial class register_company_compreg : System.Web.UI.Page
     }
     protected void btn_subb(object sender, EventArgs e)
     {
+        
 
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
@@ -27,10 +30,9 @@ public partial class register_company_compreg : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand(insertQuery, conn);
         cmd.ExecuteNonQuery();
         conn.Close();
-        Response.Write(" <script>window.alert('REGISTRATION WAS SUCCESSFULL'); window.location='comregn.aspx';</script>");
-
-    }
-
+        Response.Write(" <script>window.alert('REGISTRATION WAS SUCCESSFULL'); window.location='compregn.aspx';</script>");
+     }
+        
     protected void btn_loo(object sender, EventArgs e)
     {
         Response.Redirect("~/register/user/register.aspx");
