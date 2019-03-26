@@ -55,24 +55,31 @@
         </header>
          <section>
              <div class="sec_row1">
-                 <div class="col1">
-                     <asp:Image ID="Image1" runat="server" Height="100" Width="209" CssClass="ff" />
-                     <asp:Panel ID="Panel1" runat="server">
-                     <asp:FileUpload ID="FileUpload1" runat="server" Height="30" Width="200" />
-                     <asp:Button ID="Button1" runat="server" Text="Button" OnClick="img_click" Height="30" Width="200" CssClass="imgbtn" />
-                         </asp:Panel>
-                     <br />
-                     <asp:Button ID="Button2" runat="server" Text="LOGO CHANGE" Height="50" Width="200" CssClass="imgbtnn" OnClick="Button2_Click" />
+                 <div class="sec1_row1">
+                    <div class="col1">
+                        <asp:Image ID="Image1" runat="server" Height="100" Width="209" CssClass="ff" />
+                        <asp:Panel ID="Panel1" runat="server">
+                        <asp:FileUpload ID="FileUpload1" runat="server" Height="30" Width="200" />
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="img_click" Height="30" Width="200" CssClass="imgbtn" />
+                        </asp:Panel>
+                        <br />
+                        <asp:Button ID="Button2" runat="server" Text="LOGO CHANGE" Height="50" Width="200" CssClass="imgbtnn" OnClick="Button2_Click" /><br />
+                        <asp:Button ID="Button3" runat="server" Text="ADD PRODUCT" Height="50" Width="200" CssClass="imgbtnn" OnClick="add_Click"/><br />
+                        <asp:Button ID="Button4" runat="server" Text="VIEW PRODUCT" Height="50" Width="200" CssClass="imgbtnn" OnClick="view_Click"/><br />
+                        <asp:Button ID="Button5" runat="server" Text="MODIFY PRODUCT"  Height="50" Width="200" CssClass="imgbtnn" OnClick="modify_Click"/><br />
+                        <asp:Button ID="Button6" runat="server" Text="DELETE PRODUCT" Height="50" Width="200" CssClass="imgbtnn" OnClick="delete_Click"/><br />
+
                  </div>
-             </div>
-           
-            
-                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                 <div class="col2">
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
                     
                  </asp:ContentPlaceHolder>
-        
-               
-        </section>
+                     
+                 </div>
+
+                  </div>
+             </div>
+           </section>
 
          <footer>
             <div class="foot_rec">
