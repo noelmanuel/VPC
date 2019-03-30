@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
+    
+   
         .item_bx{
             width:240px;
             height:250px;
@@ -64,6 +66,7 @@
             text-align: center;
         }
     </style>
+     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      

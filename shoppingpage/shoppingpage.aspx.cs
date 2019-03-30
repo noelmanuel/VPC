@@ -111,7 +111,31 @@ public partial class shoppingpage : System.Web.UI.Page
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        DropDownList dropdownlist = (sender as DropDownList);
-        Response.Redirect("filter.aspx?SelectedValue=" + dropdownlist.SelectedValue + "");
+        string q = DropDownList1.SelectedItem.Value.ToString();
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        string insertQuery = "select * from motherboard WHERE Pric BETWEEN "+ q;
+        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+
+
+        conn.Open();
+        SqlDataAdapter da = new SqlDataAdapter();
+        da.SelectCommand = cmd;
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        totalrows = ds.Tables[0].Rows.Count;
+        DataTable dt = ds.Tables[0];
+        PagedDataSource pg = new PagedDataSource();
+        pg.DataSource = dt.DefaultView;
+        pg.AllowPaging = true;
+        pg.CurrentPageIndex = currentposition;
+        pg.PageSize = 4;
+        Button1.Enabled = !pg.IsFirstPage;
+        Button2.Enabled = !pg.IsFirstPage;
+        Button3.Enabled = !pg.IsLastPage;
+        Button4.Enabled = !pg.IsLastPage;
+        //Binding pg to datalist
+        DataList1.DataSource = pg;//dl is datalist
+        DataList1.DataBind();
+        conn.Close();
     }
 }
