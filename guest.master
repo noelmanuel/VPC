@@ -8,7 +8,7 @@
 <asp:ContentPlaceHolder id="head" runat="server">
 
     </asp:ContentPlaceHolder>
-        <link rel="stylesheet" type="text/css" href="/css/adminmaster.css"/>
+        <link rel="stylesheet" type="text/css" href="css/guest.css"/>
         <link rel="stylesheet" href="/css/responsive.css"/>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -65,6 +65,7 @@
 
          <footer>
             <div class="foot_rec">
+                fdg
              </div>
              </footer>
 

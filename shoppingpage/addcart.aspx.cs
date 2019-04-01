@@ -16,6 +16,8 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
     string cid, str1, sql, str2;
     protected void Page_Load(object sender, EventArgs e)
     {
+        Panel1.Visible = false;
+        Panel2.Visible = false;
         if (!IsPostBack)
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
@@ -51,5 +53,17 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='addcart.aspx';</script>");
         conn.Close();
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Panel1.Visible = true;
+        Panel2.Visible = false;
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Panel2.Visible = true;
+        Panel1.Visible = false;
     }
 }
