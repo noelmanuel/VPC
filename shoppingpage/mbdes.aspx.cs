@@ -22,6 +22,31 @@ public partial class shoppingpage_mbdes : System.Web.UI.Page
     {
 
     }
+    private void dig()
+    {
+        foreach (DataListItem dli in DataList1.Items)
+        {
+            Label Label2 = (Label)dli.FindControl("Label2");
+            Label Label5 = (Label)dli.FindControl("Label5");
+            Label Label22 = (Label)dli.FindControl("Label22");
+            Label Label21 = (Label)dli.FindControl("Label21");
+            Label motherb = (Label)dli.FindControl("motherb");
+            TextBox st = (TextBox)dli.FindControl("st");
+            string es = st.Text;
+            string ess = Label21.Text;
+            int quan = int.Parse(es);
+            int tot = int.Parse(ess);
+            int grand = quan * tot;
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+            string insertQuery = "insert into addcart(username,category,product_name,product_model,quantity,item_price,total_price) values('" + Session["user"].ToString() + "','" + motherb.Text + "','" + Label5.Text + "','" + Label2.Text + "','" + st.Text + "','" + tot + "','" + grand + "')";
+            SqlCommand cmdd = new SqlCommand(insertQuery, conn);
+            cmdd.ExecuteNonQuery();
+            conn.Close();
+            Response.Write(" <script>window.alert('ADDED TO CART');window.location='addcart.aspx';</script>");
+            
+        }
+    }
     private void execu()
     {
         foreach (DataListItem dli in DataList1.Items)
@@ -40,11 +65,32 @@ public partial class shoppingpage_mbdes : System.Web.UI.Page
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn.Open();
 
-            string insertQuery = "insert into addcart(username,category,product_name,product_model,quantity,item_price,total_price) values('" + Session["user"].ToString() + "','" + motherb.Text + "','" + Label5.Text + "','" + Label2.Text + "','" + st.Text + "','" + tot + "','" + grand + "')";
-            SqlCommand cmd = new SqlCommand(insertQuery, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            Response.Write(" <script>window.alert('ADDED TO CART'); window.location='shoppingpage.aspx';</script>");
+            
+            string inn = "select product_model from addcart where product_model='" + Label2.Text + "'";
+            SqlCommand cmd = new SqlCommand(inn, conn);
+            
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                string noo = reader.GetValue(0).ToString();
+                if (noo == Label2.Text)
+                {
+                    Response.Write(" <script>window.alert('Item already in cart'); window.location='addcart.aspx';</script>");
+                }
+                else
+                {
+                    reader.Close();
+                    
+
+                }
+            }
+            else
+            {
+                dig();
+            }
+
         }
     }
 

@@ -1,56 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="userhome.aspx.cs" Inherits="User_userhome" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/usermaster.master" AutoEventWireup="true" CodeFile="userhome.aspx.cs" Inherits="User_userhome" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link rel="stylesheet" href="/css/defaultpage.css"/>
-    <link rel="stylesheet" href="/css/responsive.css"/>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-    <form id="form1" runat="server">
-        <header>
-            <div class="first_rec"></div>
-            <div class="logo_rec">
-                <div class="logo_sec">
-                    <a href="#"><img src="/images/LOGO.jpg" height="40px" width="300px" /></a>
-                </div>
-                <div class="login_box">
-                    <a href="/login/Login_v1/login.aspx" id="login">Login &nbsp</a>
-                    <a href="/register/user/register.aspx" id="reg">&nbsp Register</a>
-                </div>
-
-
-            </div>
-            <div class="option_rec">
-                <div class="option1">
-                    <a href="#"><img src="/images/start.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
-                    
-                    
-                    
-                </div>
-                <div class="option2">
-
-                    <a href="#"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
-                </div>
-
-                <div class="option3">
-
-                    <a href="#"><img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
-                </div>
-
-                <div class="option4">
-
-                    <a href="#"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
-                </div>
-            </div>
-
-        </header>
-        <section>
-           
-            <div class="section_backgound">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="section_backgound">
                 
                 <h3 style="padding-top:20px; margin-left:10%;">SHOP BY PARTS</h3>
 
@@ -159,57 +112,5 @@
 
             </div>
 
-        </section>
+</asp:Content>
 
-        <footer>
-            <div class="foot_rec">
-                <div id="logo_footer">
-                    <img src="/images/logofo.jpg" height="40" width="250" id="logofo" />
-                    <h5>©2019 PCPart Mart, LLC. All rights reserved.</h5>
-                </div>
-                <div id="footer_middle">
-                    <p>ABOUT US</p>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Contact us</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">About us</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Careers</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Stories</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Press</p></a>
-                    
-                    
-                </div>
-
-                <div class="logo_mid">
-                    <p>SOCIAL</p>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Facebook</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Whatsapp</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Google plus</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Linkdin</p></a>
-                    <a href="#"><p style="color:#bdbebf; font-size:smaller;">Youtube</p></a>
-                </div>
-
-                <div class="logo_last">
-                    <p style="text-align:left; margin-left:12%;">MAIL US</p>
-                    <p style="text-align:left; font-size:smaller; color:#e1e1e1; margin-left:12%;">PCPARTS Mart Internet Pvt Ltd Block B (Begonia),
-                        Ground Floor, Embassy Tech Village,
-                        Bengaluru District,
-                        Karnataka, India, 560103.</p>
-
-                </div>
-
-                <div class="logo_last1">
-                    <p style="text-align:left; margin-left:12%;">REGISTERED OFFICE ADDRESS</p>
-                    <p style="text-align:left; font-size:smaller; color:#e1e1e1; margin-left:12%;">PCPARTS Mart Internet Pvt Ltd Block B (Begonia),
-                        Ground Floor, Embassy Tech Village,
-                        Bengaluru District,
-                        Karnataka, India, 560103.
-                        </br><br />
-                        Telephone: 1800 208 9898
-                    </p>
-
-                </div>
-            </div>
-        </footer>
-    
-    </form>
-</body>
-</html>
