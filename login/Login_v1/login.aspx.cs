@@ -46,7 +46,23 @@ public partial class login : System.Web.UI.Page
 
 
             }
+            else if (no == "user")
+            {
+                Session["user"] = txtuname.Value;
 
+                Response.Redirect("~/User/userhome.aspx");
+
+
+            }
+            else
+            {
+                Response.Write(" <script>window.alert('Invaild user'); window.location='login.aspx';</script>");
+            }
+
+        }
+        else
+        {
+            Response.Write(" <script>window.alert('Invaild user'); window.location='login.aspx';</script>");
         }
 
 

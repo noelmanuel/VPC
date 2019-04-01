@@ -188,7 +188,8 @@
                 </tr>
 
                 <tr>
-                    <td class="auto-style5"></td>
+                    <td class="auto-style5">
+                        <asp:Label ID="motherb" runat="server" Text="motherboard" Visible="false"></asp:Label></td>
                     <td class="auto-stylee2">
                         <asp:Label ID="Label5" runat="server" Text='<%# Eval("man") %>' CssClass="mbname"></asp:Label>&nbsp&nbsp|
                         <asp:Label ID="Label6" runat="server" Text='<%# Eval("mod") %>'></asp:Label>&nbsp&nbsp|
