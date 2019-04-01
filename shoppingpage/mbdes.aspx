@@ -119,10 +119,11 @@
      
 
     </style>
-     
+  
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" >
         <ItemTemplate>
             <table class="cata_comp">
                 <tr>
@@ -145,6 +146,7 @@
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("man") %>'></asp:Label><br /><br />
                         <span class="sp">Model No</span><br />
                         <asp:Label ID="Label2" runat="server" Text='<%# Eval("mod") %>'></asp:Label><br /><br />
+                        
                         <span class="sp">Color</span><br />
                         <asp:Label ID="Label3" runat="server" Text='<%# Eval("col") %>'></asp:Label><br /><br />
                         <span class="sp">Form Factor</span><br />
@@ -184,10 +186,9 @@
                     </td>
 
                 </tr>
+
                 <tr>
-                    <td class="auto-style5">
-                       
-                     </td>
+                    <td class="auto-style5"></td>
                     <td class="auto-stylee2">
                         <asp:Label ID="Label5" runat="server" Text='<%# Eval("man") %>' CssClass="mbname"></asp:Label>&nbsp&nbsp|
                         <asp:Label ID="Label6" runat="server" Text='<%# Eval("mod") %>'></asp:Label>&nbsp&nbsp|
@@ -195,20 +196,22 @@
                         <asp:Label ID="Label8" runat="server" Text='<%# Eval("memtyp") %>'></asp:Label><br /><br />
                         <span style="padding-left:40px; font-size:30px; color:red;">₹</span>
                         <asp:Label ID="Label21" runat="server" Text='<%# Eval("pric") %>' CssClass="ff"></asp:Label>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quantity &nbsp 
+                        <asp:TextBox ID="st" runat="server" AutoPostBack="False" Text="1" Width="20"></asp:TextBox>                        
+                        <asp:Label ID="Label22" runat="server"></asp:Label>                       
                      </td>
                     <td class="auto-styleee2">
-                        <asp:Button ID="Button1" runat="server" Text="ADD TO CART" Height="50" Width="200" CssClass="btn_cart" />
+                        <asp:Button ID="Button1" runat="server" Text="ADD TO CART" Height="50" Width="200" CssClass="btn_cart" OnClick="Button1_Click" />
                         <asp:Button ID="Button2" runat="server" Text="BUY NOW" Height="50" Width="200" CssClass="btn_cart" />
                     </td>
-                </tr>
-                
-
-            </table>
-            
+                </tr>                
+            </table>           
             <br />
             <br />
         </ItemTemplate>
     </asp:DataList>
+    
+    
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [motherboard] WHERE ([mbId] = @mbId)">
         <SelectParameters>
             <asp:QueryStringParameter Name="mbId" QueryStringField="id" Type="Int32" />
