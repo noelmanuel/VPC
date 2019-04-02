@@ -16,10 +16,17 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
     string cid, str1, sql, str2;
     protected void Page_Load(object sender, EventArgs e)
     {
+        for (int i = 1900; i <= DateTime.Now.Year; i++)
+        {
+            DropDownList2.Items.Add(i.ToString());
+            DropDownList4.Items.Add(i.ToString());
+        }
         Panel1.Visible = false;
         Panel2.Visible = false;
+        Panel3.Visible = false;
         if (!IsPostBack)
         {
+            
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             string gg = "select SUM(total_price) from addcart";
             conn.Open();
@@ -31,9 +38,23 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
             {
                 reader.Read();
                 string noo = reader.GetValue(0).ToString();
-                Label7.Text = noo;
+                int qua = int.Parse(noo);
+                if (qua < 4000)
+                {
+                    qua = qua + 500;
+                    Label7.Text = qua.ToString();
+                    Label8.Text = "₹500";
+
+                }
+                else
+                {
+                    Label7.Text = noo;
+                    Label8.Text = "₹50";
+                }
+                
                 GridView1.DataSource = SqlDataSource1;
                 GridView1.DataBind();
+                
             }
             else
             {
@@ -59,11 +80,22 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
     {
         Panel1.Visible = true;
         Panel2.Visible = false;
+        Panel3.Visible = false;
     }
 
     protected void Button2_Click(object sender, EventArgs e)
     {
         Panel2.Visible = true;
         Panel1.Visible = false;
+        Panel3.Visible = false;
+
+    }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        Panel2.Visible = false;
+        Panel1.Visible = false;
+        Panel3.Visible = true;
+
     }
 }

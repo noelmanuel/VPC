@@ -24,6 +24,15 @@
         .bo
         {
             border:1px solid #e3e3e3;
+            padding-left:50px;
+            padding-bottom:30px;
+            background-color:#e3e3e3;
+        }
+        ::placeholder 
+        { 
+            font-size:14px;
+            
+             
         }
        
     </style>
@@ -101,30 +110,69 @@
              <h4>PAYMENT METHOD</h4>
              <asp:Button ID="Button1"  runat="server" Text="Credit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button1_Click" />
              <asp:Button ID="Button2" runat="server" Text="Debit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button2_Click" /><br /><br />
-             <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" />
+             <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" />
              <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" /><br /><br />
                          </td>
                      <td style="width:25%;">
 
-             <asp:Panel ID="Panel1" CssClass="bo" runat="server">
+             <asp:Panel ID="Panel1" CssClass="bo" runat="server" >
+                 <asp:Image ID="Image1" ImageUrl="~/images/visa.jpg" runat="server" />
                  <h4>Credit Card Details</h4>
-                 <asp:TextBox ID="TextBox5" CssClass="txtadd" runat="server"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox5" CssClass="txtadd" placeholder="Card Number" runat="server"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox9" CssClass="txtadd" placeholder="Name" runat="server"></asp:TextBox><br /><br />
                  <span>Expiry</span> &nbsp
-                 <asp:DropDownList ID="DropDownList1" runat="server" Height="30" Width="30"></asp:DropDownList>
-                 <asp:DropDownList ID="DropDownList2" runat="server" Height="30" Width="30" ></asp:DropDownList>&nbsp&nbsp
+                 <asp:DropDownList ID="DropDownList1" runat="server" Height="30" Width="50">
+                     <asp:ListItem Enabled="False" Selected="True">MM</asp:ListItem>
+                     <asp:ListItem>01</asp:ListItem>
+                     <asp:ListItem>02</asp:ListItem>
+                     <asp:ListItem>03</asp:ListItem>
+                     <asp:ListItem>04</asp:ListItem>
+                     <asp:ListItem>05</asp:ListItem>
+                     <asp:ListItem>06</asp:ListItem>
+                     <asp:ListItem>07</asp:ListItem>
+                     <asp:ListItem>08</asp:ListItem>
+                     <asp:ListItem>09</asp:ListItem>
+                     <asp:ListItem>10</asp:ListItem>
+                     <asp:ListItem>11</asp:ListItem>
+                     <asp:ListItem>12</asp:ListItem>
+                    
+                 </asp:DropDownList>
+                 <asp:DropDownList ID="DropDownList2" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp
                  <span>CVV</span>&nbsp
                  <asp:TextBox ID="TextBox6" runat="server" Height="25px" Width="50px"></asp:TextBox>
              </asp:Panel>
 
              <asp:Panel ID="Panel2" runat="server" CssClass="bo">
+                 <asp:Image ID="Image2" ImageUrl="~/images/visa.jpg" runat="server" />
                  <h4>Debit Card Details</h4>
-                 <asp:TextBox ID="TextBox7" CssClass="txtadd" runat="server"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox7" CssClass="txtadd" placeholder="Card Number" runat="server"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox10" CssClass="txtadd" placeholder="Name" runat="server"></asp:TextBox><br /><br />
                  <span>Expiry</span> &nbsp
-                 <asp:DropDownList ID="DropDownList3" runat="server" Height="30" Width="30"></asp:DropDownList>
-                 <asp:DropDownList ID="DropDownList4" runat="server" Height="30" Width="30" ></asp:DropDownList>&nbsp&nbsp
+                 <asp:DropDownList ID="DropDownList3" runat="server" Height="30" Width="50">
+                     <asp:ListItem Enabled="False" Selected="True">MM</asp:ListItem>
+                     <asp:ListItem>01</asp:ListItem>
+                     <asp:ListItem>02</asp:ListItem>
+                     <asp:ListItem>03</asp:ListItem>
+                     <asp:ListItem>04</asp:ListItem>
+                     <asp:ListItem>05</asp:ListItem>
+                     <asp:ListItem>06</asp:ListItem>
+                     <asp:ListItem>07</asp:ListItem>
+                     <asp:ListItem>08</asp:ListItem>
+                     <asp:ListItem>09</asp:ListItem>
+                     <asp:ListItem>10</asp:ListItem>
+                     <asp:ListItem>11</asp:ListItem>
+                     <asp:ListItem>12</asp:ListItem>
+                 </asp:DropDownList>
+                 <asp:DropDownList ID="DropDownList4" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp
                  <span>CVV</span>&nbsp
                  <asp:TextBox ID="TextBox8" runat="server" Height="25px" Width="50px"></asp:TextBox>
              </asp:Panel>
+
+                         <asp:Panel ID="Panel3" runat="server" CssClass="bo">
+                            <h4>CASH ON DELIVERY</h4>
+                             <p>Delivery Charge <asp:Label ID="Label8" runat="server" ></asp:Label></p>
+                             <asp:Button ID="Button5" runat="server" Text="Confirm Order" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
+                         </asp:Panel>
                 
                     </td> 
                      </tr>
