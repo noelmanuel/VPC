@@ -43,7 +43,7 @@ public partial class shoppingpage_mbdes : System.Web.UI.Page
             SqlCommand cmdd = new SqlCommand(insertQuery, conn);
             cmdd.ExecuteNonQuery();
             conn.Close();
-            Response.Write(" <script>window.alert('ADDED TO CART');window.location='addcart.aspx';</script>");
+            Response.Write(" <script>window.alert('ADDED TO CART');window.location='shoppingpage.aspx';</script>");
             
         }
     }

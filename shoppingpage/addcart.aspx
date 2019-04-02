@@ -16,6 +16,7 @@
             width:300px;
             font-size:20px;
 
+
         }
         .spa
         {
@@ -24,8 +25,7 @@
         .bo
         {
             border:1px solid #e3e3e3;
-            padding-left:50px;
-            padding-bottom:30px;
+            padding:50px;
             background-color:#e3e3e3;
         }
         ::placeholder 
@@ -33,6 +33,10 @@
             font-size:14px;
             
              
+        }
+        .bt
+        {
+            cursor:pointer;
         }
        
     </style>
@@ -95,12 +99,12 @@
              <SortedAscendingCellStyle BackColor="#FFF1D4" />
              <SortedAscendingHeaderStyle BackColor="#B95C30" />
              <SortedDescendingCellStyle BackColor="#F1E5CE" />
-             <SortedDescendingHeaderStyle BackColor="#93451F" />
+             <SortedDescendingHeaderStyle BackColor="#93451F"/>
          </asp:GridView>
              <h2>GRAND TOTAL <br />₹ <asp:Label ID="Label7" runat="server" Height="50px" Width="100px" CssClass="aa"></asp:Label></h2>
-             <table style="width:50%; ">
+             <table style="width:60%; ">
                  <tr>
-                     <td style="width:35%;">
+                     <td style="width:35%; border:1px solid #efefef; padding:30px;">
              <span class="spa">Address</span><br />
              <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" placeholder="House No/Flat"></asp:TextBox><br /><br />
              <asp:TextBox ID="TextBox3" runat="server" CssClass="txtadd" placeholder="State"></asp:TextBox><br /><br />
@@ -108,12 +112,12 @@
              <span class="spa">Phone</span><br />
              <asp:TextBox ID="TextBox2" CssClass="txtadd" runat="server"></asp:TextBox>
              <h4>PAYMENT METHOD</h4>
-             <asp:Button ID="Button1"  runat="server" Text="Credit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button1_Click" />
-             <asp:Button ID="Button2" runat="server" Text="Debit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button2_Click" /><br /><br />
-             <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" />
-             <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" /><br /><br />
+             <asp:Button ID="Button1"  runat="server" Text="Credit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button1_Click" CssClass="bt" />&nbsp&nbsp&nbsp
+             <asp:Button ID="Button2" runat="server" Text="Debit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button2_Click" CssClass="bt"  /><br /><br />
+             <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" CssClass="bt"  />&nbsp&nbsp&nbsp
+             <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button4_Click"  CssClass="bt" /><br /><br />
                          </td>
-                     <td style="width:25%;">
+                     <td style="width:25%; border:1px solid #efefef; padding:30px;">
 
              <asp:Panel ID="Panel1" CssClass="bo" runat="server" >
                  <asp:Image ID="Image1" ImageUrl="~/images/visa.jpg" runat="server" />
@@ -139,7 +143,8 @@
                  </asp:DropDownList>
                  <asp:DropDownList ID="DropDownList2" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp
                  <span>CVV</span>&nbsp
-                 <asp:TextBox ID="TextBox6" runat="server" Height="25px" Width="50px"></asp:TextBox>
+                 <asp:TextBox ID="TextBox6" runat="server" Height="25px" Width="50px"></asp:TextBox><br /><br />
+                 <asp:Button ID="Button8" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button8_Click"  />
              </asp:Panel>
 
              <asp:Panel ID="Panel2" runat="server" CssClass="bo">
@@ -163,22 +168,31 @@
                      <asp:ListItem>11</asp:ListItem>
                      <asp:ListItem>12</asp:ListItem>
                  </asp:DropDownList>
-                 <asp:DropDownList ID="DropDownList4" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp
+                 <asp:DropDownList ID="DropDownList4" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp 
                  <span>CVV</span>&nbsp
-                 <asp:TextBox ID="TextBox8" runat="server" Height="25px" Width="50px"></asp:TextBox>
+                 <asp:TextBox ID="TextBox8" runat="server" Height="25px" Width="50px"></asp:TextBox><br /><br />
+                 <asp:Button ID="Button7" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
              </asp:Panel>
 
                          <asp:Panel ID="Panel3" runat="server" CssClass="bo">
                             <h4>CASH ON DELIVERY</h4>
                              <p>Delivery Charge <asp:Label ID="Label8" runat="server" ></asp:Label></p>
-                             <asp:Button ID="Button5" runat="server" Text="Confirm Order" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
+                             <asp:Button ID="Button5" runat="server" CssClass="bt" Text="Confirm Order" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
                          </asp:Panel>
                 
+                         <asp:Panel ID="Panel4" runat="server" CssClass="bo">
+                             <h4>Enter Your Gift Card</h4>
+                             <asp:TextBox ID="TextBox11" runat="server" CssClass="txtadd" placeholder="Gift card no"></asp:TextBox><br /><br />
+                             <asp:Button ID="Button6" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
+
+                         </asp:Panel>
                     </td> 
                      </tr>
                      </table>               
-         
+             <asp:Label ID="Label9" runat="server" Visible="false" ></asp:Label>
+             <asp:Label ID="Label10" runat="server" ></asp:Label>
          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [addcart]"></asp:SqlDataSource>
+             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [orderr]"></asp:SqlDataSource>
          </div>
          </div>
 </asp:Content>
