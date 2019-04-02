@@ -129,7 +129,17 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
 
     protected void Button8_Click(object sender, EventArgs e)
     {
-        int tr = Convert.ToInt32(Label10.Text);
+        String pass = "123456789";
+        Random r = new Random();
+        char[] mypass = new char[5];
+        for (int i = 0; i < 5; i++)
+        {
+            mypass[i] = pass[(int)(3 * r.NextDouble())];
+
+        }
+        string bn = new string(mypass);
+
+        int tr = Convert.ToInt32(bn);
         
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         string insertQuery = "select Transid from orderrr where Transid='" + Label10.Text + "'";
@@ -143,12 +153,12 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
             string no = reader.GetValue(0).ToString();
             int yy = Convert.ToInt32(no);
             reader.Close();
-            if (yy == 1000)
+            if (yy == tr)
             {
-                int xy = yy + 1;
+                tr = tr + 1;
 
                 
-                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + xy + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
                 SqlCommand cmdd = new SqlCommand(subcredit, conn);
                 cmdd.ExecuteNonQuery();
                 foreach (GridViewRow g1 in GridView1.Rows)
@@ -159,7 +169,7 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
                     string promod = (g1.FindControl("Label3") as Label).Text;
                     string proqua= (g1.FindControl("Label4") as Label).Text;
                     string protot = (g1.FindControl("Label6") as Label).Text;
-                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + xy + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
                     SqlCommand cmdddd = new SqlCommand(ordp, conn);
                     cmdddd.ExecuteNonQuery();
 
@@ -173,9 +183,9 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
             else
             {
                 
-                int xy = 1000;
                 
-                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + xy + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
                 SqlCommand cmdd = new SqlCommand(subcredit, conn);
                 cmdd.ExecuteNonQuery();
 
@@ -188,7 +198,7 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
                     string promod = (g1.FindControl("Label3") as Label).Text;
                     string proqua = (g1.FindControl("Label4") as Label).Text;
                     string protot = (g1.FindControl("Label6") as Label).Text;
-                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + xy + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
                     SqlCommand cmddd = new SqlCommand(ordp, conn);
                     cmddd.ExecuteNonQuery();
 
@@ -203,9 +213,9 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
         else
         {
             reader.Close();
-            int xy = 1000;
             
-            string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + xy + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+            
+            string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
             SqlCommand cmdd = new SqlCommand(subcredit, conn);
             cmdd.ExecuteNonQuery();
             foreach (GridViewRow g1 in GridView1.Rows)
@@ -217,7 +227,7 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
                 string promod = (g1.FindControl("Label3") as Label).Text;
                 string proqua = (g1.FindControl("Label4") as Label).Text;
                 string protot = (g1.FindControl("Label6") as Label).Text;
-                string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + xy + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
                 SqlCommand cmdddd = new SqlCommand(ordp, conn);
                 cmdddd.ExecuteNonQuery();
 
