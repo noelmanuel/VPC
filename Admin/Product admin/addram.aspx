@@ -65,9 +65,7 @@
 
              <div class="row2">
                 <span class="sp">Memory Size</span><br />
-                 <asp:TextBox ID="TextBox7" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                 <span class="sp">Price</span><br />
-                 <asp:TextBox ID="TextBox8" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox7" runat="server" CssClass="tb"></asp:TextBox><br /><br />                
                  <span class="sp">Cas Latency</span><br />
                  <asp:TextBox ID="TextBox9" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Timing</span><br />
@@ -76,13 +74,22 @@
                  <asp:TextBox ID="TextBox11" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Heat Spreader</span><br />
                  <asp:TextBox ID="TextBox12" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">ECC</span><br />
+                 <asp:TextBox ID="TextBox13" runat="server" CssClass="tb"></asp:TextBox><br /><br />
              </div>
 
              <div class="row3">
-                <span class="sp">ECC</span><br />
-                 <asp:TextBox ID="TextBox13" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                
                  <span class="sp">Registered</span><br />
                  <asp:TextBox ID="TextBox14" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Price</span><br />
+                 <asp:TextBox ID="TextBox17" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Stock</span><br />
+                 <asp:TextBox ID="TextBox18" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Image upload</span><br />
+                 <asp:FileUpload ID="mbimg1" runat="server" />
+                 <asp:FileUpload ID="mbimg2" runat="server" />
+                 <asp:FileUpload ID="mbimg3" runat="server" />
                  
                  
                 

@@ -25,8 +25,8 @@ public partial class Admin_Product_admin_addmotherboard : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         mbimg1.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg1.FileName));
-        mbimg1.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg2.FileName));
-        mbimg1.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg3.FileName));
+        mbimg2.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg2.FileName));
+        mbimg3.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg3.FileName));
         String link = "/images/" + Path.GetFileName(mbimg1.FileName);
         String link2 = "/images/" + Path.GetFileName(mbimg2.FileName);
         String link3 = "/images/" + Path.GetFileName(mbimg3.FileName);

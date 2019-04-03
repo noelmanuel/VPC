@@ -47,9 +47,10 @@ public partial class User_addcart : System.Web.UI.Page
 
                 if (readerr.HasRows)
                 {
-                    reader.Read();
-                    string noo = reader.GetValue(0).ToString();
+                    readerr.Read();
+                    string noo = readerr.GetValue(0).ToString();
                     int qua = int.Parse(noo);
+                    readerr.Close();
                     if (qua < 4000)
                     {
                         qua = qua + 500;
@@ -158,14 +159,14 @@ public partial class User_addcart : System.Web.UI.Page
         string insertQuery = "select Transid from orderrr where Transid='" + bn + "'";
         SqlCommand cmd = new SqlCommand(insertQuery, conn);
         conn.Open();
-        SqlDataReader reader = cmd.ExecuteReader();
+        SqlDataReader readerw = cmd.ExecuteReader();
 
-        if (reader.HasRows)
+        if (readerw.HasRows)
         {
-            reader.Read();
-            string no = reader.GetValue(0).ToString();
+            readerw.Read();
+            string no = readerw.GetValue(0).ToString();
             int yy = Convert.ToInt32(no);
-            reader.Close();
+            readerw.Close();
             if (yy == tr)
             {
                 tr = tr + 1;
@@ -196,7 +197,7 @@ public partial class User_addcart : System.Web.UI.Page
             else
             {
 
-
+                readerw.Close();
 
                 string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
                 SqlCommand cmdd = new SqlCommand(subcredit, conn);
@@ -225,8 +226,8 @@ public partial class User_addcart : System.Web.UI.Page
         }
         else
         {
-            reader.Close();
 
+            readerw.Close();
 
             string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
             SqlCommand cmdd = new SqlCommand(subcredit, conn);

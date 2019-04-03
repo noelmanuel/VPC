@@ -24,7 +24,7 @@
                         <h5 style="font-size:smaller; text-align:center;">Hard disk</h5>
                     </div></a>
 
-                    <a href="#"> <div class="ram">
+                    <a href="Product Page/ramlist.aspx"> <div class="ram">
                         <img src="/images/ram.jpg" height="105px" width="120px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">RAM</h5>
                     </div></a>

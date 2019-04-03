@@ -18,7 +18,7 @@ public partial class User_Product_category : System.Web.UI.Page
 
     protected void ram_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Admin/Product admin/addram.aspx");
+        Response.Redirect("~/User/Product Page/ramlist.aspx");
     }
 
 
