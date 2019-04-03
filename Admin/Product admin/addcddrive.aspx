@@ -86,6 +86,15 @@
                  <asp:TextBox ID="TextBox15" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">DVD-RAM Speed</span><br />
                  <asp:TextBox ID="TextBox16" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Price</span><br />
+                 <asp:TextBox ID="TextBox17" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Stock</span><br />
+                 <asp:TextBox ID="TextBox18" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Image upload</span><br />
+                 <asp:FileUpload ID="mbimg1" runat="server" />
+                 <asp:FileUpload ID="mbimg2" runat="server" />
+                 <asp:FileUpload ID="mbimg3" runat="server" />
+
                  
                  
                 

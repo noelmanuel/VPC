@@ -89,6 +89,16 @@
                 
                      
              </div>
+             <div class="crow3">
+                 <span class="sp">Price</span><br />
+                 <asp:TextBox ID="TextBox17" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Stock</span><br />
+                 <asp:TextBox ID="TextBox18" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Image upload</span><br />
+                 <asp:FileUpload ID="mbimg1" runat="server" />
+                 <asp:FileUpload ID="mbimg2" runat="server" />
+                 <asp:FileUpload ID="mbimg3" runat="server" />
+             </div>
              </div>
              <div class="crow4">
               <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="mb_sb" OnClick="Button1_Click"/> &nbsp&nbsp&nbsp

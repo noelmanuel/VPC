@@ -58,6 +58,7 @@
                  <asp:TextBox ID="TextBox5" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Include Power Supply</span><br />
                  <asp:TextBox ID="TextBox6" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 
 
              </div>
             
@@ -75,6 +76,19 @@
                  <asp:TextBox ID="TextBox11" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Dimensions</span><br />
                  <asp:TextBox ID="TextBox12" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 
+
+             </div>
+
+             <div class="row3">
+                 <span class="sp">Price</span><br />
+                 <asp:TextBox ID="TextBox17" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Stock</span><br />
+                 <asp:TextBox ID="TextBox18" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <span class="sp">Image upload</span><br />
+                 <asp:FileUpload ID="mbimg1" runat="server" />
+                 <asp:FileUpload ID="mbimg2" runat="server" />
+                 <asp:FileUpload ID="mbimg3" runat="server" />
              </div>
 
            
