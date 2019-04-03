@@ -34,7 +34,7 @@ public partial class User_Product_category : System.Web.UI.Page
 
     protected void cd_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Admin/Product admin/addcddrive.aspx");
+        Response.Redirect("~/User/Product Page/cddrivelist.aspx");
     }
 
     protected void smps_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ public partial class User_Product_category : System.Web.UI.Page
 
     protected void case_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Admin/Product admin/addcase.aspx");
+        Response.Redirect("~/User/Product Page/caselist.aspx");
     }
 
     protected void net_Click(object sender, EventArgs e)

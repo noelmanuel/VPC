@@ -191,7 +191,7 @@ public partial class User_addcart : System.Web.UI.Page
                 }
                 uig();
                 conn.Close();
-                Response.Write(" <script>window.alert('Order confirmed'); window.location='addmotherboard.aspx';</script>");
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
 
             }
             else
@@ -220,7 +220,7 @@ public partial class User_addcart : System.Web.UI.Page
                 }
                 uig();
                 conn.Close();
-                Response.Write(" <script>window.alert('Order confirmed'); window.location='addmotherboard.aspx';</script>");
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
             }
 
         }
@@ -249,7 +249,7 @@ public partial class User_addcart : System.Web.UI.Page
             }
             uig();
             conn.Close();
-            Response.Write(" <script>window.alert('Order confirmed'); window.location='addmotherboard.aspx';</script>");
+            Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
 
         }
 

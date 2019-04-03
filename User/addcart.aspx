@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/usermaster.master" AutoEventWireup="true" CodeFile="addcart.aspx.cs" Inherits="User_addcart" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/cart.master" AutoEventWireup="true" CodeFile="addcart.aspx.cs" Inherits="User_addcart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>

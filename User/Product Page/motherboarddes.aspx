@@ -47,7 +47,8 @@
        }
        .oo:hover
        {
-            width:400px;
+            width:350px;
+            height:300px;
             position:absolute;
        }
             
@@ -58,7 +59,8 @@
        }
        .oow:hover
         {
-            width:400px;
+            width:350px;
+            height:300px;
             position:absolute;
         }
         .ooo

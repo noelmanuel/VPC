@@ -103,19 +103,29 @@ h3{
 
 .section_backgound{
     width:100%;
-    height:auto;
-    background-color:#f3f3f3;
     
     
+    min-height: 100%;
+ 
+  margin-bottom: -50px; 
+    
+    
+}
+.section_backgound:after
+{
+    content: "";
+  display: block;
+}
+
+.foot_rec, .section_backgound:after
+{
+    height: 50px;
 }
 
 .foot_rec{
     
     background-color:#172437;
-    position:absolute;
-   bottom:0;
-   width:100%;
-   height:30px;
+    
 }
 
 #login{
@@ -204,10 +214,10 @@ h3{
     margin-left:15%;
 }
 .row4{
-    height:90%;
+    margin-bottom:20px;
     width:350px;
-   float:left;
-   padding-top:30px;
+   
+   
    padding-left:10%;
     
 }

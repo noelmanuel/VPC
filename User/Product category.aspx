@@ -28,7 +28,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="section_backgound">
         
-         
+       <div style="height:790px;"> 
          <div style="padding-top:5px; margin-left:10%;">
              <h3 style="">BROWSE PRODUCT</h3><br />
                 <asp:Button ID="com" CssClass="btn_com" runat="server" Text="Motherboard" OnClick="mb_Click" /> 
@@ -48,7 +48,7 @@
                 <asp:Button ID="Button13" CssClass="btn_com" runat="server" Text="Monitor" OnClick="mon_Click" />
                 <asp:Button ID="Button14" CssClass="btn_com" runat="server" Text="Speaker" OnClick="speaker_Click" /><br /><br />
             </div>
-         
+         </div> 
     </div>
 </asp:Content>
 

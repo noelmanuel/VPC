@@ -131,7 +131,7 @@ public partial class User_Product_Page_motherboarddes : System.Web.UI.Page
 
             else
             {
-                Response.Redirect("~/Admin/motherboard.aspx");
+                Response.Redirect("/User/userhome.aspx");
             }
             conn.Close();
         }

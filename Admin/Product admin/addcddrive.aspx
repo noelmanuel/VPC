@@ -100,7 +100,7 @@
                 
                      
              </div>
-             </div>
+             
              <div class="row4">
               <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="mb_sb" OnClick="Button1_Click"/> &nbsp&nbsp&nbsp
                  <asp:Button ID="Button2" runat="server" Text="Clear" CssClass="mb_sb" OnClick="Button2_Click"/>
@@ -108,5 +108,6 @@
                  </div>
              
          </div>
+        </div>
 </asp:Content>
 
