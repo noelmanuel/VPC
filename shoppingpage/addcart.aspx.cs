@@ -142,7 +142,7 @@ public partial class shoppingpage_addcart : System.Web.UI.Page
         int tr = Convert.ToInt32(bn);
         
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        string insertQuery = "select Transid from orderrr where Transid='" + Label10.Text + "'";
+        string insertQuery = "select Transid from orderrr where Transid='" + bn + "'";
         SqlCommand cmd = new SqlCommand(insertQuery, conn);
         conn.Open();
         SqlDataReader reader = cmd.ExecuteReader();

@@ -25,7 +25,7 @@
                 <div class="login_box">
                     <a href="userhome.aspx" id="login">Home &nbsp</a>
                     <a href="../Default.aspx" id="reg">&nbsp Sign out</a> &nbsp&nbsp&nbsp&nbsp
-                    <a href="../shoppingpage/addcart.aspx" style=" color:#e7b93c;">&nbsp Your Cart</a>
+                    <a href="/User/addcart.aspx" style=" color:#e7b93c;">&nbsp Your Cart</a>
                 </div>
 
 
@@ -66,6 +66,7 @@
 
            <footer>
             <div class="foot_rec">
+                tgh
              </div>
              </footer>
 

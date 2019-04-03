@@ -6,9 +6,16 @@ a{
     text-decoration:none;
     color:black;
 }
+#container{
+    width:auto;
+    height:auto;
+    margin:0;
+    padding:0;
+}
 .first_rec {
     width:100%;
     height:20px;
+    color:white;
     background-color:#252935;
 }
 .logo_rec{
@@ -93,8 +100,28 @@ a{
 
 .section_backgound{
     width:100%;
-    height:550px;
-    background-color:#f3f3f3;
+    
+    
+    min-height: 100%;
+ 
+  margin-bottom: -50px; 
+    
+    
+}
+.section_backgound:after
+{
+    content: "";
+  display: block;
+}
+
+.foot_rec, .section_backgound:after
+{
+    height: 50px;
+}
+
+.foot_rec{
+    
+    background-color:#172437;
     
 }
 .cata_parts{

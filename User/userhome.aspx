@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/usermaster.master" AutoEventWireup="true" CodeFile="userhome.aspx.cs" Inherits="User_userhome" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/userhomemaster.master" AutoEventWireup="true" CodeFile="userhome.aspx.cs" Inherits="User_userhome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -9,7 +9,7 @@
 
                 <div class="cata_parts">
 
-                   <a href="../shoppingpage/shoppingpage.aspx"> <div class="mb">
+                   <a href="Product Page/motherboardlist.aspx"> <div class="mb">
                         <img src="/images/mb.jpg" height="105px" width="130px" style="margin-left:5%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Motherboard</h5>
                     </div></a>
@@ -112,5 +112,6 @@
 
             </div>
 
+        </div>
 </asp:Content>
 
