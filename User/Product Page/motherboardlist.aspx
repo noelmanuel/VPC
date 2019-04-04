@@ -8,7 +8,7 @@
             width:240px;
             height:340px;
             border:1px solid #e2e2e2;
-           margin-left:10px;
+           margin-left:2px;
            margin-bottom:10px;
             
         }
@@ -74,12 +74,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="section_backgound">
+        <div style="height:790px;"> 
         <table>
             <tr>
-                <td style="width:20%; padding:10px;">
+                <td style="width:15%; padding:10px;">
                     <span>Price Filter</span><br />
                     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"  Height="30" Width="160">
-                        <asp:ListItem Text="select" Value="0 AND 1000000"></asp:ListItem>
+                        <asp:ListItem Text="select" Value="select"></asp:ListItem>
                         <asp:ListItem Text="0 to 5000" Value="0 AND 5000"></asp:ListItem>
                         <asp:ListItem Text="5000 to 6000" Value="5000 AND 6000"></asp:ListItem>
                         <asp:ListItem Text="6000 to 9000" Value="6000 AND 9000"></asp:ListItem>                                       
@@ -89,7 +90,7 @@
 
                 <td>
                     <h3 class="sd">MOTHERBOARD</h3>
-                    <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
+                    <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="5" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
                     <ItemTemplate>
                         
                         <table class="item_bx">
@@ -137,6 +138,7 @@
                 
 
             </div>
+        </div>
 
       
 </asp:Content>

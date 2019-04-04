@@ -43,7 +43,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div class="section_backgound">
     <h3 style="padding-top:17px; margin-left:10%;">GPU</h3>
-         
+         <div style="height:790px;">
          <div class="cata_parts2">
              <div class="row1">
                 <span class="sp">Manufacturer</span><br />
@@ -115,6 +115,7 @@
                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [gpu]"></asp:SqlDataSource>
                  </div>
              
+         </div>
          </div>
 </asp:Content>
 

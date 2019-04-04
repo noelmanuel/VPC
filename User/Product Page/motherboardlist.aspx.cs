@@ -45,7 +45,7 @@ public partial class User_Product_Page_motherboardlist : System.Web.UI.Page
         pg.DataSource = dt.DefaultView;
         pg.AllowPaging = true;
         pg.CurrentPageIndex = currentposition;
-        pg.PageSize = 4;
+        pg.PageSize = 10;
         Button1.Enabled = !pg.IsFirstPage;
         Button2.Enabled = !pg.IsFirstPage;
         Button3.Enabled = !pg.IsLastPage;
@@ -110,31 +110,43 @@ public partial class User_Product_Page_motherboardlist : System.Web.UI.Page
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        string q = DropDownList1.SelectedItem.Value.ToString();
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        string insertQuery = "select * from motherboard WHERE Pric BETWEEN " + q;
-        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+        
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+            string q = DropDownList1.SelectedItem.Value.ToString();
+            if (q == "select")
+            {
+                Response.Redirect("~/User/Product Page/motherboardlist.aspx");
+
+            }
+            else
+            {
 
 
-        conn.Open();
-        SqlDataAdapter da = new SqlDataAdapter();
-        da.SelectCommand = cmd;
-        DataSet ds = new DataSet();
-        da.Fill(ds);
-        totalrows = ds.Tables[0].Rows.Count;
-        DataTable dt = ds.Tables[0];
-        PagedDataSource pg = new PagedDataSource();
-        pg.DataSource = dt.DefaultView;
-        pg.AllowPaging = true;
-        pg.CurrentPageIndex = currentposition;
-        pg.PageSize = 4;
-        Button1.Enabled = !pg.IsFirstPage;
-        Button2.Enabled = !pg.IsFirstPage;
-        Button3.Enabled = !pg.IsLastPage;
-        Button4.Enabled = !pg.IsLastPage;
-        //Binding pg to datalist
-        DataList1.DataSource = pg;//dl is datalist
-        DataList1.DataBind();
-        conn.Close();
-    }
+
+                string insertQuery = "select * from motherboard WHERE Pric BETWEEN " + q;
+                SqlCommand cmd = new SqlCommand(insertQuery, conn);
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                totalrows = ds.Tables[0].Rows.Count;
+                DataTable dt = ds.Tables[0];
+                PagedDataSource pg = new PagedDataSource();
+                pg.DataSource = dt.DefaultView;
+                pg.AllowPaging = true;
+                pg.CurrentPageIndex = currentposition;
+                pg.PageSize = 4;
+                Button1.Enabled = !pg.IsFirstPage;
+                Button2.Enabled = !pg.IsFirstPage;
+                Button3.Enabled = !pg.IsLastPage;
+                Button4.Enabled = !pg.IsLastPage;
+                //Binding pg to datalist
+                DataList1.DataSource = pg;//dl is datalist
+                DataList1.DataBind();
+                conn.Close();
+            }
+        }
+    
 }

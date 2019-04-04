@@ -34,39 +34,78 @@ public partial class login : System.Web.UI.Page
         {
             reader.Read();
             string no = reader.GetValue(0).ToString();
+            reader.Close();
             if (no == "admin")
             {
                 Response.Redirect("~/Admin/adminhome.aspx");
             }
             else if (no == "company")
             {
+
                 Session["comp"] = txtuname.Value;
-
-                Response.Redirect("~/Company/companyhome.aspx");
-
+                string str = "select status from companyregn where usname='" + txtuname.Value + "'";
+                SqlCommand cmdd = new SqlCommand(str, conn);
+                SqlDataReader readerr = cmdd.ExecuteReader();
+                if (readerr.HasRows)
+                {
+                    readerr.Read();
+                    string abc = readerr.GetValue(0).ToString();
+                    readerr.Close();
+                    if (abc == "approved")
+                    {
+                        Response.Redirect("~/Company/companyhome.aspx");
+                    }
+                    else
+                    {
+                        Response.Write(" <script>window.alert('User Pending'); window.location='login.aspx';</script>");
+                    }
+                }
+                else
+                {
+                    Response.Write(" <script>window.alert('User Pending'); window.location='login.aspx';</script>");
+                }
 
             }
             else if (no == "user")
             {
                 Session["user"] = txtuname.Value;
-
-                Response.Redirect("~/User/userhome.aspx");
-
-
+                string strr = "select status from cregn where usname='" + txtuname.Value + "'";
+                SqlCommand cmddd = new SqlCommand(strr, conn);
+                SqlDataReader readerrr = cmddd.ExecuteReader();
+                if (readerrr.HasRows)
+                {
+                    readerrr.Read();
+                    string abcc = readerrr.GetValue(0).ToString();
+                    readerrr.Close();
+                    if (abcc == "approved")
+                    {
+                        Response.Redirect("~/User/userhome.aspx");
+                    }
+                    else
+                    {
+                        Response.Write(" <script>window.alert('User Pending'); window.location='login.aspx';</script>");
+                    }
+                }
+                else
+                {
+                    Response.Write(" <script>window.alert('User Pending'); window.location='login.aspx';</script>");
+                }
             }
+
             else
             {
                 Response.Write(" <script>window.alert('Invaild user'); window.location='login.aspx';</script>");
             }
 
-        }
-        else
-        {
-            Response.Write(" <script>window.alert('Invaild user'); window.location='login.aspx';</script>");
-        }
 
 
+
+        }
     }
-
 }
+         
+    
+
+
+
 

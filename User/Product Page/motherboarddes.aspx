@@ -14,6 +14,7 @@
             display:table;
             margin-left:5px;
             
+            
         }
         .auto-style2
         {
@@ -66,7 +67,7 @@
         .ooo
         {
             margin:40px;
-            width:550px;
+            width:350px;
             
         }
         .mbname
@@ -126,6 +127,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <div class="section_backgound">
+        <div style="height:790px;"> 
 
          <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" >
         <ItemTemplate>
@@ -198,7 +200,7 @@
                         <asp:Label ID="Label5" runat="server" Text='<%# Eval("man") %>' CssClass="mbname"></asp:Label>&nbsp&nbsp|
                         <asp:Label ID="Label6" runat="server" Text='<%# Eval("mod") %>'></asp:Label>&nbsp&nbsp|
                         <asp:Label ID="Label7" runat="server" Text='<%# Eval("col") %>'></asp:Label>&nbsp&nbsp|
-                        <asp:Label ID="Label8" runat="server" Text='<%# Eval("memtyp") %>'></asp:Label><br /><br />
+                        <asp:Label ID="Label8" runat="server" Text='<%# Eval("chi") %>'></asp:Label><br /><br />
                         <span style="padding-left:40px; font-size:30px; color:red;">₹</span>
                         <asp:Label ID="Label21" runat="server" Text='<%# Eval("pric") %>' CssClass="ff"></asp:Label>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quantity &nbsp 
@@ -222,5 +224,6 @@
         </SelectParameters>
     </asp:SqlDataSource>
     </div>
+        </div>
 </asp:Content>
 

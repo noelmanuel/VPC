@@ -10,6 +10,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="section_backgound">
+    <div style="height:790px;">
     <div class="grid">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="compname" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" OnRowUpdating="GridView1_RowUpdating" style="text-align: center" Width="1152px" OnRowDeleting="GridView1_RowDeleting">
             <Columns>
@@ -54,5 +56,7 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [compregn]"></asp:SqlDataSource>
         
     </div>
+        </div>
+        </div>
 </asp:Content>
 

@@ -28,13 +28,14 @@
     <link href="css/main.css" rel="stylesheet" media="all">
 
     <style>
-        .com{
+         .com{
             width:100px;
             height:30px;
             font-size:smaller;
             background-color:blue;
             color:white;
             border-radius:20px;
+            cursor:pointer;
         }
         .user{
             width:100px;
@@ -44,6 +45,32 @@
             color:white;
             margin-bottom:20px;
             border-radius:20px;
+            cursor:pointer;
+        }
+        .home{
+            width:100px;
+            height:30px;
+            font-size:smaller;
+            background-color:red;
+            color:white;
+            margin-bottom:20px;
+            border-radius:20px;
+            margin-left:40%;
+            cursor:pointer;
+
+        }
+        .home:hover{
+            width:100px;
+            height:30px;
+            font-size:smaller;
+            border:1px solid red;
+            background-color:white;
+            margin-bottom:20px;
+            border-radius:20px;
+            margin-left:40%;
+            color:red;
+            cursor:pointer;
+
         }
         .dd{
             width:260px;
@@ -62,9 +89,10 @@
             background-color:red;
             color:white;
             border-radius:5px;
+            cursor:pointer;
         }
          .day{
-            width:260px;
+            width:250px;
             height:50px;
             border-radius:5px;
             border:1px solid #414141;
@@ -82,6 +110,7 @@
                     <form method="POST" runat="server">
                         <asp:Button ID="Button1" runat="server" Text="COMPANY" OnClick="btn_lo" CssClass="com" />
                          <asp:Button ID="Button2" runat="server" Text="USER" CssClass="user"/>
+                        <asp:Button ID="Button4" runat="server" Text="HOME" OnClick="btn_home" CssClass="home"/>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">

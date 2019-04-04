@@ -33,6 +33,7 @@ public partial class Admin_userapprove : System.Web.UI.Page
 
 
     }
+    
 
 
     protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)

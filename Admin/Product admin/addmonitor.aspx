@@ -42,6 +42,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="section_backgound">
+        <div style="height:790px;">
     <h3 style="padding-top:17px; margin-left:10%;">MONITOR</h3>
          
          <div class="cata_parts2">
@@ -115,5 +116,6 @@
                  </div>
              
          </div>
+        </div>
 </asp:Content>
 

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="css/defaultpage.css"/>
-    <link rel="stylesheet" href="css/responsive.css"/>
+    <link rel="stylesheet" href="css/defaultresponsive.css"/>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -26,24 +26,24 @@
             </div>
             <div class="option_rec">
                 <div class="option1">
-                    <a href="#"><img src="images/start.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="#"><img src="images/start.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
                     
                     
                     
                 </div>
                 <div class="option2">
 
-                    <a href="#"><img src="images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="#"><img src="images/view.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                 <div class="option3">
 
-                    <a href="#"><img src="images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="#"><img src="images/expert.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                 <div class="option4">
 
-                    <a href="#"><img src="images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="#"><img src="images/ind.jpg" height="35" width="170" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
             </div>
 
