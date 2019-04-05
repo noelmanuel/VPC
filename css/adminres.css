@@ -1,0 +1,371 @@
+﻿@media screen and (max-width:1680px){
+    
+    
+    .section_backgound
+    {
+        width:100%;
+        
+        
+    }
+    .cata_parts
+    {
+        width:100%;
+    }
+    .cata_comp
+    {
+        width:100%;
+ 
+    }
+    .mb
+    {
+        height:90%;
+        width:90px;
+        margin-left:10%;
+        float:left;
+    }
+    .mb img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .mb h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .pro
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .pro img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .pro h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .hd
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .hd img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .hd h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .ram
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .ram img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .ram h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .gpu
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .gpu img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .gpu h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .ssd
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .ssd img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .ssd h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+    
+    .cd
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .cd img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .cd h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .smps
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .smps img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .smps h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .cool
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+
+    }
+    .cool img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .cool h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+    
+    .sound
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+        float:left;
+    }
+    .sound img
+    {
+        width:90px;
+        height:75px;
+        margin-top:20px;
+    }
+    .sound h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+
+    .acer
+    {
+        height:90%;
+        width:90px;
+        margin-left:10%;
+    }
+    .acer img
+    {
+        width:90px;
+        height:60px;
+        margin-top:20px;
+
+    }
+
+    .asus
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+
+    }
+    .asus img
+    {
+        width:90px;
+        height:60px;
+        margin-top:20px;
+
+    }
+
+    .sam
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+
+    }
+    .sam img 
+    {
+        width: 90px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .com
+   {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+    }
+    .com img 
+    {
+        width: 90px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .len
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+
+    }
+    .len img 
+    {
+        width: 90px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .tob
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+
+    }
+    .tob img 
+    {
+        width: 90px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .vio
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+    }
+    .vio img 
+    {
+        width: 90px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+    .apple
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+
+    }
+    .apple img 
+    {
+        width: 90px;
+        height: 60px;
+        margin-top: 20px;
+    }
+    .hi
+    {
+        height:90%;
+        width:90px;
+        margin-left:2%;
+
+    }
+    .hi img 
+    {
+        width: 90px;
+        height: 60px;
+        margin-top: 20px;
+    }
+
+
+    .foot_rec
+    {
+        width:100%;
+    }
+    #logo_footer
+    {
+        width:150px;
+
+    }
+    #logo_footer img
+    {
+        height:30px;
+        width:190px;
+    }
+    #logo_footer h5
+    {
+        text-align:center;
+        margin-left:10%;
+    }
+    #footer_middle
+    {
+        width:150px;
+        margin-left:1%;
+    }
+    .logo_last
+    {
+        margin-left:-2%;
+    }
+  
+}
+@media screen and (max-width:1774px) 
+{
+     .logo_last
+     {
+        margin-left:-2%;
+     }
+}

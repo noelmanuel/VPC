@@ -43,7 +43,7 @@ public partial class login : System.Web.UI.Page
             {
 
                 Session["comp"] = txtuname.Value;
-                string str = "select status from companyregn where usname='" + txtuname.Value + "'";
+                string str = "select status from compregn where compusname='" + txtuname.Value + "'";
                 SqlCommand cmdd = new SqlCommand(str, conn);
                 SqlDataReader readerr = cmdd.ExecuteReader();
                 if (readerr.HasRows)

@@ -14,6 +14,7 @@
             display:table;
             margin-left:5px;
             
+            
         }
         .auto-style2
         {
@@ -47,7 +48,8 @@
        }
        .oo:hover
        {
-            width:400px;
+            width:350px;
+            height:300px;
             position:absolute;
        }
             
@@ -58,18 +60,19 @@
        }
        .oow:hover
         {
-            width:400px;
+            width:350px;
+            height:300px;
             position:absolute;
         }
         .ooo
         {
             margin:40px;
-            width:550px;
+            width:350px;
             
         }
         .mbname
         {
-            padding-left:40px;
+            padding-left:30px;
         }
         .tb
         {
@@ -116,7 +119,6 @@
             cursor:pointer;
 
         }
-
      
 
     </style>
@@ -124,6 +126,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <div class="section_backgound">
+        <div style="height:790px;"> 
 
          <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" >
         <ItemTemplate>
@@ -216,6 +219,7 @@
         </SelectParameters>
     </asp:SqlDataSource>
     </div>
+        </div>
 </asp:Content>
 
 
