@@ -72,7 +72,7 @@
         }
         .mbname
         {
-            padding-left:40px;
+            padding-left:30px;
         }
         .tb
         {
