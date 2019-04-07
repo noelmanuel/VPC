@@ -48,7 +48,7 @@
          
          <div class="cata_parts2">
              <div class="row1">
-                <span class="sp">Manufacturer</span><br />
+                 <span class="sp">Manufacturer</span><br />
                  <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Model No</span><br />
                  <asp:TextBox ID="TextBox2" runat="server" CssClass="tb"></asp:TextBox><br /><br />

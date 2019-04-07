@@ -100,4 +100,19 @@ public partial class Admin_addproduct : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/Product admin/addspeaker.aspx");
     }
+
+    protected void ups_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/Product admin/addups.aspx");
+    }
+
+    protected void os_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/Product admin/addos.aspx");
+    }
+
+    protected void so_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/Product admin/addsoftware.aspx");
+    }
 }
