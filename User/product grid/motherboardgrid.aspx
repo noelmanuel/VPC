@@ -2,17 +2,22 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
+        .gridd
+        {
+            margin-left:10%;
+        }
         .auto-style1 {
+            margin-left: 10%;
             text-align: center;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="section_backgound">
-        <div style="height:790px; padding-left:40px;">
+        <div style="height:790px;">
 
-        
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Width="580px">
+        <h3 style="padding-top:17px; margin-left:10%;">SELECT MOTHERBOARD</h3>
+    <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="5" CellSpacing="3" Width="843px" OnRowCommand="GridView1_RowCommand" >
         <Columns>
             <asp:TemplateField HeaderText="Motherboard ">
                 <ItemTemplate>
@@ -28,7 +33,13 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Action">
                 <ItemTemplate>
-                    <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Red" OnClick="LinkButton1_Click">Add</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Red" CommandName="Select" >Add</asp:LinkButton>
+                </ItemTemplate>
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="RAM Slots">
+                <ItemTemplate>
+                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("ramno") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
