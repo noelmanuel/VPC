@@ -27,7 +27,9 @@ public partial class User_startpc : System.Web.UI.Page
         motherboard_gpuslot();
         ram_check();
         gpu_check();
-
+        hdd_check();
+        ssd_check();
+        pro_check();
 
     }
 
@@ -337,6 +339,84 @@ public partial class User_startpc : System.Web.UI.Page
     }
 
 
+    public void hdd_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string frog = "hdd";
+        string insertQuery = "select hdd from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + frog + "'";
+        SqlCommand cmd9 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader9 = cmd9.ExecuteReader();
+        if (reader9.HasRows)
+        {
+            reader9.Read();
+            string no = reader9.GetValue(0).ToString();
+            Label11.Text = no;
+            reader9.Close();
+            Button21.Enabled = false;
+        }
+
+        else
+        {
+            reader9.Close();
+            Label11.Text = "ADD HDD";
+        }
+
+        conn.Close();
+    }
+
+    public void ssd_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string cat = "ssd";
+        string insertQuery = "select sssd from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + cat + "'";
+        SqlCommand cmd12 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader12 = cmd12.ExecuteReader();
+        if (reader12.HasRows)
+        {
+            reader12.Read();
+            string no = reader12.GetValue(0).ToString();
+            Label12.Text = no;
+            reader12.Close();
+            Button23.Enabled = false;
+        }
+
+        else
+        {
+            reader12.Close();
+            Label12.Text = "ADD SSD";
+        }
+
+        conn.Close();
+    }
+
+    public void pro_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "processor";
+        string insertQuery = "select pro from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd13 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader13 = cmd13.ExecuteReader();
+        if (reader13.HasRows)
+        {
+            reader13.Read();
+            string no = reader13.GetValue(0).ToString();
+            Label13.Text = no;
+            reader13.Close();
+            Button25.Enabled = false;
+        }
+
+        else
+        {
+            reader13.Close();
+            Label13.Text = "ADD PROCESSOR";
+        }
+
+        conn.Close();
+    }
+
     protected void Button1_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/User/Product grid/motherboardgrid.aspx");
@@ -494,6 +574,54 @@ public partial class User_startpc : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
         string str2 = "delete from makecart where product='gpu' AND userr='" + Session["user"].ToString() + "' AND gpu='" + Label8.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void hdd21_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/hddgrid.aspx");
+    }
+
+    protected void delhdd22_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='hdd' AND userr='" + Session["user"].ToString() + "' AND hdd='" + Label11.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void ssd23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/ssdgrid.aspx");
+    }
+
+    protected void delssd24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='ssd' AND userr='" + Session["user"].ToString() + "' AND sssd='" + Label12.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void pro23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/processorgrid.aspx");
+    }
+
+    protected void delpro24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='processor' AND userr='" + Session["user"].ToString() + "' AND pro='" + Label13.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");

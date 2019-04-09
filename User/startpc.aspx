@@ -101,7 +101,17 @@
 
                     </asp:Panel>
 
+                    <asp:Label ID="Label11" runat="server" Width="580"></asp:Label>
+                        <asp:Button ID="Button21" CssClass="add" runat="server" Text="ADD" BackColor="#00CCFF" ForeColor="White" Height="20" Width="50" BorderStyle="None" OnClick="hdd21_Click" />
+                        <asp:Button ID="Button22" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delhdd22_Click" /><br /><br />
 
+                    <asp:Label ID="Label12" runat="server" Width="580"></asp:Label>
+                        <asp:Button ID="Button23" CssClass="add" runat="server" Text="ADD" BackColor="#00CCFF" ForeColor="White" Height="20" Width="50" BorderStyle="None" OnClick="ssd23_Click" />
+                        <asp:Button ID="Button24" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delssd24_Click" /><br /><br />
+
+                    <asp:Label ID="Label13" runat="server" Width="580"></asp:Label>
+                        <asp:Button ID="Button25" CssClass="add" runat="server" Text="ADD" BackColor="#00CCFF" ForeColor="White" Height="20" Width="50" BorderStyle="None" OnClick="pro23_Click" />
+                        <asp:Button ID="Button26" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delpro24_Click" /><br /><br />
                 </td>
             </tr>
            
