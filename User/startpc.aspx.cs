@@ -22,6 +22,17 @@ public partial class User_startpc : System.Web.UI.Page
         Panel2.Visible = false;
         Panel3.Visible = false;
         Panel4.Visible = false;
+        motherboard_check();
+        motherboardslot_check();
+        motherboard_gpuslot();
+        ram_check();
+        gpu_check();
+
+
+    }
+
+    public void motherboard_check()
+    {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
         string insertQuery = "select mb from makecart where userr='" + Session["user"].ToString() + "'";
@@ -35,62 +46,7 @@ public partial class User_startpc : System.Web.UI.Page
             Image1.ImageUrl = "~/images/mboff.jpg";
             reader.Close();
             Button1.Enabled = false;
-
-            string ramslot = "select mbslot from makecart where userr='" + Session["user"].ToString() + "' AND mb = '" + Label1.Text + "'";
-            SqlCommand cmdd2 = new SqlCommand(ramslot, conn);
-            SqlDataReader reader2 = cmdd2.ExecuteReader();
-            if (reader2.HasRows)
-            {
-                reader2.Read();
-                string noo = reader2.GetValue(0).ToString();
-                reader2.Close();
-                if (noo == "4")
-                {
-                    Panel2.Visible = true;
-                    Panel1.Visible = false;
-                }
-                else
-                {
-                    Panel1.Visible = true;
-                    Panel2.Visible = false;
-                }
-
-            }
-            else
-            {
-                reader2.Close();
-            }
-
-
-
-
-            string gslot = "select gpuslot from makecart where userr='" + Session["user"].ToString() + "' AND mb = '" + Label1.Text + "'";
-            SqlCommand cmdd4 = new SqlCommand(gslot, conn);
-            SqlDataReader reader4 = cmdd4.ExecuteReader();
-            if (reader4.HasRows)
-            {
-                reader4.Read();
-                string noo = reader4.GetValue(0).ToString();
-                reader4.Close();
-                if (noo == "2")
-                {
-                    Panel4.Visible = true;
-                    Panel3.Visible = false;
-                }
-                else
-                {
-                    Panel3.Visible = true;
-                    Panel4.Visible = false;
-                }
-
-            }
-            else
-            {
-                reader4.Close();
-            }
         }
-
-
 
         else
         {
@@ -98,25 +54,93 @@ public partial class User_startpc : System.Web.UI.Page
             Label1.Text = "ADD MOTHERBOARD";
         }
 
+        conn.Close();
+    }
 
+    public void motherboardslot_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string ramslot = "select mbslot from makecart where userr='" + Session["user"].ToString() + "' AND mb = '" + Label1.Text + "'";
+        SqlCommand cmdd2 = new SqlCommand(ramslot, conn);
+        SqlDataReader reader2 = cmdd2.ExecuteReader();
+        if (reader2.HasRows)
+        {
+            reader2.Read();
+            string gym = reader2.GetValue(0).ToString();
+            reader2.Close();
+            if (gym == "4")
+            {
+                Panel2.Visible = true;
+                Panel1.Visible = false;
+            }
+            else
+            {
+                Panel1.Visible = true;
+                Panel2.Visible = false;
+            }
 
-        string insertram = "select ram from makecart where userr='" + Session["user"].ToString() + "'";
+        }
+        else
+        {
+            reader2.Close();
+        }
+        conn.Close();
+
+    }
+
+    public void motherboard_gpuslot()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string gslot = "select gpuslot from makecart where userr='" + Session["user"].ToString() + "' AND mb = '" + Label1.Text + "'";
+        SqlCommand cmdd4 = new SqlCommand(gslot, conn);
+        SqlDataReader reader4 = cmdd4.ExecuteReader();
+        if (reader4.HasRows)
+        {
+            reader4.Read();
+            string noo = reader4.GetValue(0).ToString();
+            reader4.Close();
+            if (noo == "2")
+            {
+                Panel4.Visible = true;
+                Panel3.Visible = false;
+            }
+            else
+            {
+                Panel3.Visible = true;
+                Panel4.Visible = false;
+            }
+
+        }
+        else
+        {
+            reader4.Close();
+        }
+        conn.Close();
+    }
+
+    public void ram_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string tata = "ram";
+        string insertram = "select ram from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + tata + "'";
         SqlCommand cmd1 = new SqlCommand(insertram, conn);
         SqlDataReader reader1 = cmd1.ExecuteReader();
         if (reader1.HasRows)
         {
 
             int cnt = 5;
-            for (int i = 0; i < cnt; i++)
+            for (int j = 0; j < cnt; j++)
             {
-                if (i == 0)
+                if (j == 0)
                 {
-                    reader1.Read();
-                    string no = reader1.GetValue(0).ToString();
                     
 
+
                 }
-                if (i == 1)
+                if (j == 1)
                 {
 
                     if (reader1.Read() == true)
@@ -126,17 +150,17 @@ public partial class User_startpc : System.Web.UI.Page
                         Label2.Text = noi;
                         Button3.Enabled = false;
                         Button7.Enabled = false;
-                        
+
                     }
                     else
                     {
                         Label4.Text = "ADD RAM";
                         Label2.Text = "ADD RAM";
-                        
-                    }                                    
+
+                    }
 
                 }
-                else if (i == 2)
+                else if (j == 2)
                 {
                     if (reader1.Read() == true)
                     {
@@ -145,65 +169,65 @@ public partial class User_startpc : System.Web.UI.Page
                         Label3.Text = noii;
                         Button5.Enabled = false;
                         Button9.Enabled = false;
-                        
+
                     }
                     else
                     {
                         Label5.Text = "ADD RAM";
                         Label3.Text = "ADD RAM";
-                        
+
                     }
-                                    
+
                 }
-                else if (i == 3)
+                else if (j == 3)
                 {
-                    if(reader1.Read()==true)
+                    if (reader1.Read() == true)
                     {
                         string nop = reader1.GetValue(0).ToString();
                         Label6.Text = nop;
                         Button11.Enabled = false;
-                        
+
                     }
                     else
                     {
                         Label6.Text = "ADD RAM";
-                        
+
 
                     }
 
-                                       
+
                 }
-                else if (i == 4)
+                else if (j == 4)
                 {
                     if (reader1.Read() == true)
                     {
                         string nopp = reader1.GetValue(0).ToString();
                         Label7.Text = nopp;
                         Button13.Enabled = false;
-                        
+
 
                     }
                     else
                     {
                         Label7.Text = "ADD RAM";
-                        
+
                     }
 
-                    
-                    
+
+
                 }
                 else
                 {
-                    
+
                     Label2.Text = "ADD RAM";
                     Label3.Text = "ADD RAM";
                     Label4.Text = "ADD RAM";
                     Label5.Text = "ADD RAM";
                     Label6.Text = "ADD RAM";
                     Label7.Text = "ADD RAM";
-                    
+
                 }
-                
+
 
 
             }
@@ -220,21 +244,28 @@ public partial class User_startpc : System.Web.UI.Page
             Label7.Text = "ADD RAM";
             reader1.Close();
         }
-        
-        string insertgpu = "select gpu from makecart where userr='" + Session["user"].ToString() + "'";
+        conn.Close();
+    }
+
+
+    public void gpu_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string fog = "gpu";
+        string insertgpu = "select gpu from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + fog + "'";
         SqlCommand cmd55 = new SqlCommand(insertgpu, conn);
         SqlDataReader reader55 = cmd55.ExecuteReader();
         if (reader55.HasRows)
         {
-            
+
             int cnt = 3;
             for (int i = 0; i < cnt; i++)
             {
                 if (i == 0)
                 {
+
                     
-                    reader55.Read();
-                    string item1 = reader55.GetValue(0).ToString();
 
                 }
                 if (i == 1)
@@ -261,21 +292,21 @@ public partial class User_startpc : System.Web.UI.Page
                     {
                         string item3 = reader55.GetValue(0).ToString();
                         Label10.Text = item3;
-                        
+
                         Button19.Enabled = false;
-                        
+
                     }
                     else
                     {
                         Label10.Text = "ADD GPU";
-                        
+
                     }
 
                 }
-                
+
                 else
                 {
-                    
+
                     Label8.Text = "ADD GPU";
                     Label9.Text = "ADD GPU";
                     Label10.Text = "ADD GPU";
@@ -283,32 +314,26 @@ public partial class User_startpc : System.Web.UI.Page
 
 
                 }
-                
+
 
 
             }
 
             reader55.Close();
         }
-        
+
 
 
         else
         {
-            
-            
-            Label2.Text = "ADD RAM";
-            Label3.Text = "ADD RAM";
-            Label4.Text = "ADD RAM";
-            Label5.Text = "ADD RAM";
-            Label6.Text = "ADD RAM";
-            Label7.Text = "ADD RAM";
+
+
+            Label8.Text = "ADD GPU";
+            Label9.Text = "ADD GPU";
+            Label10.Text = "ADD GPU";
             reader55.Close();
         }
-        
-            conn.Close();
-
-        
+        conn.Close();
     }
 
 

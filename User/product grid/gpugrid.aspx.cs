@@ -32,12 +32,12 @@ public partial class User_product_grid_gpugrid : System.Web.UI.Page
             conn.Open();
             GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
 
-            Label pro = (Label)row.FindControl("Label1");
-            Label mbprice = (Label)row.FindControl("Label2");
+            Label proq = (Label)row.FindControl("gpu_la");
+            Label mbprice = (Label)row.FindControl("gpu_price");
 
-            int pri = int.Parse(mbprice.Text);
+            int prig = int.Parse(mbprice.Text);
 
-            string ordp = "insert into makecart(userr,product,gpu,gpuprice) values('" + Session["user"].ToString() + "','gpu','" + pro.Text + "','" + pri + "')";
+            string ordp = "insert into makecart(userr,product,gpu,gpuprice) values('" + Session["user"].ToString() + "','gpu','" + proq.Text + "','" + prig + "')";
             SqlCommand cmddd = new SqlCommand(ordp, conn);
             cmddd.ExecuteNonQuery();
             conn.Close();
