@@ -17,7 +17,7 @@ public partial class User_product_grid_motherboardgrid : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        SqlDataAdapter Adp = new SqlDataAdapter("select DISTINCT motherboard,mbp,ramno from cpubuild", conn);
+        SqlDataAdapter Adp = new SqlDataAdapter("select DISTINCT motherboard,mbp,ramno,gpuno from cpubuild", conn);
         DataTable Dt = new DataTable();
         Adp.Fill(Dt);
         GridView1.DataSource = Dt;
@@ -40,13 +40,15 @@ public partial class User_product_grid_motherboardgrid : System.Web.UI.Page
             Label pro = (Label)row.FindControl("Label1");
             Label mbprice = (Label)row.FindControl("Label2");
             Label mbslot = (Label)row.FindControl("Label3");
+            Label gpuslot = (Label)row.FindControl("Label4");
 
 
 
-            
+
             int pri = int.Parse(mbprice.Text);
             int slo = int.Parse(mbslot.Text);
-            string ordp = "insert into makecart(userr,product,mb,mbprice,mbslot) values('" + Session["user"].ToString() + "','motherboard','" + pro.Text + "','" + pri + "','" + slo + "')";
+            int gpus = int.Parse(gpuslot.Text);
+            string ordp = "insert into makecart(userr,product,mb,mbprice,mbslot,gpuslot) values('" + Session["user"].ToString() + "','motherboard','" + pro.Text + "','" + pri + "','" + slo + "','" + gpus + "')";
             SqlCommand cmddd = new SqlCommand(ordp, conn);
             cmddd.ExecuteNonQuery();
             conn.Close();

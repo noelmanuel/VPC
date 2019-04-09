@@ -34,18 +34,14 @@ public partial class User_product_grid_ramgrid : System.Web.UI.Page
 
             Label pro = (Label)row.FindControl("Label1");
             Label mbprice = (Label)row.FindControl("Label2");
-            Label mbslot = (Label)row.FindControl("Label3");
-
-
-
-
+            
             int pri = int.Parse(mbprice.Text);
-            int slo = int.Parse(mbslot.Text);
+            
             string ordp = "insert into makecart(userr,product,ram,ramprice) values('" + Session["user"].ToString() + "','ram','" + pro.Text + "','" + pri + "')";
             SqlCommand cmddd = new SqlCommand(ordp, conn);
             cmddd.ExecuteNonQuery();
             conn.Close();
-            Response.Write(" <script>window.alert('Motherboard Added');</script>");
+            Response.Write(" <script>window.alert('RAM Added');</script>");
             Response.Redirect("~/User/startpc.aspx");
         }
     }

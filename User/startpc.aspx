@@ -84,6 +84,23 @@
                      
                     </asp:Panel>
 
+                    <asp:Panel ID="Panel3" runat="server">
+                        <asp:Label ID="Label8" runat="server" Width="580"></asp:Label>
+                        <asp:Button ID="Button15" CssClass="add" runat="server" Text="ADD" BackColor="#00CCFF" ForeColor="White" Height="20" Width="50" BorderStyle="None" OnClick="gpu15_Click" />
+                        <asp:Button ID="Button16" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delgpu16_Click" /><br /><br />
+                    </asp:Panel>
+
+                    <asp:Panel ID="Panel4" runat="server">
+                        <asp:Label ID="Label9" runat="server" Width="580"></asp:Label>
+                        <asp:Button ID="Button17" CssClass="add" runat="server" Text="ADD" BackColor="#00CCFF" ForeColor="White" Height="20" Width="50" BorderStyle="None" OnClick="gpu17_Click" />
+                        <asp:Button ID="Button18" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delgpu18_Click" /><br /><br />
+
+                        <asp:Label ID="Label10" runat="server" Width="580"></asp:Label>
+                        <asp:Button ID="Button19" CssClass="add" runat="server" Text="ADD" BackColor="#00CCFF" ForeColor="White" Height="20" Width="50" BorderStyle="None" OnClick="gpu19_Click" />
+                        <asp:Button ID="Button20" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delgpu20_Click" /><br /><br />
+
+                    </asp:Panel>
+
 
                 </td>
             </tr>

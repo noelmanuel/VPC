@@ -13,7 +13,7 @@
         <div style="height:790px;">
 
         <h3 style="padding-top:17px; margin-left:10%;">SELECT RAM</h3>
-    <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="5" CellSpacing="3" Width="843px">
+    <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="5" CellSpacing="3" Width="843px" OnRowCommand="GridView1_RowCommand">
         <Columns>
             <asp:TemplateField HeaderText="Motherboard ">
                 <ItemTemplate>
