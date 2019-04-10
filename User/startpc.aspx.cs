@@ -30,6 +30,8 @@ public partial class User_startpc : System.Web.UI.Page
         hdd_check();
         ssd_check();
         pro_check();
+        cool_check();
+        sound_check();
 
     }
 
@@ -417,6 +419,58 @@ public partial class User_startpc : System.Web.UI.Page
         conn.Close();
     }
 
+    public void cool_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "cooler";
+        string insertQuery = "select cooler from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd14 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader14 = cmd14.ExecuteReader();
+        if (reader14.HasRows)
+        {
+            reader14.Read();
+            string no = reader14.GetValue(0).ToString();
+            Label14.Text = no;
+            reader14.Close();
+            Button27.Enabled = false;
+        }
+
+        else
+        {
+            reader14.Close();
+            Label14.Text = "ADD CPU COOLER";
+        }
+
+        conn.Close();
+    }
+
+    public void sound_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "soundcard";
+        string insertQuery = "select soundcard from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd15 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader15 = cmd15.ExecuteReader();
+        if (reader15.HasRows)
+        {
+            reader15.Read();
+            string no = reader15.GetValue(0).ToString();
+            Label15.Text = no;
+            reader15.Close();
+            Button29.Enabled = false;
+        }
+
+        else
+        {
+            reader15.Close();
+            Label15.Text = "ADD SOUNDCARD";
+        }
+
+        conn.Close();
+    }
+
     protected void Button1_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/User/Product grid/motherboardgrid.aspx");
@@ -622,6 +676,38 @@ public partial class User_startpc : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
         string str2 = "delete from makecart where product='processor' AND userr='" + Session["user"].ToString() + "' AND pro='" + Label13.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void cool23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/coolergrid.aspx");
+    }
+
+    protected void delcool24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='cooler' AND userr='" + Session["user"].ToString() + "' AND cooler='" + Label14.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void sound23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/soundcardgrid.aspx");
+    }
+
+    protected void delsound24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='soundcard' AND userr='" + Session["user"].ToString() + "' AND soundcard='" + Label15.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
