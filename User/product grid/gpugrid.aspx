@@ -15,7 +15,7 @@
         <h3 style="padding-top:17px; margin-left:10%;">SELECT GPU</h3>
     <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="5" CellSpacing="3" Width="843px" OnRowCommand="GridView1_RowCommand">
         <Columns>
-            <asp:TemplateField HeaderText="Motherboard ">
+            <asp:TemplateField HeaderText="Video Card">
                 <ItemTemplate>
                     <asp:Label ID="gpu_la" runat="server" Text='<%# Eval("gpu") %>'></asp:Label>
                 </ItemTemplate>

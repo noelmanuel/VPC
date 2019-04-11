@@ -32,8 +32,25 @@ public partial class User_startpc : System.Web.UI.Page
         pro_check();
         cool_check();
         sound_check();
+        network_check();
+        cd_check();
+        power_check();
+        case_check();
+        casefan_check();   
+        monitor_check();
+        keyboard_check();
+        mouse_check();
+        speaker_check();
+        ups_check();
+        software_check();
+        os_check();
+        
+       
+
 
     }
+
+    
 
     public void motherboard_check()
     {
@@ -50,6 +67,8 @@ public partial class User_startpc : System.Web.UI.Page
             Image1.ImageUrl = "~/images/mboff.jpg";
             reader.Close();
             Button1.Enabled = false;
+            Button1.ForeColor = System.Drawing.Color.White;
+            Button1.BackColor = System.Drawing.Color.Gray;
         }
 
         else
@@ -154,6 +173,10 @@ public partial class User_startpc : System.Web.UI.Page
                         Label2.Text = noi;
                         Button3.Enabled = false;
                         Button7.Enabled = false;
+                        Button3.ForeColor = System.Drawing.Color.White;
+                        Button3.BackColor = System.Drawing.Color.Gray;
+                        Button7.ForeColor = System.Drawing.Color.White;
+                        Button7.BackColor = System.Drawing.Color.Gray;
 
                     }
                     else
@@ -173,6 +196,10 @@ public partial class User_startpc : System.Web.UI.Page
                         Label3.Text = noii;
                         Button5.Enabled = false;
                         Button9.Enabled = false;
+                        Button5.ForeColor = System.Drawing.Color.White;
+                        Button5.BackColor = System.Drawing.Color.Gray;
+                        Button9.ForeColor = System.Drawing.Color.White;
+                        Button9.BackColor = System.Drawing.Color.Gray;
 
                     }
                     else
@@ -190,6 +217,8 @@ public partial class User_startpc : System.Web.UI.Page
                         string nop = reader1.GetValue(0).ToString();
                         Label6.Text = nop;
                         Button11.Enabled = false;
+                        Button11.ForeColor = System.Drawing.Color.White;
+                        Button11.BackColor = System.Drawing.Color.Gray;
 
                     }
                     else
@@ -208,6 +237,8 @@ public partial class User_startpc : System.Web.UI.Page
                         string nopp = reader1.GetValue(0).ToString();
                         Label7.Text = nopp;
                         Button13.Enabled = false;
+                        Button13.ForeColor = System.Drawing.Color.White;
+                        Button13.BackColor = System.Drawing.Color.Gray;
 
 
                     }
@@ -282,6 +313,10 @@ public partial class User_startpc : System.Web.UI.Page
                         Label9.Text = item2;
                         Button15.Enabled = false;
                         Button17.Enabled = false;
+                        Button15.ForeColor = System.Drawing.Color.White;
+                        Button15.BackColor = System.Drawing.Color.Gray;
+                        Button17.ForeColor = System.Drawing.Color.White;
+                        Button17.BackColor = System.Drawing.Color.Gray;
                     }
                     else
                     {
@@ -298,6 +333,8 @@ public partial class User_startpc : System.Web.UI.Page
                         Label10.Text = item3;
 
                         Button19.Enabled = false;
+                        Button19.ForeColor = System.Drawing.Color.White;
+                        Button19.BackColor = System.Drawing.Color.Gray;
 
                     }
                     else
@@ -356,6 +393,8 @@ public partial class User_startpc : System.Web.UI.Page
             Label11.Text = no;
             reader9.Close();
             Button21.Enabled = false;
+            Button21.ForeColor = System.Drawing.Color.White;
+            Button21.BackColor = System.Drawing.Color.Gray;
         }
 
         else
@@ -382,6 +421,8 @@ public partial class User_startpc : System.Web.UI.Page
             Label12.Text = no;
             reader12.Close();
             Button23.Enabled = false;
+            Button23.ForeColor = System.Drawing.Color.White;
+            Button23.BackColor = System.Drawing.Color.Gray;
         }
 
         else
@@ -408,6 +449,8 @@ public partial class User_startpc : System.Web.UI.Page
             Label13.Text = no;
             reader13.Close();
             Button25.Enabled = false;
+            Button25.ForeColor = System.Drawing.Color.White;
+            Button25.BackColor = System.Drawing.Color.Gray;
         }
 
         else
@@ -434,6 +477,8 @@ public partial class User_startpc : System.Web.UI.Page
             Label14.Text = no;
             reader14.Close();
             Button27.Enabled = false;
+            Button27.ForeColor = System.Drawing.Color.White;
+            Button27.BackColor = System.Drawing.Color.Gray;
         }
 
         else
@@ -460,6 +505,8 @@ public partial class User_startpc : System.Web.UI.Page
             Label15.Text = no;
             reader15.Close();
             Button29.Enabled = false;
+            Button29.ForeColor = System.Drawing.Color.White;
+            Button29.BackColor = System.Drawing.Color.Gray;
         }
 
         else
@@ -470,6 +517,355 @@ public partial class User_startpc : System.Web.UI.Page
 
         conn.Close();
     }
+
+    public void network_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "networkcard";
+        string insertQuery = "select networkcard from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd16 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader16 = cmd16.ExecuteReader();
+        if (reader16.HasRows)
+        {
+            reader16.Read();
+            string no = reader16.GetValue(0).ToString();
+            Label16.Text = no;
+            reader16.Close();
+            Button31.Enabled = false;
+            Button31.ForeColor = System.Drawing.Color.White;
+            Button31.BackColor = System.Drawing.Color.Gray;
+        }
+
+        else
+        {
+            reader16.Close();
+            Label16.Text = "ADD NETWORKCARD";
+        }
+
+        conn.Close();
+    }
+
+
+    public void cd_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "optical drive";
+        string insertQuery = "select opticaldrive from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd17 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader17 = cmd17.ExecuteReader();
+        if (reader17.HasRows)
+        {
+            reader17.Read();
+            string no = reader17.GetValue(0).ToString();
+            Label17.Text = no;
+            reader17.Close();
+            Button33.Enabled = false;
+            Button33.ForeColor = System.Drawing.Color.White;
+            Button33.BackColor = System.Drawing.Color.Gray;
+        }
+
+        else
+        {
+            reader17.Close();
+            Label17.Text = "ADD OPTICAL DRIVE";
+        }
+
+        conn.Close();
+    }
+
+
+    public void power_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "smps";
+        string insertQuery = "select powerr from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd18 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader18 = cmd18.ExecuteReader();
+        if (reader18.HasRows)
+        {
+            reader18.Read();
+            string no = reader18.GetValue(0).ToString();
+            Label18.Text = no;
+            reader18.Close();
+            Button35.Enabled = false;
+            Button35.ForeColor = System.Drawing.Color.White;
+            Button35.BackColor = System.Drawing.Color.Gray;
+        }
+
+        else
+        {
+            reader18.Close();
+            Label18.Text = "ADD SMPS";
+        }
+
+        conn.Close();
+    }
+
+
+    public void case_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "case";
+        string insertQuery = "select casee from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd19 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader19 = cmd19.ExecuteReader();
+        if (reader19.HasRows)
+        {
+            reader19.Read();
+            string no = reader19.GetValue(0).ToString();
+            Label19.Text = no;
+            reader19.Close();
+            Button37.Enabled = false;
+            Button37.ForeColor = System.Drawing.Color.White;
+            Button37.BackColor = System.Drawing.Color.Gray;
+        }
+
+        else
+        {
+            reader19.Close();
+            Label19.Text = "ADD CASE";
+        }
+
+        conn.Close();
+    }
+
+    public void casefan_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "casefan";
+        string insertQuery = "select casefan from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd20 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader20 = cmd20.ExecuteReader();
+        if (reader20.HasRows)
+        {
+            reader20.Read();
+            string no = reader20.GetValue(0).ToString();
+            Label20.Text = no;
+            reader20.Close();
+            Button39.Enabled = false;
+            Button39.ForeColor = System.Drawing.Color.White;
+            Button39.BackColor = System.Drawing.Color.Gray;
+        }
+
+        else
+        {
+            reader20.Close();
+            Label20.Text = "ADD CASE FAN";
+        }
+
+        conn.Close();
+    }
+
+    public void monitor_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "monitor";
+        string insertQuery = "select monitor from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd21 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader21 = cmd21.ExecuteReader();
+        if (reader21.HasRows)
+        {
+            reader21.Read();
+            string no = reader21.GetValue(0).ToString();
+            Label21.Text = no;
+            reader21.Close();
+            Button41.Enabled = false;
+            Button41.ForeColor = System.Drawing.Color.White;
+            Button41.BackColor = System.Drawing.Color.Gray;
+            Image2.ImageUrl = "~/images/deskoff.jpg";
+        }
+
+        else
+        {
+            reader21.Close();
+            Label21.Text = "ADD MONITOR";
+        }
+
+        conn.Close();
+    }
+
+    public void keyboard_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "keyboard";
+        string insertQuery = "select keyboard from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd22 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader21 = cmd22.ExecuteReader();
+        if (reader21.HasRows)
+        {
+            reader21.Read();
+            string no = reader21.GetValue(0).ToString();
+            Label22.Text = no;
+            reader21.Close();
+            Button43.Enabled = false;
+            Button43.ForeColor = System.Drawing.Color.White;
+            Button43.BackColor = System.Drawing.Color.Gray;
+            Image2.ImageUrl = "~/images/deskoff.jpg";
+        }
+
+        else
+        {
+            reader21.Close();
+            Label22.Text = "ADD KEYBOARD";
+        }
+
+        conn.Close();
+    }
+
+    public void mouse_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "mice";
+        string insertQuery = "select mouse from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd23 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader211 = cmd23.ExecuteReader();
+        if (reader211.HasRows)
+        {
+            reader211.Read();
+            string no = reader211.GetValue(0).ToString();
+            Label23.Text = no;
+            reader211.Close();
+            Button45.Enabled = false;
+            Button45.ForeColor = System.Drawing.Color.White;
+            Button45.BackColor = System.Drawing.Color.Gray;
+            Image2.ImageUrl = "~/images/deskoff.jpg";
+        }
+
+        else
+        {
+            reader211.Close();
+            Label23.Text = "ADD MOUSE";
+        }
+
+        conn.Close();
+    }
+
+    public void speaker_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "speaker";
+        string insertQuery = "select speaker from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd24 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader21 = cmd24.ExecuteReader();
+        if (reader21.HasRows)
+        {
+            reader21.Read();
+            string no = reader21.GetValue(0).ToString();
+            Label24.Text = no;
+            reader21.Close();
+            Button47.Enabled = false;
+            Button47.ForeColor = System.Drawing.Color.White;
+            Button47.BackColor = System.Drawing.Color.Gray;
+            Image2.ImageUrl = "~/images/deskoff.jpg";
+        }
+
+        else
+        {
+            reader21.Close();
+            Label24.Text = "ADD SPEAKER";
+        }
+
+        conn.Close();
+    }
+
+    public void ups_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "ups";
+        string insertQuery = "select ups from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd25 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader21 = cmd25.ExecuteReader();
+        if (reader21.HasRows)
+        {
+            reader21.Read();
+            string no = reader21.GetValue(0).ToString();
+            Label25.Text = no;
+            reader21.Close();
+            Button49.Enabled = false;
+            Button49.ForeColor = System.Drawing.Color.White;
+            Button49.BackColor = System.Drawing.Color.Gray;
+            Image2.ImageUrl = "~/images/deskoff.jpg";
+        }
+
+        else
+        {
+            reader21.Close();
+            Label25.Text = "ADD UPS";
+        }
+
+        conn.Close();
+    }
+
+    public void software_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "software";
+        string insertQuery = "select software from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd26 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader21 = cmd26.ExecuteReader();
+        if (reader21.HasRows)
+        {
+            reader21.Read();
+            string no = reader21.GetValue(0).ToString();
+            Label26.Text = "Added";
+            reader21.Close();
+            Button51.Enabled = false;
+            Button51.ForeColor = System.Drawing.Color.White;
+            Button51.BackColor = System.Drawing.Color.Gray;
+            Image2.ImageUrl = "~/images/deskoff.jpg";
+        }
+
+        else
+        {
+            reader21.Close();
+            Label26.Text = "ADD SOFTWARE";
+        }
+
+        conn.Close();
+    }
+
+    public void os_check()
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string catt = "os";
+        string insertQuery = "select os from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        SqlCommand cmd27 = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader21 = cmd27.ExecuteReader();
+        if (reader21.HasRows)
+        {
+            reader21.Read();
+            string no = reader21.GetValue(0).ToString();
+            Label27.Text = no;
+            reader21.Close();
+            Button53.Enabled = false;
+            Button53.ForeColor = System.Drawing.Color.White;
+            Button53.BackColor = System.Drawing.Color.Gray;
+            Image2.ImageUrl = "~/images/deskoff.jpg";
+        }
+
+        else
+        {
+            reader21.Close();
+            Label27.Text = "ADD OS";
+        }
+
+        conn.Close();
+    }
+
+    
+
 
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -482,7 +878,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='motherboard' AND userr='" + Session["user"].ToString() + "'";
+        string str2 = "delete from makecart where userr='" + Session["user"].ToString() + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -713,4 +1109,221 @@ public partial class User_startpc : System.Web.UI.Page
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
         conn.Close();
     }
+
+    protected void net23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/networkcardgrid.aspx");
+    }
+
+    protected void delnet24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='networkcard' AND userr='" + Session["user"].ToString() + "' AND networkcard='" + Label16.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void cd23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/opticaldrivegrid.aspx");
+    }
+
+    protected void delcd24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='optical drive' AND userr='" + Session["user"].ToString() + "' AND opticaldrive='" + Label17.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void power23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/smpsgrid.aspx");
+    }
+
+    protected void delpower24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='smps' AND userr='" + Session["user"].ToString() + "' AND powerr='" + Label18.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void case23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/casegrid.aspx");
+    }
+
+    protected void delcase24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='case' AND userr='" + Session["user"].ToString() + "' AND casee='" + Label19.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void casefan23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/casefangrid.aspx");
+    }
+
+    protected void delcasefan24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='casefan' AND userr='" + Session["user"].ToString() + "' AND casefan='" + Label20.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void mon23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/monitorgrid.aspx");
+    }
+
+    protected void delmon24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='monitor' AND userr='" + Session["user"].ToString() + "' AND monitor='" + Label21.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void key23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/keyboardgrid.aspx");
+    }
+
+    protected void delkey24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='keyboard' AND userr='" + Session["user"].ToString() + "' AND keyboard='" + Label22.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void mouse23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/mousegrid.aspx");
+    }
+
+    protected void delmouse24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='mouse' AND userr='" + Session["user"].ToString() + "' AND mouse='" + Label23.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void speaker23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/speakergrid.aspx");
+    }
+
+    protected void delspeaker24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='speaker' AND userr='" + Session["user"].ToString() + "' AND speaker='" + Label24.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void software23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/softwaregrid.aspx");
+    }
+
+    protected void delsoftware24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='software' AND userr='" + Session["user"].ToString() + "' AND software='" + Label26.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void os23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/osgrid.aspx");
+    }
+
+    protected void delos24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='os' AND userr='" + Session["user"].ToString() + "' AND os='" + Label27.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void ups23_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/Product grid/upsgrid.aspx");
+    }
+
+    protected void delups24_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where product='ups' AND userr='" + Session["user"].ToString() + "' AND ups='" + Label25.Text + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void Button55_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string ordp = "insert into finalcart(mb,builtname) select mb,'nonu' from makecart";
+        SqlCommand cmddd = new SqlCommand(ordp, conn);
+        cmddd.ExecuteNonQuery();
+        conn.Close();
+        Response.Write(" <script>window.alert('Added');</script>");
+        
+    }
+
+    protected void Button56_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string str2 = "delete from makecart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmd = new SqlCommand(str2, conn);
+        cmd.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Item Cleared'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+
 }

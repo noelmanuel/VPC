@@ -315,7 +315,7 @@ a{
 
 
 
-#login{
+.login{
 
     color:black;
     font-weight:bold;
@@ -323,7 +323,7 @@ a{
     border-right:1px solid grey;
 }
 
-#reg{
+.reg{
 
     color:black;
     font-weight:bold;

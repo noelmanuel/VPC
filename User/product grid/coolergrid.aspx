@@ -19,7 +19,7 @@
         <h3 style="padding-top:17px; margin-left:10%;">SELECT CPU COOLER</h3>
     <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="5" CellSpacing="3" Width="843px" OnRowCommand="GridView1_RowCommand" >
         <Columns>
-            <asp:TemplateField HeaderText="Processor">
+            <asp:TemplateField HeaderText="CPU Cooler">
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Eval("cool") %>'></asp:Label>
                 </ItemTemplate>

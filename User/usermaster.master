@@ -23,9 +23,11 @@
                     <a href="#"><img src="/images/LOGO.jpg" height="40px" width="300px" /></a>
                 </div>
                 <div class="login_box">
-                    <a href="../userhome.aspx" id="login">Home &nbsp</a>
-                    <a href="../Default.aspx" id="reg">&nbsp Sign out</a> &nbsp&nbsp&nbsp&nbsp
-                    <a href="../addcart.aspx" style=" color:#e7b93c;">&nbsp Your Cart</a>
+                    
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/User/userhome.aspx" CssClass="Login">Home</asp:HyperLink>&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx" CssClass="reg"> Sign out</asp:HyperLink> &nbsp&nbsp&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink3" NavigateUrl="~/User/addcart.aspx" runat="server" ForeColor="#E7B93C"> Your Cart</asp:HyperLink>
+                    
                 </div>
 
 
