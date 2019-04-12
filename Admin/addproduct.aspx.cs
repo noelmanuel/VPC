@@ -115,4 +115,9 @@ public partial class Admin_addproduct : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/Product admin/addsoftware.aspx");
     }
+
+    protected void soo_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/Product admin/addcasefan.aspx");
+    }
 }
