@@ -6,14 +6,39 @@
         .auto-style1 {
             text-align: center;
         }
+        .drd
+        {
+            border:1px solid #d9d9d9;
+            outline:none;
+        }
+        .sp
+        {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:15px;
+            width:200px;
+        }
+        td
+        {
+            width:25%;
+            padding-left:30px;
+           
+        }
+        .scr
+        {
+            height:650px; 
+            overflow:scroll;
+        }
+       
     </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <div class="section_backgound">
     <table>
+        <h3 style="padding-top:17px; margin-left:10%;">BUILT YOUR COMPACTIBILITY FOR EACH MOTHERBOARD</h3>
         <tr>
             <td style="vertical-align:top">
+                <div class="scr">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource1">
                 <Columns>
                  <asp:TemplateField HeaderText="Select">
@@ -39,10 +64,13 @@
              <SortedDescendingCellStyle BackColor="#F1E5CE" />
              <SortedDescendingHeaderStyle BackColor="#93451F" />
          </asp:GridView>
-         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [motherboard]"></asp:SqlDataSource>                         
+                    
+         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [motherboard]"></asp:SqlDataSource>       
+                    </div>                  
         </td>
 
         <td style="vertical-align:top">
+            <div class="scr">
           <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource2">
               <Columns>
                   <asp:TemplateField HeaderText="Select">
@@ -69,10 +97,12 @@
               <SortedDescendingHeaderStyle BackColor="#93451F" />
             </asp:GridView>
          <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [ram]"></asp:SqlDataSource>
+                </div>
         </td>
         
                  
          <td style="vertical-align:top">
+             <div class="scr">
              <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource3">
                  <Columns>
                      <asp:TemplateField HeaderText="Select">
@@ -99,9 +129,11 @@
                  <SortedDescendingHeaderStyle BackColor="#93451F" />
              </asp:GridView>
              <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [gpu]"></asp:SqlDataSource>
+            </div>
             </td>
         
             <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource4">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -128,13 +160,15 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [cooler]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
         </tr>
 
 
 
         <tr>
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource5">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -161,9 +195,11 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [hdd]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
 
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource6">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -190,9 +226,11 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [ssd]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
 
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView7" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource7">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -219,9 +257,11 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [cddrive]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
 
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView8" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource8">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -248,13 +288,15 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [processor]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
             
             
         </tr>
 
         <tr>
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView9" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource9">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -281,9 +323,11 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource9" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [soundcard]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
 
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView10" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource10">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -310,9 +354,11 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource10" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [net]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
 
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView11" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource11">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -339,9 +385,11 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [casee]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
 
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView12" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource12">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -368,14 +416,16 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource12" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [casefan]"></asp:SqlDataSource>
-            </td>
+                </div>
+                </td>
 
         </tr>
 
 
 
         <tr>
-            <td>
+            <td style="vertical-align:top">
+                <div class="scr">
                 <asp:GridView ID="GridView13" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource13">
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
@@ -402,11 +452,25 @@
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource13" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [smps]"></asp:SqlDataSource>
+                </div>
+                </td>
+            
+            <td>
+                <span class="sp">RAM SLOT</span><br />
+                <asp:DropDownList ID="DropDownList1" runat="server" Height="50px" Width="150px" CssClass="drd">
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>4</asp:ListItem>
+                </asp:DropDownList><br /><br />
+                <span class="sp">GPU SLOT</span><br />
+                <asp:DropDownList ID="DropDownList2" Height="50px" Width="150px" CssClass="drd" runat="server">
+                    <asp:ListItem>1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                </asp:DropDownList><br /><br />
+
+                <asp:Button ID="Button1" runat="server" Text="SUBMIT" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button1_Click" />
             </td>
 
-            <td>
-            <asp:Button ID="Button1" runat="server" Text="SUBMIT" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button1_Click" />
-            </td>
+            
         </tr>
     </table>
         

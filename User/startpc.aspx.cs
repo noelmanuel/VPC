@@ -36,7 +36,7 @@ public partial class User_startpc : System.Web.UI.Page
         cd_check();
         power_check();
         case_check();
-        casefan_check();   
+        casefan_check();
         monitor_check();
         keyboard_check();
         mouse_check();
@@ -44,13 +44,13 @@ public partial class User_startpc : System.Web.UI.Page
         ups_check();
         software_check();
         os_check();
-        
-       
+
+
 
 
     }
 
-    
+
 
     public void motherboard_check()
     {
@@ -159,7 +159,7 @@ public partial class User_startpc : System.Web.UI.Page
             {
                 if (j == 0)
                 {
-                    
+
 
 
                 }
@@ -300,7 +300,7 @@ public partial class User_startpc : System.Web.UI.Page
                 if (i == 0)
                 {
 
-                    
+
 
                 }
                 if (i == 1)
@@ -864,7 +864,7 @@ public partial class User_startpc : System.Web.UI.Page
         conn.Close();
     }
 
-    
+
 
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -872,7 +872,7 @@ public partial class User_startpc : System.Web.UI.Page
         Response.Redirect("~/User/Product grid/motherboardgrid.aspx");
     }
 
-    
+
 
     protected void Button2_Click(object sender, EventArgs e)
     {
@@ -885,7 +885,7 @@ public partial class User_startpc : System.Web.UI.Page
         conn.Close();
     }
 
-    
+
     protected void ram1_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/User/Product grid/ramgrid.aspx");
@@ -1302,17 +1302,7 @@ public partial class User_startpc : System.Web.UI.Page
         conn.Close();
     }
 
-    protected void Button55_Click(object sender, EventArgs e)
-    {
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        conn.Open();
-        string ordp = "insert into finalcart(mb,builtname) select mb,'nonu' from makecart";
-        SqlCommand cmddd = new SqlCommand(ordp, conn);
-        cmddd.ExecuteNonQuery();
-        conn.Close();
-        Response.Write(" <script>window.alert('Added');</script>");
-        
-    }
+
 
     protected void Button56_Click(object sender, EventArgs e)
     {
@@ -1326,4 +1316,275 @@ public partial class User_startpc : System.Web.UI.Page
     }
 
 
+    protected void Button55_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+
+        string baby = "ram";
+        string q = "select SUM(ramprice) from makecart where userr ='" + Session["user"].ToString() + "' AND product ='" + baby + "'";
+        SqlCommand cmdiron = new SqlCommand(q, conn);
+        SqlDataReader readeriron = cmdiron.ExecuteReader();
+        readeriron.Read();
+        string gym = readeriron.GetValue(0).ToString();
+        int gputot = int.Parse(gym);
+        readeriron.Close();
+
+        string q1 = "select SUM(gpuprice) from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'gpu'";
+        SqlCommand cmd1 = new SqlCommand(q1, conn);
+        SqlDataReader reader1 = cmd1.ExecuteReader();
+
+        reader1.Read();
+        string gym1 = reader1.GetValue(0).ToString();
+        int gputot1 = int.Parse(gym1);
+        reader1.Close();
+
+
+        string q2 = "select SUM(softwareprice) from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'software'";
+        SqlCommand cmd2 = new SqlCommand(q2, conn);
+        SqlDataReader reader2 = cmd2.ExecuteReader();
+
+        reader2.Read();
+        string gym2 = reader2.GetValue(0).ToString();
+        int gputot2 = int.Parse(gym2);
+        reader2.Close();
+
+
+        string q3 = "select mbprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'motherboard'";
+        SqlCommand cmd3 = new SqlCommand(q3, conn);
+        SqlDataReader reader3 = cmd3.ExecuteReader();
+
+        reader3.Read();
+        string gym3 = reader3.GetValue(0).ToString();
+        int gputot3 = int.Parse(gym3);
+        reader3.Close();
+
+
+        string q4 = "select hddprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'hdd'";
+        SqlCommand cmd4 = new SqlCommand(q4, conn);
+        SqlDataReader reader4 = cmd4.ExecuteReader();
+
+        reader4.Read();
+        string gym4 = reader4.GetValue(0).ToString();
+        int gputot4 = int.Parse(gym4);
+        reader4.Close();
+
+
+        string q5 = "select ssdprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'ssd'";
+        SqlCommand cmd5 = new SqlCommand(q5, conn);
+        SqlDataReader reader5 = cmd5.ExecuteReader();
+
+        reader5.Read();
+        string gym5 = reader5.GetValue(0).ToString();
+        int gputot5 = int.Parse(gym5);
+        reader5.Close();
+
+
+        string q6 = "select proprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'processor'";
+        SqlCommand cmd6 = new SqlCommand(q6, conn);
+        SqlDataReader reader6 = cmd6.ExecuteReader();
+
+        reader6.Read();
+        string gym6 = reader6.GetValue(0).ToString();
+        int gputot6 = int.Parse(gym6);
+        reader6.Close();
+
+
+        string q7 = "select coolerprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'cooler'";
+        SqlCommand cmd7 = new SqlCommand(q7, conn);
+        SqlDataReader reader7 = cmd7.ExecuteReader();
+
+        reader7.Read();
+        string gym7 = reader7.GetValue(0).ToString();
+        int gputot7 = int.Parse(gym7);
+        reader7.Close();
+
+
+
+        string q8 = "select soundcardprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'soundcard'";
+        SqlCommand cmd8 = new SqlCommand(q8, conn);
+        SqlDataReader reader8 = cmd8.ExecuteReader();
+
+        reader8.Read();
+        string gym8 = reader8.GetValue(0).ToString();
+        int gputot8 = int.Parse(gym8);
+        reader8.Close();
+
+
+        string q9 = "select networkcardprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'networkcard'";
+        SqlCommand cmd9 = new SqlCommand(q9, conn);
+        SqlDataReader reader9 = cmd9.ExecuteReader();
+
+        reader9.Read();
+        string gym9 = reader9.GetValue(0).ToString();
+        int gputot9 = int.Parse(gym9);
+        reader9.Close();
+
+
+        string q10 = "select opticaldriveprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'optical drive'";
+        SqlCommand cmd10 = new SqlCommand(q10, conn);
+        SqlDataReader reader10 = cmd10.ExecuteReader();
+
+        reader10.Read();
+        string gym10 = reader10.GetValue(0).ToString();
+        int gputot10 = int.Parse(gym10);
+        reader10.Close();
+
+
+        string q11 = "select powerprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'smps'";
+        SqlCommand cmd11 = new SqlCommand(q11, conn);
+        SqlDataReader reader11 = cmd11.ExecuteReader();
+
+        reader11.Read();
+        string gym11 = reader11.GetValue(0).ToString();
+        int gputot11 = int.Parse(gym11);
+        reader11.Close();
+
+
+        string q12 = "select caseprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'case'";
+        SqlCommand cmd12 = new SqlCommand(q12, conn);
+        SqlDataReader reader12 = cmd12.ExecuteReader();
+
+        reader12.Read();
+        string gym12 = reader12.GetValue(0).ToString();
+        int gputot12 = int.Parse(gym12);
+        reader12.Close();
+
+
+        string q13 = "select casefanprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'casefan'";
+        SqlCommand cmd13 = new SqlCommand(q13, conn);
+        SqlDataReader reader13 = cmd13.ExecuteReader();
+
+        reader13.Read();
+        string gym13 = reader13.GetValue(0).ToString();
+        int gputot13 = int.Parse(gym13);
+        reader13.Close();
+
+
+        string q14 = "select monitorprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'monitor'";
+        SqlCommand cmd14 = new SqlCommand(q14, conn);
+        SqlDataReader reader14 = cmd14.ExecuteReader();
+
+        reader14.Read();
+        string gym14 = reader14.GetValue(0).ToString();
+        int gputot14 = int.Parse(gym14);
+        reader14.Close();
+
+
+        string q15 = "select keyboardprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'keyboard'";
+        SqlCommand cmd15 = new SqlCommand(q15, conn);
+        SqlDataReader reader15 = cmd15.ExecuteReader();
+
+        reader15.Read();
+        string gym15 = reader15.GetValue(0).ToString();
+        int gputot15 = int.Parse(gym15);
+        reader15.Close();
+
+
+        string q16 = "select mouseprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'mice'";
+        SqlCommand cmd16 = new SqlCommand(q16, conn);
+        SqlDataReader reader16 = cmd16.ExecuteReader();
+
+        reader16.Read();
+        string gym16 = reader16.GetValue(0).ToString();
+        int gputot16 = int.Parse(gym16);
+        reader16.Close();
+
+
+        string q17 = "select speakerprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'speaker'";
+        SqlCommand cmd17 = new SqlCommand(q17, conn);
+        SqlDataReader reader17 = cmd17.ExecuteReader();
+
+        reader17.Read();
+        string gym17 = reader17.GetValue(0).ToString();
+        int gputot17 = int.Parse(gym17);
+        reader17.Close();
+
+
+        string q18 = "select upsprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'ups'";
+        SqlCommand cmd18 = new SqlCommand(q18, conn);
+        SqlDataReader reader18 = cmd18.ExecuteReader();
+
+        reader18.Read();
+        string gym18 = reader18.GetValue(0).ToString();
+        int gputot18 = int.Parse(gym18);
+        reader18.Close();
+
+
+
+
+        string q20 = "select osprice from makecart where userr ='" + Session["user"].ToString() + "' AND product = 'os'";
+        SqlCommand cmd20 = new SqlCommand(q20, conn);
+        SqlDataReader reader20 = cmd20.ExecuteReader();
+
+        reader20.Read();
+        string gym20 = reader20.GetValue(0).ToString();
+        int gputot20 = int.Parse(gym20);
+        reader20.Close();
+
+
+
+        int grandtot = gputot + gputot1 + gputot2 + gputot3 + gputot4 + gputot5 + gputot6 + gputot7 + gputot8 + gputot9 + gputot10 + gputot11 + gputot12 + gputot13 + gputot14 + gputot15 + gputot16 + gputot17 + gputot18 + gputot20;
+
+
+        string ordp = "insert into finalcart(userr,transactionn,mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,totalp) select userr,'101',mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,'11' from makecart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdfinal = new SqlCommand(ordp, conn);
+        cmdfinal.ExecuteNonQuery();
+
+        String pass = "123456";
+        Random r = new Random();
+        char[] mypass = new char[6];
+        for (int i = 0; i < 6; i++)
+        {
+            mypass[i] = pass[(int)(4 * r.NextDouble())];
+
+        }
+        string bn = new string(mypass);
+        int thor = 101;
+
+        int tr = Convert.ToInt32(bn);
+
+        string iQ = "select transactionn from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdi = new SqlCommand(iQ, conn);
+        SqlDataReader readerw = cmdi.ExecuteReader();
+
+        if (readerw.HasRows)
+        {
+            readerw.Read();
+            string noiq = readerw.GetValue(0).ToString();
+            int yy = Convert.ToInt32(noiq);
+            readerw.Close();
+            if (yy == tr && yy == thor)
+            {
+                tr = tr + 1;
+
+                string upt = "update finalcart set transactionn='" + tr + "', totalp='" + grandtot + "' where userr='" + Session["user"].ToString() + "'";
+                SqlCommand cmdu = new SqlCommand(upt, conn);
+                cmdu.ExecuteNonQuery();
+            }
+            else
+            {
+                string upt = "update finalcart set transactionn='" + tr + "', totalp='" + grandtot + "' where userr='" + Session["user"].ToString() + "'";
+                SqlCommand cmdu = new SqlCommand(upt, conn);
+                cmdu.ExecuteNonQuery();
+            }
+
+
+
+
+           
+
+        }
+        else
+        {
+            string upt = "update finalcart set transactionn='" + tr + "', totalp='" + grandtot + "' where userr='" + Session["user"].ToString() + "'";
+            SqlCommand cmdu = new SqlCommand(upt, conn);
+            cmdu.ExecuteNonQuery();
+        }
+
+        conn.Close();
+        Response.Write(" <script>window.alert('ADDED TO CART');</script>");
+        Response.Redirect("~/User/buildcart.aspx");
+
+    }
 }

@@ -26,7 +26,8 @@
                     
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/User/userhome.aspx" CssClass="Login">Home</asp:HyperLink>&nbsp&nbsp
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx" CssClass="reg"> Sign out</asp:HyperLink> &nbsp&nbsp&nbsp&nbsp
-                    <asp:HyperLink ID="HyperLink3" NavigateUrl="~/User/addcart.aspx" runat="server" ForeColor="#E7B93C"> Your Cart</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" NavigateUrl="~/User/addcart.aspx" runat="server" ForeColor="#E7B93C"> Your Cart</asp:HyperLink>&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink4" NavigateUrl="~/User/buildcart.aspx" runat="server" ForeColor="#E7B93C"> Build Cart</asp:HyperLink>
                     
                 </div>
 
