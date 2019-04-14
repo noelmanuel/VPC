@@ -24,10 +24,10 @@
                 </div>
                 <div class="login_box">
                     
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/User/userhome.aspx" CssClass="Login">Home</asp:HyperLink>&nbsp&nbsp
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx" CssClass="reg"> Sign out</asp:HyperLink> &nbsp&nbsp&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/User/userhome.aspx" CssClass="Login" ForeColor="#66CCFF">Home</asp:HyperLink>&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx" CssClass="reg" ForeColor="Red"> Sign out</asp:HyperLink> &nbsp&nbsp&nbsp&nbsp
                     <asp:HyperLink ID="HyperLink3" NavigateUrl="~/User/addcart.aspx" runat="server" ForeColor="#E7B93C"> Your Cart</asp:HyperLink>&nbsp&nbsp
-                    <asp:HyperLink ID="HyperLink4" NavigateUrl="~/User/buildcart.aspx" runat="server" ForeColor="#E7B93C"> Build Cart</asp:HyperLink>
+                    <asp:Button ID="Button1" runat="server" Text="Build Cart" Height="25" Width="80" ForeColor="White" BackColor="#CC6600" OnClick="Button1_Click" BorderStyle="None" />
                     
                 </div>
 

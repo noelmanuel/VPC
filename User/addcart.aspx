@@ -104,7 +104,7 @@
              <h2>GRAND TOTAL <br />₹ <asp:Label ID="Label7" runat="server" Height="50px" Width="100px" CssClass="aa"></asp:Label></h2>
              <table style="width:60%; ">
                  <tr>
-                     <td style="width:35%; border:1px solid #efefef; padding:30px;">
+                     <td style="width:35%; border:1px solid #efefef; padding:30px; ">
              <span class="spa">Address</span><br />
              <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" placeholder="House No/Flat"></asp:TextBox><br /><br />
              <asp:TextBox ID="TextBox3" runat="server" CssClass="txtadd" placeholder="State"></asp:TextBox><br /><br />

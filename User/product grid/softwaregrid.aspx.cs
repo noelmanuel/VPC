@@ -39,16 +39,51 @@ public partial class User_product_grid_softwaregrid : System.Web.UI.Page
         
     }
 
-    private void deleterow(string pro,int rollno)
+    private void deleterow(string pro, int rollno)
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string ordp = "insert into makecart(userr,product,software,softwareprice) values('" + Session["user"].ToString() + "','software','" + pro + "','" + rollno + "')";
-        SqlCommand cmddd = new SqlCommand(ordp, conn);
-        cmddd.ExecuteNonQuery();
-        conn.Close();
-        
+        string major = "";
+        string uptmb = "select mb from makecart where userr='" + Session["user"].ToString() + "' AND mb !='" + major + "'";
+        SqlCommand cmd25 = new SqlCommand(uptmb, conn);
+        SqlDataReader reader21 = cmd25.ExecuteReader();
+        if (reader21.HasRows)
+        {
+            reader21.Read();
+            string no = reader21.GetValue(0).ToString();
+            reader21.Close();
 
+            string ramslot = "select mbslot from makecart where userr='" + Session["user"].ToString() + "' AND mb = '" + no + "'";
+            SqlCommand cmdd2 = new SqlCommand(ramslot, conn);
+            SqlDataReader reader2 = cmdd2.ExecuteReader();
+            reader2.Read();
+            string gym = reader2.GetValue(0).ToString();
+            int gputot3 = int.Parse(gym);
+            reader2.Close();
+
+            string gslot = "select gpuslot from makecart where userr='" + Session["user"].ToString() + "' AND mb = '" + no + "'";
+            SqlCommand cmdd4 = new SqlCommand(gslot, conn);
+            SqlDataReader reader4 = cmdd4.ExecuteReader();
+            reader4.Read();
+            string noo = reader4.GetValue(0).ToString();
+            int gputot = int.Parse(noo);
+            reader4.Close();
+
+            string q3 = "select mbprice from makecart where userr ='" + Session["user"].ToString() + "' AND mb = '" + no + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            reader3.Read();
+            string gym3 = reader3.GetValue(0).ToString();
+            int gputot4 = int.Parse(gym3);
+            reader3.Close();
+
+            string ordp = "insert into makecart(userr,product,mb,mbprice,mbslot,gpuslot,software,softwareprice) values('" + Session["user"].ToString() + "','software','" + no + "','" + gputot4 + "','" + gputot3 + "','" + gputot + "','" + pro + "','" + rollno + "')";
+            SqlCommand cmddd = new SqlCommand(ordp, conn);
+            cmddd.ExecuteNonQuery();
+            conn.Close();
+
+
+        }
     }
 
     protected void Button1_Click2(object sender, EventArgs e)
