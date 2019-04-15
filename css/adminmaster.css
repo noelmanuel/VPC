@@ -128,7 +128,7 @@ h3{
     
 }
 
-#login{
+.login{
 
     color:black;
     font-weight:bold;
@@ -136,7 +136,7 @@ h3{
     border-right:1px solid grey;
 }
 
-#reg{
+.reg{
 
     color:black;
     font-weight:bold;
@@ -144,8 +144,8 @@ h3{
     
 }
 
-#login:hover{color:green;}
-#reg:hover{color:red;}
+.login:hover{color:green;}
+.reg:hover{color:red;}
 
 .cata_parts{
     width:100%;

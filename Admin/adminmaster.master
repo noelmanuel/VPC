@@ -9,7 +9,7 @@
 
     </asp:ContentPlaceHolder>
         <link rel="stylesheet" type="text/css" href="/css/adminmaster.css"/>
-        <link rel="stylesheet" href="../css/adminres.css">
+        <link rel="stylesheet" href="../css/adminres.css"/>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -23,22 +23,22 @@
                     <a href="#"><img src="/images/LOGO.jpg" height="40px" width="300px" /></a>
                 </div>
                 <div class="login_box">
-                    <a href="/Admin/adminhome.aspx" id="login">Home &nbsp</a>
-                    <a href="/Default.aspx" id="reg">&nbsp Sign out</a>
+                    <asp:HyperLink ID="HyperLink1" CssClass="login" NavigateUrl="~/Admin/adminhome.aspx" runat="server">Home &nbsp</asp:HyperLink>&nbsp
+                    <asp:HyperLink ID="HyperLink2" CssClass="reg" NavigateUrl="~/Default.aspx" runat="server">Sign Out</asp:HyperLink>
                 </div>
 
 
             </div>
             <div class="option_rec">
                 <div class="option1">
-                    <a href="addcompacthardware.aspx"><img src="/images/amke.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="selectcompact.aspx"><img src="/images/amke.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
                     
                     
                     
                 </div>
                 <div class="option2">
 
-                    <a href="addcompact.aspx"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="#"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                 <div class="option3">

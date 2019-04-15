@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/adminmaster.master" AutoEventWireup="true" CodeFile="adminhome.aspx.cs" Inherits="Admin_adminhome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-<style>
+    <style>
     .btn_com{
         width:180px;
         height:50px;
@@ -37,8 +37,7 @@
              
              <div class="approval">
              <asp:Button ID="Button1" CssClass="btn_com" runat="server" Text="Add" OnClick="proadd_Click" /> 
-             <asp:Button ID="Button2" CssClass="btn_com" runat="server" Text="Update" />
-             <asp:Button ID="Button3" CssClass="btn_com" runat="server" Text="Delete" />
+             <asp:Button ID="Button3" CssClass="btn_com" runat="server" Text="Delete" OnClick="Button3_Click" />
              <asp:Button ID="Button4" CssClass="btn_com" runat="server" Text="View" />
 
              </div>
@@ -49,7 +48,7 @@
          <div class="cata_parts">
              
              <div class="approval">
-             <asp:Button ID="Button5" CssClass="btn_com" runat="server" Text="Add" /> 
+             <asp:Button ID="Button5" CssClass="btn_com" runat="server" Text="Add" OnClick="Button5_Click" /> 
              <asp:Button ID="Button6" CssClass="btn_com" runat="server" Text="Update" />
              <asp:Button ID="Button7" CssClass="btn_com" runat="server" Text="Delete" />
              <asp:Button ID="Button8" CssClass="btn_com" runat="server" Text="Company Details" />
@@ -61,7 +60,7 @@
          <div class="cata_parts">
              
              <div class="approval">
-             <asp:Button ID="Button9" CssClass="btn_com" runat="server" Text="Add" /> 
+             <asp:Button ID="Button9" CssClass="btn_com" runat="server" Text="Add" OnClick="Button9_Click" /> 
              <asp:Button ID="Button10" CssClass="btn_com" runat="server" Text="Update" />
              <asp:Button ID="Button11" CssClass="btn_com" runat="server" Text="Delete" />
              <asp:Button ID="Button12" CssClass="btn_com" runat="server" Text="View user" />

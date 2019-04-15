@@ -26,4 +26,19 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/addproduct.aspx");
     }
+
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/register/company/admincompanyreg.aspx");
+    }
+
+    protected void Button9_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/register/user/adminuserreg.aspx");
+    }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/deleteproduct.aspx");
+    }
 }
