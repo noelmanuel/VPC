@@ -92,4 +92,24 @@ public partial class Company_comaddproduct : System.Web.UI.Page
     {
         Response.Redirect("~/Company/Product company/comaddspeaker.aspx");
     }
+
+    protected void ups_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Company/Product company/comaddups.aspx");
+    }
+
+    protected void os_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Company/Product company/comaddos.aspx");
+    }
+
+    protected void so_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Company/Product company/comaddsoftware.aspx");
+    }
+
+    protected void soo_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Company/Product company/comaddcasefan.aspx");
+    }
 }

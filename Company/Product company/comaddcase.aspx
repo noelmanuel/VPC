@@ -43,8 +43,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h3>CASE</h3>
          <div class="section_backgound">
-             <div style="height:790px;">
-         <div class="cata_parts3">
+            
+         
              <div class="crow1">
                 <span class="sp">Manufacturer</span><br />
                  <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox>
@@ -69,6 +69,7 @@
             
 
              <div class="crow2">
+                 <span class="sp">Internal 2.5 Bays</span><br />
                 <asp:TextBox ID="TextBox7" runat="server" CssClass="tb"></asp:TextBox>
                  <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextBox7" ForeColor="Red" ErrorMessage="field Required"></asp:RequiredFieldValidator><br /><br />
                  <span class="sp">Internal 3.5 Bays</span><br />
@@ -90,7 +91,7 @@
 
              </div>
 
-            <div class="row3">
+            <div class="crow3">
                  <span class="sp">Price</span><br />
                  <asp:TextBox ID="TextBox17" runat="server" CssClass="tb"></asp:TextBox>
                  <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="TextBox17" ForeColor="Red" ErrorMessage="field Required"></asp:RequiredFieldValidator><br /><br />
@@ -104,13 +105,14 @@
              </div>
 
            
-             </div>
-             <div class="crow4">
+             
+             <div class="crow5">
               <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="mb_sb" OnClick="Button1_Click"/> &nbsp&nbsp&nbsp
                  <asp:Button ID="Button2" runat="server" Text="Clear" CssClass="mb_sb" OnClick="Button2_Click" CausesValidation="False" />
                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [case]"></asp:SqlDataSource>
                  </div>
-             </div>
+             
+             
              </div>
              
 </asp:Content>
