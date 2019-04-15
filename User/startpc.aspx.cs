@@ -723,7 +723,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string catt = "mice";
+        string catt = "mouse";
         string insertQuery = "select mouse from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
         SqlCommand cmd23 = new SqlCommand(insertQuery, conn);
         SqlDataReader reader211 = cmd23.ExecuteReader();
@@ -1373,7 +1373,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader3.Close();
 
 
-            string q4 = "select hddprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q4 = "select SUM(hddprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd4 = new SqlCommand(q4, conn);
             SqlDataReader reader4 = cmd4.ExecuteReader();
 
@@ -1383,7 +1383,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader4.Close();
 
 
-            string q5 = "select ssdprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q5 = "select SUM(ssdprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd5 = new SqlCommand(q5, conn);
             SqlDataReader reader5 = cmd5.ExecuteReader();
 
@@ -1393,7 +1393,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader5.Close();
 
 
-            string q6 = "select proprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q6 = "select SUM(proprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd6 = new SqlCommand(q6, conn);
             SqlDataReader reader6 = cmd6.ExecuteReader();
 
@@ -1403,7 +1403,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader6.Close();
 
 
-            string q7 = "select coolerprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q7 = "select SUM(coolerprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd7 = new SqlCommand(q7, conn);
             SqlDataReader reader7 = cmd7.ExecuteReader();
 
@@ -1414,7 +1414,7 @@ public partial class User_startpc : System.Web.UI.Page
 
 
 
-            string q8 = "select soundcardprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q8 = "select SUM(soundcardprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd8 = new SqlCommand(q8, conn);
             SqlDataReader reader8 = cmd8.ExecuteReader();
 
@@ -1424,7 +1424,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader8.Close();
 
 
-            string q9 = "select networkcardprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q9 = "select SUM(networkcardprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd9 = new SqlCommand(q9, conn);
             SqlDataReader reader9 = cmd9.ExecuteReader();
 
@@ -1434,7 +1434,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader9.Close();
 
 
-            string q10 = "select opticaldriveprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q10 = "select SUM(opticaldriveprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd10 = new SqlCommand(q10, conn);
             SqlDataReader reader10 = cmd10.ExecuteReader();
 
@@ -1444,7 +1444,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader10.Close();
 
 
-            string q11 = "select powerprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q11 = "select SUM(powerprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd11 = new SqlCommand(q11, conn);
             SqlDataReader reader11 = cmd11.ExecuteReader();
 
@@ -1454,7 +1454,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader11.Close();
 
 
-            string q12 = "select caseprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q12 = "select SUM(caseprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd12 = new SqlCommand(q12, conn);
             SqlDataReader reader12 = cmd12.ExecuteReader();
 
@@ -1464,7 +1464,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader12.Close();
 
 
-            string q13 = "select casefanprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q13 = "select SUM(casefanprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd13 = new SqlCommand(q13, conn);
             SqlDataReader reader13 = cmd13.ExecuteReader();
 
@@ -1474,7 +1474,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader13.Close();
 
 
-            string q14 = "select monitorprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q14 = "select SUM(monitorprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd14 = new SqlCommand(q14, conn);
             SqlDataReader reader14 = cmd14.ExecuteReader();
 
@@ -1484,7 +1484,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader14.Close();
 
 
-            string q15 = "select keyboardprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q15 = "select SUM(keyboardprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd15 = new SqlCommand(q15, conn);
             SqlDataReader reader15 = cmd15.ExecuteReader();
 
@@ -1494,7 +1494,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader15.Close();
 
 
-            string q16 = "select mouseprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q16 = "select SUM(mouseprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd16 = new SqlCommand(q16, conn);
             SqlDataReader reader16 = cmd16.ExecuteReader();
 
@@ -1504,7 +1504,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader16.Close();
 
 
-            string q17 = "select speakerprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q17 = "select SUM(speakerprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd17 = new SqlCommand(q17, conn);
             SqlDataReader reader17 = cmd17.ExecuteReader();
 
@@ -1514,7 +1514,7 @@ public partial class User_startpc : System.Web.UI.Page
             reader17.Close();
 
 
-            string q18 = "select upsprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q18 = "select SUM(upsprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd18 = new SqlCommand(q18, conn);
             SqlDataReader reader18 = cmd18.ExecuteReader();
 
@@ -1526,7 +1526,7 @@ public partial class User_startpc : System.Web.UI.Page
 
 
 
-            string q20 = "select osprice from makecart where userr ='" + Session["user"].ToString() + "'";
+            string q20 = "select SUM(osprice) from makecart where userr ='" + Session["user"].ToString() + "'";
             SqlCommand cmd20 = new SqlCommand(q20, conn);
             SqlDataReader reader20 = cmd20.ExecuteReader();
 

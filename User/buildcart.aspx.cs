@@ -469,7 +469,33 @@ public partial class User_buildcart : System.Web.UI.Page
 
     protected void Button7_Click(object sender, EventArgs e)
     {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string ordp = "insert into pastorder(userr,transactionn,mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,totalp,orderstatus) select userr,transactionn,mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,totalp,'confirmed' from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdfinal = new SqlCommand(ordp, conn);
+        cmdfinal.ExecuteNonQuery();
 
+        string tra = "select DISTINCT transactionn from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdtra = new SqlCommand(tra, conn);
+        SqlDataReader readertra = cmdtra.ExecuteReader();
+        readertra.Read();
+        string transa = readertra.GetValue(0).ToString();
+        readertra.Close();
+
+        string subcredit = "insert into cashmodebuild(transactionn,username,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + transa + "','" + Session["user"].ToString() + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','debit card','" + Convert.ToInt64(TextBox7.Text) + "','" + DropDownList4.SelectedItem + "','" + DropDownList5.SelectedItem + "','" + Convert.ToInt32(TextBox8.Text) + "','" + Label9.Text + "','" + TextBox10.Text + "')";
+        SqlCommand cmdd = new SqlCommand(subcredit, conn);
+        cmdd.ExecuteNonQuery();
+
+        string strdet = "delete from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmddet = new SqlCommand(strdet, conn);
+        cmddet.ExecuteNonQuery();
+
+        string strdet1 = "delete from makecart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmddet1 = new SqlCommand(strdet1, conn);
+        cmddet1.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Order Confirmed'); window.location='startpc.aspx';</script>");
+
+        conn.Close();
     }
 
     protected void Button8_Click(object sender, EventArgs e)
@@ -501,6 +527,66 @@ public partial class User_buildcart : System.Web.UI.Page
         Response.Write(" <script>window.alert('Order Confirmed'); window.location='startpc.aspx';</script>");
 
 
+        conn.Close();
+    }
+
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string ordp = "insert into pastorder(userr,transactionn,mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,totalp,orderstatus) select userr,transactionn,mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,totalp,'confirmed' from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdfinal = new SqlCommand(ordp, conn);
+        cmdfinal.ExecuteNonQuery();
+
+        string tra = "select DISTINCT transactionn from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdtra = new SqlCommand(tra, conn);
+        SqlDataReader readertra = cmdtra.ExecuteReader();
+        readertra.Read();
+        string transa = readertra.GetValue(0).ToString();
+        readertra.Close();
+
+        string subcredit = "insert into cashmodebuild(transactionn,username,addr1,addr2,addr3,phone,payment_method,datee) values('" + transa + "','" + Session["user"].ToString() + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','COD','" + Label9.Text + "')";
+        SqlCommand cmdd = new SqlCommand(subcredit, conn);
+        cmdd.ExecuteNonQuery();
+
+        string strdet = "delete from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmddet = new SqlCommand(strdet, conn);
+        cmddet.ExecuteNonQuery();
+
+        string strdet1 = "delete from makecart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmddet1 = new SqlCommand(strdet1, conn);
+        cmddet1.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Order Confirmed'); window.location='startpc.aspx';</script>");
+        conn.Close();
+    }
+
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string ordp = "insert into pastorder(userr,transactionn,mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,totalp,orderstatus) select userr,transactionn,mb,mbprice,ram,ramprice,gpu,gpuprice,hdd,hddprice,sssd,ssdprice,pro,proprice,cooler,coolerprice,soundcard,soundcardprice,networkcard,networkcardprice,opticaldrive,opticaldriveprice,powerr,powerprice,casee,caseprice,casefan,casefanprice,monitor,monitorprice,keyboard,keyboardprice,mouse,mouseprice,speaker,speakerprice,ups,upsprice,software,softwareprice,os,osprice,totalp,'confirmed' from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdfinal = new SqlCommand(ordp, conn);
+        cmdfinal.ExecuteNonQuery();
+
+        string tra = "select DISTINCT transactionn from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmdtra = new SqlCommand(tra, conn);
+        SqlDataReader readertra = cmdtra.ExecuteReader();
+        readertra.Read();
+        string transa = readertra.GetValue(0).ToString();
+        readertra.Close();
+
+        string subcredit = "insert into cashmodebuild(transactionn,username,addr1,addr2,addr3,phone,payment_method,datee,cardno) values('" + transa + "','" + Session["user"].ToString() + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','cod giftcard','" + Label9.Text + "','" + TextBox11.Text + "')";
+        SqlCommand cmdd = new SqlCommand(subcredit, conn);
+        cmdd.ExecuteNonQuery();
+
+        string strdet = "delete from finalcart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmddet = new SqlCommand(strdet, conn);
+        cmddet.ExecuteNonQuery();
+
+        string strdet1 = "delete from makecart where userr='" + Session["user"].ToString() + "'";
+        SqlCommand cmddet1 = new SqlCommand(strdet1, conn);
+        cmddet1.ExecuteNonQuery();
+        Response.Write(" <script>window.alert('Order Confirmed'); window.location='startpc.aspx';</script>");
         conn.Close();
     }
 }

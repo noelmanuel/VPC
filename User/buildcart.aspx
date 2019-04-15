@@ -288,7 +288,7 @@
 
                          <asp:Panel ID="Panel5" runat="server" CssClass="bo">
                             <h4>CASH ON DELIVERY</h4>
-                             <p>Delivery Charge <asp:Label ID="Label27" runat="server" ></asp:Label></p>
+                             
                              <asp:Button ID="Button5" runat="server" CssClass="bt" Text="Confirm Order" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
                          </asp:Panel>
                 

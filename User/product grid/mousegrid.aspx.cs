@@ -75,7 +75,7 @@ public partial class User_product_grid_mousegrid : System.Web.UI.Page
 
                 int pri = int.Parse(mbprice.Text);
 
-                string ordp = "insert into makecart(userr,product,mb,mbprice,mbslot,gpuslot,mouse,mouseprice) values('" + Session["user"].ToString() + "','mice','" + no + "','" + gputot4 + "','" + gputot3 + "','" + gputot + "','" + pro.Text + "','" + pri + "')";
+                string ordp = "insert into makecart(userr,product,mb,mbprice,mbslot,gpuslot,mouse,mouseprice) values('" + Session["user"].ToString() + "','mouse','" + no + "','" + gputot4 + "','" + gputot3 + "','" + gputot + "','" + pro.Text + "','" + pri + "')";
                 SqlCommand cmddd = new SqlCommand(ordp, conn);
                 cmddd.ExecuteNonQuery();
                 conn.Close();
