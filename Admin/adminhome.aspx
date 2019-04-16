@@ -38,7 +38,7 @@
              <div class="approval">
              <asp:Button ID="Button1" CssClass="btn_com" runat="server" Text="Add" OnClick="proadd_Click" /> 
              <asp:Button ID="Button3" CssClass="btn_com" runat="server" Text="Delete" OnClick="Button3_Click" />
-             <asp:Button ID="Button4" CssClass="btn_com" runat="server" Text="View" />
+             <asp:Button ID="Button4" CssClass="btn_com" runat="server" Text="View" OnClick="Button4_Click" />
 
              </div>
              </div>

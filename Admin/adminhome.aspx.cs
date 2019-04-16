@@ -41,4 +41,9 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/deleteproduct.aspx");
     }
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/product category.aspx");
+    }
 }

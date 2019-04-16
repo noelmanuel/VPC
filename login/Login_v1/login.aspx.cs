@@ -37,6 +37,7 @@ public partial class login : System.Web.UI.Page
             reader.Close();
             if (no == "admin")
             {
+                
                 Response.Redirect("~/Admin/adminhome.aspx");
             }
             else if (no == "company")
