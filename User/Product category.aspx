@@ -47,6 +47,10 @@
                 <asp:Button ID="Button12" CssClass="btn_com" runat="server" Text="Mouse" OnClick="mice_Click" />
                 <asp:Button ID="Button13" CssClass="btn_com" runat="server" Text="Monitor" OnClick="mon_Click" />
                 <asp:Button ID="Button14" CssClass="btn_com" runat="server" Text="Speaker" OnClick="speaker_Click" /><br /><br />
+                <asp:Button ID="Button15" CssClass="btn_com" runat="server" Text="UPS" OnClick="ups_Click" />
+                 <asp:Button ID="Button16" CssClass="btn_com" runat="server" Text="OS" OnClick="os_Click" /> 
+                 <asp:Button ID="Button17" CssClass="btn_com" runat="server" Text="Software" OnClick="so_Click" />
+                 <asp:Button ID="Button18" CssClass="btn_com" runat="server" Text="Case Fan" OnClick="soo_Click" />  
             </div>
          </div> 
     </div>

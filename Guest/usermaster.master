@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="usermaster.master.cs" Inherits="Guest_usermaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+<asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+        <link rel="stylesheet" type="text/css" href="../css/user.css"/>
+        <link rel="stylesheet" href="../css/responsive.css"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div id="container">
+     <form id="form1" runat="server">
+        <header>
+            <div class="first_rec"></div>
+            <div class="logo_rec">
+                <div class="logo_sec">
+                    <a href="#"><img src="/images/LOGO.jpg" height="40px" width="300px" /></a>
+                </div>
+                <div class="login_box">
+                    
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" CssClass="Login" ForeColor="#66CCFF">Home</asp:HyperLink>&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/login/Login_v1/login.aspx" CssClass="reg" ForeColor="Red"> Login</asp:HyperLink> &nbsp&nbsp&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink3" NavigateUrl="~/login/Login_v1/login.aspx" runat="server" ForeColor="#E7B93C"> Your Cart</asp:HyperLink>&nbsp&nbsp
+                    <asp:Button ID="Button1" runat="server" Text="Build Cart" Height="25" Width="80" ForeColor="White" BackColor="#CC6600" OnClick="Button1_Click" BorderStyle="None" />
+                    
+                </div>
+
+
+            </div>
+            <div class="option_rec">
+                <div class="option1">
+                    <a href="../login/Login_v1/login.aspx"><img src="/images/start.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    
+                    
+                    
+                </div>
+                <div class="option2">
+
+                    <a href="../login/Login_v1/login.aspx"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+
+                <div class="option3">
+
+                    <a href="../login/Login_v1/login.aspx"><img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+
+                <div class="option4">
+
+                    <a href="Product category.aspx"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                </div>
+            </div>
+
+        </header>
+         <section>
+           
+            
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    
+                 </asp:ContentPlaceHolder>
+        
+               
+        </section>
+
+           <footer>
+            <div class="foot_rec">
+                tgh
+             </div>
+             </footer>
+
+</form>
+   </div>
+</body>
+</html>

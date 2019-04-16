@@ -44,7 +44,7 @@
         
              
     
-    <h3 style="padding-top:17px; margin-left:10%;">CASE</h3>
+    <h3 style="padding-top:17px; margin-left:10%;">CASE FAN</h3>
          
          
              <div class="row1">
