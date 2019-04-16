@@ -26,24 +26,24 @@
             </div>
             <div class="option_rec">
                 <div class="option1">
-                    <a href="#"><img src="images/start.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="login/Login_v1/login.aspx"><img src="images/start.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
                     
                     
                     
                 </div>
                 <div class="option2">
 
-                    <a href="#"><img src="images/view.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="login/Login_v1/login.aspx"><img src="images/view.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                 <div class="option3">
 
-                    <a href="#"><img src="images/expert.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="login/Login_v1/login.aspx"><img src="images/expert.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                 <div class="option4">
 
-                    <a href="#"><img src="images/ind.jpg" height="35" width="170" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="Guest/Product category.aspx"><img src="images/ind.jpg" height="35" width="170" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/usermaster.master" AutoEventWireup="true" CodeFile="smpsdes.aspx.cs" Inherits="User_Product_Page_smpsdes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Guest/usermaster.master" AutoEventWireup="true" CodeFile="smpsdes.aspx.cs" Inherits="Guest_Product_Page_smpsdes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
@@ -195,7 +195,7 @@
     </asp:DataList>
     
     
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [motherboard] WHERE ([smpsid] = @smpsid)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [smps] WHERE ([smpsid] = @smpsid)">
         <SelectParameters>
             <asp:QueryStringParameter Name="smpsid" QueryStringField="id" Type="Int32" />
         </SelectParameters>

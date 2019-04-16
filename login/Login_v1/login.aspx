@@ -48,7 +48,7 @@
 						Member Login
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<div class="wrap-input100 validate-input" data-validate = "Valid user is required">
 						<input class="input100" type="text" name="email" runat="server" ID="txtuname" placeholder="Username">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -75,7 +75,7 @@
 						<span class="txt1">
 							Forgot
 						</span>
-						<a class="txt2" href="#">
+						<a class="txt2" href="../../forgot.aspx">
 							Username / Password?
 						</a>
 					</div>

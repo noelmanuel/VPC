@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/usermaster.master" AutoEventWireup="true" CodeFile="processordes.aspx.cs" Inherits="User_Product_Page_processordes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Guest/usermaster.master" AutoEventWireup="true" CodeFile="processordes.aspx.cs" Inherits="Guest_Product_Page_processordes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
@@ -216,7 +216,7 @@
     </asp:DataList>
     
     
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [processsor] WHERE ([proid] = @proid)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [processor] WHERE ([proid] = @proid)">
         <SelectParameters>
             <asp:QueryStringParameter Name="proid" QueryStringField="id" Type="Int32" />
         </SelectParameters>

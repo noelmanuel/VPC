@@ -202,7 +202,7 @@
                         <asp:Label ID="Label5" runat="server" Text='<%# Eval("man") %>' CssClass="mbname"></asp:Label>&nbsp&nbsp|
                         <asp:Label ID="Label6" runat="server" Text='<%# Eval("mod") %>'></asp:Label>&nbsp&nbsp|
                         <asp:Label ID="Label7" runat="server" Text='<%# Eval("rec") %>'></asp:Label>&nbsp&nbsp|
-                        <asp:Label ID="Label8" runat="server" Text='<%# Eval("memtyp") %>'></asp:Label><br /><br />
+                        <asp:Label ID="Label8" runat="server" Text='<%# Eval("wid") %>'></asp:Label><br /><br />
                         <span style="padding-left:40px; font-size:30px; color:red;">₹</span>
                         <asp:Label ID="Label21" runat="server" Text='<%# Eval("pric") %>' CssClass="ff"></asp:Label>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quantity &nbsp 

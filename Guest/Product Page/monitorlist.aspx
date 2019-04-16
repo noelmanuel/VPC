@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/usermaster.master" AutoEventWireup="true" CodeFile="monitorlist.aspx.cs" Inherits="User_Product_Page_monitorlist" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Guest/usermaster.master" AutoEventWireup="true" CodeFile="monitorlist.aspx.cs" Inherits="Guest_Product_Page_monitorlist" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
      <style type="text/css">
@@ -88,7 +88,7 @@
                 </td>
 
                 <td>
-                    <h3 class="sd">MOTHERBOARD</h3>
+                    <h3 class="sd">MONITOR</h3>
                     <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
                     <ItemTemplate>
                         

@@ -216,7 +216,7 @@
     </asp:DataList>
     
     
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [processsor] WHERE ([proid] = @proid)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [processor] WHERE ([proid] = @proid)">
         <SelectParameters>
             <asp:QueryStringParameter Name="proid" QueryStringField="id" Type="Int32" />
         </SelectParameters>

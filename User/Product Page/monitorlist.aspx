@@ -88,7 +88,7 @@
                 </td>
 
                 <td>
-                    <h3 class="sd">MOTHERBOARD</h3>
+                    <h3 class="sd">MONITOR</h3>
                     <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
                     <ItemTemplate>
                         

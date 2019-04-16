@@ -102,6 +102,10 @@ public partial class login : System.Web.UI.Page
 
 
         }
+        else
+        {
+            Response.Write(" <script>window.alert('Invaild user'); window.location='login.aspx';</script>");
+        }
     }
 }
          

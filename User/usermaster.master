@@ -35,24 +35,25 @@
             </div>
             <div class="option_rec">
                 <div class="option1">
-                    <a href="startpc.aspx"><img src="/images/start.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <asp:HyperLink ID="HyperLink4" NavigateUrl="~/User/startpc.aspx" runat="server">
+                    <img src="/images/start.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
                     
                     
                     
                 </div>
                 <div class="option2">
-
-                    <a href="#"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <asp:HyperLink ID="HyperLink5" NavigateUrl="~/User/startpc.aspx" runat="server">
+                    <img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
                 </div>
 
                 <div class="option3">
-
-                    <a href="#"><img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <asp:HyperLink ID="HyperLink6" NavigateUrl="#" runat="server">
+                    <img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
                 </div>
 
                 <div class="option4">
-
-                    <a href="Product category.aspx"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <asp:HyperLink ID="HyperLink7" NavigateUrl="~/User/Product category.aspx" runat="server">
+                    <img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
                 </div>
             </div>
 

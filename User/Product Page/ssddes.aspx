@@ -193,7 +193,7 @@
     </asp:DataList>
     
     
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [motherboard] WHERE ([ssdid] = @ssdid)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ssd] WHERE ([ssdid] = @ssdid)">
         <SelectParameters>
             <asp:QueryStringParameter Name="ssdid" QueryStringField="id" Type="Int32" />
         </SelectParameters>

@@ -12,7 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 
-public partial class User_Product_Page_ramlist : System.Web.UI.Page
+public partial class Guest_Product_Page_ramlist : System.Web.UI.Page
 {
     static int currentposition = 0;
     static int totalrows = 0;
