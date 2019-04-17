@@ -126,7 +126,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <div class="section_backgound">
-
+        <div style="height:790px;">
          <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" >
         <ItemTemplate>
             <table class="cata_comp">
@@ -145,19 +145,19 @@
                     </td>
 
                     <td class="auto-style2">
-                        <div class="titl"><h3 style=" font-size:18px; padding-top:10px; color:#e7b93c;">SPEAKER SPECIFICATIONS</h3></div><br />
+                       <div class="titl"><h3 style=" font-size:18px; padding-top:10px; color:#e7b93c;">SPEAKER SPECIFICATIONS</h3></div><br />
                         <span class="sp">Manufacturer</span><br />
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("man") %>'></asp:Label><br /><br />
                         <span class="sp">Model No</span><br />
                         <asp:Label ID="Label2" runat="server" Text='<%# Eval("mod") %>'></asp:Label><br /><br />
                         
-                        <span class="sp">Color</span><br />
+                        <span class="sp">Configuration</span><br />
                         <asp:Label ID="Label3" runat="server" Text='<%# Eval("con") %>'></asp:Label><br /><br />
-                        <span class="sp">Form Factor</span><br />
+                        <span class="sp">Total Power</span><br />
                         <asp:Label ID="Label4" runat="server" Text='<%# Eval("tot") %>'></asp:Label><br /><br />
-                        <span class="sp">CPU Socket</span><br />
+                        <span class="sp">Power Front</span><br />
                          <asp:Label ID="Label9" runat="server" Text='<%# Eval("pow") %>'></asp:Label><br /><br />
-                        <span class="sp">Chipset</span><br />
+                        <span class="sp">Power Subwoofer</span><br />
                         <asp:Label ID="Label12" runat="server" Text='<%# Eval("pow1") %>'></asp:Label><br /><br />
                         
                         
@@ -190,7 +190,7 @@
         </ItemTemplate>
     </asp:DataList>
     
-    
+    </div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [speaker] WHERE ([speakerid] = @speakerid)">
         <SelectParameters>
             <asp:QueryStringParameter Name="speakerid" QueryStringField="id" Type="Int32" />

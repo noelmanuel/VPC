@@ -155,7 +155,7 @@
                         <asp:Label ID="Label3" runat="server" Text='<%# Eval("sup") %>'></asp:Label><br /><br />
                         <span class="sp">Liquid Cooled</span><br />
                         <asp:Label ID="Label4" runat="server" Text='<%# Eval("liq") %>'></asp:Label><br /><br />
-                        <span class="sp">Radiator Sze</span><br />
+                        <span class="sp">Radiator Size</span><br />
                          <asp:Label ID="Label9" runat="server" Text='<%# Eval("radi") %>'></asp:Label><br /><br />
                          <span class="sp">Noise Level</span><br />
                         <asp:Label ID="Label12" runat="server" Text='<%# Eval("noi") %>'></asp:Label><br /><br />
