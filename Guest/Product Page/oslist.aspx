@@ -8,7 +8,7 @@
             width:240px;
             height:340px;
             border:1px solid #e2e2e2;
-           margin-left:10px;
+           margin-left:2px;
            margin-bottom:10px;
             
         }
@@ -70,26 +70,40 @@
         .sd{
             margin-left:10px;
         }
+        .spa{
+            font-weight:bold;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="section_backgound">
+         
         <table>
             <tr>
-                <td style="width:20%; padding:10px;">
-                    <span>Price Filter</span><br />
-                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"  Height="30" Width="160">
-                        <asp:ListItem Text="select" Value="0 AND 1000000"></asp:ListItem>
-                        <asp:ListItem Text="0 to 5000" Value="0 AND 5000"></asp:ListItem>
-                        <asp:ListItem Text="5000 to 6000" Value="5000 AND 6000"></asp:ListItem>
-                        <asp:ListItem Text="6000 to 9000" Value="6000 AND 9000"></asp:ListItem>                                       
-                    </asp:DropDownList>
+                <td style="width:15%; padding:10px; border-left:1px solid #C07C05;">
+                   <span class="spa">Price Filter</span><br /><br />
+                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Min" Height="30" Width="55" BorderColor="#E2E2E2" BorderStyle="Solid"></asp:TextBox> &nbsp-&nbsp
+                    <asp:TextBox ID="TextBox2" BorderColor="#E2E2E2" placeholder="Max" BorderStyle="Solid" Height="30" Width="55" runat="server"></asp:TextBox>&nbsp
+                    <asp:Button ID="Button6" runat="server" Height="30" Width="50" Text="Go" ForeColor="White" BackColor="#C07C05" BorderStyle="None" OnClick="Button6_Click" /><br /><br /><br /><br />
+                    
+                    <span class="spa">Brand</span><br /><br />
+                    <asp:DropDownList ID="DropDownList1" DataTextField="man" DataValueField="man" Height="30" Width="143" BorderColor="#E2E2E2" BorderStyle="Solid" runat="server"></asp:DropDownList>&nbsp
+                    <asp:Button ID="Button11" runat="server" Height="30" Width="50" Text="Go" ForeColor="White" BackColor="#C07C05" BorderStyle="None" OnClick="Button11_Click" /><br /><br /><br /><br />
+
+                    <span class="spa">Version</span><br /><br />
+                    <asp:DropDownList ID="DropDownList2" DataTextField="ver" DataValueField="ver" Height="30" Width="143" BorderColor="#E2E2E2" BorderStyle="Solid" runat="server"></asp:DropDownList>&nbsp
+                    <asp:Button ID="Button16" runat="server" Height="30" Width="50" Text="Go" ForeColor="White" BackColor="#C07C05" BorderStyle="None" OnClick="Button16_Click" /><br /><br /><br /><br />
+
+                     <span class="spa">Mode</span><br /><br />
+                    <asp:DropDownList ID="DropDownList3" DataTextField="modee" DataValueField="modee" Height="30" Width="143" BorderColor="#E2E2E2" BorderStyle="Solid" runat="server"></asp:DropDownList>&nbsp
+                    <asp:Button ID="Button17" runat="server" Height="30" Width="50" Text="Go" ForeColor="White" BackColor="#C07C05" BorderStyle="None" OnClick="Button17_Click" /><br /><br /><br /><br />
 
                 </td>
 
-                <td>
-                    <h3 class="sd">OPERATING SYSTEM</h3>
-                    <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
+                <td style="width:85%; height:790px; border-left:1px solid #E2E2E2; ">
+                    <a href="../Product category.aspx" class="sd">PRODUCT CATEGORY</a>
+                    <a href="oslist.aspx" style=""><h3 class="sd">OS</h3></a>
+                    <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="5" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
                     <ItemTemplate>
                         
                         <table class="item_bx">
@@ -125,21 +139,46 @@
                 </asp:DataList>
             
             
+            <asp:Panel ID="Panel1" runat="server">
             <asp:Button ID="Button1" runat="server" Text="<<" CssClass="sd" OnClick="Button1_Click" />
             <asp:Button ID="Button2" runat="server" Text="<" OnClick="Button2_Click"/>
             <asp:Button ID="Button3" runat="server" Text=">" OnClick="Button3_Click"/>
             <asp:Button ID="Button4" runat="server" Text=">>" OnClick="Button4_Click" />
+                        </asp:Panel><br />
+                    <asp:Panel ID="Panel2" runat="server">
+            <asp:Button ID="Button7" runat="server" Text="<<" CssClass="sd" OnClick="Button7_Click" />
+            <asp:Button ID="Button8" runat="server" Text="<" OnClick="Button8_Click"/>
+            <asp:Button ID="Button9" runat="server" Text=">" OnClick="Button9_Click"/>
+            <asp:Button ID="Button10" runat="server" Text=">>" OnClick="Button10_Click" />
+                        </asp:Panel>
+                    <asp:Panel ID="Panel3" runat="server">
+            
+            <asp:Button ID="Button13" runat="server" Text="<" OnClick="Button13_Click"/>
+            <asp:Button ID="Button14" runat="server" Text=">" OnClick="Button14_Click"/>
+            
+                        </asp:Panel>
+                    <asp:Panel ID="Panel4" runat="server">
+            
+            <asp:Button ID="Button12" runat="server" Text="<" OnClick="Button12_Click"/>
+            <asp:Button ID="Button15" runat="server" Text=">" OnClick="Button15_Click"/>
+            
+                        </asp:Panel>
+                    <asp:Panel ID="Panel5" runat="server">
+            
+            <asp:Button ID="Button18" runat="server" Text="<" OnClick="Button18_Click"/>
+            <asp:Button ID="Button19" runat="server" Text=">" OnClick="Button19_Click"/>
+            
+                        </asp:Panel>
 
                 </td>
             </tr>
         </table>
-     
+     </div>
                 
 
-            </div>
+            
 
       
 </asp:Content>
-
 
 

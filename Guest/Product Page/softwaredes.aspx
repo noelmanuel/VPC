@@ -127,7 +127,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <div class="section_backgound">
-
+        <div style="height:790px;">
          <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" >
         <ItemTemplate>
             <table class="cata_comp">
@@ -206,6 +206,7 @@
         </SelectParameters>
     </asp:SqlDataSource>
     </div>
+        </div>
 </asp:Content>
 
 
