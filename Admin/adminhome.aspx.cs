@@ -46,4 +46,14 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
         Response.Redirect("~/User/product category.aspx");
     }
+
+    protected void Button10_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/manageuser.aspx");
+    }
+
+    protected void Button12_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/viewuser.aspx");
+    }
 }

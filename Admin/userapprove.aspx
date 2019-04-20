@@ -2,16 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
-        .grid
-        {
-            padding-left:10%;
-            padding-top:20px;
-        }
+     
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div class="section_backgound">
-    <div style="height:790px;">
+    <div style="height:790px;margin-left:10%;">
+
+        <h3 style="">APPROVE USER</h3>
      <div class="grid">
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" OnRowUpdating="GridView1_RowUpdating" style="text-align: center" Width="1152px" OnRowDeleting="GridView1_RowDeleting">
             <Columns>

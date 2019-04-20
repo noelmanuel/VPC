@@ -49,8 +49,7 @@
              
              <div class="approval">
              <asp:Button ID="Button5" CssClass="btn_com" runat="server" Text="Add" OnClick="Button5_Click" /> 
-             <asp:Button ID="Button6" CssClass="btn_com" runat="server" Text="Update" />
-             <asp:Button ID="Button7" CssClass="btn_com" runat="server" Text="Delete" />
+             <asp:Button ID="Button6" CssClass="btn_com" runat="server" Text="Manage Company" />
              <asp:Button ID="Button8" CssClass="btn_com" runat="server" Text="Company Details" />
 
              </div>
@@ -61,9 +60,8 @@
              
              <div class="approval">
              <asp:Button ID="Button9" CssClass="btn_com" runat="server" Text="Add" OnClick="Button9_Click" /> 
-             <asp:Button ID="Button10" CssClass="btn_com" runat="server" Text="Update" />
-             <asp:Button ID="Button11" CssClass="btn_com" runat="server" Text="Delete" />
-             <asp:Button ID="Button12" CssClass="btn_com" runat="server" Text="View user" />
+             <asp:Button ID="Button10" CssClass="btn_com" runat="server" Text="Manage User" OnClick="Button10_Click" />
+             <asp:Button ID="Button12" CssClass="btn_com" runat="server" Text="View user" OnClick="Button12_Click" />
 
              </div>
              </div>
