@@ -38,7 +38,7 @@
                 </div>
                 <div class="option2">
 
-                    <a href="#"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="viewbuilt.aspx"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                 <div class="option3">
@@ -48,7 +48,7 @@
 
                 <div class="option4">
 
-                    <a href="#"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="../Guest/Product category.aspx"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
             </div>
 

@@ -27,6 +27,14 @@ public partial class Guest_Product_Page_ramdes : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/login/Login_v1/login.aspx");
+        string g = Session["admin"].ToString();
+        if (g == "admin")
+        {
+            Response.Redirect("~/Admin/adminhome.aspx");
+        }
+        else
+        {
+            Response.Redirect("~/login/Login_v1/login.aspx");
+        }
     }
 }
