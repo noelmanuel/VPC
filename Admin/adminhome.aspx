@@ -49,8 +49,8 @@
              
              <div class="approval">
              <asp:Button ID="Button5" CssClass="btn_com" runat="server" Text="Add" OnClick="Button5_Click" /> 
-             <asp:Button ID="Button6" CssClass="btn_com" runat="server" Text="Manage Company" />
-             <asp:Button ID="Button8" CssClass="btn_com" runat="server" Text="Company Details" />
+             <asp:Button ID="Button6" CssClass="btn_com" runat="server" Text="Manage Company" OnClick="Button6_Click" />
+             <asp:Button ID="Button8" CssClass="btn_com" runat="server" Text="Company Details" OnClick="Button8_Click" />
 
              </div>
              </div>

@@ -44,7 +44,7 @@ public partial class Admin_adminhome : System.Web.UI.Page
 
     protected void Button4_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/User/product category.aspx");
+        Response.Redirect("~/Guest/product category.aspx");
     }
 
     protected void Button10_Click(object sender, EventArgs e)
@@ -55,5 +55,15 @@ public partial class Admin_adminhome : System.Web.UI.Page
     protected void Button12_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/Admin/viewuser.aspx");
+    }
+
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/managecompany.aspx");
+    }
+
+    protected void Button8_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/viewcompany.aspx");
     }
 }
