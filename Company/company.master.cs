@@ -64,7 +64,7 @@ public partial class Company_company : System.Web.UI.MasterPage
 
     protected void view_Click(object sender, EventArgs e)
     {
-        Response.Redirect("/Company/comaddproduct.aspx");
+        Response.Redirect("/Company/viewproduct.aspx");
     }
 
     protected void modify_Click(object sender, EventArgs e)
