@@ -13,7 +13,26 @@ public partial class Company_viewproduct : System.Web.UI.Page
         Panel2.Visible = false;
         Panel3.Visible = false;
         Panel4.Visible = false;
+        Panel5.Visible = false;
+        Panel9.Visible = false;
+        Panel10.Visible = false;
+        Panel11.Visible = false;
+        Panel12.Visible = false;
+        Panel13.Visible = false;
+        Panel14.Visible = false;
+        Panel15.Visible = false;
+        Panel16.Visible = false;
+        Panel17.Visible = false;
+        Panel18.Visible = false;
+        Panel19.Visible = false;
+        Panel20.Visible = false;
+        Panel21.Visible = false;
+        Panel22.Visible = false;
+        Panel23.Visible = false;
     }
+
+
+
 
     protected void mb_Click(object sender, EventArgs e)
     {
@@ -38,81 +57,81 @@ public partial class Company_viewproduct : System.Web.UI.Page
 
     protected void cd_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddcddrive.aspx");
+        Panel5.Visible = true;
     }
 
     protected void smps_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddsmps.aspx");
+        Panel9.Visible = true;
     }
 
     protected void hd_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddhdd.aspx");
+        Panel10.Visible = true;
     }
 
     protected void sd_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddsoundcard.aspx");
+        Panel11.Visible = true;
     }
 
     protected void ssd_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddssd.aspx");
+        Panel12.Visible = true;
     }
 
     protected void coolent_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddcooler.aspx");
+        Panel13.Visible = true;
     }
 
     protected void case_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddcase.aspx");
+        Panel14.Visible = true;
     }
 
     protected void net_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddnet.aspx");
+        Panel15.Visible = true;
     }
 
     protected void kb_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddkeyboard.aspx");
+        Panel16.Visible = true;
     }
 
     protected void mice_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddmouse.aspx");
+        Panel17.Visible = true;
     }
 
     protected void mon_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddmonitor.aspx");
+        Panel18.Visible = true;
     }
 
     protected void speaker_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddspeaker.aspx");
+        Panel19.Visible = true;
     }
 
     protected void ups_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddups.aspx");
+        Panel20.Visible = true;
     }
 
     protected void os_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddos.aspx");
+        Panel21.Visible = true;
     }
 
     protected void so_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddsoftware.aspx");
+        Panel22.Visible = true;
     }
 
     protected void soo_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddcasefan.aspx");
+        Panel23.Visible = true;
     }
 }

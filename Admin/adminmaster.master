@@ -43,7 +43,7 @@
 
                 <div class="option3">
 
-                    <a href="#"><img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="../expertsystem/createexpert.aspx"><img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                 <div class="option4">
