@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
+using System.IO;
 
 public partial class expertsystem_createexpert : System.Web.UI.Page
 {
@@ -423,18 +424,32 @@ public partial class expertsystem_createexpert : System.Web.UI.Page
         }
         conn.Close();
 
-
+        int qua = int.Parse(Label1.Text) + int.Parse(Label2.Text) + int.Parse(Label3.Text) + int.Parse(Label4.Text) + int.Parse(Label5.Text) + int.Parse(Label6.Text) + int.Parse(Label7.Text) + int.Parse(Label8.Text) + int.Parse(Label9.Text) + int.Parse(Label10.Text) + int.Parse(Label12.Text) + int.Parse(Label13.Text) + int.Parse(Label14.Text) + int.Parse(Label15.Text) + int.Parse(Label16.Text) + int.Parse(Label17.Text) + int.Parse(Label18.Text) + int.Parse(Label19.Text) + int.Parse(Label20.Text) + int.Parse(Label21.Text) + int.Parse(Label22.Text) + int.Parse(Label23.Text);
+        Label11.Text = qua.ToString();
 
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-
+        int quan = int.Parse(Label11.Text);
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        mbimg1.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg1.FileName));
+        String link = "/images/" + Path.GetFileName(mbimg1.FileName);
+        mbimg2.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg2.FileName));
+        String link2 = "/images/" + Path.GetFileName(mbimg2.FileName);
+        mbimg3.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg3.FileName));
+        String link3 = "/images/" + Path.GetFileName(mbimg3.FileName);
+        conn.Open();
+        string insertQuery = "insert into expert(budget,type,images1,images2,images3,pri1,pri2,pri3,pri4,motherboard,ram,ram1,ram2,ram3,processor,gpu,gpu1,cddrive,smps,hdd,soundcard,ssd,cool,casee,net,keyboard,mouse,monitor,speaker,ups,casefan,totalprice) values('" + DropDownList19.SelectedItem + "','" + DropDownList20.SelectedItem + "','" + link + "','" + link2 + "','" + link3 + "','" + DropDownList21.SelectedItem + "','" + DropDownList22.SelectedItem + "','" + DropDownList23.SelectedItem + "','" + DropDownList24.SelectedItem + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + DropDownList25.SelectedItem + "','" + DropDownList26.SelectedItem + "','" + DropDownList27.SelectedItem + "','" + DropDownList3.SelectedItem + "','" + DropDownList4.SelectedItem + "','" + DropDownList28.SelectedItem + "','" + DropDownList5.SelectedItem + "','" + DropDownList6.SelectedItem + "','" + DropDownList7.SelectedItem + "','" + DropDownList8.SelectedItem + "','" + DropDownList9.SelectedItem + "','" + DropDownList10.SelectedItem + "','" + DropDownList11.SelectedItem + "','" + DropDownList12.SelectedItem + "','" + DropDownList13.SelectedItem + "','" + DropDownList14.SelectedItem + "','" + DropDownList15.SelectedItem + "','" + DropDownList16.SelectedItem + "','" + DropDownList17.SelectedItem + "','" + DropDownList18.SelectedItem + "','" + quan + "')";
+        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+        cmd.ExecuteNonQuery();
+        conn.Close();
+        Response.Write(" <script>window.alert('System added'); window.location='createexpert.aspx';</script>");
     }
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("~/createexpert.aspx");
     }
 
     protected void DropDownList16_DataBound(object sender, EventArgs e)
@@ -469,5 +484,26 @@ public partial class expertsystem_createexpert : System.Web.UI.Page
     protected void DropDownList28_DataBound(object sender, EventArgs e)
     {
         DropDownList28.Items.Insert(0, new ListItem("omitted", "0"));
+    }
+
+    protected void DropDownList4_DataBound(object sender, EventArgs e)
+    {
+        DropDownList4.Items.Insert(0, new ListItem("omitted", "0"));
+    }
+    protected void DropDownList8_DataBound(object sender, EventArgs e)
+    {
+        DropDownList8.Items.Insert(0, new ListItem("omitted", "0"));
+    }
+    protected void DropDownList9_DataBound(object sender, EventArgs e)
+    {
+        DropDownList9.Items.Insert(0, new ListItem("omitted", "0"));
+    }
+    protected void DropDownList12_DataBound(object sender, EventArgs e)
+    {
+        DropDownList12.Items.Insert(0, new ListItem("omitted", "0"));
+    }
+    protected void DropDownList15_DataBound(object sender, EventArgs e)
+    {
+        DropDownList15.Items.Insert(0, new ListItem("omitted", "0"));
     }
 }

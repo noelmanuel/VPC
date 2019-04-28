@@ -26,12 +26,19 @@
             width:200px;
             
         }
+        .spp
+        {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:20px;
+            width:200px;
+            
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div class="section_backgound">
     <div style="margin-left:185px;">
-        <h3 style="">CREATE EXPERT SYSTEM</h3>
+        <h3>CREATE EXPERT SYSTEM</h3>
 
         <table>
             <tr>
@@ -52,6 +59,14 @@
                         <asp:ListItem>Only CPU</asp:ListItem>
                         
                 </asp:DropDownList><br /><br />
+                </td>
+
+                <td>
+                    <span class="sp">IMAGES</span><br /><br />
+                    <asp:FileUpload ID="mbimg1" runat="server" />
+                    <asp:FileUpload ID="mbimg2" runat="server" />
+                    <asp:FileUpload ID="mbimg3" runat="server" />
+
                 </td>
 
                 
@@ -136,7 +151,7 @@
 
                 <td>
                     <span class="sp">GPU</span><br /><br />
-                    <asp:DropDownList ID="DropDownList4" runat="server" onmousedown="this.size=10;" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource4" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList4" runat="server" onmousedown="this.size=10;" ondatabound="DropDownList4_DataBound" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource4" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man] FROM [gpu]"></asp:SqlDataSource>
                     <br /><br /><span class="sp">Price</span><br />
                     <asp:Label ID="Label4" ForeColor="red" runat="server"></asp:Label>
@@ -172,7 +187,7 @@
 
                 <td>
                     <span class="sp">SOUNDCARD</span><br /><br />
-                    <asp:DropDownList ID="DropDownList8" runat="server" onmousedown="this.size=10;" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource8" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList8" runat="server" onmousedown="this.size=10;" ondatabound="DropDownList8_DataBound" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource8" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man] FROM [soundcard]"></asp:SqlDataSource>
                     <br /><br /><span class="sp">Price</span><br />
                     <asp:Label ID="Label8" ForeColor="red" runat="server"></asp:Label>
@@ -183,7 +198,7 @@
             <tr>
                 <td>
                     <span class="sp">SSD</span><br /><br />
-                    <asp:DropDownList ID="DropDownList9" runat="server" onmousedown="this.size=10;" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource9" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList9" runat="server" onmousedown="this.size=10;" ondatabound="DropDownList9_DataBound" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource9" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource9" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man] FROM [ssd]"></asp:SqlDataSource>
                     <br /><br /><span class="sp">Price</span><br />
                     <asp:Label ID="Label9" ForeColor="red" runat="server"></asp:Label>
@@ -208,7 +223,7 @@
 
                 <td>
                     <span class="sp">NETWORKCARD</span><br /><br />
-                    <asp:DropDownList ID="DropDownList12" runat="server" onmousedown="this.size=10;" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource12" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList12" runat="server" ondatabound="DropDownList12_DataBound" onmousedown="this.size=10;" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource12" AutoPostBack="True" DataTextField="man" DataValueField="man"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource12" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man] FROM [net]"></asp:SqlDataSource>
                     <br /><br /><span class="sp">Price</span><br />
                     <asp:Label ID="Label13" ForeColor="red" runat="server"></asp:Label>
@@ -235,7 +250,7 @@
 
                 <td>
                     <span class="sp">MONITOR</span><br /><br />
-                    <asp:DropDownList ID="DropDownList15" runat="server" onmousedown="this.size=10;" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource15" DataTextField="man" AutoPostBack="True" DataValueField="man"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList15" runat="server" ondatabound="DropDownList15_DataBound" onmousedown="this.size=10;" onfocusout="this.size=1;" ondblclick="this.size=1;" Width="330px" CssClass="drd" DataSourceID="SqlDataSource15" DataTextField="man" AutoPostBack="True" DataValueField="man"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource15" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man] FROM [monitor]"></asp:SqlDataSource>
                     <br /><br /><span class="sp">Price</span><br />
                     <asp:Label ID="Label16" ForeColor="red" runat="server"></asp:Label>
@@ -298,6 +313,12 @@
                     <asp:SqlDataSource ID="SqlDataSource18" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man] FROM [casefan]"></asp:SqlDataSource>
                     <br /><br /><span class="sp">Price</span><br />
                     <asp:Label ID="Label23" ForeColor="red" runat="server"></asp:Label>
+                </td>
+
+                <td>
+                    <span class="spp">TOTAL PRICE</span><br /><br />
+                    <span class="spp">₹</span>
+                    <asp:Label ID="Label11" Font-Size="20" ForeColor="red" runat="server"></asp:Label>
                 </td>
 
                 <td>
