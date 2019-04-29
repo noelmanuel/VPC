@@ -170,7 +170,7 @@
                 <tr>
                 <td >
                 <span class="spaa">What does your system do for you?</span><br /><br />
-                <span class="spaa">Select yout priority</span><br /> <br /><br />
+                <span class="spaa">Select your priority</span><br /> <br /><br />
 
                     
                      <span class="sp">FIRST PRIORITY</span><br /><br />

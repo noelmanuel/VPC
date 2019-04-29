@@ -6,7 +6,7 @@
    
         .item_bx{
             width:240px;
-            height:340px;
+            height:440px;
             border:1px solid #e2e2e2;
            margin-left:2px;
            margin-bottom:10px;
@@ -56,16 +56,20 @@
             width: 127px;
             height: 22px;
             text-align: center;
+            font-weight:bold;
         }
+
         .auto-style5 {
             width: 127px;
             height: 28px;
             text-align: center;
+            font-weight:bold;
         }
         .auto-style6 {
             width: 127px;
             height: 20px;
             text-align: center;
+            font-weight:bold;
         }
         .sd{
             margin-left:5px;
@@ -85,28 +89,28 @@
                 <td style="width:85%; height:790px; ">
                     <a href="createexpert.aspx" style="font-weight:bold;">EXPERT HOME</a><br /><br />
                     <a href="expertlist.aspx">EXPERT SYSTEMS</a>
-                    <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="5" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
+                    <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" RepeatColumns="4" Height="600px" Width="749px" OnItemCommand="DataList1_ItemCommand">
                     <ItemTemplate>
                         
                         <table class="item_bx">
                             <tr>
                                 <td class="auto-style3">
-                                    <asp:Image ID="Image1" runat="server" Height="190" Width="260" ImageUrl='<%# Eval("images1") %>' />
+                                    <asp:Image ID="Image1" runat="server" Height="250" Width="320" ImageUrl='<%# Eval("images1") %>' />
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style4">
-                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("budget") %>'></asp:Label>
+                                   BUDGET: <asp:Label ID="Label1" runat="server" ForeColor="red" Text='<%# Eval("budget") %>'></asp:Label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style6">
-                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("type") %>'></asp:Label>
+                                   TYPE: <asp:Label ID="Label2" runat="server" ForeColor="red" Text='<%# Eval("type") %>'></asp:Label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style5">
-                                    ₹<asp:Label ID="Label3" runat="server" Text='<%# Eval("totalprice") %>'></asp:Label>
+                                    COST: ₹<asp:Label ID="Label3" runat="server" ForeColor="red" Text='<%# Eval("totalprice") %>'></asp:Label>
                                 </td>
                             </tr>
                             <tr>

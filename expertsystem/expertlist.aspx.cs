@@ -51,7 +51,7 @@ public partial class expertsystem_expertlist : System.Web.UI.Page
         pg.DataSource = dt.DefaultView;
         pg.AllowPaging = true;
         pg.CurrentPageIndex = currentposition;
-        pg.PageSize = 10;
+        pg.PageSize = 4;
         Button1.Enabled = !pg.IsFirstPage;
         Button2.Enabled = !pg.IsFirstPage;
         Button3.Enabled = !pg.IsLastPage;

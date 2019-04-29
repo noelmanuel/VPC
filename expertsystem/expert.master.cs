@@ -28,11 +28,11 @@ public partial class expertsystem_expert : System.Web.UI.MasterPage
         SqlDataReader readerqw20 = cmdqw20.ExecuteReader();
         if (readerqw20.HasRows)
         {
-            Response.Redirect("~/User/expertcart.aspx");
+            Response.Redirect("expertcart.aspx");
         }
         else
         {
-            Response.Redirect("~/User/emptyexpertcart.aspx");
+            Response.Redirect("emptyexpertcart.aspx");
         }
         readerqw20.Close();
         conn.Close();

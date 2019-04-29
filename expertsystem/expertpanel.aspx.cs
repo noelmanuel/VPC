@@ -114,6 +114,12 @@ public partial class expertsystem_expertpanel : System.Web.UI.Page
         Panel4.Visible = false;
         Panel5.Visible = true;
 
-        
+        Session["pri1"] = DropDownList1.SelectedItem;
+        Session["pri2"] = DropDownList2.SelectedItem;
+        Session["pri3"] = DropDownList3.SelectedItem;
+        Session["pri4"] = DropDownList4.SelectedItem;
+
+        Response.Redirect("userexpertlist.aspx");
+
     }
 }
