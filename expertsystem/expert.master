@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="expert.master.cs" Inherits="expertsystem_expert" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+<asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+        <link rel="stylesheet" type="text/css" href="../css/user.css"/>
+        <link rel="stylesheet" href="../css/responsive.css"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div id="container">
+     <form id="form1" runat="server">
+        <header>
+            <div class="first_rec"></div>
+            <div class="logo_rec">
+                <div class="logo_sec">
+                    <a href="#"><img src="/images/LOGO.jpg" height="40" width="300" /></a>
+                </div>
+                <div class="login_box">
+                    
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/User/userhome.aspx" CssClass="Login" ForeColor="#66CCFF">Home</asp:HyperLink>&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx" CssClass="reg" ForeColor="Red"> Sign out</asp:HyperLink> &nbsp&nbsp&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink3" NavigateUrl="~/User/addcart.aspx" runat="server" ForeColor="#E7B93C"> Your Cart</asp:HyperLink>&nbsp&nbsp
+                    <asp:Button ID="Button1" runat="server" Text="Expert Cart" Height="25" Width="80" ForeColor="White" BackColor="#CC6600" OnClick="Button1_Click" BorderStyle="None" />
+                    
+                </div>
+
+
+            </div>
+            <div class="option_rec">
+                <div class="option1">
+                    <asp:HyperLink ID="HyperLink4" NavigateUrl="~/User/startpc.aspx" runat="server">
+                    <img src="/images/start.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                    
+                    
+                    
+                </div>
+                <div class="option2">
+                    <asp:HyperLink ID="HyperLink5" NavigateUrl="~/User/startpc.aspx" runat="server">
+                    <img src="/images/view.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                </div>
+
+                <div class="option3">
+                    <asp:HyperLink ID="HyperLink6" NavigateUrl="~/expertsystem/expertpanel.aspx" runat="server">
+                    <img src="/images/expert.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                </div>
+
+               
+                <div class="option4">
+                    <asp:HyperLink ID="HyperLink8" NavigateUrl="~/User/Product category.aspx" runat="server">
+                    <img src="/images/ind.jpg" height="35" width="170" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                </div>
+            </div>
+
+        </header>
+         <section>
+           
+            
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    
+                 </asp:ContentPlaceHolder>
+        
+               
+        </section>
+
+           <footer>
+            <div class="foot_rec">
+                
+             </div>
+             </footer>
+
+</form>
+   </div>
+</body>
+</html>

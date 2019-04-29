@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="option3">
-                    <asp:HyperLink ID="HyperLink6" NavigateUrl="#" runat="server">
+                    <asp:HyperLink ID="HyperLink6" NavigateUrl="~/expertsystem/expertpanel.aspx" runat="server">
                     <img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
                 </div>
 
