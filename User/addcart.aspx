@@ -171,19 +171,19 @@
                  <asp:DropDownList ID="DropDownList4" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp 
                  <span>CVV</span>&nbsp
                  <asp:TextBox ID="TextBox8" runat="server" Height="25px" Width="50px"></asp:TextBox><br /><br />
-                 <asp:Button ID="Button7" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
+                 <asp:Button ID="Button7" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button7_Click"  />
              </asp:Panel>
 
                          <asp:Panel ID="Panel3" runat="server" CssClass="bo">
                             <h4>CASH ON DELIVERY</h4>
                              <p>Delivery Charge <asp:Label ID="Label8" runat="server" ></asp:Label></p>
-                             <asp:Button ID="Button5" runat="server" CssClass="bt" Text="Confirm Order" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
+                             <asp:Button ID="Button5" runat="server" CssClass="bt" Text="Confirm Order" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button5_Click"  />
                          </asp:Panel>
                 
                          <asp:Panel ID="Panel4" runat="server" CssClass="bo">
                              <h4>Enter Your Gift Card</h4>
                              <asp:TextBox ID="TextBox11" runat="server" CssClass="txtadd" placeholder="Gift card no"></asp:TextBox><br /><br />
-                             <asp:Button ID="Button6" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
+                             <asp:Button ID="Button6" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button6_Click"  />
 
                          </asp:Panel>
                     </td> 

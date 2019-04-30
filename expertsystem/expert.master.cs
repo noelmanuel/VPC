@@ -32,7 +32,7 @@ public partial class expertsystem_expert : System.Web.UI.MasterPage
         }
         else
         {
-            Response.Redirect("emptyexpertcart.aspx");
+            Response.Redirect("expertemptycart.aspx");
         }
         readerqw20.Close();
         conn.Close();

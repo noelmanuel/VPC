@@ -255,4 +255,346 @@ public partial class User_addcart : System.Web.UI.Page
 
 
     }
+
+    protected void Button7_Click(object sender, EventArgs e)
+    {
+        String pass = "123456789";
+        Random r = new Random();
+        char[] mypass = new char[5];
+        for (int i = 0; i < 5; i++)
+        {
+            mypass[i] = pass[(int)(3 * r.NextDouble())];
+
+        }
+        string bn = new string(mypass);
+
+        int tr = Convert.ToInt32(bn);
+
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        string insertQuery = "select Transid from orderrr where Transid='" + bn + "'";
+        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+        conn.Open();
+        SqlDataReader readerw = cmd.ExecuteReader();
+
+        if (readerw.HasRows)
+        {
+            readerw.Read();
+            string no = readerw.GetValue(0).ToString();
+            int yy = Convert.ToInt32(no);
+            readerw.Close();
+            if (yy == tr)
+            {
+                tr = tr + 1;
+
+
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                SqlCommand cmdd = new SqlCommand(subcredit, conn);
+                cmdd.ExecuteNonQuery();
+                foreach (GridViewRow g1 in GridView1.Rows)
+                {
+
+                    string pro = (g1.FindControl("Label1") as Label).Text;
+                    string proname = (g1.FindControl("Label2") as Label).Text;
+                    string promod = (g1.FindControl("Label3") as Label).Text;
+                    string proqua = (g1.FindControl("Label4") as Label).Text;
+                    string protot = (g1.FindControl("Label6") as Label).Text;
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    SqlCommand cmdddd = new SqlCommand(ordp, conn);
+                    cmdddd.ExecuteNonQuery();
+
+
+                }
+                uig();
+                conn.Close();
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+
+            }
+            else
+            {
+
+                readerw.Close();
+
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                SqlCommand cmdd = new SqlCommand(subcredit, conn);
+                cmdd.ExecuteNonQuery();
+
+                foreach (GridViewRow g1 in GridView1.Rows)
+                {
+
+
+                    string pro = (g1.FindControl("Label1") as Label).Text;
+                    string proname = (g1.FindControl("Label2") as Label).Text;
+                    string promod = (g1.FindControl("Label3") as Label).Text;
+                    string proqua = (g1.FindControl("Label4") as Label).Text;
+                    string protot = (g1.FindControl("Label6") as Label).Text;
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    SqlCommand cmddd = new SqlCommand(ordp, conn);
+                    cmddd.ExecuteNonQuery();
+
+
+                }
+                uig();
+                conn.Close();
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+            }
+
+        }
+        else
+        {
+
+            readerw.Close();
+
+            string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','debit card','" + Convert.ToInt64(TextBox7.Text) + "','" + DropDownList3.SelectedItem + "','" + DropDownList4.SelectedItem + "','" + Convert.ToInt32(TextBox8.Text) + "','" + Label9.Text + "','" + TextBox10.Text + "')";
+            SqlCommand cmdd = new SqlCommand(subcredit, conn);
+            cmdd.ExecuteNonQuery();
+            foreach (GridViewRow g1 in GridView1.Rows)
+            {
+
+
+                string pro = (g1.FindControl("Label1") as Label).Text;
+                string proname = (g1.FindControl("Label2") as Label).Text;
+                string promod = (g1.FindControl("Label3") as Label).Text;
+                string proqua = (g1.FindControl("Label4") as Label).Text;
+                string protot = (g1.FindControl("Label6") as Label).Text;
+                string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                SqlCommand cmdddd = new SqlCommand(ordp, conn);
+                cmdddd.ExecuteNonQuery();
+
+
+            }
+            uig();
+            conn.Close();
+            Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+
+        }
+
+    }
+
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        String pass = "123456789";
+        Random r = new Random();
+        char[] mypass = new char[5];
+        for (int i = 0; i < 5; i++)
+        {
+            mypass[i] = pass[(int)(3 * r.NextDouble())];
+
+        }
+        string bn = new string(mypass);
+
+        int tr = Convert.ToInt32(bn);
+
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        string insertQuery = "select Transid from orderrr where Transid='" + bn + "'";
+        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+        conn.Open();
+        SqlDataReader readerw = cmd.ExecuteReader();
+
+        if (readerw.HasRows)
+        {
+            readerw.Read();
+            string no = readerw.GetValue(0).ToString();
+            int yy = Convert.ToInt32(no);
+            readerw.Close();
+            if (yy == tr)
+            {
+                tr = tr + 1;
+
+
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                SqlCommand cmdd = new SqlCommand(subcredit, conn);
+                cmdd.ExecuteNonQuery();
+                foreach (GridViewRow g1 in GridView1.Rows)
+                {
+
+                    string pro = (g1.FindControl("Label1") as Label).Text;
+                    string proname = (g1.FindControl("Label2") as Label).Text;
+                    string promod = (g1.FindControl("Label3") as Label).Text;
+                    string proqua = (g1.FindControl("Label4") as Label).Text;
+                    string protot = (g1.FindControl("Label6") as Label).Text;
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    SqlCommand cmdddd = new SqlCommand(ordp, conn);
+                    cmdddd.ExecuteNonQuery();
+
+
+                }
+                uig();
+                conn.Close();
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+
+            }
+            else
+            {
+
+                readerw.Close();
+
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                SqlCommand cmdd = new SqlCommand(subcredit, conn);
+                cmdd.ExecuteNonQuery();
+
+                foreach (GridViewRow g1 in GridView1.Rows)
+                {
+
+
+                    string pro = (g1.FindControl("Label1") as Label).Text;
+                    string proname = (g1.FindControl("Label2") as Label).Text;
+                    string promod = (g1.FindControl("Label3") as Label).Text;
+                    string proqua = (g1.FindControl("Label4") as Label).Text;
+                    string protot = (g1.FindControl("Label6") as Label).Text;
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    SqlCommand cmddd = new SqlCommand(ordp, conn);
+                    cmddd.ExecuteNonQuery();
+
+
+                }
+                uig();
+                conn.Close();
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+            }
+
+        }
+        else
+        {
+
+            readerw.Close();
+
+            string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','COD','0','0','0','0','" + Label9.Text + "','COD')";
+            SqlCommand cmdd = new SqlCommand(subcredit, conn);
+            cmdd.ExecuteNonQuery();
+            foreach (GridViewRow g1 in GridView1.Rows)
+            {
+
+
+                string pro = (g1.FindControl("Label1") as Label).Text;
+                string proname = (g1.FindControl("Label2") as Label).Text;
+                string promod = (g1.FindControl("Label3") as Label).Text;
+                string proqua = (g1.FindControl("Label4") as Label).Text;
+                string protot = (g1.FindControl("Label6") as Label).Text;
+                string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                SqlCommand cmdddd = new SqlCommand(ordp, conn);
+                cmdddd.ExecuteNonQuery();
+
+
+            }
+            uig();
+            conn.Close();
+            Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+
+        }
+
+    }
+
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+        String pass = "123456789";
+        Random r = new Random();
+        char[] mypass = new char[5];
+        for (int i = 0; i < 5; i++)
+        {
+            mypass[i] = pass[(int)(3 * r.NextDouble())];
+
+        }
+        string bn = new string(mypass);
+
+        int tr = Convert.ToInt32(bn);
+
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        string insertQuery = "select Transid from orderrr where Transid='" + bn + "'";
+        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+        conn.Open();
+        SqlDataReader readerw = cmd.ExecuteReader();
+
+        if (readerw.HasRows)
+        {
+            readerw.Read();
+            string no = readerw.GetValue(0).ToString();
+            int yy = Convert.ToInt32(no);
+            readerw.Close();
+            if (yy == tr)
+            {
+                tr = tr + 1;
+
+
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                SqlCommand cmdd = new SqlCommand(subcredit, conn);
+                cmdd.ExecuteNonQuery();
+                foreach (GridViewRow g1 in GridView1.Rows)
+                {
+
+                    string pro = (g1.FindControl("Label1") as Label).Text;
+                    string proname = (g1.FindControl("Label2") as Label).Text;
+                    string promod = (g1.FindControl("Label3") as Label).Text;
+                    string proqua = (g1.FindControl("Label4") as Label).Text;
+                    string protot = (g1.FindControl("Label6") as Label).Text;
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    SqlCommand cmdddd = new SqlCommand(ordp, conn);
+                    cmdddd.ExecuteNonQuery();
+
+
+                }
+                uig();
+                conn.Close();
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+
+            }
+            else
+            {
+
+                readerw.Close();
+
+                string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','credit card','" + Convert.ToInt64(TextBox5.Text) + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + Convert.ToInt32(TextBox6.Text) + "','" + Label9.Text + "','" + TextBox9.Text + "')";
+                SqlCommand cmdd = new SqlCommand(subcredit, conn);
+                cmdd.ExecuteNonQuery();
+
+                foreach (GridViewRow g1 in GridView1.Rows)
+                {
+
+
+                    string pro = (g1.FindControl("Label1") as Label).Text;
+                    string proname = (g1.FindControl("Label2") as Label).Text;
+                    string promod = (g1.FindControl("Label3") as Label).Text;
+                    string proqua = (g1.FindControl("Label4") as Label).Text;
+                    string protot = (g1.FindControl("Label6") as Label).Text;
+                    string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                    SqlCommand cmddd = new SqlCommand(ordp, conn);
+                    cmddd.ExecuteNonQuery();
+
+
+                }
+                uig();
+                conn.Close();
+                Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+            }
+
+        }
+        else
+        {
+
+            readerw.Close();
+
+            string subcredit = "insert into orderrr(Transid,username,grandtot,addr1,addr2,addr3,phone,payment_method,cardno,exp_month,exp_year,cvv,datee,cardholder_name) values('" + tr + "','" + Session["user"].ToString() + "','" + Convert.ToInt32(Label7.Text) + "','" + TextBox1.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + Convert.ToInt64(TextBox2.Text) + "','gift card','" + Convert.ToInt64(TextBox11.Text) + "','0','0','0','" + Label9.Text + "','" + Session["user"].ToString() + "')";
+            SqlCommand cmdd = new SqlCommand(subcredit, conn);
+            cmdd.ExecuteNonQuery();
+            foreach (GridViewRow g1 in GridView1.Rows)
+            {
+
+
+                string pro = (g1.FindControl("Label1") as Label).Text;
+                string proname = (g1.FindControl("Label2") as Label).Text;
+                string promod = (g1.FindControl("Label3") as Label).Text;
+                string proqua = (g1.FindControl("Label4") as Label).Text;
+                string protot = (g1.FindControl("Label6") as Label).Text;
+                string ordp = "insert into orderpp(Transid,product,prod_man,prod_mod,quantity,tot) values('" + tr + "','" + pro + "','" + proname + "','" + promod + "','" + proqua + "','" + protot + "')";
+                SqlCommand cmdddd = new SqlCommand(ordp, conn);
+                cmdddd.ExecuteNonQuery();
+
+
+            }
+            uig();
+            conn.Close();
+            Response.Write(" <script>window.alert('Order confirmed'); window.location='emptyaddcart.aspx';</script>");
+
+        }
+
+    }
 }

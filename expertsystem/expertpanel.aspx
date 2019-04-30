@@ -81,7 +81,7 @@
         <div style="height:790px;">
 
             <asp:Panel ID="Panel1" runat="server">
-                <table style="margin-left:10%;">
+                <table style="margin-left:10%; margin-top:2%; background-color:#00acee; padding:7%;">
                 <tr>
                 <td>
                 <h1 style="font-size:25px; line-height:50px;">Welcome to PC Parts Mart,<br /><br />
@@ -96,8 +96,8 @@
                     <br />
                 <asp:Button ID="Button6" runat="server" Text="Next" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="150" OnClick="Button6_Click"  />
                     </td>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" ImageAlign="Middle" ImageUrl="~/images/exp.png" />
+                    <td style="padding-left:5%; width:50%; vertical-align:top;">
+                        <asp:Image ID="Image1" runat="server" ImageAlign="Middle" ImageUrl="~/images/exp.png" Height="500"  />
                     </td>
                     </tr>
                     </table>
@@ -109,13 +109,14 @@
                 <tr>
                 <td >
                 <span class="spa">What is your name?</span><br /><br />
-                <asp:TextBox ID="TextBox1" CssClass="txtadd" runat="server"></asp:TextBox><br /><br /><br />
+                <asp:TextBox ID="TextBox1" CssClass="txtadd" runat="server"></asp:TextBox> &nbsp <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Textbox1" ForeColor="red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br /><br />
+                
 
                 <span class="spa">What is your profession?</span><br /><br />
-                <asp:TextBox ID="TextBox2" CssClass="txtadd" runat="server"></asp:TextBox><br /><br /><br />
+                <asp:TextBox ID="TextBox2" CssClass="txtadd" runat="server"></asp:TextBox>&nbsp <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Textbox2" ForeColor="red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br /><br />
 
                 <span class="spa">What is your age?</span><br /><br />
-                <asp:TextBox ID="TextBox3" CssClass="txtadd" runat="server"></asp:TextBox><br /><br /><br />
+                <asp:TextBox ID="TextBox3" CssClass="txtadd" runat="server"></asp:TextBox>&nbsp <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Textbox3" ForeColor="red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br /><br />
 
                  <asp:Button ID="Button2" runat="server" Text="Next" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="150" OnClick="Button2_Click"  />
                  </td>

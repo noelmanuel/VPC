@@ -25,6 +25,7 @@ public partial class expertsystem_userexpertdes : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        
         foreach (DataListItem dli in DataList1.Items)
         {
             Label budget = (Label)dli.FindControl("Label5");
@@ -69,6 +70,7 @@ public partial class expertsystem_userexpertdes : System.Web.UI.Page
             for (int i = 0; i < 6; i++)
             {
                 mypass[i] = pass[(int)(4 * r.NextDouble())];
+               
 
             }
             string bn = new string(mypass);
