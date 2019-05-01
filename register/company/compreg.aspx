@@ -184,8 +184,8 @@
                                     
                                     <asp:DropDownList ID="DropDownList2" CssClass="dd" runat="server">
                                         <asp:ListItem>Choose your question</asp:ListItem>
-                                        <asp:ListItem>Your fav color?</asp:ListItem>
-                                        <asp:ListItem>Your childhood name?</asp:ListItem>
+                                        <asp:ListItem>Six digit pin?</asp:ListItem>
+                                        <asp:ListItem>Company origin date?</asp:ListItem>
                                     </asp:DropDownList>
                         </div>
                         <div class="row row-space">

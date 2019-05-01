@@ -20,6 +20,10 @@ public partial class forgot : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Panel1.Visible = false;
+        Panel2.Visible = false;
+        Panel3.Visible = false;
+        Panel4.Visible = false;
+
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -42,13 +46,56 @@ public partial class forgot : System.Web.UI.Page
         else
         {
             reader.Close();
-            Label1.Text = "Invaild details";
-            Response.Redirect("~/forgot.aspx");
+            Response.Write(" <script>window.alert('INVAILD DETAILS');  window.location='forgot.aspx'</script>");
         }
         conn.Close();
     }
 
     protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/forgot.aspx");
+    }
+
+    protected void user(object sender, EventArgs e)
+    {
+        Panel2.Visible = true;
+        Panel3.Visible = false;
+        Panel4.Visible = false;
+    }
+
+    protected void company(object sender, EventArgs e)
+    {
+        Panel3.Visible = true;
+        Panel1.Visible = false;
+        Panel2.Visible = false;
+    }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string insertQuery = "select comppass from compregn where compusname='" + TextBox5.Text + "' AND compemail='" + TextBox6.Text + "' AND compques='" + DropDownList2.SelectedItem + "' AND compans='" + TextBox7.Text + "'";
+        SqlCommand cmd = new SqlCommand(insertQuery, conn);
+        SqlDataReader reader = cmd.ExecuteReader();
+
+        if (reader.HasRows)
+        {
+            Panel4.Visible = true;
+            reader.Read();
+            string no = reader.GetValue(0).ToString();
+            reader.Close();
+            TextBox8.Text = no;
+            conn.Close();
+        }
+        else
+        {
+            reader.Close();
+            Response.Write(" <script>window.alert('INVAILD DETAILS');  window.location='forgot.aspx'</script>");
+        }
+        conn.Close();
+    }
+
+    protected void Button4_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/forgot.aspx");
     }

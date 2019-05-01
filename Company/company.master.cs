@@ -67,13 +67,10 @@ public partial class Company_company : System.Web.UI.MasterPage
         Response.Redirect("/Company/viewproduct.aspx");
     }
 
-    protected void modify_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("/Company/comaddproduct.aspx");
-    }
+   
 
     protected void delete_Click(object sender, EventArgs e)
     {
-        Response.Redirect("/Company/comaddproduct.aspx");
+        Response.Redirect("/Company/deleteproduct.aspx");
     }
 }

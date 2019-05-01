@@ -175,12 +175,12 @@
                         <span style="padding-left:40px; font-size:30px; color:red;">₹</span>
                         <asp:Label ID="Label21" runat="server" Text='<%# Eval("pric") %>' CssClass="ff"></asp:Label>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quantity &nbsp 
-                        <asp:TextBox ID="st" runat="server" AutoPostBack="False" Text="1" Width="20"></asp:TextBox>                        
+                        <asp:TextBox ID="st" runat="server" AutoPostBack="False" Text="1" Width="20"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" Font-Size="15" ControlToValidate="st" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>                        
                         <asp:Label ID="Label22" runat="server"></asp:Label>                       
                      </td>
                     <td class="auto-styleee2">
                         <asp:Button ID="Button1" runat="server" Text="ADD TO CART" Height="50" Width="200" CssClass="btn_cart" OnClick="Button1_Click" />
-                        <asp:Button ID="Button2" runat="server" Text="BUY NOW" Height="50" Width="200" CssClass="btn_cart" />
+                        
                     </td>
                 </tr>                
             </table>           

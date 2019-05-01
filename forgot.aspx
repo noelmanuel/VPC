@@ -45,6 +45,10 @@
         <h3 style="padding-top:17px; margin-left:10%;">FORGOT PASSWORD</h3>
         <div style="height:790px; margin-left:10%;">
 
+            <asp:Button ID="Button5" runat="server" Text="USER" CssClass="mb_sb" OnClick="user" /> &nbsp&nbsp&nbsp
+            <asp:Button ID="Button6" runat="server" Text="COMPANY" CssClass="mb_sb" OnClick="company" /><br /><br />
+
+            <asp:Panel ID="Panel2" runat="server">
             <span class="sp">Enter your username</span><br />
             <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox><br /><br />
 
@@ -67,9 +71,37 @@
              <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="mb_sb" OnClick="Button1_Click"/> &nbsp&nbsp&nbsp
              <asp:Button ID="Button2" runat="server" Text="Clear" CssClass="mb_sb" OnClick="Button2_Click" CausesValidation="False"/>
 
+                </asp:Panel>
+
+            <asp:Panel ID="Panel3" runat="server">
+                <span class="sp">Enter your username</span><br />
+            <asp:TextBox ID="TextBox5" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+
+            <span class="sp">Enter your email</span><br />
+            <asp:TextBox ID="TextBox6" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+
+            <span class="sp">Pick your Question</span><br />
+            <asp:DropDownList ID="DropDownList2" CssClass="tb" runat="server" DataSourceID="SqlDataSource2" DataTextField="compques" DataValueField="compques">
+            </asp:DropDownList><br /><br />
+
+            <span class="sp">Enter your answer</span><br />
+            <asp:TextBox ID="TextBox7" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+
+            <asp:Panel ID="Panel4" runat="server">
+            <span class="sp">Your Password</span><br />
+            <asp:TextBox ID="TextBox8" CssClass="tb" runat="server"></asp:TextBox><br /><br /></asp:Panel>
+            <asp:Label ID="Label2" runat="server"></asp:Label><br /><br />
+
+
+             <asp:Button ID="Button3" runat="server" Text="Submit" CssClass="mb_sb" OnClick="Button3_Click"/> &nbsp&nbsp&nbsp
+             <asp:Button ID="Button4" runat="server" Text="Clear" CssClass="mb_sb" OnClick="Button4_Click" CausesValidation="False"/>
+
+
+            </asp:Panel>
 
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT DISTINCT [usques] FROM [cregn]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT DISTINCT [compques] FROM [compregn]"></asp:SqlDataSource>
     </div>
 </asp:Content>
 

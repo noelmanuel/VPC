@@ -30,7 +30,7 @@ public partial class Company_Product_company_comaddkeyboard : System.Web.UI.Page
         mbimg3.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg3.FileName));
         String link3 = "/images/" + Path.GetFileName(mbimg3.FileName);
         conn.Open();
-        string insertQuery = "insert into keyboard(man,mod,par,col,des,typ,bac,mec,inc,imageurl,pric,imageurl1,imageurl2,stock) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + TextBox8.Text + "','" + TextBox9.Text + "','" + link + "','" + TextBox17.Text + "','" + link2 + "','" + link3 + "','" + TextBox18.Text + "')";
+        string insertQuery = "insert into keyboard(man,mod,par,col,des,typ,bac,mec,inc,imageurl,pric,imageurl1,imageurl2,stock,brand) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + TextBox8.Text + "','" + TextBox9.Text + "','" + link + "','" + TextBox17.Text + "','" + link2 + "','" + link3 + "','" + TextBox18.Text + "','" + Session["comp"].ToString() + "')";
         SqlCommand cmd = new SqlCommand(insertQuery, conn);
         cmd.ExecuteNonQuery();
         conn.Close();

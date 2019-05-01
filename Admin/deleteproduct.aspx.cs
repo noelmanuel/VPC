@@ -149,6 +149,7 @@ public partial class Admin_deleteproduct : System.Web.UI.Page
 
     protected void del_mb(object sender, EventArgs e)
     {
+
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
 

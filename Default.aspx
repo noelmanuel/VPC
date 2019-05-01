@@ -56,52 +56,52 @@
 
                 <div class="cata_parts">
 
-                   <a href="#"> <div class="mb">
+                   <a href="Guest/Product Page/motherboardlist.aspx"> <div class="mb">
                         <img src="images/mb.jpg" height="105px" width="130px" style="margin-left:5%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Motherboard</h5>
                     </div></a>
 
-                    <a href="#"> <div class="pro">
+                    <a href="Guest/Product Page/processorlist.aspx"> <div class="pro">
                         <img src="images/pro.jpg" height="105px" width="130px" style="margin-left:5%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Processor</h5>
                     </div></a>
 
-                    <a href="#"> <div class="hd">
+                    <a href="Guest/Product Page/hddlist.aspx"> <div class="hd">
                         <img src="images/hd.jpg" height="105px" width="120px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Hard disk</h5>
                     </div></a>
 
-                    <a href="#"> <div class="ram">
+                    <a href="Guest/Product Page/ramlist.aspx"> <div class="ram">
                         <img src="images/ram.jpg" height="105px" width="120px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">RAM</h5>
                     </div></a>
 
-                    <a href="#"> <div class="gpu">
+                    <a href="Guest/Product Page/gpulist.aspx"> <div class="gpu">
                         <img src="images/gpu.jpg" height="105px" width="140px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">GPU</h5>
                     </div></a>
 
-                    <a href="#"> <div class="ssd">
+                    <a href="Guest/Product Page/ssdlist.aspx"> <div class="ssd">
                         <img src="images/ssd.jpg" height="105px" width="140px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">SSD</h5>
                     </div></a>
 
-                     <a href="#"> <div class="cd">
+                     <a href="Guest/Product Page/cddrivelist.aspx"> <div class="cd">
                         <img src="images/cd.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">CD Drive</h5>
                     </div></a>
 
-                     <a href="#"> <div class="smps">
+                     <a href="Guest/Product Page/smpslist.aspx"> <div class="smps">
                         <img src="images/smps.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">SMPS</h5>
                     </div></a>
 
-                     <a href="#"> <div class="cool">
+                     <a href="Guest/Product Page/coolerlist.aspx"> <div class="cool">
                         <img src="images/cool.jpg" height="105px" width="130px" style="margin-left:10%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Coolent</h5>
                          </div></a>
 
-                          <a href="#"> <div class="sound">
+                          <a href="Guest/Product Page/soundcardlist.aspx"> <div class="sound">
                         <img src="images/sound.jpg" height="105px" width="130px" style="margin-left:8%; margin-top:20px;" />
                         <h5 style="font-size:smaller; text-align:center;">Sound Card</h5>
                     </div></a>

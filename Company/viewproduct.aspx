@@ -175,24 +175,24 @@
          <h3 style=" margin-left:15px;">PROCESSOR</h3>
         <asp:GridView ID="GridView3" CssClass="gri" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" AutoGenerateColumns="False" DataSourceID="SqlDataSource3">
             <Columns>
-                <asp:BoundField DataField="man" HeaderText="man" SortExpression="man" />
-                <asp:BoundField DataField="mod" HeaderText="mod" SortExpression="mod" />
-                <asp:BoundField DataField="wid" HeaderText="wid" SortExpression="wid" />
-                <asp:BoundField DataField="soc" HeaderText="soc" SortExpression="soc" />
-                <asp:BoundField DataField="fre" HeaderText="fre" SortExpression="fre" />
-                <asp:BoundField DataField="tur" HeaderText="tur" SortExpression="tur" />
-                <asp:BoundField DataField="cor" HeaderText="cor" SortExpression="cor" />
+                <asp:BoundField DataField="man" HeaderText="Manufacturer" SortExpression="man" />
+                <asp:BoundField DataField="mod" HeaderText="Model" SortExpression="mod" />
+                <asp:BoundField DataField="wid" HeaderText="Data Width" SortExpression="wid" />
+                <asp:BoundField DataField="soc" HeaderText="Socket" SortExpression="soc" />
+                <asp:BoundField DataField="fre" HeaderText="Operating Frequency" SortExpression="fre" />
+                <asp:BoundField DataField="tur" HeaderText="Turbo Frequency" SortExpression="tur" />
+                <asp:BoundField DataField="cor" HeaderText="Cores" SortExpression="cor" />
                 <asp:BoundField DataField="max" HeaderText="max" SortExpression="max" />
-                <asp:BoundField DataField="l1" HeaderText="l1" SortExpression="l1" />
-                <asp:BoundField DataField="l2" HeaderText="l2" SortExpression="l2" />
-                <asp:BoundField DataField="l3" HeaderText="l3" SortExpression="l3" />
-                <asp:BoundField DataField="lit" HeaderText="lit" SortExpression="lit" />
-                <asp:BoundField DataField="the" HeaderText="the" SortExpression="the" />
-                <asp:BoundField DataField="inc" HeaderText="inc" SortExpression="inc" />
-                <asp:BoundField DataField="sim" HeaderText="sim" SortExpression="sim" />
-                <asp:BoundField DataField="inte" HeaderText="inte" SortExpression="inte" />
-                <asp:BoundField DataField="pric" HeaderText="pric" SortExpression="pric" />
-                <asp:BoundField DataField="stock" HeaderText="stock" SortExpression="stock" />
+                <asp:BoundField DataField="l1" HeaderText="L1 Cache" SortExpression="l1" />
+                <asp:BoundField DataField="l2" HeaderText="L2 Cache" SortExpression="l2" />
+                <asp:BoundField DataField="l3" HeaderText="L3 Cache" SortExpression="l3" />
+                <asp:BoundField DataField="lit" HeaderText="Lithography" SortExpression="lit" />
+                <asp:BoundField DataField="the" HeaderText="Thermal Design Power" SortExpression="the" />
+                <asp:BoundField DataField="inc" HeaderText="Includes CPU Cooler" SortExpression="inc" />
+                <asp:BoundField DataField="sim" HeaderText="Simultaneous Multithreading" SortExpression="sim" />
+                <asp:BoundField DataField="inte" HeaderText="Maximum Supported Memory" SortExpression="inte" />
+                <asp:BoundField DataField="pric" HeaderText="Price" SortExpression="pric" />
+                <asp:BoundField DataField="stock" HeaderText="Stock" SortExpression="stock" />
             </Columns>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -215,26 +215,26 @@
          <h3 style=" margin-left:15px;">GPU</h3>
         <asp:GridView ID="GridView4" CssClass="gri" runat="server" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" AutoGenerateColumns="False" DataSourceID="SqlDataSource4">
             <Columns>
-                <asp:BoundField DataField="man" HeaderText="man" SortExpression="man" />
-                <asp:BoundField DataField="mod" HeaderText="mod" SortExpression="mod" />
-                <asp:BoundField DataField="col" HeaderText="col" SortExpression="col" />
-                <asp:BoundField DataField="inte" HeaderText="inte" SortExpression="inte" />
-                <asp:BoundField DataField="chi" HeaderText="chi" SortExpression="chi" />
-                <asp:BoundField DataField="mem" HeaderText="mem" SortExpression="mem" />
-                <asp:BoundField DataField="memtyp" HeaderText="memtyp" SortExpression="memtyp" />
-                <asp:BoundField DataField="cor" HeaderText="cor" SortExpression="cor" />
-                <asp:BoundField DataField="boo" HeaderText="boo" SortExpression="boo" />
-                <asp:BoundField DataField="tdp" HeaderText="tdp" SortExpression="tdp" />
-                <asp:BoundField DataField="fan" HeaderText="fan" SortExpression="fan" />
-                <asp:BoundField DataField="cro" HeaderText="cro" SortExpression="cro" />
-                <asp:BoundField DataField="sli" HeaderText="sli" SortExpression="sli" />
-                <asp:BoundField DataField="len" HeaderText="len" SortExpression="len" />
-                <asp:BoundField DataField="sup" HeaderText="sup" SortExpression="sup" />
+                <asp:BoundField DataField="man" HeaderText="Manufacturer" SortExpression="man" />
+                <asp:BoundField DataField="mod" HeaderText="Model" SortExpression="mod" />
+                <asp:BoundField DataField="col" HeaderText="Color" SortExpression="col" />
+                <asp:BoundField DataField="inte" HeaderText="Interface" SortExpression="inte" />
+                <asp:BoundField DataField="chi" HeaderText="Chipset" SortExpression="chi" />
+                <asp:BoundField DataField="mem" HeaderText="Memory Size" SortExpression="mem" />
+                <asp:BoundField DataField="memtyp" HeaderText="Memory Type" SortExpression="memtyp" />
+                <asp:BoundField DataField="cor" HeaderText="Core Clock" SortExpression="cor" />
+                <asp:BoundField DataField="boo" HeaderText="Boost Clock" SortExpression="boo" />
+                <asp:BoundField DataField="tdp" HeaderText="TDP" SortExpression="tdp" />
+                <asp:BoundField DataField="fan" HeaderText="Fan" SortExpression="fan" />
+                <asp:BoundField DataField="cro" HeaderText="CrossFire Support" SortExpression="cro" />
+                <asp:BoundField DataField="sli" HeaderText="SLI Support" SortExpression="sli" />
+                <asp:BoundField DataField="len" HeaderText="Length" SortExpression="len" />
+                <asp:BoundField DataField="sup" HeaderText="Supports G-Sync" SortExpression="sup" />
                 <asp:BoundField DataField="dvi" HeaderText="dvi" SortExpression="dvi" />
-                <asp:BoundField DataField="dis" HeaderText="dis" SortExpression="dis" />
-                <asp:BoundField DataField="hdm" HeaderText="hdm" SortExpression="hdm" />
-                <asp:BoundField DataField="pric" HeaderText="pric" SortExpression="pric" />
-                <asp:BoundField DataField="stock" HeaderText="stock" SortExpression="stock" />
+                <asp:BoundField DataField="dis" HeaderText="DisplayPort" SortExpression="dis" />
+                <asp:BoundField DataField="hdm" HeaderText="hdmi" SortExpression="hdm" />
+                <asp:BoundField DataField="pric" HeaderText="Price" SortExpression="pric" />
+                <asp:BoundField DataField="stock" HeaderText="Stock" SortExpression="stock" />
             </Columns>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />

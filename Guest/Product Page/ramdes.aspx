@@ -204,7 +204,7 @@
                      </td>
                     <td class="auto-styleee2">
                         <asp:Button ID="Button1" runat="server" Text="ADD TO CART" Height="50" Width="200" CssClass="btn_cart" OnClick="Button1_Click" />
-                        <asp:Button ID="Button2" runat="server" Text="BUY NOW" Height="50" Width="200" CssClass="btn_cart" />
+                       <asp:Button ID="Button2" runat="server" Text="HOME" Height="50" Width="200" CssClass="btn_cart" OnClick="Button22_Click" />
                     </td>
                 </tr>                
             </table>           

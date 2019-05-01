@@ -44,6 +44,7 @@ public partial class login : System.Web.UI.Page
             {
 
                 Session["comp"] = txtuname.Value;
+                Session["company"] = "company";
                 string str = "select status from compregn where compusname='" + txtuname.Value + "'";
                 SqlCommand cmdd = new SqlCommand(str, conn);
                 SqlDataReader readerr = cmdd.ExecuteReader();

@@ -32,7 +32,7 @@ public partial class Company_Product_company_comaddram : System.Web.UI.Page
         mbimg3.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg3.FileName));
         String link3 = "/images/" + Path.GetFileName(mbimg3.FileName);
         conn.Open();
-        string insertQuery = "insert into ram(man,mod,col,memtyp,ddr,fre,siz,cas,tim,vol,hea,ecc,regi,imageurl,pric,imageurl1,imageurl2,stock) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + TextBox9.Text + "','" + TextBox10.Text + "','" + TextBox11.Text + "','" + TextBox12.Text + "','" + TextBox13.Text + "','" + TextBox14.Text + "','" + link + "','" + TextBox17.Text + "','" + link2 + "','" + link3 + "','" + TextBox18.Text + "')";
+        string insertQuery = "insert into ram(man,mod,col,memtyp,ddr,fre,siz,cas,tim,vol,hea,ecc,regi,imageurl,pric,imageurl1,imageurl2,stock,brand) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + TextBox9.Text + "','" + TextBox10.Text + "','" + TextBox11.Text + "','" + TextBox12.Text + "','" + TextBox13.Text + "','" + TextBox14.Text + "','" + link + "','" + TextBox17.Text + "','" + link2 + "','" + link3 + "','" + TextBox18.Text + "','" + Session["comp"].ToString() + "')";
         SqlCommand cmd = new SqlCommand(insertQuery, conn);
         cmd.ExecuteNonQuery();
         conn.Close();

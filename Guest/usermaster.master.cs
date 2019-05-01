@@ -23,4 +23,80 @@ public partial class Guest_usermaster : System.Web.UI.MasterPage
     {
         Response.Redirect("~/login/Login_v1/login.aspx");
     }
+
+    protected void home1(object sender, EventArgs e)
+    {
+        string g = Session["admin"].ToString();
+        if (g == "admin")
+        {
+            Response.Redirect("~/Admin/adminhome.aspx");
+        }
+        else if (Session["company"].ToString() == "company")
+        {
+            Response.Redirect("~/Company/companyhome.aspx");
+        }
+        else
+        {
+            Response.Redirect("~/login/Login_v1/login.aspx");
+        }
+    }
+
+    protected void home2(object sender, EventArgs e)
+    {
+        string g = Session["admin"].ToString();
+        if (g == "admin")
+        {
+            Response.Redirect("~/Admin/adminhome.aspx");
+        }
+        else if (Session["company"].ToString() == "company")
+        {
+            Response.Redirect("~/Company/companyhome.aspx");
+        }
+        else
+        {
+            Response.Redirect("~/login/Login_v1/login.aspx");
+        }
+    }
+
+    protected void home3(object sender, EventArgs e)
+    {
+        string g = Session["admin"].ToString();
+        if (g == "admin")
+        {
+            Response.Redirect("~/Admin/adminhome.aspx");
+        }
+        else if (Session["company"].ToString() == "company")
+        {
+
+            Response.Write(" <script>window.alert('Coming soon'); window.location='Product category.aspx';</script>");
+        }
+        else
+        {
+            Response.Redirect("~/login/Login_v1/login.aspx");
+        }
+    }
+
+    protected void home4(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Guest/Product category.aspx");
+    }
+    protected void home5(object sender, EventArgs e)
+    {
+        string g = Session["admin"].ToString();
+        
+        if (g == "admin")
+        {
+            Response.Redirect("~/Admin/adminhome.aspx");
+        }
+        else if(Session["company"].ToString() == "company")
+        {
+            Response.Redirect("~/Company/companyhome.aspx");
+        }
+        else
+        {
+            Response.Redirect("~/login/Login_v1/login.aspx");
+        }
+    }
+
+    
 }

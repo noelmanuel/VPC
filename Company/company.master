@@ -41,14 +41,11 @@
                     <a href="viewcombuild.aspx"><img src="/images/view.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
-                <div class="option3">
-
-                    <a href="#"><img src="/images/expert.jpg" height="35px" width="150px;" style=" margin-top:5px; margin-left:10px;" /></a>
-                </div>
+                
 
                 <div class="option4">
 
-                    <a href="#"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="../Guest/Product category.aspx"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
             </div>
 
@@ -66,8 +63,7 @@
                         <br />
                         <asp:Button ID="Button2" runat="server" Text="LOGO CHANGE" Height="50" Width="200" CssClass="imgbtnn" OnClick="Button2_Click" CausesValidation="False" /><br />
                         <asp:Button ID="Button3" runat="server" Text="ADD PRODUCT" Height="50" Width="200" CssClass="imgbtnn" OnClick="add_Click" CausesValidation="False" /><br />
-                        <asp:Button ID="Button4" runat="server" Text="VIEW PRODUCT" Height="50" Width="200" CssClass="imgbtnn" OnClick="view_Click" CausesValidation="False" /><br />
-                        <asp:Button ID="Button5" runat="server" Text="MODIFY PRODUCT"  Height="50" Width="200" CssClass="imgbtnn" OnClick="modify_Click" CausesValidation="False" /><br />
+                        <asp:Button ID="Button4" runat="server" Text="VIEW PRODUCT" Height="50" Width="200" CssClass="imgbtnn" OnClick="view_Click" CausesValidation="False" /><br />                     
                         <asp:Button ID="Button6" runat="server" Text="DELETE PRODUCT" Height="50" Width="200" CssClass="imgbtnn" OnClick="delete_Click" CausesValidation="False" /><br />
 
                  </td>
