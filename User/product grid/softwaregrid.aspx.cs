@@ -25,16 +25,34 @@ public partial class User_product_grid_softwaregrid : System.Web.UI.Page
 
     protected void Button1_Click1(object sender, EventArgs e)
     {
+
         foreach (GridViewRow row in GridView1.Rows)
         {
             CheckBox cbox = (row.Cells[0].FindControl("CheckBox1") as CheckBox);
             int rollno = Convert.ToInt32(row.Cells[2].Text);
             string pro = row.Cells[1].Text;
-            if(cbox.Checked)
+            if (cbox.Checked)
             {
-                deleterow(pro,rollno);
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                conn.Open();
+                string catt = "software";
+                string insertQuery = "select software from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "' AND software = '" + pro + "'";
+                SqlCommand cmd26 = new SqlCommand(insertQuery, conn);
+                SqlDataReader reader21 = cmd26.ExecuteReader();
+                if (reader21.HasRows)
+                {
+                    Response.Write(" <script>window.alert('Item already exist cannot be added again'); window.location='softwaregrid.aspx';</script>");
+                }
+                else
+                deleterow(pro, rollno);
             }
+
         }
+        
+            
+                    
+            
+        
         GridView1.DataBind();
         
     }
@@ -82,6 +100,7 @@ public partial class User_product_grid_softwaregrid : System.Web.UI.Page
             cmddd.ExecuteNonQuery();
             conn.Close();
 
+            Label1.Text = "Software Added Sucessfully";
 
         }
     }

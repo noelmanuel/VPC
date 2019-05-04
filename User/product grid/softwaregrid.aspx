@@ -12,8 +12,8 @@
 
                 <tr>
 
-                    <td style="vertical-align:top; padding-left:15%; width:60%;">
-                   <h3 style="padding-top:17px; margin-left:10%;">SELECT SOFTWARE</h3>
+                    <td style="vertical-align:top; padding-left:10%; width:50%; border-right:1px solid #c3c3c3;">
+                   <h3>SELECT SOFTWARE</h3>
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="SqlDataSource1" Height="194px" Width="670px">
                             <Columns>
                                 <asp:TemplateField HeaderText="Select">
@@ -39,18 +39,21 @@
                             <SortedDescendingCellStyle BackColor="#F1E5CE" />
                             <SortedDescendingHeaderStyle BackColor="#93451F" />
                         </asp:GridView>
+
+
             
             
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [software]"></asp:SqlDataSource>
 
    
 
-                    </td>
-
-                    <td style="padding-left:10px; vertical-align:top; width:40%; padding-top:12%;">
+                        <br /><br />
+                        <asp:Label ID="Label1" runat="server"></asp:Label><br /><br />
                         <asp:Button ID="Button1" runat="server" Text="ADD"  ForeColor="White" BackColor="Red" BorderStyle="None" Height="50" Width="100" OnClick="Button1_Click1" /> &nbsp &nbsp
                         <asp:Button ID="Button2" runat="server" Text="Back" ForeColor="White" BackColor="Red" BorderStyle="None" Height="50" Width="100" OnClick="Button1_Click2" />
                     </td>
+
+                   
                 </tr>
             </table>
 

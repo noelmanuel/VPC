@@ -170,9 +170,13 @@
                         <asp:Button ID="Button49" CssClass="add" runat="server" Text="ADD UPS" BackColor="#00CCFF" ForeColor="White" Height="20" Width="150" BorderStyle="None" OnClick="ups23_Click" />
                         <asp:Button ID="Button50" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delups24_Click" /><br /><br />
 
-                            <asp:Label ID="Label26" runat="server" Width="580"></asp:Label>
+                            
+                            <asp:Label ID="Label26" Width="580" runat="server" ></asp:Label>
+                    
                         <asp:Button ID="Button51" CssClass="add" runat="server" Text="ADD SOFTWARE" BackColor="#00CCFF" ForeColor="White" Height="20" Width="150" BorderStyle="None" OnClick="software23_Click" />
-                        <asp:Button ID="Button52" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delsoftware24_Click" /><br /><br />
+                        <asp:Button ID="Button52" CssClass="add" runat="server" Text="X" BackColor="red" ForeColor="White" Height="20" Width="30" BorderStyle="None" OnClick="delsoftware24_Click" /><br />
+                    <asp:DropDownList ID="DropDownList1" DataTextField="software" DataValueField="software" runat="server"></asp:DropDownList> &nbsp&nbsp&nbsp  <asp:Button ID="Button57" CssClass="add" runat="server" Text="Edit" BackColor="#00CCFF" ForeColor="White" Height="20" Width="50" BorderStyle="None" OnClick="softwarelist_Click" />
+                    <br /><br />
 
                     <asp:Label ID="Label27" runat="server" Width="580"></asp:Label>
                         <asp:Button ID="Button53" CssClass="add" runat="server" Text="ADD OS" BackColor="#00CCFF" ForeColor="White" Height="20" Width="150" BorderStyle="None" OnClick="os23_Click" />

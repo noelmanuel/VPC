@@ -28,6 +28,10 @@ public partial class Guest_Product_Page_motherboarddes : System.Web.UI.Page
         {
             Response.Redirect("~/Admin/adminhome.aspx");
         }
+        else if (Session["company"].ToString() == "company")
+        {
+            Response.Redirect("~/Company/companyhome.aspx");
+        }
         else
         {
             Response.Redirect("~/login/Login_v1/login.aspx");
@@ -41,6 +45,10 @@ public partial class Guest_Product_Page_motherboarddes : System.Web.UI.Page
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");
+        }
+        else if (Session["company"].ToString() == "company")
+        {
+            Response.Redirect("~/Company/companyhome.aspx");
         }
         else
         {

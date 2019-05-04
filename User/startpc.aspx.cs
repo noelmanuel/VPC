@@ -45,6 +45,13 @@ public partial class User_startpc : System.Web.UI.Page
         software_check();
         os_check();
 
+        
+            
+            
+           
+
+        
+
 
 
 
@@ -67,6 +74,33 @@ public partial class User_startpc : System.Web.UI.Page
             Image1.ImageUrl = "~/images/mboff.jpg";
             reader.Close();
             Button1.Enabled = false;
+            Button3.Enabled = true;
+            Button5.Enabled = true;
+            Button7.Enabled = true;
+            Button9.Enabled = true;
+            Button11.Enabled = true;
+            Button13.Enabled = true;
+            Button15.Enabled = true;
+            Button17.Enabled = true;
+            Button19.Enabled = true;
+            Button21.Enabled = true;
+            Button23.Enabled = true;
+            Button25.Enabled = true;
+            Button27.Enabled = true;
+            Button29.Enabled = true;
+            Button31.Enabled = true;
+            Button33.Enabled = true;
+            Button35.Enabled = true;
+            Button37.Enabled = true;
+            Button39.Enabled = true;
+            Button41.Enabled = true;
+            Button43.Enabled = true;
+            Button45.Enabled = true;
+            Button47.Enabled = true;
+            Button49.Enabled = true;
+            Button51.Enabled = true;
+            Button53.Enabled = true;
+            Button1.Text = "Motherboard Added";
             Button1.ForeColor = System.Drawing.Color.White;
             Button1.BackColor = System.Drawing.Color.Gray;
         }
@@ -74,6 +108,33 @@ public partial class User_startpc : System.Web.UI.Page
         else
         {
             reader.Close();
+            Button3.Enabled = false;
+            Button5.Enabled = false;
+            Button7.Enabled = false;
+            Button9.Enabled = false;
+            Button11.Enabled = false;
+            Button13.Enabled = false;
+            Button15.Enabled = false;
+            Button17.Enabled = false;
+            Button19.Enabled = false;
+            Button21.Enabled = false;
+            Button23.Enabled = false;
+            Button25.Enabled = false;
+            Button27.Enabled = false;
+            Button29.Enabled = false;
+            Button31.Enabled = false;
+            Button33.Enabled = false;
+            Button35.Enabled = false;
+            Button37.Enabled = false;
+            Button39.Enabled = false;
+            Button41.Enabled = false;
+            Button43.Enabled = false;
+            Button45.Enabled = false;
+            Button47.Enabled = false;
+            Button49.Enabled = false;
+            Button51.Enabled = false;
+            Button53.Enabled = false;
+            DropDownList1.Visible = false;
             Label1.Text = "ADD MOTHERBOARD";
         }
 
@@ -173,6 +234,8 @@ public partial class User_startpc : System.Web.UI.Page
                         Label2.Text = noi;
                         Button3.Enabled = false;
                         Button7.Enabled = false;
+                        Button3.Text = "RAM Added";
+                        Button7.Text = "RAM Added";
                         Button3.ForeColor = System.Drawing.Color.White;
                         Button3.BackColor = System.Drawing.Color.Gray;
                         Button7.ForeColor = System.Drawing.Color.White;
@@ -196,6 +259,8 @@ public partial class User_startpc : System.Web.UI.Page
                         Label3.Text = noii;
                         Button5.Enabled = false;
                         Button9.Enabled = false;
+                        Button5.Text = "RAM Added";
+                        Button9.Text = "RAM Added";
                         Button5.ForeColor = System.Drawing.Color.White;
                         Button5.BackColor = System.Drawing.Color.Gray;
                         Button9.ForeColor = System.Drawing.Color.White;
@@ -217,6 +282,7 @@ public partial class User_startpc : System.Web.UI.Page
                         string nop = reader1.GetValue(0).ToString();
                         Label6.Text = nop;
                         Button11.Enabled = false;
+                        Button11.Text = "RAM Added";
                         Button11.ForeColor = System.Drawing.Color.White;
                         Button11.BackColor = System.Drawing.Color.Gray;
 
@@ -237,6 +303,7 @@ public partial class User_startpc : System.Web.UI.Page
                         string nopp = reader1.GetValue(0).ToString();
                         Label7.Text = nopp;
                         Button13.Enabled = false;
+                        Button13.Text = "RAM Added";
                         Button13.ForeColor = System.Drawing.Color.White;
                         Button13.BackColor = System.Drawing.Color.Gray;
 
@@ -811,17 +878,24 @@ public partial class User_startpc : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
         string catt = "software";
-        string insertQuery = "select software from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
+        string insertQuery = "select DISTINCT software from makecart where userr='" + Session["user"].ToString() + "' AND product = '" + catt + "'";
         SqlCommand cmd26 = new SqlCommand(insertQuery, conn);
         SqlDataReader reader21 = cmd26.ExecuteReader();
         if (reader21.HasRows)
         {
-            reader21.Read();
-            string no = reader21.GetValue(0).ToString();
-            Label26.Text = "Added";
+            DropDownList1.Visible = true;
             reader21.Close();
+            SqlCommand cd = new SqlCommand(insertQuery, conn);
+            DropDownList1.DataSource = cd.ExecuteReader();
+            DropDownList1.DataBind();            
+            Label26.Text = "Added";
+            
             Button51.Enabled = false;
+            Button57.Enabled = true;
+            Button51.Text = "Software Added";
             Button51.ForeColor = System.Drawing.Color.White;
+       
+
             Button51.BackColor = System.Drawing.Color.Gray;
             Image2.ImageUrl = "~/images/deskoff.jpg";
         }
@@ -829,6 +903,10 @@ public partial class User_startpc : System.Web.UI.Page
         else
         {
             reader21.Close();
+            Button57.Enabled = false;
+            Button57.BackColor = System.Drawing.Color.Gray;
+            Button57.ForeColor = System.Drawing.Color.White;
+
             Label26.Text = "ADD SOFTWARE";
         }
 
@@ -1263,7 +1341,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='software' AND userr='" + Session["user"].ToString() + "' AND software='" + Label26.Text + "'";
+        string str2 = "delete from makecart where product='software' AND userr='" + Session["user"].ToString() + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1600,5 +1678,10 @@ public partial class User_startpc : System.Web.UI.Page
             Response.Redirect("~/User/buildcart.aspx");
 
         }
+    }
+
+    protected void softwarelist_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/User/product grid/listsoftware.aspx");
     }
 }
