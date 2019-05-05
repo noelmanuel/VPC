@@ -25,9 +25,15 @@ public partial class Guest_Product_Page_keyboarddes : System.Web.UI.Page
     {
 
         string g = Session["admin"].ToString();
+        string f = Session["company"].ToString();
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");
+        }
+
+        else if (f == "company")
+        {
+            Response.Redirect("~/Company/companyhome.aspx");
         }
         else
         {
@@ -39,9 +45,15 @@ public partial class Guest_Product_Page_keyboarddes : System.Web.UI.Page
     protected void Button22_Click(object sender, EventArgs e)
     {
         string g = Session["admin"].ToString();
+        string f = Session["company"].ToString();
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");
+        }
+
+        else if (f == "company")
+        {
+            Response.Redirect("~/Company/companyhome.aspx");
         }
         else
         {

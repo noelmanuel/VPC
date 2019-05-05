@@ -27,11 +27,12 @@ public partial class Guest_usermaster : System.Web.UI.MasterPage
     protected void home1(object sender, EventArgs e)
     {
         string g = Session["admin"].ToString();
+        string f = Session["company"].ToString();
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");
         }
-        else if (Session["company"].ToString() == "company")
+        else if (f == "company")
         {
             Response.Redirect("~/Company/companyhome.aspx");
         }
@@ -44,11 +45,12 @@ public partial class Guest_usermaster : System.Web.UI.MasterPage
     protected void home2(object sender, EventArgs e)
     {
         string g = Session["admin"].ToString();
+        string f = Session["company"].ToString();
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");
         }
-        else if (Session["company"].ToString() == "company")
+        else if (f == "company")
         {
             Response.Redirect("~/Company/companyhome.aspx");
         }
@@ -61,14 +63,16 @@ public partial class Guest_usermaster : System.Web.UI.MasterPage
     protected void home3(object sender, EventArgs e)
     {
         string g = Session["admin"].ToString();
+        string f = Session["company"].ToString();
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");
         }
-        else if (Session["company"].ToString() == "company")
+        else if (f == "company")
         {
 
-            Response.Write(" <script>window.alert('Coming soon'); window.location='Product category.aspx';</script>");
+            Response.Write(" <script>window.alert('Coming soon');</script>");
+
         }
         else
         {
@@ -83,12 +87,13 @@ public partial class Guest_usermaster : System.Web.UI.MasterPage
     protected void home5(object sender, EventArgs e)
     {
         string g = Session["admin"].ToString();
-        
+        string f = Session["company"].ToString();
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");
         }
-        else if(Session["company"].ToString() == "company")
+
+        else if (f == "company")
         {
             Response.Redirect("~/Company/companyhome.aspx");
         }

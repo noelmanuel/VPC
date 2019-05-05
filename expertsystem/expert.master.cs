@@ -16,7 +16,25 @@ public partial class expertsystem_expert : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+        string insertQuery21 = "select COUNT(category) from addcart where username='" + Session["user"].ToString() + "'";
+        SqlCommand cmdqw21 = new SqlCommand(insertQuery21, conn);
+        SqlDataReader readerqw21 = cmdqw21.ExecuteReader();
+        if (readerqw21.HasRows)
+        {
+            Label1.ForeColor = System.Drawing.Color.Red;
+            readerqw21.Read();
+            string noo = readerqw21.GetValue(0).ToString();
+            Label1.Text = noo;
+        }
+        else
+        {
+            Label1.Text = "0";
+            Label1.ForeColor = System.Drawing.Color.Red;
+        }
+        readerqw21.Close();
+        conn.Close();
     }
 
     protected void Button1_Click(object sender, EventArgs e)

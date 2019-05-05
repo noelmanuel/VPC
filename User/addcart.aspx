@@ -45,8 +45,11 @@
     <div class="section_backgound">
                 
          <h3 style="height:40px; padding-top:10px; margin-left:10%;">YOUR CART</h3>
+        
+                
+                     
          <div style=" margin-left:10%;">
-         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="product_model" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="4" CellSpacing="2" Height="213px" OnRowDeleting="GridView1_RowDeleting" Width="1091px">
+         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="product_model" BackColor="#DEBA84" BorderColor="#ffd3be" BorderStyle="Solid" BorderWidth="1px" CellPadding="4" CellSpacing="2" Height="213px" OnRowDeleting="GridView1_RowDeleting" Width="1091px">
              <Columns>
                  <asp:TemplateField HeaderText="Product">
                      <ItemTemplate>
@@ -101,10 +104,19 @@
              <SortedDescendingCellStyle BackColor="#F1E5CE" />
              <SortedDescendingHeaderStyle BackColor="#93451F"/>
          </asp:GridView>
-             <h2>GRAND TOTAL <br />₹ <asp:Label ID="Label7" runat="server" Height="50px" Width="100px" CssClass="aa"></asp:Label></h2>
-             <table style="width:60%; ">
+             <table style="width:64%; ">
+            
+            <tr>
+                     <td style="width:35%; border:1px solid #ffd3be; padding:30px; ">
+             <h2>GRAND TOTAL <br />₹ <asp:Label ID="Label7" runat="server" CssClass="aa"></asp:Label></h2>
+             <span>(Inclusive of all taxes and delivery charges)</span>
+                         </td>
+                     </tr>
+            </table>
+             
+             <table style="width:64%; ">
                  <tr>
-                     <td style="width:35%; border:1px solid #efefef; padding:30px; ">
+                     <td style="width:35%; border:1px solid #ffd3be; padding:30px; ">
              <span class="spa">Address</span><br />
              <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" placeholder="House No/Flat"></asp:TextBox><br /><br />
              <asp:TextBox ID="TextBox3" runat="server" CssClass="txtadd" placeholder="State"></asp:TextBox><br /><br />
@@ -117,7 +129,7 @@
              <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" CssClass="bt"  />&nbsp&nbsp&nbsp
              <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button4_Click"  CssClass="bt" /><br /><br />
                          </td>
-                     <td style="width:25%; border:1px solid #efefef; padding:30px;">
+                     <td style="width:25%; border:1px solid #ffd3be; padding:30px;">
 
              <asp:Panel ID="Panel1" CssClass="bo" runat="server" >
                  <asp:Image ID="Image1" ImageUrl="~/images/visa.jpg" runat="server" />

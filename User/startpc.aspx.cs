@@ -281,6 +281,7 @@ public partial class User_startpc : System.Web.UI.Page
                     {
                         string nop = reader1.GetValue(0).ToString();
                         Label6.Text = nop;
+                        
                         Button11.Enabled = false;
                         Button11.Text = "RAM Added";
                         Button11.ForeColor = System.Drawing.Color.White;
@@ -302,6 +303,7 @@ public partial class User_startpc : System.Web.UI.Page
                     {
                         string nopp = reader1.GetValue(0).ToString();
                         Label7.Text = nopp;
+                        Button13.Text = "RAM Added";
                         Button13.Enabled = false;
                         Button13.Text = "RAM Added";
                         Button13.ForeColor = System.Drawing.Color.White;
@@ -380,6 +382,8 @@ public partial class User_startpc : System.Web.UI.Page
                         Label9.Text = item2;
                         Button15.Enabled = false;
                         Button17.Enabled = false;
+                        Button17.Text = "GPU Added";
+                        Button15.Text = "GPU Added";
                         Button15.ForeColor = System.Drawing.Color.White;
                         Button15.BackColor = System.Drawing.Color.Gray;
                         Button17.ForeColor = System.Drawing.Color.White;
@@ -400,6 +404,7 @@ public partial class User_startpc : System.Web.UI.Page
                         Label10.Text = item3;
 
                         Button19.Enabled = false;
+                        Button19.Text = "GPU Added";
                         Button19.ForeColor = System.Drawing.Color.White;
                         Button19.BackColor = System.Drawing.Color.Gray;
 
@@ -459,6 +464,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader9.GetValue(0).ToString();
             Label11.Text = no;
             reader9.Close();
+            Button21.Text = "Harddisk Added";
             Button21.Enabled = false;
             Button21.ForeColor = System.Drawing.Color.White;
             Button21.BackColor = System.Drawing.Color.Gray;
@@ -487,6 +493,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader12.GetValue(0).ToString();
             Label12.Text = no;
             reader12.Close();
+            Button23.Text = "SSD Added";
             Button23.Enabled = false;
             Button23.ForeColor = System.Drawing.Color.White;
             Button23.BackColor = System.Drawing.Color.Gray;
@@ -515,6 +522,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader13.GetValue(0).ToString();
             Label13.Text = no;
             reader13.Close();
+            Button25.Text = "Processor Added";
             Button25.Enabled = false;
             Button25.ForeColor = System.Drawing.Color.White;
             Button25.BackColor = System.Drawing.Color.Gray;
@@ -543,6 +551,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader14.GetValue(0).ToString();
             Label14.Text = no;
             reader14.Close();
+            Button27.Text = "CPU Cooler Added";
             Button27.Enabled = false;
             Button27.ForeColor = System.Drawing.Color.White;
             Button27.BackColor = System.Drawing.Color.Gray;
@@ -571,6 +580,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader15.GetValue(0).ToString();
             Label15.Text = no;
             reader15.Close();
+            Button29.Text = "Soundcard Added";
             Button29.Enabled = false;
             Button29.ForeColor = System.Drawing.Color.White;
             Button29.BackColor = System.Drawing.Color.Gray;
@@ -599,6 +609,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader16.GetValue(0).ToString();
             Label16.Text = no;
             reader16.Close();
+            Button31.Text = "Networkcark Added";
             Button31.Enabled = false;
             Button31.ForeColor = System.Drawing.Color.White;
             Button31.BackColor = System.Drawing.Color.Gray;
@@ -628,6 +639,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader17.GetValue(0).ToString();
             Label17.Text = no;
             reader17.Close();
+            Button33.Text = "CD Drive Added";
             Button33.Enabled = false;
             Button33.ForeColor = System.Drawing.Color.White;
             Button33.BackColor = System.Drawing.Color.Gray;
@@ -657,6 +669,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader18.GetValue(0).ToString();
             Label18.Text = no;
             reader18.Close();
+            Button35.Text = "SMPS Added";
             Button35.Enabled = false;
             Button35.ForeColor = System.Drawing.Color.White;
             Button35.BackColor = System.Drawing.Color.Gray;
@@ -686,6 +699,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader19.GetValue(0).ToString();
             Label19.Text = no;
             reader19.Close();
+            Button37.Text = "Case Added";
             Button37.Enabled = false;
             Button37.ForeColor = System.Drawing.Color.White;
             Button37.BackColor = System.Drawing.Color.Gray;
@@ -714,6 +728,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader20.GetValue(0).ToString();
             Label20.Text = no;
             reader20.Close();
+            Button39.Text = "Casefan Added";
             Button39.Enabled = false;
             Button39.ForeColor = System.Drawing.Color.White;
             Button39.BackColor = System.Drawing.Color.Gray;
@@ -742,6 +757,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader21.GetValue(0).ToString();
             Label21.Text = no;
             reader21.Close();
+            Button41.Text = "Monitor Added";
             Button41.Enabled = false;
             Button41.ForeColor = System.Drawing.Color.White;
             Button41.BackColor = System.Drawing.Color.Gray;
@@ -771,6 +787,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader21.GetValue(0).ToString();
             Label22.Text = no;
             reader21.Close();
+            Button43.Text = "Keyboard Added";
             Button43.Enabled = false;
             Button43.ForeColor = System.Drawing.Color.White;
             Button43.BackColor = System.Drawing.Color.Gray;
@@ -800,6 +817,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader211.GetValue(0).ToString();
             Label23.Text = no;
             reader211.Close();
+            Button45.Text = "Mouse Added";
             Button45.Enabled = false;
             Button45.ForeColor = System.Drawing.Color.White;
             Button45.BackColor = System.Drawing.Color.Gray;
@@ -829,6 +847,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader21.GetValue(0).ToString();
             Label24.Text = no;
             reader21.Close();
+            Button47.Text = "Speaker Added";
             Button47.Enabled = false;
             Button47.ForeColor = System.Drawing.Color.White;
             Button47.BackColor = System.Drawing.Color.Gray;
@@ -858,6 +877,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader21.GetValue(0).ToString();
             Label25.Text = no;
             reader21.Close();
+            Button49.Text = "UPS Added";
             Button49.Enabled = false;
             Button49.ForeColor = System.Drawing.Color.White;
             Button49.BackColor = System.Drawing.Color.Gray;
@@ -927,6 +947,7 @@ public partial class User_startpc : System.Web.UI.Page
             string no = reader21.GetValue(0).ToString();
             Label27.Text = no;
             reader21.Close();
+            Button53.Text = "OS Added";
             Button53.Enabled = false;
             Button53.ForeColor = System.Drawing.Color.White;
             Button53.BackColor = System.Drawing.Color.Gray;

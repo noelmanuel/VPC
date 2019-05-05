@@ -12,11 +12,13 @@
         {
             font-size:20px;
             font-weight:bold;
+            color:white;
         }
          .spaa
         {
             font-size:30px;
             font-weight:bold;
+            color:white;
         }
          .txtadd
         {
@@ -71,6 +73,7 @@
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size:15px;
             width:200px;
+            color:white;
             
         }
     
@@ -81,23 +84,23 @@
         <div style="height:790px;">
 
             <asp:Panel ID="Panel1" runat="server">
-                <table style="margin-left:10%; margin-top:2%; background-color:#00acee; padding:7%;">
+                <table style=" margin-top:2%; background-color:#00acee; padding:7%;">
                 <tr>
                 <td>
-                <h1 style="font-size:25px; line-height:50px;">Welcome to PC Parts Mart,<br /><br />
-                    We will help yo to buy/Select
-                    quality build according to your <br />
+                <h5 style="font-size:25px; color:white; line-height:50px;">Welcome to PC Parts Mart,<br /></h5>
+                    <p style="color:white; font-size:18px;">We will help yo to buy/Select
+                    quality build according to your 
                     perference.<br /><br />
                     
                     We will ask you some question
-                    from which we will provide you<br /> 
-                    the best build. 
-                </h1>
+                    from which we will provide you
+                    the best build. </p>
+                
                     <br />
                 <asp:Button ID="Button6" runat="server" Text="Next" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="150" OnClick="Button6_Click"  />
                     </td>
                     <td style="padding-left:5%; width:50%; vertical-align:top;">
-                        <asp:Image ID="Image1" runat="server" ImageAlign="Middle" ImageUrl="~/images/exp.png" Height="500"  />
+                        <asp:Image ID="Image1" runat="server" ImageAlign="Middle" ImageUrl="~/images/expp.jpg" Height="500"  />
                     </td>
                     </tr>
                     </table>
@@ -105,9 +108,9 @@
 
 
             <asp:Panel ID="Panel2" runat="server">
-                <table style="margin-left:10%; margin-top:2%; background-color:#00acee; padding:7%;">
+                <table style=" width:100%; margin-top:2%; background-color:#00acee; padding:7%;">
                 <tr>
-                <td >
+                <td style="padding-left:10%;">
                 <span class="spa">What is your name?</span><br /><br />
                 <asp:TextBox ID="TextBox1" CssClass="txtadd" runat="server"></asp:TextBox> &nbsp <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Textbox1" ForeColor="red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br /><br />
                 
@@ -120,7 +123,7 @@
 
                  <asp:Button ID="Button2" runat="server" Text="Next" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="150" OnClick="Button2_Click"  />
                  </td>
-                    <td style="padding-left:2%; width:50%;">
+                    <td style="padding-left:2%;">
                         <asp:Image ID="Image2" runat="server" ImageAlign="Middle" ImageUrl="~/images/blueb.jpg" />
                     </td>
                     </tr>
@@ -128,9 +131,9 @@
                     </asp:Panel>
 
             <asp:Panel ID="Panel3" runat="server">
-                <table style="margin-left:10%; margin-top:2%; background-color:#00acee; padding:7%;">
+                <table style="width:100%; margin-top:2%; background-color:#00acee; padding:7%;">
                 <tr>
-                <td >
+                <td style="padding-left:10%;">
                 <span class="spaa">You are interested in buying</span><br /><br /><br />
                     <asp:Button ID="Button3" CssClass="btn_com" runat="server" Text="Whole System" OnClick="Button3_Click" /> &nbsp &nbsp &nbsp
                     <asp:Button ID="Button4" CssClass="btn_com" runat="server" Text="Only CPU" OnClick="Button4_Click" /><br /><br /><br />
@@ -146,9 +149,9 @@
                     </asp:Panel>
 
                <asp:Panel ID="Panel4" runat="server">
-                <table style="margin-left:10%; margin-top:2%; background-color:#00acee; padding:7%;">
+                <table style="width:100%; margin-top:2%; background-color:#00acee; padding:7%;">
                 <tr>
-                <td >
+                <td style="padding-left:10%;">
                 <span class="spaa">Whats your budget?</span><br /><br /><br />
 
                     <asp:Button ID="Button1" title="Above 90k" CssClass="btn_com" runat="server" Text="Expensive" OnClick="ult_Click" /> &nbsp &nbsp 
@@ -167,9 +170,9 @@
                     </asp:Panel>
 
             <asp:Panel ID="Panel5" runat="server">
-                <table style="margin-left:10%; margin-top:2%; background-color:#00acee; padding:7%;">
+                <table style="width:100%; margin-top:2%; background-color:#00acee; padding:6%;">
                 <tr>
-                <td >
+                <td style="padding-left:10%;">
                 <span class="spaa">What does your system do for you?</span><br /><br />
                 <span class="spaa">Select your priority</span><br /> <br /><br />
 
