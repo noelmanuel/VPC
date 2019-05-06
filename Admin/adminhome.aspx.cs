@@ -66,4 +66,9 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/viewcompany.aspx");
     }
+
+    protected void order_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/approveorder.aspx");
+    }
 }

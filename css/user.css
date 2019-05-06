@@ -102,12 +102,12 @@ a{
     width:190px;
     color:white;
     
-    border-left:1px solid #efefef;
+    margin-left:35%;
     float:left;
 
 }
 .option4:hover{border-left:5px solid #f8c32e;}
-.option5:hover{border-left:5px solid #f8c32e;}
+
 
 .section_backgound{
     width:100%;

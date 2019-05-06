@@ -29,6 +29,7 @@
              <div class="approval">
              <asp:Button ID="com" CssClass="btn_com" runat="server" Text="Company" OnClick="com_Click" /> 
              <asp:Button ID="user" CssClass="btn_com" runat="server" Text="User" OnClick="user_Click" />
+             <asp:Button ID="orderapprove" CssClass="btn_com" runat="server" Text="Order" OnClick="order_Click" />
              </div>
              </div>
 

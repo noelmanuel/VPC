@@ -58,6 +58,11 @@
                     <asp:HyperLink ID="HyperLink7" NavigateUrl="~/User/Product category.aspx" runat="server">
                     <img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
                 </div>
+
+                <div class="option5">
+                    <asp:HyperLink ID="HyperLink9" NavigateUrl="~/User/editprofile.aspx" runat="server">
+                    <img src="../images/editprofile.png" height="50px" width="110px;" style=" margin-left:10px;" /></asp:HyperLink>
+                </div>
             </div>
 
         </header>
