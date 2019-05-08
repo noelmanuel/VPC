@@ -6,7 +6,7 @@
     <div class="section_backgound">
     <div style="height:1190px;margin-left:10%;">
 
-        <h3 style="">APPROVE USER</h3><br />
+        <h3 style="">APPROVE ORDER</h3><br />
         <div style="overflow:scroll; height:400px; width:80%;">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="id" DataSourceID="SqlDataSource1">
             <Columns>
@@ -55,7 +55,7 @@
                     <ItemTemplate>
                         <asp:LinkButton ID="LinkButton1" runat="server" CommandName="update" ForeColor="#0099CC">Approve</asp:LinkButton>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete" ForeColor="Red">Delete</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete" ForeColor="Red">Decline</asp:LinkButton>
                     </ItemTemplate>
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:TemplateField>

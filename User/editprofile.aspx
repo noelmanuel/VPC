@@ -40,7 +40,7 @@
 
 
                    <td class="boxt">
-                       <asp:LinkButton ID="LinkButton2" CssClass="link" runat="server" Font-Bold="True">ORDERS</asp:LinkButton>
+                       <asp:LinkButton ID="LinkButton2" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton2_Click">ORDERS</asp:LinkButton>
                    </td> &nbsp
 
                    <td class="boxt">

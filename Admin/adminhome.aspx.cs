@@ -71,4 +71,14 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/approveorder.aspx");
     }
+
+    protected void order2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/approvebuildorder.aspx");
+    }
+
+    protected void order7_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/approveexpertorder.aspx");
+    }
 }

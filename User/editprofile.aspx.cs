@@ -11,4 +11,9 @@ public partial class User_editprofile : System.Web.UI.Page
     {
 
     }
+
+    protected void LinkButton2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("orders.aspx");
+    }
 }
