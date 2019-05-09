@@ -60,6 +60,10 @@ public partial class Admin_manageuser : System.Web.UI.Page
         SqlDataSource1.DataBind();
         GridView1.DataSource = SqlDataSource1;
         GridView1.DataBind();
+
+        string str2 = "update login set pass='" + password.Text + "' where usname='" + username.Text + "'";
+        SqlCommand cmd2 = new SqlCommand(str2, conn);
+        cmd2.ExecuteNonQuery();
         conn.Close();
     }
 
@@ -71,6 +75,10 @@ public partial class Admin_manageuser : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd = new SqlCommand(str3, conn);
         cmd.ExecuteNonQuery();
+
+        string str4 = "delete from login where usname='" + usernamee.Text + "'";
+        SqlCommand cmd4 = new SqlCommand(str4, conn);
+        cmd4.ExecuteNonQuery();
         conn.Close();
         Response.Write(" <script>window.alert('User Deleted'); window.location='manageuser.aspx';</script>");
     }
