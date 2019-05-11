@@ -65,6 +65,7 @@
              <asp:Button ID="Button9" CssClass="btn_com" runat="server" Text="Add" OnClick="Button9_Click" /> 
              <asp:Button ID="Button10" CssClass="btn_com" runat="server" Text="Manage User" OnClick="Button10_Click" />
              <asp:Button ID="Button12" CssClass="btn_com" runat="server" Text="View user" OnClick="Button12_Click" />
+             <asp:Button ID="Button11" CssClass="btn_com" runat="server" Text="Inbox" OnClick="Button111_Click" />
 
              </div>
              </div>

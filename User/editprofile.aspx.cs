@@ -17,6 +17,10 @@ public partial class User_editprofile : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Panel1.Visible = false;
+        Panel2.Visible = false;
+        Panel3.Visible = false;
+        Panel4.Visible = false;
+        Panel5.Visible = false;
     }
 
     protected void LinkButton2_Click(object sender, EventArgs e)
@@ -71,5 +75,78 @@ public partial class User_editprofile : System.Web.UI.Page
         }
         conn.Close();
 
+    }
+
+    protected void LinkButton5_Click(object sender, EventArgs e)
+    {
+        Panel2.Visible = true;
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+
+        if (Label1.Text == "Order")
+        {
+            string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList2.SelectedItem + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd = new SqlCommand(subcredit, conn);
+            cmdd.ExecuteNonQuery();
+            conn.Close();
+            Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
+        }
+        else if(Label1.Text == "Build Order")
+        {
+            string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList3.SelectedItem + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd = new SqlCommand(subcredit, conn);
+            cmdd.ExecuteNonQuery();
+            conn.Close();
+            Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
+        }
+        else if(Label1.Text == "Expert Order")
+        {
+            string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList4.SelectedItem + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd = new SqlCommand(subcredit, conn);
+            cmdd.ExecuteNonQuery();
+            conn.Close();
+            Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
+        }
+        else
+        {
+            Label1.Text = "general";
+            string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + Label1.Text + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd = new SqlCommand(subcredit, conn);
+            cmdd.ExecuteNonQuery();
+            conn.Close();
+            Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
+        }
+
+    }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        Panel2.Visible = true;
+        Panel3.Visible = true;
+        Panel4.Visible = false;
+        Panel5.Visible = false;
+        Label1.Text = Button3.Text;
+    }
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        Panel2.Visible = true;
+        Panel4.Visible = true;
+        Panel3.Visible = false;
+        Panel5.Visible = false;
+        Label1.Text = Button4.Text;
+    }
+
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        Panel2.Visible = true;
+        Panel5.Visible = true;
+        Panel4.Visible = false;
+        Panel3.Visible = false;
+        Label1.Text = Button5.Text;
     }
 }
