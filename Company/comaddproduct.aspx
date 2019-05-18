@@ -27,7 +27,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
-                
+           
          <h3 style=" margin-left:15px;">ADD PRODUCT</h3>
          
          <br />
@@ -52,6 +52,7 @@
                 <asp:Button ID="Button16" CssClass="btn_com" runat="server" Text="OS" OnClick="os_Click" /> 
                 <asp:Button ID="Button17" CssClass="btn_com" runat="server" Text="Software" OnClick="so_Click" />
                 <asp:Button ID="Button18" CssClass="btn_com" runat="server" Text="Case Fan" OnClick="soo_Click" />  
+
             
 </asp:Content>
 

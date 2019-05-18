@@ -16,10 +16,26 @@ public partial class Admin_messageinbox : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Panel1.Visible = false;
-        Panel2.Visible = false;
-        GridView1.DataSource = SqlDataSource1;
-        GridView1.DataBind();
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+        conn.Open();
+
+        string insertQuery = "select * from message1";
+        SqlCommand cmdqw = new SqlCommand(insertQuery, conn);
+        SqlDataReader readerqw = cmdqw.ExecuteReader();
+        if (readerqw.HasRows)
+        {
+            Panel1.Visible = false;
+            Panel2.Visible = false;
+            GridView1.DataSource = SqlDataSource1;
+            GridView1.DataBind();
+        }
+        else
+        {
+            Panel1.Visible = false;
+            Panel2.Visible = false;
+            Label6.Text = "No New Messages";
+        }
+       
         
     }
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -45,7 +61,7 @@ public partial class Admin_messageinbox : System.Web.UI.Page
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn.Open();
 
-            string insertQuery = "select message from message where userr='" + pro1 + "' AND Id='" + pro + "'";
+            string insertQuery = "select message from message1 where userr='" + pro1 + "' AND Id='" + pro + "'";
             SqlCommand cmdqw = new SqlCommand(insertQuery, conn);
             SqlDataReader readerqw = cmdqw.ExecuteReader();
             if (readerqw.HasRows && readerqw.Read())
@@ -88,6 +104,11 @@ public partial class Admin_messageinbox : System.Web.UI.Page
             string ordp = "insert into remessage(userr,name,transaction_type,transaction_no,message) values('" + pro1 + "','" + pro2 + "','" + pro3 + "','" + pro4 + "','" + TextArea2.Value + "')";
             SqlCommand cmddd = new SqlCommand(ordp, conn);
             cmddd.ExecuteNonQuery();
+
+            string ordp1 = "insert into remessage1(userr,name,transaction_type,transaction_no,message) values('" + pro1 + "','" + pro2 + "','" + pro3 + "','" + pro4 + "','" + TextArea2.Value + "')";
+            SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
+            cmddd1.ExecuteNonQuery();
+
             conn.Close();
             Response.Write(" <script>window.alert('Message sent');</script>");
 
@@ -104,7 +125,7 @@ public partial class Admin_messageinbox : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
         Label compname = GridView1.Rows[e.RowIndex].FindControl("Label1") as Label;
-        string str2 = "delete from message where Id='" + compname.Text + "'";
+        string str2 = "delete from message1 where Id='" + compname.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Message Deleted'); window.location='messageinbox.aspx';</script>");

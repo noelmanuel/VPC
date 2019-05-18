@@ -16,6 +16,7 @@ public partial class User_userhomemaster : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Label2.Text = Session["user"].ToString();
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
         string insertQuery21 = "select COUNT(category) from addcart where username='" + Session["user"].ToString() + "'";

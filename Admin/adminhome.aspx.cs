@@ -86,4 +86,19 @@ public partial class Admin_adminhome : System.Web.UI.Page
     {
         Response.Redirect("~/Admin/messageinbox.aspx");
     }
+
+    protected void Button112_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/companyadmininbox.aspx");
+    }
+
+    protected void Button119_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/adminsentbox.aspx");
+    }
+
+    protected void Button198_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/adminsentbox1.aspx");
+    }
 }

@@ -54,6 +54,8 @@
              <asp:Button ID="Button5" CssClass="btn_com" runat="server" Text="Add" OnClick="Button5_Click" /> 
              <asp:Button ID="Button6" CssClass="btn_com" runat="server" Text="Manage Company" OnClick="Button6_Click" />
              <asp:Button ID="Button8" CssClass="btn_com" runat="server" Text="Company Details" OnClick="Button8_Click" />
+             <asp:Button ID="Button13" CssClass="btn_com" runat="server" Text="Inbox" OnClick="Button112_Click" />
+             <asp:Button ID="Button15" CssClass="btn_com" runat="server" Text="Sent Mail" OnClick="Button198_Click" />
 
              </div>
              </div>
@@ -66,6 +68,7 @@
              <asp:Button ID="Button10" CssClass="btn_com" runat="server" Text="Manage User" OnClick="Button10_Click" />
              <asp:Button ID="Button12" CssClass="btn_com" runat="server" Text="View user" OnClick="Button12_Click" />
              <asp:Button ID="Button11" CssClass="btn_com" runat="server" Text="Inbox" OnClick="Button111_Click" />
+             <asp:Button ID="Button14" CssClass="btn_com" runat="server" Text="Sent Mail" OnClick="Button119_Click" />
 
              </div>
              </div>

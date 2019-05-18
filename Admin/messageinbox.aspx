@@ -14,7 +14,7 @@
      <div class="section_backgound">
     <div style="height:870px; margin-left:185px;">
         <h3 style="">INBOX</h3>
-
+        <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="16" Font-Underline="False" Font-Overline="False" ForeColor="Red"></asp:Label>
         <div style=" overflow:scroll; height:500px;">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand" Width="1145px" OnRowDeleting="GridView1_RowDeleting" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" />
@@ -84,7 +84,7 @@
                  <SortedDescendingHeaderStyle BackColor="#820000" />
              </asp:GridView>
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [userr], [transaction_type], [name], [transaction_no], [Id] FROM [message]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [userr], [transaction_type], [name], [transaction_no], [Id] FROM [message1]"></asp:SqlDataSource>
         </div>
         <table>
             <tr>

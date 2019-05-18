@@ -92,6 +92,11 @@ public partial class User_editprofile : System.Web.UI.Page
             string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList2.SelectedItem + "','" + TextArea1.Value + "')";
             SqlCommand cmdd = new SqlCommand(subcredit, conn);
             cmdd.ExecuteNonQuery();
+
+            string subcredit1 = "insert into message1(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList2.SelectedItem + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd1 = new SqlCommand(subcredit1, conn);
+            cmdd1.ExecuteNonQuery();
+
             conn.Close();
             Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
         }
@@ -100,6 +105,11 @@ public partial class User_editprofile : System.Web.UI.Page
             string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList3.SelectedItem + "','" + TextArea1.Value + "')";
             SqlCommand cmdd = new SqlCommand(subcredit, conn);
             cmdd.ExecuteNonQuery();
+
+            string subcredit1 = "insert into message1(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList3.SelectedItem + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd1 = new SqlCommand(subcredit1, conn);
+            cmdd1.ExecuteNonQuery();
+
             conn.Close();
             Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
         }
@@ -108,6 +118,11 @@ public partial class User_editprofile : System.Web.UI.Page
             string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList4.SelectedItem + "','" + TextArea1.Value + "')";
             SqlCommand cmdd = new SqlCommand(subcredit, conn);
             cmdd.ExecuteNonQuery();
+
+            string subcredit1 = "insert into message1(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + DropDownList4.SelectedItem + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd1 = new SqlCommand(subcredit1, conn);
+            cmdd1.ExecuteNonQuery();
+
             conn.Close();
             Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
         }
@@ -117,6 +132,10 @@ public partial class User_editprofile : System.Web.UI.Page
             string subcredit = "insert into message(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + Label1.Text + "','" + TextArea1.Value + "')";
             SqlCommand cmdd = new SqlCommand(subcredit, conn);
             cmdd.ExecuteNonQuery();
+
+            string subcredit1 = "insert into message1(userr,name,transaction_type,transaction_no,message) values('" + Session["user"].ToString() + "','" + TextBox3.Text + "','" + Label1.Text + "','" + Label1.Text + "','" + TextArea1.Value + "')";
+            SqlCommand cmdd1= new SqlCommand(subcredit1, conn);
+            cmdd1.ExecuteNonQuery();
             conn.Close();
             Response.Write(" <script>window.alert('Message sent');  window.location='editprofile.aspx'</script>");
         }
@@ -148,5 +167,15 @@ public partial class User_editprofile : System.Web.UI.Page
         Panel4.Visible = false;
         Panel3.Visible = false;
         Label1.Text = Button5.Text;
+    }
+
+    protected void LinkButton31_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("msginbox.aspx");
+    }
+
+    protected void LinkButton8_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("usersentbox.aspx");
     }
 }

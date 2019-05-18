@@ -80,7 +80,7 @@
 
            
        <div style="height:950px;"> 
-         <div style="padding-top:5px; margin-left:10%;">
+         <div style="padding-top:5px;">
              <h3 style="">BROWSE PRODUCT</h3><br />
                 <asp:Button ID="com" CssClass="btn_com" runat="server" Text="Motherboard" OnClick="mb_Click" /> 
                 <asp:Button ID="user" CssClass="btn_com" runat="server" Text="RAM" OnClick="ram_Click" />

@@ -25,7 +25,7 @@
                 <div class="login_box">
                     
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/User/userhome.aspx" CssClass="Login" ForeColor="#66CCFF" Font-Bold="True">Home</asp:HyperLink>&nbsp&nbsp
-                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/User/editprofile.aspx" CssClass="Login" ForeColor="#66CCFF" Font-Bold="True">Edit Profile</asp:HyperLink>&nbsp&nbsp
+                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/User/edituserdetails.aspx" CssClass="Login" ForeColor="#66CCFF" Font-Bold="True">Edit Profile</asp:HyperLink>&nbsp&nbsp
                     <asp:HyperLink ID="HyperLink3" NavigateUrl="~/User/addcart.aspx" runat="server" ForeColor="#E7B93C"> Your Cart</asp:HyperLink>&nbsp<asp:Label ID="Label1" runat="server" Font-Bold="True"></asp:Label>&nbsp&nbsp
                     <asp:Button ID="Button1" runat="server" Text="Build Cart" Height="25" Width="80" ForeColor="White" BackColor="#CC6600" OnClick="Button1_Click" BorderStyle="None" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx" CssClass="reg" ForeColor="Red"> Sign out</asp:HyperLink>
@@ -58,8 +58,13 @@
                     <asp:HyperLink ID="HyperLink7" NavigateUrl="~/User/Product category.aspx" runat="server">
                     <img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
                 </div>
+                <div class="option51">
+                    Welcome
+                    <asp:Label ID="Label2" runat="server" ></asp:Label>
+                </div>
 
                 <div class="option5">
+
                     <asp:HyperLink ID="HyperLink9" NavigateUrl="~/User/editprofile.aspx" runat="server">
                     <img src="../images/editprofile.png" height="50px" width="110px;" style=" margin-left:10px;" /></asp:HyperLink>
                 </div>

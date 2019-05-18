@@ -12,7 +12,8 @@ public partial class Company_company : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(!IsPostBack)
+        Label1.Text = Session["comp"].ToString();
+        if (!IsPostBack)
         {
             Panel1.Visible = false;
             Image1.ImageUrl = "~/profileimage/" + Session["comp"].ToString() + ".jpg";

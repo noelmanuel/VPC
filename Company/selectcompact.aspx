@@ -29,16 +29,14 @@
      <div class="section_backgound">
          
     <div style="height:790px;">       
-         <h3 style="padding-top:17px; margin-left:10%;">SELECT METHOD FOR COMPACTIBITY BUILD</h3>
+         <h3 style="padding-top:17px;">SELECT METHOD FOR COMPACTIBITY BUILD</h3>
          
-         <div class="cata_parts1">
-             <div class="approval1">
+         
                 
                 <asp:Button ID="Button1" CssClass="btn_com" runat="server" Text="Individual" OnClick="pro_Click" />
                 <asp:Button ID="Button2" CssClass="btn_com" runat="server" Text="Multiple" OnClick="gpu_Click" /><br /><br />
               
-             </div>
-             </div>
+             
          </div>
          </div>
 </asp:Content>

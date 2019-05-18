@@ -102,7 +102,16 @@ a{
     width:190px;
     color:white;
     
-    margin-left:35%;
+    
+    float:left;
+
+}
+.option51{
+    height:100%;
+    
+    color:white;
+    padding-top:15px;
+    margin-left:24%;
     float:left;
 
 }

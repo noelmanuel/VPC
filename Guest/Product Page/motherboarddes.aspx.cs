@@ -25,6 +25,7 @@ public partial class Guest_Product_Page_motherboarddes : System.Web.UI.Page
     {
         string g = Session["admin"].ToString();
         string f = Session["company"].ToString();
+
         if (g == "admin")
         {
             Response.Redirect("~/Admin/adminhome.aspx");

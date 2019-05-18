@@ -79,6 +79,10 @@
                         <asp:LinkButton ID="LinkButton3" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton3_Click">BUILD ORDERS</asp:LinkButton>
                    </td> &nbsp
 
+                   <td class="boxt">
+                        <asp:LinkButton ID="LinkButton7" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton31_Click">INBOX</asp:LinkButton>
+                   </td> &nbsp
+
                </tr>
 
                <tr>
@@ -92,6 +96,10 @@
 
                    <td class="boxt">
                        <asp:LinkButton ID="LinkButton6" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton6_Click">EXPERT ORDERS</asp:LinkButton>
+                   </td> &nbsp
+
+                    <td class="boxt">
+                       <asp:LinkButton ID="LinkButton8" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton8_Click">SENT MAIL</asp:LinkButton>
                    </td> &nbsp
 
                </tr>

@@ -38,6 +38,7 @@ public partial class login : System.Web.UI.Page
             if (no == "admin")
             {
                 Session["admin"] = "admin";
+                Session["company"] = "nul";
                 Response.Redirect("~/Admin/adminhome.aspx");
             }
             else if (no == "company")
@@ -45,6 +46,7 @@ public partial class login : System.Web.UI.Page
 
                 Session["comp"] = txtuname.Value;
                 Session["company"] = "company";
+                Session["admin"] = "nul";
                 string str = "select status from compregn where compusname='" + txtuname.Value + "'";
                 SqlCommand cmdd = new SqlCommand(str, conn);
                 SqlDataReader readerr = cmdd.ExecuteReader();

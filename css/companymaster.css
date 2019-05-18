@@ -49,9 +49,9 @@ a{
 .login_box{
     
     height:40px;
-    width:160px;
+    width:240px;
     position:absolute;
-    margin-left:70%;
+    margin-left:67%;
     margin-top:20px;
 
     
@@ -98,23 +98,34 @@ h3{
     height:100%;
     width:180px;
     color:white;
-   
+    border-right:1px solid #efefef;
     border-left:1px solid #efefef;
     float:left;
 
 }
 .option3:hover{border-left:5px solid #f8c32e;}
 
-.option4{
+.option4
+{
+   
     height:100%;
-    width:190px;
+    margin-top:15px;
     color:white;
-    border-right:1px solid #efefef;
-    border-left:1px solid #efefef;
+    margin-left:29%;
+    
     float:left;
 
 }
-.option4:hover{border-left:5px solid #f8c32e;}
+
+
+.option5
+{
+    
+    height:100%;   
+    color:white;   
+    float:left;
+
+}
 
 .section_backgound{
     width:100%;

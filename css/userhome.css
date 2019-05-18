@@ -6,6 +6,25 @@ a{
     text-decoration:none;
     color:black;
 }
+.option51{
+    height:100%;
+    
+    color:white;
+    padding-top:15px;
+    margin-left:24%;
+    float:left;
+
+}
+
+.option5{
+    height:100%;
+    width:190px;
+    color:white;
+    
+    
+    float:left;
+
+}
 .first_rec {
     width:100%;
     height:20px;
