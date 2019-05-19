@@ -70,7 +70,7 @@ public partial class Company_companyeditprofile : System.Web.UI.Page
             SqlCommand cmd3 = new SqlCommand(str3, conn);
             cmd3.ExecuteNonQuery();
 
-            string str4 = "delete from login where compusname='" + Session["comp"].ToString() + "' AND comppass='" + TextBox1.Text + "'";
+            string str4 = "delete from login where usname='" + Session["comp"].ToString() + "' AND pass='" + TextBox1.Text + "'";
             SqlCommand cmd4 = new SqlCommand(str4, conn);
             cmd4.ExecuteNonQuery();
         }

@@ -21,6 +21,8 @@ public partial class User_editprofile : System.Web.UI.Page
         Panel3.Visible = false;
         Panel4.Visible = false;
         Panel5.Visible = false;
+
+        
     }
 
     protected void LinkButton2_Click(object sender, EventArgs e)
@@ -60,11 +62,12 @@ public partial class User_editprofile : System.Web.UI.Page
 
         if (reader.HasRows)
         {
+            reader.Close();
             string str3 = "delete from cregn where usname='" + Session["user"].ToString() + "' AND uspass='" + TextBox1.Text + "'";
             SqlCommand cmd3 = new SqlCommand(str3, conn);
             cmd3.ExecuteNonQuery();
 
-            string str4 = "delete from login where usname='" + Session["user"].ToString() + "' AND uspass='" + TextBox1.Text + "'";
+            string str4 = "delete from login where usname='" + Session["user"].ToString() + "' AND pass='" + TextBox1.Text + "'";
             SqlCommand cmd4 = new SqlCommand(str4, conn);
             cmd4.ExecuteNonQuery();
         }

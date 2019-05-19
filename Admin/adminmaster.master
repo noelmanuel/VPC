@@ -33,30 +33,30 @@
               
                   <div class="option1">
                     <asp:HyperLink ID="HyperLink4" NavigateUrl="~/Admin/selectcompact.aspx" runat="server">
-                    <img src="../images/amke.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
-                    
-                    
-                    
+                    <asp:Image ID="Image5" runat="server" ImageUrl="~/images/amke.jpg" CssClass="optb" height="35" width="150" /> </asp:HyperLink>                          
                 </div>
+
                 <div class="option2">
                     <asp:HyperLink ID="HyperLink5" NavigateUrl="~/Admin/viewbuilt.aspx" runat="server">
-                    <img src="/images/view.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                    <asp:Image ID="Image4" runat="server" ImageUrl="~/images/view.jpg" CssClass="optb" height="35" width="150" /> </asp:HyperLink>      
                 </div>
+
 
                 <div class="option3">
                     <asp:HyperLink ID="HyperLink6" NavigateUrl="~/expertsystem/createexpert.aspx" runat="server">
-                    <img src="../images/createexpert.jpg" height="35" width="150" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                    <asp:Image ID="Image3" runat="server" ImageUrl="~/images/createexpert.jpg" CssClass="optb" height="35" width="150" /> </asp:HyperLink>     
                 </div>
 
                 <div class="option4">
                     <asp:HyperLink ID="HyperLink7" NavigateUrl="~/expertsystem/expertlist.aspx" runat="server">
-                    <img src="../images/viewexpert.jpg" height="35" width="170" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                     <asp:Image ID="Image2" runat="server" ImageUrl="~/images/viewexpert.jpg" CssClass="optb" height="35" width="170" /> </asp:HyperLink>                 
                 </div>
 
                 <div class="option5">
                     <asp:HyperLink ID="HyperLink8" NavigateUrl="~/Guest/Product category.aspx" runat="server">
-                    <img src="/images/ind.jpg" height="35" width="170" style=" margin-top:5px; margin-left:10px;" /></asp:HyperLink>
+                     <asp:Image ID="Image1" runat="server" ImageUrl="~/images/ind.jpg" CssClass="optb" height="35" width="170" /> </asp:HyperLink>                  
                 </div>
+
             </div>
 
 
