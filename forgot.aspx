@@ -62,9 +62,7 @@
             <span class="sp">Enter your answer</span><br />
             <asp:TextBox ID="TextBox3" runat="server" CssClass="tb"></asp:TextBox><br /><br />
 
-            <asp:Panel ID="Panel1" runat="server">
-            <span class="sp">Your Password</span><br />
-            <asp:TextBox ID="TextBox4" CssClass="tb" runat="server"></asp:TextBox><br /><br /></asp:Panel>
+            
             <asp:Label ID="Label1" runat="server"></asp:Label><br /><br />
 
 
@@ -72,6 +70,12 @@
              <asp:Button ID="Button2" runat="server" Text="Clear" CssClass="mb_sb" OnClick="Button2_Click" CausesValidation="False"/>
 
                 </asp:Panel>
+
+            <asp:Panel ID="Panel1" runat="server">
+            <span class="sp">Your Password</span><br />
+            
+            <asp:Label ID="Label3" runat="server" ></asp:Label>
+            </asp:Panel>
 
             <asp:Panel ID="Panel3" runat="server">
                 <span class="sp">Enter your username</span><br />
@@ -87,10 +91,7 @@
             <span class="sp">Enter your answer</span><br />
             <asp:TextBox ID="TextBox7" runat="server" CssClass="tb"></asp:TextBox><br /><br />
 
-            <asp:Panel ID="Panel4" runat="server">
-            <span class="sp">Your Password</span><br />
-            <asp:TextBox ID="TextBox8" CssClass="tb" runat="server"></asp:TextBox><br /><br /></asp:Panel>
-            <asp:Label ID="Label2" runat="server"></asp:Label><br /><br />
+            
 
 
              <asp:Button ID="Button3" runat="server" Text="Submit" CssClass="mb_sb" OnClick="Button3_Click"/> &nbsp&nbsp&nbsp
@@ -98,6 +99,13 @@
 
 
             </asp:Panel>
+
+            <asp:Panel ID="Panel4" runat="server">
+            <span class="sp">Your Password</span><br />
+             <asp:Label ID="Label4" runat="server" ></asp:Label>
+
+            </asp:Panel>
+            <asp:Label ID="Label2" runat="server"></asp:Label><br /><br />
 
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT DISTINCT [usques] FROM [cregn]"></asp:SqlDataSource>
