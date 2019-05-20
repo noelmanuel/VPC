@@ -42,15 +42,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="section_backgound">
-        <div style="height:790px;">
+        <div style="height:860px;">
     <h3 style="padding-top:17px; margin-left:10%;">CD DRIVE</h3>
          
          <div class="cata_parts2">
              <div class="row1">
                 <span class="sp">Manufacturer</span><br />
-                 <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">Model No</span><br />
-                 <asp:TextBox ID="TextBox2" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox2" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox2" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">Form Factor</span><br />
                  <asp:TextBox ID="TextBox3" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Interface</span><br />
@@ -88,13 +92,20 @@
                  <span class="sp">DVD-RAM Speed</span><br />
                  <asp:TextBox ID="TextBox16" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Price</span><br />
-                 <asp:TextBox ID="TextBox17" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox17" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBox17" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">Stock</span><br />
-                 <asp:TextBox ID="TextBox18" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox18" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="TextBox18" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">Image upload</span><br />
                  <asp:FileUpload ID="mbimg1" runat="server" />
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="mbimg1" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                  <asp:FileUpload ID="mbimg2" runat="server" />
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="mbimg2" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                  <asp:FileUpload ID="mbimg3" runat="server" />
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="mbimg3" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
 
                  
                  
