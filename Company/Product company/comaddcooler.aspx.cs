@@ -42,7 +42,6 @@ public partial class Company_Product_company_comaddcooler : System.Web.UI.Page
             String link2 = "/images/" + Path.GetFileName(mbimg2.FileName);
             mbimg3.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg3.FileName));
             String link3 = "/images/" + Path.GetFileName(mbimg3.FileName);
-            conn.Open();
             string insertQuery = "insert into cooler(man,mod,sup,liq,radi,noi,fan,imageurl,pric,imageurl1,imageurl2,stock,brand) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + link + "','" + TextBox17.Text + "','" + link2 + "','" + link3 + "','" + TextBox18.Text + "','" + Session["comp"].ToString() + "')";
             SqlCommand cmd = new SqlCommand(insertQuery, conn);
             cmd.ExecuteNonQuery();

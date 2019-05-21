@@ -42,7 +42,6 @@ public partial class Company_Product_company_comaddcase : System.Web.UI.Page
             String link2 = "/images/" + Path.GetFileName(mbimg2.FileName);
             mbimg3.SaveAs(Server.MapPath("~/images/") + Path.GetFileName(mbimg3.FileName));
             String link3 = "/images/" + Path.GetFileName(mbimg3.FileName);
-            conn.Open();
             string insertQuery = "insert into casee(man,mod,par,col,typ,inc,inte,inte1,mot,fro,maxi,dime,imageurl,pric,imageurl1,imageurl2,stock,brand) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + TextBox8.Text + "','" + TextBox9.Text + "','" + TextBox10.Text + "','" + TextBox11.Text + "','" + TextBox12.Text + "','" + link + "','" + TextBox17.Text + "','" + link2 + "','" + link3 + "','" + TextBox18.Text + "','" + Session["comp"].ToString() + "')";
             SqlCommand cmd = new SqlCommand(insertQuery, conn);
             cmd.ExecuteNonQuery();
