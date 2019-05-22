@@ -48,7 +48,7 @@
              <div class="row1">
                 <span class="sp">Manufacturer</span><br />
                  <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                  <br /><br />
                  <span class="sp">Model No</span><br />
                  <asp:TextBox ID="TextBox2" runat="server" CssClass="tb"></asp:TextBox>
