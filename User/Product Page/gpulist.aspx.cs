@@ -33,7 +33,7 @@ public partial class User_Product_Page_gpulist : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string brand = "select DISTINCT man from gpu";
+        string brand = "select DISTINCT brand from gpu";
         SqlCommand cd = new SqlCommand(brand, conn);
         DropDownList1.DataSource = cd.ExecuteReader();
         DropDownList1.DataBind();
@@ -125,7 +125,7 @@ public partial class User_Product_Page_gpulist : System.Web.UI.Page
 
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string inp = "select * from gpu WHERE man='" + DropDownList1.SelectedItem + "'";
+        string inp = "select * from gpu WHERE brand='" + DropDownList1.SelectedItem + "'";
         SqlCommand cmdp = new SqlCommand(inp, conn);
         SqlDataAdapter dp = new SqlDataAdapter();
         dp.SelectCommand = cmdp;

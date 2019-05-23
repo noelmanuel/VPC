@@ -47,9 +47,13 @@
   
              <div class="crow1">
                 <span class="sp">Manufacturer</span><br />
-                 <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox1" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">Model No</span><br />
-                 <asp:TextBox ID="TextBox2" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox2" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox2" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">LOAD CAPACITY (VA)</span><br />
                  <asp:TextBox ID="TextBox3" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">LOAD CAPACITY (W)</span><br />
@@ -102,13 +106,20 @@
                  <span class="sp">WAVEFORM TYPE</span><br />
                  <asp:TextBox ID="TextBox21" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                 <span class="sp">Price</span><br />
-                 <asp:TextBox ID="TextBox22" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox22" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBox22" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">Stock</span><br />
-                 <asp:TextBox ID="TextBox23" runat="server" CssClass="tb"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox23" runat="server" CssClass="tb"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="TextBox23" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+                 <br /><br />
                  <span class="sp">Image upload</span><br />
                  <asp:FileUpload ID="mbimg1" runat="server" />
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="mbimg1" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                  <asp:FileUpload ID="mbimg2" runat="server" />
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="mbimg2" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                  <asp:FileUpload ID="mbimg3" runat="server" />
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="mbimg3" ForeColor="Red" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                  
                 
                      

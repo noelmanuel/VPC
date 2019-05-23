@@ -87,7 +87,7 @@
                     <asp:Button ID="Button6" runat="server" Height="30" Width="50" Text="Go" ForeColor="White" BackColor="#C07C05" BorderStyle="None" OnClick="Button6_Click" /><br /><br /><br /><br />
                     
                     <span class="spa">Brand</span><br /><br />
-                    <asp:DropDownList ID="DropDownList1" DataTextField="man" DataValueField="man" Height="30" Width="143" BorderColor="#E2E2E2" BorderStyle="Solid" runat="server"></asp:DropDownList>&nbsp
+                    <asp:DropDownList ID="DropDownList1" DataTextField="brand" DataValueField="brand" Height="30" Width="143" BorderColor="#E2E2E2" BorderStyle="Solid" runat="server"></asp:DropDownList>&nbsp
                     <asp:Button ID="Button11" runat="server" Height="30" Width="50" Text="Go" ForeColor="White" BackColor="#C07C05" BorderStyle="None" OnClick="Button11_Click" /><br /><br /><br /><br />
 
                     <span class="spa">Battery Life</span><br /><br />
