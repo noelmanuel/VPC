@@ -17,11 +17,50 @@ public partial class User_product_grid_smpsgrid : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        SqlDataAdapter Adp = new SqlDataAdapter("select DISTINCT powerr,powerp from cpubuild", conn);
-        DataTable Dt = new DataTable();
-        Adp.Fill(Dt);
-        GridView1.DataSource = Dt;
-        GridView1.DataBind();
+        conn.Open();
+
+        string major1 = "";
+        string upttest = "select mb from makecart where userr='" + Session["user"].ToString() + "' AND mb !='" + major1 + "'";
+        SqlCommand cmdtest = new SqlCommand(upttest, conn);
+        SqlDataReader readertest = cmdtest.ExecuteReader();
+        if (readertest.HasRows)
+        {
+            readertest.Read();
+            string notest = readertest.GetValue(0).ToString();
+            readertest.Close();
+
+
+            string upttest1 = "select productid from cpubuildmb where Motherboard='" + notest + "'";
+            SqlCommand cmdtest1 = new SqlCommand(upttest1, conn);
+            SqlDataReader readertest1 = cmdtest1.ExecuteReader();
+            if (readertest1.HasRows)
+            {
+                readertest1.Read();
+                string notest1 = readertest1.GetValue(0).ToString();
+                readertest1.Close();
+
+                SqlDataAdapter Adp = new SqlDataAdapter("select smps,Price from cpubuildsmps where productid='" + notest1 + "'", conn);
+                DataTable Dt = new DataTable();
+                Adp.Fill(Dt);
+                GridView1.DataSource = Dt;
+                GridView1.DataBind();
+
+            }
+            else
+            {
+                Response.Write(" <script>window.alert('No Compactiable SMPS Found');</script>");
+                Response.Redirect("~/User/startpc.aspx");
+            }
+
+
+
+
+        }
+        else
+        {
+            Response.Write(" <script>window.alert('No Compactiable SMPS Found');</script>");
+            Response.Redirect("~/User/startpc.aspx");
+        }
     }
 
 

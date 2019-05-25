@@ -21,13 +21,13 @@
         <Columns>
             <asp:TemplateField HeaderText="SMPS">
                 <ItemTemplate>
-                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("powerr") %>'></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("smps") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Price">
                 <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("powerp") %>'></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>

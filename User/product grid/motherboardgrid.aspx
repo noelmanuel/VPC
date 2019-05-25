@@ -21,25 +21,25 @@
         <Columns>
             <asp:TemplateField HeaderText="Motherboard ">
                 <ItemTemplate>
-                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("motherboard") %>'></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Motherboard") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Price">
                 <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("mbp") %>'></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="RAM Slots">
                 <ItemTemplate>
-                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("ramno") %>'></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("RamSlots") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="GPU Slots">
                 <ItemTemplate>
-                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("gpuno") %>'></asp:Label>
+                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("GPUSlots") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
@@ -61,7 +61,7 @@
         <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
             </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [cpubuild]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [cpubuildmb]"></asp:SqlDataSource>
 
     </div>
 </asp:Content>

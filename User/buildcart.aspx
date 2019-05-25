@@ -133,14 +133,9 @@
                                 <asp:Label ID="Label18" runat="server"></asp:Label>,<br /><br />
 
                                 <span class="sp">CASE FAN</span><br />
-                                <asp:Label ID="Label19" runat="server"></asp:Label>
+                                <asp:Label ID="Label19" runat="server"></asp:Label>,<br /><br />
 
-                                </asp:Panel>
-                                </td>
-                                <td style="vertical-align:top; font-size:15px; width:40px; padding:80px;">
-                                <asp:Panel ID="Panel2" runat="server">
-
-                                    <span class="sp">MONITOR</span><br />
+                                <span class="sp">MONITOR</span><br />
                                     <asp:Label ID="Label20" runat="server"></asp:Label>,<br /><br />
 
                                     <span class="sp">KEYBOARD</span><br />
@@ -162,8 +157,10 @@
                                     <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
                                     <asp:Label ID="Label26" runat="server"></asp:Label>
 
-                                    </asp:Panel>  
-                                    </td> 
+                                </asp:Panel>
+                                </td>
+                                
+                                    
                             </tr>
                         </table>  
                 </div>

@@ -17,7 +17,7 @@ public partial class User_product_grid_motherboardgrid : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        SqlDataAdapter Adp = new SqlDataAdapter("select DISTINCT motherboard,mbp,ramno,gpuno from cpubuild", conn);
+        SqlDataAdapter Adp = new SqlDataAdapter("select Motherboard,RamSlots,GPUSlots,Price from cpubuildmb", conn);
         DataTable Dt = new DataTable();
         Adp.Fill(Dt);
         GridView1.DataSource = Dt;

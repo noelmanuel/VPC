@@ -38,7 +38,7 @@
         }
         td
         {
-            width:25%;
+            width:50%;
         }
         </style>
 </asp:Content>
@@ -74,58 +74,19 @@
                  
 
              </td>
-                 <td>
-                 <span class="sp">CPU Cooler</span><br />
-                 <asp:TextBox ID="TextBox5" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                 <span class="sp">CPU Cooler price</span><br />
-                 <asp:TextBox ID="TextBox18" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
+                
+                    <td style="vertical-align:top;">
 
                  <span class="sp">Power Supply</span><br />
                  <asp:TextBox ID="TextBox6" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Power Supply price</span><br />
-                 <asp:TextBox ID="TextBox19" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
+                 <asp:TextBox ID="TextBox19" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />                            
                 
-                 <span class="sp">Optical Drive</span><br />
-                 <asp:TextBox ID="TextBox7" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                 <span class="sp">Optical Drive price</span><br />
-                 <asp:TextBox ID="TextBox20" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
-
-                 <span class="sp">Sound Cards</span><br />
-                 <asp:TextBox ID="TextBox8" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                 <span class="sp">Sound Cards price</span><br />
-                 <asp:TextBox ID="TextBox21" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
-                </td>
-
-                <td>
-                 <span class="sp">Wireless Network Adapters</span><br />
-                 <asp:TextBox ID="TextBox9" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                 <span class="sp">Wireless Network Adapters price</span><br />
-                 <asp:TextBox ID="TextBox22" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
-
                  <span class="sp">Case</span><br />
                  <asp:TextBox ID="TextBox10" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                  <span class="sp">Case price</span><br />
                  <asp:TextBox ID="TextBox23" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
-
-                 <span class="sp">Hard Disk</span><br />
-                 <asp:TextBox ID="TextBox11" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                 <span class="sp">Hard Disk price</span><br />
-                 <asp:TextBox ID="TextBox24" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
-
-                 <span class="sp">SSD</span><br />
-                 <asp:TextBox ID="TextBox12" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                 <span class="sp">SSD price</span><br />
-                 <asp:TextBox ID="TextBox25" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
-             
-                
-                 
-                                          
-                </td>
-                    <td style="vertical-align:top;">
-                        <span class="sp">Case Fans</span><br />
-                        <asp:TextBox ID="TextBox13" runat="server" CssClass="tb"></asp:TextBox><br /><br />
-                        <span class="sp">Case Fans price</span><br />
-                        <asp:TextBox ID="TextBox26" runat="server" CssClass="tb"></asp:TextBox><br /><br /><br />
+                       
                         <span class="sp">RAM Slot</span><br />
                         <asp:TextBox ID="TextBox27" runat="server" CssClass="tb"></asp:TextBox><br /><br />
                         <span class="sp">GPU No</span><br />
@@ -136,11 +97,7 @@
                     </td>
                          
             </tr> 
-                <tr>
-                    <td>
-              
-          </td>
-                         </tr>
+                
                          
        </table>
            

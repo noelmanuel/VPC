@@ -66,7 +66,7 @@
                 <div class="option5">
 
                     <asp:HyperLink ID="HyperLink9" NavigateUrl="~/User/editprofile.aspx" runat="server">
-                    <img src="../images/editprofile.png" height="50px" width="110px;" style=" margin-left:10px;" /></asp:HyperLink>
+                    <asp:Image ID="Image2"  height="50" width="110" runat="server" ImageUrl="~/images/editprofile.png" /></asp:HyperLink>
                 </div>
             </div>
 

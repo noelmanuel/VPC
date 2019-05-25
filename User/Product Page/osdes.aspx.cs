@@ -28,7 +28,7 @@ public partial class User_Product_Page_osdes : System.Web.UI.Page
             Label Label5 = (Label)dli.FindControl("Label5");
             Label Label22 = (Label)dli.FindControl("Label22");
             Label Label21 = (Label)dli.FindControl("Label21");
-            Label motherb = (Label)dli.FindControl("motherb");
+            string motherb = "os";
             TextBox st = (TextBox)dli.FindControl("st");
             string es = st.Text;
             string ess = Label21.Text;
@@ -37,7 +37,7 @@ public partial class User_Product_Page_osdes : System.Web.UI.Page
             int grand = quan * tot;
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn.Open();
-            string insertQuery = "insert into addcart(username,category,product_name,product_model,quantity,item_price,total_price) values('" + Session["user"].ToString() + "','" + motherb.Text + "','" + Label5.Text + "','" + Label2.Text + "','" + st.Text + "','" + tot + "','" + grand + "')";
+            string insertQuery = "insert into addcart(username,category,product_name,product_model,quantity,item_price,total_price) values('" + Session["user"].ToString() + "','" + motherb + "','" + Label5.Text + "','" + Label2.Text + "','" + st.Text + "','" + tot + "','" + grand + "')";
             SqlCommand cmdd = new SqlCommand(insertQuery, conn);
             cmdd.ExecuteNonQuery();
             conn.Close();

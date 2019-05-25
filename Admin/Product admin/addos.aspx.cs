@@ -47,12 +47,12 @@ public partial class Admin_Product_admin_addos : System.Web.UI.Page
             SqlCommand cmd = new SqlCommand(insertQuery, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            Response.Write(" <script>window.alert('Software added'); window.location='comaddos.aspx';</script>");
+            Response.Write(" <script>window.alert('OS added'); window.location='addos.aspx';</script>");
         }
     }
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Company/Product company/comaddos.aspx");
+        Response.Redirect("~/Company/Product company/addos.aspx");
     }
 }

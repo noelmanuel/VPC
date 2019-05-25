@@ -16,160 +16,212 @@ public partial class Admin_addcompact : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
 
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        foreach (GridViewRow row in GridView1.Rows)
+
+        String pass = "123456789";
+        Random r = new Random();
+        char[] mypass = new char[5];
+        for (int i = 0; i < 5; i++)
         {
-            CheckBox cbox = (row.Cells[0].FindControl("CheckBox1") as CheckBox);
-            int rollno = Convert.ToInt32(row.Cells[2].Text);
-            string pro = row.Cells[1].Text;
-            if (cbox.Checked)
-            {
-                
-                foreach (GridViewRow row1 in GridView2.Rows)
-                {
-                    CheckBox cboxram = (row1.Cells[0].FindControl("CheckBox2") as CheckBox);
-                    int rollnoram = Convert.ToInt32(row1.Cells[2].Text);
-                    string proram = row1.Cells[1].Text;
-                    if (cboxram.Checked)
-                    {
-                        
-                        foreach (GridViewRow row2 in GridView3.Rows)
-                        {
-                            CheckBox cboxgpu = (row2.Cells[0].FindControl("CheckBox3") as CheckBox);
-                            int rollnogpu = Convert.ToInt32(row2.Cells[2].Text);
-                            string progpu = row2.Cells[1].Text;
-                            if (cboxgpu.Checked)
-                            {
-                               
-                                foreach (GridViewRow row3 in GridView4.Rows)
-                                {
-                                    CheckBox cboxcool = (row3.Cells[0].FindControl("CheckBox4") as CheckBox);
-                                    int rollnocool = Convert.ToInt32(row3.Cells[2].Text);
-                                    string procool = row3.Cells[1].Text;
-                                    if (cboxcool.Checked)
-                                    {
-                                        
-                                        foreach (GridViewRow row4 in GridView5.Rows)
-                                        {
-                                            CheckBox cboxhdd = (row4.Cells[0].FindControl("CheckBox5") as CheckBox);
-                                            int rollnohdd = Convert.ToInt32(row4.Cells[2].Text);
-                                            string prohdd = row4.Cells[1].Text;
-                                            if (cboxhdd.Checked)
-                                            {
-                                                foreach (GridViewRow row5 in GridView6.Rows)
-                                                {
-                                                    CheckBox cboxssd = (row5.Cells[0].FindControl("CheckBox6") as CheckBox);
-                                                    int rollnossd = Convert.ToInt32(row5.Cells[2].Text);
-                                                    string prossd = row5.Cells[1].Text;
-                                                    if (cboxssd.Checked)
-                                                    {
-                                                        foreach (GridViewRow row6 in GridView7.Rows)
-                                                        {
-                                                            CheckBox cboxcd = (row6.Cells[0].FindControl("CheckBox7") as CheckBox);
-                                                            int rollnocd = Convert.ToInt32(row6.Cells[2].Text);
-                                                            string procd = row6.Cells[1].Text;
-                                                            if (cboxcd.Checked)
-                                                            {
-                                                                foreach (GridViewRow row7 in GridView8.Rows)
-                                                                {
-                                                                    CheckBox cboxpro = (row7.Cells[0].FindControl("CheckBox8") as CheckBox);
-                                                                    int rollnopro = Convert.ToInt32(row7.Cells[2].Text);
-                                                                    string propro = row7.Cells[1].Text;
-                                                                    if (cboxpro.Checked)
-                                                                    {
-                                                                        foreach (GridViewRow row8 in GridView9.Rows)
-                                                                        {
-                                                                            CheckBox cboxsd = (row8.Cells[0].FindControl("CheckBox9") as CheckBox);
-                                                                            int rollnosd = Convert.ToInt32(row8.Cells[2].Text);
-                                                                            string prosd = row8.Cells[1].Text;
-                                                                            if (cboxsd.Checked)
-                                                                            {
-                                                                                foreach (GridViewRow row9 in GridView10.Rows)
-                                                                                {
-                                                                                    CheckBox cboxnet = (row9.Cells[0].FindControl("CheckBox10") as CheckBox);
-                                                                                    int rollnonet = Convert.ToInt32(row9.Cells[2].Text);
-                                                                                    string pronet = row9.Cells[1].Text;
-                                                                                    if (cboxnet.Checked)
-                                                                                    {
-                                                                                        foreach (GridViewRow row10 in GridView11.Rows)
-                                                                                        {
-                                                                                            CheckBox cboxcase = (row10.Cells[0].FindControl("CheckBox11") as CheckBox);
-                                                                                            int rollnocase = Convert.ToInt32(row10.Cells[2].Text);
-                                                                                            string procase = row10.Cells[1].Text;
-                                                                                            if (cboxcase.Checked)
-                                                                                            {
-                                                                                                foreach (GridViewRow row11 in GridView12.Rows)
-                                                                                                {
-                                                                                                    CheckBox cboxcasefan = (row11.Cells[0].FindControl("CheckBox12") as CheckBox);
-                                                                                                    int rollnocasefan = Convert.ToInt32(row11.Cells[2].Text);
-                                                                                                    string procasefan = row11.Cells[1].Text;
-                                                                                                    if (cboxcasefan.Checked)
-                                                                                                    {
-                                                                                                        foreach (GridViewRow row12 in GridView13.Rows)
-                                                                                                        {
-                                                                                                            CheckBox cboxsmps = (row12.Cells[0].FindControl("CheckBox13") as CheckBox);
-                                                                                                            int rollnosmps = Convert.ToInt32(row12.Cells[2].Text);
-                                                                                                            string prosmps = row12.Cells[1].Text;
-                                                                                                            if (cboxsmps.Checked)
-                                                                                                            {
-                                                                                                                deleterow(pro, rollno, proram, rollnoram, progpu, rollnogpu, procool, rollnocool, prohdd, rollnohdd, prossd, rollnossd, procd, rollnocd, propro, rollnopro, prosd, rollnosd, pronet, rollnonet, procase, rollnocase, procasefan, rollnocasefan, prosmps, rollnosmps);
-                                                                                                            }
-                                                                                                        }
-                                                                                                        
-                                                                                                    }
-                                                                                                }
-                                                                                                
-                                                                                            }
-                                                                                        }
-                                                                                        
-                                                                                    }
-                                                                                }
-                                                                               
-                                                                            }
-                                                                        }
-                                                                        
-                                                                    }
-                                                                }
-                                                                
-                                                            }
-                                                        }
-                                                       
-                                                    }
-                                                }
-                                                
-                                            }
-                                        }
-                                        
-                                    }
-                                }
-                                
-                            }
-                        }
-                        
-                    }
-                }
-               
-            }
+            mypass[i] = pass[(int)(4 * r.NextDouble())];
+
         }
-        
+        string bn = new string(mypass);
+        int tr = Convert.ToInt32(bn);
 
-        
 
-    }
-
-    public void deleterow(string pro, int rollno, string proram, int rollnoram, string progpu, int rollnogpu, string procool, int rollnocool, string prohdd, int rollnohdd, string prossd, int rollnossd, string procd, int rollnocd, string propro, int rollnopro, string prosd, int rollnosd, string pronet, int rollnonet, string procase, int rollnocase, string procasefan, int rollnocasefan, string prosmps, int rollnosmps)
-    {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string ordp = "insert into cpubuild(motherboard,mbp,ram,ramp,gpu,gpup,cool,coolp,hd,hddp,ssd,ssdp,cd,cdp,processor,prop,sound,sdp,network,netp,casee,casep,casefan,casefanp,powerr,powerp,ramno,gpuno) values('" + pro + "','" + rollno + "','" + proram + "','" + rollnoram + "','" + progpu + "','" + rollnogpu + "','" + procool + "','" + rollnocool + "','" + prohdd + "','" + rollnohdd + "','" + prossd + "','" + rollnossd + "','" + procd + "','" + rollnocd + "','" + propro + "','" + rollnopro + "','" + prosd + "','" + rollnosd + "','" + pronet + "','" + rollnonet + "','" + procase + "','" + rollnocase + "','" + procasefan + "','" + rollnocasefan + "','" + prosmps + "','" + rollnosmps + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "')";
-        SqlCommand cmddd = new SqlCommand(ordp, conn);
-        cmddd.ExecuteNonQuery();
-        conn.Close();
+        string ggg = "select productid from cpubuildmb where productid='" + tr + "'";
+        SqlCommand cmd = new SqlCommand(ggg, conn);
+        SqlDataReader reader = cmd.ExecuteReader();
+        if (reader.HasRows)
+        {
+
+            reader.Close();
+            int trr = tr + 1;
+
+            foreach (GridViewRow row in GridView1.Rows)
+            {
+                CheckBox cbox = (row.Cells[0].FindControl("CheckBox1") as CheckBox);
+                int rollno = Convert.ToInt32(row.Cells[2].Text);
+                string pro = row.Cells[1].Text;
+                if (cbox.Checked)
+                {
+
+                    string ordp = "insert into cpubuildmb(Motherboard,Ram Slots,GPU Slots,Price,productid) values('" + pro + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + rollno + "','" + trr + "')";
+                    SqlCommand cmddd = new SqlCommand(ordp, conn);
+                    cmddd.ExecuteNonQuery();
+
+                }
+            }
+
+            foreach (GridViewRow row1 in GridView2.Rows)
+            {
+                CheckBox cboxram = (row1.Cells[0].FindControl("CheckBox2") as CheckBox);
+                int rollnoram = Convert.ToInt32(row1.Cells[2].Text);
+                string proram = row1.Cells[1].Text;
+                if (cboxram.Checked)
+                {
+                    string ordp1 = "insert into cpubuildram(Ram,Price,productid) values('" + proram + "','" + rollnoram + "','" + trr + "')";
+                    SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
+                    cmddd1.ExecuteNonQuery();
+                }
+            }
+
+            foreach (GridViewRow row2 in GridView3.Rows)
+            {
+                CheckBox cboxgpu = (row2.Cells[0].FindControl("CheckBox3") as CheckBox);
+                int rollnogpu = Convert.ToInt32(row2.Cells[2].Text);
+                string progpu = row2.Cells[1].Text;
+                if (cboxgpu.Checked)
+                {
+                    string ordp2 = "insert into cpubuildgpu(GPU,Price,productid) values('" + progpu + "','" + rollnogpu + "','" + trr + "')";
+                    SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
+                    cmddd2.ExecuteNonQuery();
+                }
+            }
+            foreach (GridViewRow row7 in GridView8.Rows)
+            {
+                CheckBox cboxpro = (row7.Cells[0].FindControl("CheckBox8") as CheckBox);
+                int rollnopro = Convert.ToInt32(row7.Cells[2].Text);
+                string propro = row7.Cells[1].Text;
+                if (cboxpro.Checked)
+                {
+                    string ordp3 = "insert into cpubuildpro(Processor,Price,productid) values('" + propro + "','" + rollnopro + "','" + trr + "')";
+                    SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
+                    cmddd3.ExecuteNonQuery();
+                }
+            }
+
+            foreach (GridViewRow row10 in GridView11.Rows)
+            {
+                CheckBox cboxcase = (row10.Cells[0].FindControl("CheckBox11") as CheckBox);
+                int rollnocase = Convert.ToInt32(row10.Cells[2].Text);
+                string procase = row10.Cells[1].Text;
+                if (cboxcase.Checked)
+                {
+                    string ordp4 = "insert into cpubuildcase(Casee,Price,productid) values('" + procase + "','" + rollnocase + "','" + trr + "')";
+                    SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
+                    cmddd4.ExecuteNonQuery();
+
+                }
+            }
+
+            foreach (GridViewRow row12 in GridView13.Rows)
+            {
+                CheckBox cboxsmps = (row12.Cells[0].FindControl("CheckBox13") as CheckBox);
+                int rollnosmps = Convert.ToInt32(row12.Cells[2].Text);
+                string prosmps = row12.Cells[1].Text;
+                if (cboxsmps.Checked)
+                {
+                    string ordp5 = "insert into cpubuildsmps(smps,Price,productid) values('" + prosmps + "','" + rollnosmps + "','" + trr + "')";
+                    SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
+                    cmddd5.ExecuteNonQuery();
+                }
+            }
+            conn.Close();
+        }
+        else
+        {
+            reader.Close();
+
+
+            foreach (GridViewRow row in GridView1.Rows)
+            {
+                CheckBox cbox = (row.Cells[0].FindControl("CheckBox1") as CheckBox);
+                int rollno = Convert.ToInt32(row.Cells[2].Text);
+                string pro = row.Cells[1].Text;
+                if (cbox.Checked)
+                {
+
+                    string ordp = "insert into cpubuildmb(Motherboard,RamSlots,GPUSlots,Price,productid) values('" + pro + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + rollno + "' ,'" + tr + "')";
+                    SqlCommand cmddd = new SqlCommand(ordp, conn);
+                    cmddd.ExecuteNonQuery();
+
+                }
+            }
+
+            foreach (GridViewRow row1 in GridView2.Rows)
+            {
+                CheckBox cboxram = (row1.Cells[0].FindControl("CheckBox2") as CheckBox);
+                int rollnoram = Convert.ToInt32(row1.Cells[2].Text);
+                string proram = row1.Cells[1].Text;
+                if (cboxram.Checked)
+                {
+                    string ordp1 = "insert into cpubuildram(Ram,Price,productid) values('" + proram + "','" + rollnoram + "','" + tr + "')";
+                    SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
+                    cmddd1.ExecuteNonQuery();
+                }
+            }
+
+            foreach (GridViewRow row2 in GridView3.Rows)
+            {
+                CheckBox cboxgpu = (row2.Cells[0].FindControl("CheckBox3") as CheckBox);
+                int rollnogpu = Convert.ToInt32(row2.Cells[2].Text);
+                string progpu = row2.Cells[1].Text;
+                if (cboxgpu.Checked)
+                {
+                    string ordp2 = "insert into cpubuildgpu(GPU,Price,productid) values('" + progpu + "','" + rollnogpu + "','" + tr + "')";
+                    SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
+                    cmddd2.ExecuteNonQuery();
+                }
+            }
+            foreach (GridViewRow row7 in GridView8.Rows)
+            {
+                CheckBox cboxpro = (row7.Cells[0].FindControl("CheckBox8") as CheckBox);
+                int rollnopro = Convert.ToInt32(row7.Cells[2].Text);
+                string propro = row7.Cells[1].Text;
+                if (cboxpro.Checked)
+                {
+                    string ordp3 = "insert into cpubuildpro(Processor,Price,productid) values('" + propro + "','" + rollnopro + "','" + tr + "')";
+                    SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
+                    cmddd3.ExecuteNonQuery();
+                }
+            }
+
+            foreach (GridViewRow row10 in GridView11.Rows)
+            {
+                CheckBox cboxcase = (row10.Cells[0].FindControl("CheckBox11") as CheckBox);
+                int rollnocase = Convert.ToInt32(row10.Cells[2].Text);
+                string procase = row10.Cells[1].Text;
+                if (cboxcase.Checked)
+                {
+                    string ordp4 = "insert into cpubuildcase(Casee,Price,productid) values('" + procase + "','" + rollnocase + "','" + tr + "')";
+                    SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
+                    cmddd4.ExecuteNonQuery();
+                }
+            }
+
+            foreach (GridViewRow row12 in GridView13.Rows)
+            {
+                CheckBox cboxsmps = (row12.Cells[0].FindControl("CheckBox13") as CheckBox);
+                int rollnosmps = Convert.ToInt32(row12.Cells[2].Text);
+                string prosmps = row12.Cells[1].Text;
+                if (cboxsmps.Checked)
+                {
+                    string ordp5 = "insert into cpubuildsmps(smps,Price,productid) values('" + prosmps + "','" + rollnosmps + "','" + tr + "')";
+                    SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
+                    cmddd5.ExecuteNonQuery();
+                }
+            }
+
+            conn.Close();
+
+        }
 
 
     }
+
+
+
+
+
+
+
 }

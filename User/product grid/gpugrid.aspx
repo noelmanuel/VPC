@@ -17,13 +17,13 @@
         <Columns>
             <asp:TemplateField HeaderText="Video Card">
                 <ItemTemplate>
-                    <asp:Label ID="gpu_la" runat="server" Text='<%# Eval("gpu") %>'></asp:Label>
+                    <asp:Label ID="gpu_la" runat="server" Text='<%# Eval("GPU") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Price">
                 <ItemTemplate>
-                    <asp:Label ID="gpu_price" runat="server" Text='<%# Eval("gpup") %>'></asp:Label>
+                    <asp:Label ID="gpu_price" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>

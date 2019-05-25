@@ -18,7 +18,7 @@ public partial class User_product_grid_hddgrid : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        SqlDataAdapter Adp = new SqlDataAdapter("select DISTINCT hd,hddp from cpubuild", conn);
+        SqlDataAdapter Adp = new SqlDataAdapter("select man,pric from hdd", conn);
         DataTable Dt = new DataTable();
         Adp.Fill(Dt);
         GridView1.DataSource = Dt;

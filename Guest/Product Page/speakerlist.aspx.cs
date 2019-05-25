@@ -19,12 +19,16 @@ public partial class Guest_Product_Page_speakerlist : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        
+
         if (!IsPostBack)
         {
             brand();
             socket();
             chipset();
             bindata();
+
+           
         }
 
 

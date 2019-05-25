@@ -21,13 +21,13 @@
         <Columns>
             <asp:TemplateField HeaderText="RAM">
                 <ItemTemplate>
-                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("hd") %>'></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("man") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Price">
                 <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("hddp") %>'></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("pric") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
@@ -49,7 +49,7 @@
         <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
             </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [cpubuild]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [hdd]"></asp:SqlDataSource>
 
     </div>
 </asp:Content>

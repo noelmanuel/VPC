@@ -16,7 +16,7 @@ public partial class User_product_grid_opticaldrivegrid : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        SqlDataAdapter Adp = new SqlDataAdapter("select DISTINCT cd,cdp from cpubuild", conn);
+        SqlDataAdapter Adp = new SqlDataAdapter("select man,pric from cddrive", conn);
         DataTable Dt = new DataTable();
         Adp.Fill(Dt);
         GridView1.DataSource = Dt;

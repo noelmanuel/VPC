@@ -21,13 +21,13 @@
         <Columns>
             <asp:TemplateField HeaderText="Case">
                 <ItemTemplate>
-                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("casee") %>'></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Casee") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Price">
                 <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("casep") %>'></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>

@@ -22,13 +22,87 @@ public partial class Company_addcomcompacthardware : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        String pass = "123456789";
+        Random r = new Random();
+        char[] mypass = new char[5];
+        for (int i = 0; i < 5; i++)
+        {
+            mypass[i] = pass[(int)(4 * r.NextDouble())];
+
+        }
+        string bn = new string(mypass);
+        int tr = Convert.ToInt32(bn);
+
+
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string insertQuery = "insert into cpubuild(motherboard,processor,ram,gpu,cool,powerr,cd,sound,network,casee,hd,ssd,casefan,mbp,prop,ramp,gpup,powerp,cdp,sdp,netp,casep,hddp,ssdp,casefanp,coolp,ramno,gpuno,author) values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + TextBox7.Text + "','" + TextBox8.Text + "','" + TextBox9.Text + "','" + TextBox10.Text + "','" + TextBox11.Text + "','" + TextBox12.Text + "','" + TextBox13.Text + "','" + TextBox14.Text + "','" + TextBox15.Text + "','" + TextBox16.Text + "','" + TextBox17.Text + "','" + TextBox19.Text + "','" + TextBox20.Text + "','" + TextBox21.Text + "','" + TextBox22.Text + "','" + TextBox23.Text + "','" + TextBox24.Text + "','" + TextBox25.Text + "','" + TextBox26.Text + "','" + TextBox18.Text + "','" + TextBox27.Text + "','" + TextBox28.Text + "','" + Session["comp"].ToString() + "')";
-        SqlCommand cmd = new SqlCommand(insertQuery, conn);
-        cmd.ExecuteNonQuery();
-        conn.Close();
-        Response.Write(" <script>window.alert('CPU Build added'); window.location='addcomcompacthardware.aspx';</script>");
+
+        string ggg = "select productid from cpubuildmb where productid='" + tr + "'";
+        SqlCommand cmd = new SqlCommand(ggg, conn);
+        SqlDataReader reader = cmd.ExecuteReader();
+        if (reader.HasRows)
+        {
+
+            reader.Close();
+            int trr = tr + 1;
+
+            string ordp = "insert into cpubuildmb(Motherboard,Ram Slots,GPU Slots,Price,author,productid) values('" + TextBox1.Text + "','" + TextBox27.Text + "','" + TextBox28.Text + "','" + TextBox14.Text + "','" + Session["comp"].ToString() + "','" + trr + "')";
+            SqlCommand cmddd = new SqlCommand(ordp, conn);
+            cmddd.ExecuteNonQuery();
+
+            string ordp1 = "insert into cpubuildram(Ram,Price,author,productid) values('" + TextBox3.Text + "','" + TextBox16.Text + "','" + Session["comp"].ToString() + "','" + trr + "')";
+            SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
+            cmddd1.ExecuteNonQuery();
+
+            string ordp2 = "insert into cpubuildgpu(GPU,Price,author,productid) values('" + TextBox4.Text + "','" + TextBox17.Text + "','" + Session["comp"].ToString() + "','" + trr + "')";
+            SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
+            cmddd2.ExecuteNonQuery();
+
+            string ordp3 = "insert into cpubuildpro(Processor,Price,author,productid) values('" + TextBox2.Text + "','" + TextBox15.Text + "','" + Session["comp"].ToString() + "','" + trr + "')";
+            SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
+            cmddd3.ExecuteNonQuery();
+
+            string ordp4 = "insert into cpubuildcase(Casee,Price,author,productid) values('" + TextBox10.Text + "','" + TextBox23.Text + "','" + Session["comp"].ToString() + "','" + trr + "')";
+            SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
+            cmddd4.ExecuteNonQuery();
+
+            string ordp5 = "insert into cpubuildsmps(smps,Price,author,productid) values('" + TextBox6.Text + "','" + TextBox19.Text + "','" + Session["comp"].ToString() + "','" + trr + "')";
+            SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
+            cmddd5.ExecuteNonQuery();
+
+            conn.Close();
+            Response.Write(" <script>window.alert('CPU Build added'); window.location='addcompacthardware.aspx';</script>");
+        }
+        else
+        {
+
+            string ordp = "insert into cpubuildmb(Motherboard,Ram Slots,GPU Slots,Price,author,productid) values('" + TextBox1.Text + "','" + TextBox27.Text + "','" + TextBox28.Text + "','" + TextBox14.Text + "','" + Session["comp"].ToString() + "','" + tr + "')";
+            SqlCommand cmddd = new SqlCommand(ordp, conn);
+            cmddd.ExecuteNonQuery();
+
+            string ordp1 = "insert into cpubuildram(Ram,Price,author,productid) values('" + TextBox3.Text + "','" + TextBox16.Text + "','" + Session["comp"].ToString() + "','" + tr + "')";
+            SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
+            cmddd1.ExecuteNonQuery();
+
+            string ordp2 = "insert into cpubuildgpu(GPU,Price,author,productid) values('" + TextBox4.Text + "','" + TextBox17.Text + "','" + Session["comp"].ToString() + "','" + tr + "')";
+            SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
+            cmddd2.ExecuteNonQuery();
+
+            string ordp3 = "insert into cpubuildpro(Processor,Price,author,productid) values('" + TextBox2.Text + "','" + TextBox15.Text + "','" + Session["comp"].ToString() + "','" + tr + "')";
+            SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
+            cmddd3.ExecuteNonQuery();
+
+            string ordp4 = "insert into cpubuildcase(Casee,Price,author,productid) values('" + TextBox10.Text + "','" + TextBox23.Text + "','" + Session["comp"].ToString() + "','" + tr + "')";
+            SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
+            cmddd4.ExecuteNonQuery();
+
+            string ordp5 = "insert into cpubuildsmps(smps,Price,author,productid) values('" + TextBox6.Text + "','" + TextBox19.Text + "','" + Session["comp"].ToString() + "','" + tr + "')";
+            SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
+            cmddd5.ExecuteNonQuery();
+
+            conn.Close();
+            Response.Write(" <script>window.alert('CPU Build added'); window.location='addcompacthardware.aspx';</script>");
+        }
     }
 
     protected void Button2_Click(object sender, EventArgs e)

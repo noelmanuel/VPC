@@ -24,7 +24,6 @@ public partial class User_buildcart : System.Web.UI.Page
             DropDownList5.Items.Add(i.ToString());
         }
         Panel1.Visible = false;
-        Panel2.Visible = false;
         Panel4.Visible = false;
         Panel3.Visible = true;
         Panel5.Visible = false;
@@ -44,7 +43,6 @@ public partial class User_buildcart : System.Web.UI.Page
     {
         if (e.CommandName == "Select")
         {
-            Panel2.Visible = true;
             //Determine the RowIndex of the Row whose Button was clicked.
             int rowIndex = Convert.ToInt32(e.CommandArgument);
 
