@@ -15,6 +15,7 @@ public partial class User_product_grid_upsgrid : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Panel1.Visible = false;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlDataAdapter Adp = new SqlDataAdapter("select man,pric from ups", conn);
         DataTable Dt = new DataTable();
@@ -81,6 +82,65 @@ public partial class User_product_grid_upsgrid : System.Web.UI.Page
                 conn.Close();
                 Response.Write(" <script>window.alert('UPS Added');</script>");
                 Response.Redirect("~/User/startpc.aspx");
+            }
+        }
+
+        else if (e.CommandName == "Insert")
+        {
+            Panel1.Visible = true;
+
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+
+
+
+            GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+            Label pro = (Label)row.FindControl("Label1");
+            Label pro1 = (Label)row.FindControl("Label2");
+
+
+            string gg = "select * from ups where man='" + pro.Text + "'";
+            SqlCommand cmdd = new SqlCommand(gg, conn);
+            SqlDataReader readerr = cmdd.ExecuteReader();
+
+            if (readerr.HasRows)
+            {
+                readerr.Read();
+                Label11.Text = readerr.GetString(5);
+                Label12.Text = readerr.GetString(6);
+                Label13.Text = readerr.GetString(7);
+                Label14.Text = readerr.GetString(8);
+                Label15.Text = readerr.GetString(9);
+                readerr.Close();
+
+
+            }
+
+            string major = "";
+            string q3 = "select mbprice from makecart where userr ='" + Session["user"].ToString() + "' AND mb != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                int qua = int.Parse(noo3);
+                int qua1 = int.Parse(pro1.Text);
+
+
+                if (qua>10000 && qua1<10000)
+                {
+                    Label23.ForeColor = System.Drawing.Color.Orange;                  
+                    Label23.Text = "Warning: Selected Motherboard fetch more power so you need higher backup power ups";
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No Issues";
+                }
+                reader3.Close();
+
             }
         }
     }

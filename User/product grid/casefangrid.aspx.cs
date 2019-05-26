@@ -16,12 +16,15 @@ public partial class User_product_grid_casefangrid : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Panel1.Visible = false;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        SqlDataAdapter Adp = new SqlDataAdapter("select DISTINCT casefan,casefanp from cpubuild", conn);
+        SqlDataAdapter Adp = new SqlDataAdapter("select man,pric from casefan", conn);
         DataTable Dt = new DataTable();
         Adp.Fill(Dt);
         GridView1.DataSource = Dt;
         GridView1.DataBind();
+
+
     }
 
 
@@ -83,6 +86,42 @@ public partial class User_product_grid_casefangrid : System.Web.UI.Page
                 Response.Write(" <script>window.alert('Case fan Added');</script>");
                 Response.Redirect("~/User/startpc.aspx");
             }
+        }
+
+        else if (e.CommandName == "Insert")
+        {
+            Panel1.Visible = true;
+
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+
+
+
+            GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+            Label pro = (Label)row.FindControl("Label1");
+
+
+            string gg = "select * from casefan where man='" + pro.Text + "'";
+            SqlCommand cmdd = new SqlCommand(gg, conn);
+            SqlDataReader readerr = cmdd.ExecuteReader();
+
+            if (readerr.HasRows)
+            {
+                readerr.Read();
+                Label11.Text = readerr.GetString(4);
+                Label12.Text = readerr.GetString(5);
+                Label13.Text = readerr.GetString(6);
+                Label14.Text = readerr.GetString(7);
+                Label15.Text = readerr.GetString(8);
+                Label16.Text = readerr.GetString(9);
+
+
+            }
+
+
+
+
         }
     }
 }

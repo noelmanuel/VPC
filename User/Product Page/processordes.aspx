@@ -156,7 +156,7 @@
                         <span class="sp">Socket</span><br />
                         <asp:Label ID="Label4" runat="server" Text='<%# Eval("soc") %>'></asp:Label><br /><br />
                         <span class="sp">Operating Frequency</span><br />
-                         <asp:Label ID="Label9" runat="server" Text='<%# Eval("fre") %>'></asp:Label><br /><br />
+                        <asp:Label ID="Label9" runat="server" Text='<%# Eval("fre") %>'></asp:Label><br /><br />
                         <span class="sp">Turbo Frequency</span><br />
                         <asp:Label ID="Label12" runat="server" Text='<%# Eval("tur") %>'></asp:Label><br /><br />
                         <span class="sp">Cores</span><br />

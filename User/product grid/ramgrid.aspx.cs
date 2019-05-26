@@ -16,6 +16,7 @@ public partial class User_product_grid_ramgrid : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Panel1.Visible = false;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
 
@@ -122,6 +123,42 @@ public partial class User_product_grid_ramgrid : System.Web.UI.Page
                 Response.Write(" <script>window.alert('RAM Added');</script>");
                 Response.Redirect("~/User/startpc.aspx");
             }
+        }
+
+        else if (e.CommandName == "Insert")
+        {
+            Panel1.Visible = true;
+
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+
+
+
+            GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+            Label pro = (Label)row.FindControl("Label1");
+
+
+            string gg = "select * from ram where man='" + pro.Text + "'";
+            SqlCommand cmdd = new SqlCommand(gg, conn);
+            SqlDataReader readerr = cmdd.ExecuteReader();
+
+            if (readerr.HasRows)
+            {
+                readerr.Read();
+                Label11.Text = readerr.GetString(5);
+                Label12.Text = readerr.GetString(6);
+                Label13.Text = readerr.GetString(7);
+                Label14.Text = readerr.GetString(8);
+                Label15.Text = readerr.GetString(9);
+                Label16.Text = readerr.GetString(10);
+
+
+            }
+
+
+
+
         }
     }
 }

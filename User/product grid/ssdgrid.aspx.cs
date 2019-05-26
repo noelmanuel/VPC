@@ -16,6 +16,7 @@ public partial class User_product_grid_ssdgrid : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Panel1.Visible = false;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlDataAdapter Adp = new SqlDataAdapter("select man,pric from ssd", conn);
         DataTable Dt = new DataTable();
@@ -83,5 +84,56 @@ public partial class User_product_grid_ssdgrid : System.Web.UI.Page
                 Response.Redirect("~/User/startpc.aspx");
             }
         }
+
+        else if (e.CommandName == "Insert")
+        {
+            Panel1.Visible = true;
+
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+
+
+
+            GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+            Label pro = (Label)row.FindControl("Label1");
+
+
+            string gg = "select * from ssd where man='" + pro.Text + "'";
+            SqlCommand cmdd = new SqlCommand(gg, conn);
+            SqlDataReader readerr = cmdd.ExecuteReader();
+
+            if (readerr.HasRows)
+            {
+                readerr.Read();
+                Label11.Text = readerr.GetString(4);
+                Label12.Text = readerr.GetString(5);
+                Label13.Text = readerr.GetString(6);
+                Label14.Text = readerr.GetString(7);
+                readerr.Close();
+
+
+            }
+
+            string major = "";
+            string q3 = "select casefan from makecart where userr ='" + Session["user"].ToString() + "' AND casefan != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "No Issues";
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Orange;
+                Label23.Text = "Warning: Better to add casefan to avoid heating";
+            }
+                reader3.Close();
+
+
+
+
+            }
     }
 }

@@ -16,6 +16,7 @@ public partial class User_product_grid_speakergrid : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Panel1.Visible = false;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlDataAdapter Adp = new SqlDataAdapter("select man,pric from speaker", conn);
         DataTable Dt = new DataTable();
@@ -82,6 +83,40 @@ public partial class User_product_grid_speakergrid : System.Web.UI.Page
                 Response.Write(" <script>window.alert('Speaker Added');</script>");
                 Response.Redirect("~/User/startpc.aspx");
             }
+        }
+
+        else if (e.CommandName == "Insert")
+        {
+            Panel1.Visible = true;
+
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+
+
+
+            GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+            Label pro = (Label)row.FindControl("Label1");
+
+
+            string gg = "select * from speaker where man='" + pro.Text + "'";
+            SqlCommand cmdd = new SqlCommand(gg, conn);
+            SqlDataReader readerr = cmdd.ExecuteReader();
+
+            if (readerr.HasRows)
+            {
+                readerr.Read();
+                Label11.Text = readerr.GetString(3);
+                Label12.Text = readerr.GetString(4);
+                Label13.Text = readerr.GetString(5);
+                Label14.Text = readerr.GetString(6);
+                
+
+            }
+
+
+
+
         }
     }
 }

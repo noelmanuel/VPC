@@ -10,12 +10,23 @@
             margin-left: 10%;
             text-align: center;
         }
+        .sp
+        {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:20px;
+            color:#f92f42;
+            
+            
+            
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="section_backgound">
         <div style="height:790px;">
-
+        <table>
+            <tr >
+                <td style="width:50%; vertical-align:top;">
         <h3 style="padding-top:17px; margin-left:10%;">SELECT CPU COOLER</h3>
     <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="5" CellSpacing="3" Width="843px" OnRowCommand="GridView1_RowCommand" >
         <Columns>
@@ -31,6 +42,14 @@
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
             </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="Details">
+                <ItemTemplate>
+                    <asp:LinkButton ID="LinkButton2" runat="server" ForeColor="Red" CommandName="Insert" CommandArgument="<%# Container.DataItemIndex %>" >View</asp:LinkButton>
+                </ItemTemplate>
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:TemplateField>
+
             <asp:TemplateField HeaderText="Action">
                 <ItemTemplate>
                     <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Red" CommandName="Select" >Add</asp:LinkButton>
@@ -48,6 +67,28 @@
         <SortedDescendingCellStyle BackColor="#F1E5CE" />
         <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
+                    </td>
+
+     <td style="padding-left:9%; vertical-align:top;">
+     <asp:Panel ID="Panel1" runat="server">
+
+      <h3 style="padding-top:20px;">CPU COOLER DETAILS</h3>
+
+                        <span class="sp">Supported Sockets</span><br />
+                        <asp:Label ID="Label11" runat="server" ></asp:Label><br /><br />
+                        <span class="sp">Liquid Cooled</span><br />
+                        <asp:Label ID="Label12" runat="server" ></asp:Label><br /><br />
+                        <span class="sp">Radiator Size</span><br />
+                         <asp:Label ID="Label13" runat="server" ></asp:Label><br /><br />
+                         <span class="sp">Noise Level</span><br />
+                        <asp:Label ID="Label14" runat="server" ></asp:Label><br /><br />
+                        <span class="sp">Fan RPM</span><br />
+                        <asp:Label ID="Label15" runat="server" ></asp:Label><br /><br />
+
+         </asp:Panel> 
+      </td>
+      </tr>
+      </table>
             </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [cpubuild]"></asp:SqlDataSource>
 

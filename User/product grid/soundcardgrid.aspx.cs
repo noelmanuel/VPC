@@ -16,6 +16,7 @@ public partial class User_product_grid_soundcardgrid : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Panel1.Visible = false;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         SqlDataAdapter Adp = new SqlDataAdapter("select man,pric from soundcard", conn);
         DataTable Dt = new DataTable();
@@ -83,6 +84,67 @@ public partial class User_product_grid_soundcardgrid : System.Web.UI.Page
                 Response.Write(" <script>window.alert('Soundcard Added');</script>");
                 Response.Redirect("~/User/startpc.aspx");
             }
+        }
+
+        else if (e.CommandName == "Insert")
+        {
+            Panel1.Visible = true;
+
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+
+
+
+            GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+            Label pro = (Label)row.FindControl("Label1");
+            Label pro1 = (Label)row.FindControl("Label2");
+
+
+            string gg = "select * from soundcard where man='" + pro.Text + "'";
+            SqlCommand cmdd = new SqlCommand(gg, conn);
+            SqlDataReader readerr = cmdd.ExecuteReader();
+
+            if (readerr.HasRows)
+            {
+                readerr.Read();
+                Label11.Text = readerr.GetString(4);
+                Label12.Text = readerr.GetString(5);
+                Label13.Text = readerr.GetString(6);
+                Label14.Text = readerr.GetString(7);
+                Label15.Text = readerr.GetString(8);
+                readerr.Close();
+
+
+            }
+            string major = "";
+            string q3 = "select mbprice from makecart where userr ='" + Session["user"].ToString() + "' AND mb != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                int qua = int.Parse(noo3);
+                int qua1 = int.Parse(pro1.Text);
+
+
+                if (qua < 4000 && qua1 < 1500)
+                {
+                    Label23.ForeColor = System.Drawing.Color.Orange;
+                    Label23.Text = "Warning: User may experience slight noise";
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "Selected motherboard has better audio technology than this soundcard";
+                }
+                reader3.Close();
+
+            }
+
+
+
         }
     }
 }
