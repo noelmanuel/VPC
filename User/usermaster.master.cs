@@ -21,12 +21,12 @@ public partial class User_usermaster : System.Web.UI.MasterPage
         conn.Open();
         string insertQuery21 = "select COUNT(category) from addcart where username='" + Session["user"].ToString() + "'";
         SqlCommand cmdqw21 = new SqlCommand(insertQuery21, conn);
-        SqlDataReader readerqw21 = cmdqw21.ExecuteReader();
-        if (readerqw21.HasRows)
+        SqlDataReader readerqw219 = cmdqw21.ExecuteReader();
+        if (readerqw219.HasRows)
         {
             Label1.ForeColor = System.Drawing.Color.Red;
-            readerqw21.Read();
-            string noo = readerqw21.GetValue(0).ToString();
+            readerqw219.Read();
+            string noo = readerqw219.GetValue(0).ToString();
             Label1.Text = noo;
         }
         else
@@ -34,7 +34,7 @@ public partial class User_usermaster : System.Web.UI.MasterPage
             Label1.Text = "0";
             Label1.ForeColor = System.Drawing.Color.Red;
         }
-        readerqw21.Close();
+        readerqw219.Close();
         conn.Close();
 
 

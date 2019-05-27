@@ -110,10 +110,77 @@ public partial class User_product_grid_monitorgrid : System.Web.UI.Page
                 Label14.Text = readerr.GetString(8);
                 Label15.Text = readerr.GetString(9);
                 Label16.Text = readerr.GetString(10);
+                readerr.Close();
 
 
             }
 
+            string major = "";
+            string q3 = "select TOP 1 gpu from makecart where userr ='" + Session["user"].ToString() + "' AND gpu != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                reader3.Close();
+
+                string q4 = "select hdm from gpu where man='" + noo3 + "'";
+                SqlCommand cmd4 = new SqlCommand(q4, conn);
+                SqlDataReader reader4 = cmd4.ExecuteReader();
+                if (reader4.HasRows)
+                {
+                    reader4.Read();
+                    string noo4 = reader4.GetValue(0).ToString();
+                    int hdmigpu = int.Parse(noo4);
+                    reader4.Close();
+
+                    string q5 = "select hdm from monitor where man='" + pro.Text + "'";
+                    SqlCommand cmd5 = new SqlCommand(q5, conn);
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.HasRows)
+                    {
+                        reader5.Read();
+                        string noo5 = reader5.GetValue(0).ToString();
+                        int hdmimonitor = int.Parse(noo5);
+
+                        if(hdmimonitor==0)
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Orange;
+                            Label23.Text = "Warning: Monitor does not have HDMI Port ";
+                        }
+                        else if(hdmigpu==0)
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Orange;
+                            Label23.Text = "Warning: Selected GPU does not have HDMI Port ";
+                        }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "No Issues";
+                        }
+                    }
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Black;
+                        Label23.Text = "No monitor found";
+                    }
+
+
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No gpu found";
+                }
+
+
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "No Issues";
+            }
 
 
 

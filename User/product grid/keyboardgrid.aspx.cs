@@ -110,13 +110,42 @@ public partial class User_product_grid_keyboardgrid : System.Web.UI.Page
                 Label13.Text = readerr.GetString(7);
                 Label14.Text = readerr.GetString(8);
                 Label15.Text = readerr.GetString(9);
-               
+                readerr.Close();
 
             }
 
+            
+            string q3 = "select des from keyboard where man='" + pro.Text + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string keydes = reader3.GetString(0).ToString();
+                if(keydes=="Gaming")
+                {
+                    Label23.Text = "This keyboard is more prefered by gamers";
+                }
+                else if(keydes == "Office")
+                {
+                    Label23.Text = "Office purpose keyboard";
+                }
+                else if (keydes == "General")
+                {
+                    Label23.Text = "All purpose keyboard";
+                }
+                else
+                {
+                    Label23.Text = "104-key Windows Standard keyboard";
+                }
 
 
 
+            }
+            else
+            {
+                Label23.Text = "No keyboard Found";
+            }
         }
     }
 }

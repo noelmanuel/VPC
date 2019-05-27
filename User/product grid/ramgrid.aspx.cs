@@ -237,7 +237,7 @@ public partial class User_product_grid_ramgrid : System.Web.UI.Page
                     else
                     {
                         Label23.ForeColor = System.Drawing.Color.Black;
-                        Label23.Text = "No RAM Found";
+                        Label23.Text = "Add RAM for details";
                     }
 
 

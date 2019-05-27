@@ -28,6 +28,7 @@
             <tr >
                 <td style="width:50%; vertical-align:top;">
         <h3 style="padding-top:17px; margin-left:10%;">SELECT KEYBOARD</h3>
+                     <div style="height:520px; width:1000px; overflow:scroll;">
     <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="5" CellSpacing="3" Width="843px" OnRowCommand="GridView1_RowCommand" >
         <Columns>
             <asp:TemplateField HeaderText="Keyboard Brand">
@@ -68,9 +69,10 @@
         <SortedDescendingCellStyle BackColor="#F1E5CE" />
         <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
+                         </div>
                     </td>
 
-     <td style="padding-left:9%; vertical-align:top;">
+     <td style="padding-left:3%; vertical-align:top;">
      <asp:Panel ID="Panel1" runat="server">
 
       <h3 style="padding-top:20px;">KEYBOARD DETAILS</h3>
@@ -85,6 +87,9 @@
                         <asp:Label ID="Label14" runat="server" ></asp:Label><br /><br />
                         <span class="sp">Include Mouse</span><br />
                         <asp:Label ID="Label15" runat="server" ></asp:Label><br /><br />
+
+         <h3 style="">NOTE:</h3>
+         <asp:Label ID="Label23" Font-Bold="true"  ForeColor="#006600"   runat="server" ></asp:Label>
 
          </asp:Panel> 
       </td>

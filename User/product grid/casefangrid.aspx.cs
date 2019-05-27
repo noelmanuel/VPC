@@ -115,10 +115,71 @@ public partial class User_product_grid_casefangrid : System.Web.UI.Page
                 Label14.Text = readerr.GetString(7);
                 Label15.Text = readerr.GetString(8);
                 Label16.Text = readerr.GetString(9);
-
+                readerr.Close();
 
             }
 
+            string major = "";
+            string q3 = "select count(gpu) from makecart where userr ='" + Session["user"].ToString() + "' AND gpu != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                int qua = int.Parse(noo3);
+                reader3.Close();
+
+                if (qua == 2)
+                {
+                    string q4 = "select pric from casefan where man='" + pro.Text + "'";
+                    SqlCommand cmd4 = new SqlCommand(q4, conn);
+                    SqlDataReader reader4 = cmd4.ExecuteReader();
+                    if (reader4.HasRows)
+                    {
+                        reader4.Read();
+                        string noo4 = reader4.GetValue(0).ToString();
+                        reader4.Close();
+                        int qua4 = int.Parse(noo4);
+                        reader4.Close();
+
+                        if(qua4<1000)
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Red;
+                            Label23.Text = "This casefan does not provide sufficient airflow";
+                        }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "No Issues found";
+                        }
+
+
+                    }
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Black;
+                        Label23.Text = "No casefan found";
+                    }
+
+                }
+                else if (qua == 1)
+                {
+                    Label23.ForeColor = System.Drawing.Color.Orange;
+                    Label23.Text = "Warning: Single video card is selected you must add a good casefan to avoid heating";
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No Issues found and you can add a normal casefan";
+                }
+
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "No Issues found";
+            }
 
 
 

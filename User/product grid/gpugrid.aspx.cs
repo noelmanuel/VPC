@@ -146,8 +146,52 @@ public partial class User_product_grid_gpugrid : System.Web.UI.Page
                 Label14.Text = readerr.GetString(8);
                 Label15.Text = readerr.GetString(9);
                 Label16.Text = readerr.GetString(10);
+                readerr.Close();
 
 
+            }
+
+            string major = "";
+            string q3 = "select gpu from makecart where userr ='" + Session["user"].ToString() + "' AND gpu != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                reader3.Close();
+
+
+                string q4 = "select brand from gpu where man='" + noo3 + "' ";
+                SqlCommand cmd4 = new SqlCommand(q4, conn);
+                SqlDataReader reader4 = cmd4.ExecuteReader();
+                if (reader4.HasRows)
+                {
+                    reader4.Read();
+                    string noo4 = reader4.GetValue(0).ToString();
+
+                    if( noo4 == "NVIDIA" || noo4 == "Gigabyte")
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Orange;
+                        Label23.Text = "Warning: Selected GPU have sli technology where you must select gpu having architecture";
+                    }
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Orange;
+                        Label23.Text = "Warning: If selected GPU supports crossfire technology you can add second one </br> it will only marginally increase quality";
+                    }
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No motherboard found";
+                }
+
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "No Issues";
             }
 
 

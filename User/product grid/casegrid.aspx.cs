@@ -150,7 +150,7 @@ public partial class User_product_grid_casegrid : System.Web.UI.Page
                 Label14.Text = readerr.GetString(8);
                 Label15.Text = readerr.GetString(9);
                 Label16.Text = readerr.GetString(10);
-
+                readerr.Close();
 
             }
 

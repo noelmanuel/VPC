@@ -90,7 +90,11 @@
                         <span class="sp">PCI-Express 6+2-PIN Connectors</span><br />
                         <asp:Label ID="Label15" runat="server" ></asp:Label><br /><br /><br />
 
-         <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3><br />
+        <h3 style="">NOTE:</h3>
+         <asp:Label ID="Label83" Font-Bold="true"  ForeColor="#006600"   runat="server" >ADD GPU,PROCESSOR TO CALCULATE POWER CONSUMPTION</asp:Label><br /><br />
+
+
+         <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3>
          <asp:Label ID="Label23" Font-Bold="true" ForeColor="Red" runat="server" ></asp:Label>
          
          </asp:Panel> 

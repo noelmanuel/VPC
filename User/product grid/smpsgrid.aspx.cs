@@ -286,6 +286,11 @@ public partial class User_product_grid_smpsgrid : System.Web.UI.Page
                                     Label23.Text = "No Issues";
                             }
                         }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "No Issues";
+                        }
 
 
                         }
@@ -303,6 +308,11 @@ public partial class User_product_grid_smpsgrid : System.Web.UI.Page
                 }
                 reader3.Close();
 
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "No Issues";
             }
 
 

@@ -109,9 +109,36 @@ public partial class User_product_grid_osgrid : System.Web.UI.Page
                 Label11.Text = readerr.GetString(3);
                 Label12.Text = readerr.GetString(4);
                 Label13.Text = readerr.GetString(5);
-                
+                readerr.Close();
 
 
+            }
+
+            string major = "";
+            string q3 = "select count(ram) from makecart where userr ='" + Session["user"].ToString() + "' AND ram != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                int qua = int.Parse(noo3);
+
+                if (qua == 1 || qua == 0)
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "If the selected RAM stick has 4GB memory size you may experience slow operation";
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No Issues";
+                }
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Orange;
+                Label23.Text = "Warning: This OS need atleast 2GB memory";
             }
 
 

@@ -111,9 +111,76 @@ public partial class User_product_grid_coolergrid : System.Web.UI.Page
                 Label13.Text = readerr.GetString(5);
                 Label14.Text = readerr.GetString(6);
                 Label15.Text = readerr.GetString(7);
-                
+                readerr.Close();
 
 
+            }
+
+            string major = "";
+            string q3 = "select pro from makecart where userr ='" + Session["user"].ToString() + "' AND pro != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                reader3.Close();
+
+                string q4 = "select sup from cooler where man='" + pro.Text + "'";
+                SqlCommand cmd4 = new SqlCommand(q4, conn);
+                SqlDataReader reader4 = cmd4.ExecuteReader();
+                if (reader4.HasRows)
+                {
+                    reader4.Read();
+                    string noo4 = reader4.GetValue(0).ToString();
+                    reader4.Close();
+
+                    string q5 = "select soc from processor where man='" + noo3 + "'";
+                    SqlCommand cmd5 = new SqlCommand(q5, conn);
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.HasRows)
+                    {
+
+                        reader5.Read();
+                        string noo5 = reader5.GetValue(0).ToString();
+                        reader5.Close();
+
+                        bool contains = noo4.Contains(noo5);
+
+                        if (contains == true)
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "No Issues";
+                        }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Red;
+                            Label23.Text = "Selected CPU Coolers socket is incompatible";
+                            
+
+                        }
+
+                    }
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Orange;
+                        Label23.Text = "Warning: Processor not selected";
+
+                    }
+
+
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Orange;
+                    Label23.Text = "Warning: CPU Cooler not selected";
+                }
+
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Orange;
+                Label23.Text = "Warning: Processor not selected";
             }
 
 
