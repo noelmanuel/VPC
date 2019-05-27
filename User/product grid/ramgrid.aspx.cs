@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 public partial class User_product_grid_ramgrid : System.Web.UI.Page
 {
@@ -152,11 +153,114 @@ public partial class User_product_grid_ramgrid : System.Web.UI.Page
                 Label14.Text = readerr.GetString(8);
                 Label15.Text = readerr.GetString(9);
                 Label16.Text = readerr.GetString(10);
-
+                readerr.Close();
 
             }
 
+            string major = "";
+            int totsiz = 0;
+            string q3 = "select DISTINCT mb from makecart where userr ='" + Session["user"].ToString() + "' AND mb != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                reader3.Close();
 
+                string q4 = "select max from motherboard where man='" + noo3 + "'";
+                SqlCommand cmd4 = new SqlCommand(q4, conn);
+                SqlDataReader reader4 = cmd4.ExecuteReader();
+                if (reader4.HasRows)
+                {
+                    reader4.Read();
+                    string noo4 = reader4.GetValue(0).ToString();
+
+                    string resultString = Regex.Match(noo4, @"\d+").Value;
+                    int mbmemory = int.Parse(resultString);
+                    reader4.Close();
+
+                    
+                    string major5 = "";
+                    string q5 = "select ram from makecart where ram != '" + major5 + "'";
+                    SqlCommand cmd5 = new SqlCommand(q5, conn);
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.HasRows)
+                    {
+                        ArrayList al = new ArrayList();
+                        int n = 0;
+                        int totm = 0;
+                        while (reader5.Read())
+                        {
+                            al.Insert(n, reader5.GetValue(0).ToString());
+                            n++;
+
+
+                        }
+                        
+                        for (int i = 0; i < al.Count; i++)
+                        {
+                            reader5.Close();
+                            string q6 = "select siz from ram where man= '" + al[i] + "'";
+                            SqlCommand cmd6 = new SqlCommand(q6, conn);
+                            SqlDataReader reader6 = cmd6.ExecuteReader();
+
+                            if (reader6.HasRows)
+                            {
+                                reader6.Read();
+                                string noo6 = reader6.GetValue(0).ToString();
+                                string resultString6 = Regex.Match(noo6, @"\d+").Value;
+                                int mbmemory6 = int.Parse(resultString6);
+                                totm = totm+mbmemory6;
+                                
+                                if(mbmemory<totm)
+                                {
+                                    Label23.ForeColor = System.Drawing.Color.Orange;
+                                    Label23.Text = "Not compactiable: Total memory size exceed the motherboard memory";
+                                    Label300.Text = totm.ToString();
+                                }
+                                else
+                                {
+                                    Label23.ForeColor = System.Drawing.Color.Black;
+                                    Label23.Text = "No Issues";
+                                    Label300.Text = totm.ToString();
+                                }
+
+                            }
+                            reader6.Close();
+
+                        }
+
+
+                    }
+
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Black;
+                        Label23.Text = "No RAM Found";
+                    }
+
+
+
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No Motherboard Found";
+                }
+
+
+
+
+                    
+
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "No Motherboard Found";
+
+            }
 
 
         }

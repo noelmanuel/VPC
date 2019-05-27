@@ -1019,7 +1019,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label2.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label2.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1030,7 +1030,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label3.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label3.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1041,7 +1041,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label4.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label4.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1052,7 +1052,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label5.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label5.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1063,7 +1063,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label6.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label6.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1074,7 +1074,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label7.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='ram' AND userr='" + Session["user"].ToString() + "' AND ram='" + Label7.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1100,7 +1100,7 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='gpu' AND userr='" + Session["user"].ToString() + "' AND gpu='" + Label10.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='gpu' AND userr='" + Session["user"].ToString() + "' AND gpu='" + Label10.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
@@ -1111,18 +1111,22 @@ public partial class User_startpc : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='gpu' AND userr='" + Session["user"].ToString() + "' AND gpu='" + Label9.Text + "'";
-        SqlCommand cmd = new SqlCommand(str2, conn);
-        cmd.ExecuteNonQuery();
-        Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
-        conn.Close();
+
+
+       
+            string str2 = "delete TOP (1) from makecart where product='gpu' AND userr='" + Session["user"].ToString() + "' AND gpu='" + Label9.Text + "'";
+            SqlCommand cmd = new SqlCommand(str2, conn);
+            cmd.ExecuteNonQuery();
+            Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");
+            conn.Close();
+        
     }
 
     protected void delgpu16_Click(object sender, EventArgs e)
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string str2 = "delete from makecart where product='gpu' AND userr='" + Session["user"].ToString() + "' AND gpu='" + Label8.Text + "'";
+        string str2 = "delete TOP (1) from makecart where product='gpu' AND userr='" + Session["user"].ToString() + "' AND gpu='" + Label8.Text + "'";
         SqlCommand cmd = new SqlCommand(str2, conn);
         cmd.ExecuteNonQuery();
         Response.Write(" <script>window.alert('Item removed'); window.location='startpc.aspx';</script>");

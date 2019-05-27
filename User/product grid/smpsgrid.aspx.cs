@@ -12,6 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Text.RegularExpressions;
 
 public partial class User_product_grid_smpsgrid : System.Web.UI.Page
 {
@@ -72,7 +73,7 @@ public partial class User_product_grid_smpsgrid : System.Web.UI.Page
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-       
+
 
         if (e.CommandName == "Select")
         {
@@ -131,7 +132,7 @@ public partial class User_product_grid_smpsgrid : System.Web.UI.Page
         {
             Panel1.Visible = true;
 
-          
+
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn.Open();
@@ -154,7 +155,153 @@ public partial class User_product_grid_smpsgrid : System.Web.UI.Page
                 Label13.Text = readerr.GetString(6);
                 Label14.Text = readerr.GetString(7);
                 Label15.Text = readerr.GetString(8);
-                
+                readerr.Close();
+
+            }
+
+            string major = "";
+            string q3 = "select mbprice from makecart where userr ='" + Session["user"].ToString() + "' AND mb != '" + major + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                int qua = int.Parse(noo3);
+                reader3.Close();
+                if (qua > 9000)
+                {
+
+                    string major33 = "";
+                    string q33 = "select count(gpu) from makecart where userr ='" + Session["user"].ToString() + "' AND gpu != '" + major33 + "'";
+                    SqlCommand cmd33 = new SqlCommand(q33, conn);
+                    SqlDataReader reader33 = cmd33.ExecuteReader();
+                    if (reader33.HasRows)
+                    {
+                        reader33.Read();
+                        string noo33 = reader33.GetValue(0).ToString();
+                        int gpucount = int.Parse(noo33);
+                        reader33.Close();
+                        if (gpucount == 2)
+                        {
+                            string major34 = "";
+                            string q34 = "select sum(gpuprice) from makecart where userr ='" + Session["user"].ToString() + "' AND gpu != '" + major34 + "'";
+                            SqlCommand cmd34 = new SqlCommand(q34, conn);
+                            SqlDataReader reader34 = cmd34.ExecuteReader();
+                            if (reader34.HasRows)
+                            {
+                                reader34.Read();
+                                string noo34 = reader34.GetValue(0).ToString();
+                                int gpucost = int.Parse(noo34);
+                                reader34.Close();
+                                if (gpucost > 15000)
+                                {
+                                    string q35 = "select wat from smps where man='" + pro.Text + "'";
+                                    SqlCommand cmd35 = new SqlCommand(q35, conn);
+                                    SqlDataReader reader35 = cmd35.ExecuteReader();
+                                    if (reader35.HasRows)
+                                    {
+                                        reader35.Read();
+                                        string noo35 = reader35.GetValue(0).ToString();
+                                        string resultString = Regex.Match(noo35, @"\d+").Value;
+                                        
+                                        int walt = int.Parse(resultString);
+                                        reader35.Close();
+                                        if (walt < 750)
+                                        {
+                                            Label23.ForeColor = System.Drawing.Color.Orange;
+                                            Label23.Text = "Warning: Both selected GPU's fetch more power so you need higher power";
+                                        }
+                                        else
+                                        {
+                                            Label23.ForeColor = System.Drawing.Color.Black;
+                                            Label23.Text = "No Issues";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Label23.ForeColor = System.Drawing.Color.Orange;
+                                        Label23.Text = "Warning: No SMPS Found";
+                                    }
+                                }
+                                else
+                                {
+                                    Label23.ForeColor = System.Drawing.Color.Black;
+                                    Label23.Text = "No Issues";
+                                }
+                            }
+                        }
+                        else if (gpucount == 1)
+                        {
+                            string major34 = "";
+                            string q34 = "select gpuprice from makecart where userr ='" + Session["user"].ToString() + "' AND gpu != '" + major34 + "'";
+                            SqlCommand cmd34 = new SqlCommand(q34, conn);
+                            SqlDataReader reader34 = cmd34.ExecuteReader();
+                            if (reader34.HasRows)
+                            {
+                                reader34.Read();
+                                string noo34 = reader34.GetValue(0).ToString();
+                                int gpucost = int.Parse(noo34);
+                                reader34.Close();
+                                if (gpucost > 15000)
+                                {
+                                    
+                                    string q35 = "select wat from smps where man='" + pro.Text + "'";
+                                    SqlCommand cmd35 = new SqlCommand(q35, conn);
+                                    SqlDataReader reader35 = cmd35.ExecuteReader();
+                                    if (reader35.HasRows)
+                                    {
+                                        reader35.Read();
+                                        string noo35 = reader35.GetValue(0).ToString();
+                                        string resultString = Regex.Match(noo35, @"\d+").Value;
+                                        
+                                        int walt = int.Parse(resultString);
+                                        reader35.Close();
+                                        if (walt < 750)
+                                        {
+                                            Label23.ForeColor = System.Drawing.Color.Orange;
+                                            Label23.Text = "Warning: Selected GPU fetch more power so you need higher power";
+                                        }
+                                        else
+                                        {
+                                            Label23.ForeColor = System.Drawing.Color.Black;
+                                            Label23.Text = "No Issues";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Label23.ForeColor = System.Drawing.Color.Orange;
+                                        Label23.Text = "Warning: No SMPS Found";
+                                    }
+                                }
+                                else
+                                {
+                                    Label23.ForeColor = System.Drawing.Color.Black;
+                                    Label23.Text = "No Issues";
+                                }
+                            }
+                            else
+                            {
+                                Label23.ForeColor = System.Drawing.Color.Black;
+                                    Label23.Text = "No Issues";
+                            }
+                        }
+
+
+                        }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "No Issues";
+                        }
+                       
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No Issues";
+                }
+                reader3.Close();
 
             }
 
@@ -162,7 +309,13 @@ public partial class User_product_grid_smpsgrid : System.Web.UI.Page
 
 
         }
-    }
+        
+
+
+
+    
+
+}
 
     
 }

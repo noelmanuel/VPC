@@ -26,8 +26,9 @@
         <div style="height:790px;">
             <table>
             <tr >
-                <td style="width:50%; vertical-align:top;">
+                <td style="width:60%; vertical-align:top;">
         <h3 style="padding-top:17px; margin-left:10%;">SELECT POWER SUPPLY</h3>
+                    <div style="height:520px; width:1000px; overflow:scroll;">
     <asp:GridView ID="GridView1" CssClass="gridd" runat="server" AutoGenerateColumns="False" CellPadding="3" Width="843px" OnRowCommand="GridView1_RowCommand" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2" >
         <Columns>
             <asp:TemplateField HeaderText="SMPS">
@@ -69,10 +70,11 @@
                  <SortedDescendingCellStyle BackColor="#F1E5CE" />
                  <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
+                        </div>
 
                     </td>
 
-     <td style="padding-left:9%; vertical-align:top;">
+     <td style="padding-left:3%; vertical-align:top;">
      <asp:Panel ID="Panel1" runat="server">
 
       <h3 style="padding-top:20px;">SMPS DETAILS</h3>
@@ -86,7 +88,11 @@
                         <span class="sp">Efficency Certification</span><br />
                         <asp:Label ID="Label14" runat="server" ></asp:Label><br /><br />
                         <span class="sp">PCI-Express 6+2-PIN Connectors</span><br />
-                        <asp:Label ID="Label15" runat="server" ></asp:Label><br /><br />
+                        <asp:Label ID="Label15" runat="server" ></asp:Label><br /><br /><br />
+
+         <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3><br />
+         <asp:Label ID="Label23" Font-Bold="true" ForeColor="Red" runat="server" ></asp:Label>
+         
          </asp:Panel> 
       </td>
       </tr>
