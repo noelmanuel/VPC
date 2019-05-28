@@ -44,6 +44,7 @@
                  <asp:TemplateField HeaderText="Select">
                      <ItemTemplate>
                          <asp:CheckBox ID="CheckBox1" runat="server" />
+                        
                      </ItemTemplate>
                      <ItemStyle HorizontalAlign="Center" />
                  </asp:TemplateField>
@@ -63,6 +64,7 @@
              <SortedAscendingHeaderStyle BackColor="#B95C30" />
              <SortedDescendingCellStyle BackColor="#F1E5CE" />
              <SortedDescendingHeaderStyle BackColor="#93451F" />
+
          </asp:GridView>
                     
          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [man], [pric] FROM [motherboard]"></asp:SqlDataSource>       
@@ -75,7 +77,7 @@
               <Columns>
                   <asp:TemplateField HeaderText="Select">
                       <ItemTemplate>
-                          <asp:CheckBox ID="CheckBox2" runat="server" />
+                          <asp:CheckBox ID="CheckBox2" CausesValidation="True" runat="server" />
                       </ItemTemplate>
                       <ItemStyle HorizontalAlign="Center" />
                   </asp:TemplateField>
@@ -107,7 +109,7 @@
                  <Columns>
                      <asp:TemplateField HeaderText="Select">
                          <ItemTemplate>
-                             <asp:CheckBox ID="CheckBox3" runat="server" />
+                             <asp:CheckBox ID="CheckBox3" CausesValidation="True" runat="server" />
                          </ItemTemplate>
                          <ItemStyle HorizontalAlign="Center" />
                      </asp:TemplateField>
@@ -148,7 +150,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
                             <ItemTemplate>
-                                <asp:CheckBox ID="CheckBox8" runat="server" />
+                                <asp:CheckBox ID="CheckBox8" CausesValidation="True" runat="server" />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
@@ -187,7 +189,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
                             <ItemTemplate>
-                                <asp:CheckBox ID="CheckBox11" runat="server" />
+                                <asp:CheckBox ID="CheckBox11" CausesValidation="True" runat="server" />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
@@ -223,7 +225,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
                             <ItemTemplate>
-                                <asp:CheckBox ID="CheckBox13" runat="server" />
+                                <asp:CheckBox ID="CheckBox13" runat="server" CausesValidation="True" />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
@@ -262,7 +264,10 @@
                     <asp:ListItem>2</asp:ListItem>
                 </asp:DropDownList><br /><br />
 
-                <asp:Button ID="Button1" runat="server" Text="SUBMIT" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button1_Click" />
+                
+                <asp:Button ID="Button1" runat="server" Text="SUBMIT" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button1_Click" /><br />
+                    <asp:TextBox ID="TextBox1"  runat="server" Height="1" Width="1"></asp:TextBox>
+                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" Font-Size="15" ForeColor="Red"  ControlToValidate="TextBox1" runat="server" ErrorMessage="Select atleast one motherboard"></asp:RequiredFieldValidator>
             </td>
 
             

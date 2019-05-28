@@ -35,7 +35,7 @@ public partial class expertsystem_userexpertlist : System.Web.UI.Page
         Panel1.Visible = true;
 
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        string insertQuery = "select * from expert where type='" + Session["type"].ToString() + "' AND budget='" + Session["budget"].ToString() + "' AND pri1='" + Session["pri1"].ToString() + "' AND pri2='" + Session["pri2"].ToString() + "'AND pri3='" + Session["pri3"].ToString() + "'AND pri4='" + Session["pri4"].ToString() + "'";
+        string insertQuery = "select * from expert where type='" + Session["type"].ToString() + "' AND budget='" + Session["budget"].ToString() + "' AND pri1='" + Session["pri1"].ToString() + "'";
         SqlCommand cmd = new SqlCommand(insertQuery, conn);
         conn.Open();
         SqlDataReader reader = cmd.ExecuteReader();

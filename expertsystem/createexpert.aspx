@@ -62,10 +62,9 @@
                 </td>
 
                 <td>
-                    <span class="sp">IMAGES</span><br /><br />
-                    <asp:FileUpload ID="mbimg1" runat="server" />
-                    <asp:FileUpload ID="mbimg2" runat="server" />
-                    <asp:FileUpload ID="mbimg3" runat="server" />
+                     <span class="spp">TOTAL PRICE</span><br /><br />
+                    <span class="spp">₹</span>
+                    <asp:Label ID="Label11" Font-Size="20" ForeColor="red" runat="server"></asp:Label>
 
                 </td>
 
@@ -315,10 +314,11 @@
                     <asp:Label ID="Label23" ForeColor="red" runat="server"></asp:Label>
                 </td>
 
-                <td>
-                    <span class="spp">TOTAL PRICE</span><br /><br />
-                    <span class="spp">₹</span>
-                    <asp:Label ID="Label11" Font-Size="20" ForeColor="red" runat="server"></asp:Label>
+                <td>                  
+                    <span class="sp">IMAGES</span><br /><br />
+                    <asp:FileUpload ID="mbimg1" runat="server" />
+                    <asp:FileUpload ID="mbimg2" runat="server" />
+                    <asp:FileUpload ID="mbimg3" runat="server" />
                 </td>
 
                 <td>

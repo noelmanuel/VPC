@@ -16,8 +16,8 @@ public partial class Admin_addcompact : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
 
+        
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -59,6 +59,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     cmddd.ExecuteNonQuery();
 
                 }
+                else
+                {
+                    Response.Write(" <script>window.alert('You should add motherboard'); window.location='addcompact.aspx';</script>");
+                }
             }
 
             foreach (GridViewRow row1 in GridView2.Rows)
@@ -72,6 +76,11 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
                     cmddd1.ExecuteNonQuery();
                 }
+                else
+                {
+
+                }
+                
             }
 
             foreach (GridViewRow row2 in GridView3.Rows)
@@ -85,6 +94,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
                     cmddd2.ExecuteNonQuery();
                 }
+                else
+                {
+
+                }
             }
             foreach (GridViewRow row7 in GridView8.Rows)
             {
@@ -96,6 +109,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp3 = "insert into cpubuildpro(Processor,Price,productid) values('" + propro + "','" + rollnopro + "','" + trr + "')";
                     SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
                     cmddd3.ExecuteNonQuery();
+                }
+                else
+                {
+
                 }
             }
 
@@ -111,6 +128,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     cmddd4.ExecuteNonQuery();
 
                 }
+                else
+                {
+
+                }
             }
 
             foreach (GridViewRow row12 in GridView13.Rows)
@@ -123,6 +144,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp5 = "insert into cpubuildsmps(smps,Price,productid) values('" + prosmps + "','" + rollnosmps + "','" + trr + "')";
                     SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
                     cmddd5.ExecuteNonQuery();
+                }
+                else
+                {
+
                 }
             }
             conn.Close();
@@ -145,6 +170,12 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     cmddd.ExecuteNonQuery();
 
                 }
+                else
+                {
+                    
+
+                    RequiredFieldValidator1.ControlToValidate = cbox.Text;
+                }
             }
 
             foreach (GridViewRow row1 in GridView2.Rows)
@@ -158,6 +189,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
                     cmddd1.ExecuteNonQuery();
                 }
+                else
+                {
+
+                }
             }
 
             foreach (GridViewRow row2 in GridView3.Rows)
@@ -170,6 +205,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp2 = "insert into cpubuildgpu(GPU,Price,productid) values('" + progpu + "','" + rollnogpu + "','" + tr + "')";
                     SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
                     cmddd2.ExecuteNonQuery();
+                }
+                else
+                {
+
                 }
             }
             foreach (GridViewRow row7 in GridView8.Rows)
@@ -196,6 +235,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
                     cmddd4.ExecuteNonQuery();
                 }
+                else
+                {
+
+                }
             }
 
             foreach (GridViewRow row12 in GridView13.Rows)
@@ -208,6 +251,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp5 = "insert into cpubuildsmps(smps,Price,productid) values('" + prosmps + "','" + rollnosmps + "','" + tr + "')";
                     SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
                     cmddd5.ExecuteNonQuery();
+                }
+                else
+                {
+
                 }
             }
 

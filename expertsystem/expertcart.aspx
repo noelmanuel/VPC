@@ -79,7 +79,7 @@
                      </asp:TemplateField>
                      <asp:TemplateField HeaderText="Delete">
                          <ItemTemplate>
-                             <asp:LinkButton ID="LinkButton1" runat="server" BackColor="Red" CommandName="Delete" ForeColor="White" Width="50px">X</asp:LinkButton>
+                             <asp:LinkButton ID="LinkButton1" runat="server" BackColor="Red" CommandName="Delete" ForeColor="White" Width="50px" CausesValidation="False">X</asp:LinkButton>
                          </ItemTemplate>
                          <ItemStyle HorizontalAlign="Center" />
                      </asp:TemplateField>

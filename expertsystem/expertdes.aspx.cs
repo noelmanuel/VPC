@@ -29,6 +29,10 @@ public partial class expertsystem_expertdes : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Write(" <script>window.alert('ADDED TO CART');window.location='expertlist.aspx';</script>");
+        Response.Redirect("expertlist.aspx");
+    }
+    protected void Button1_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("expertlist.aspx");
     }
 }
