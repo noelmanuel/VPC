@@ -31,6 +31,9 @@
        
     </style>
 
+
+   
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <div class="section_backgound">
@@ -77,7 +80,7 @@
               <Columns>
                   <asp:TemplateField HeaderText="Select">
                       <ItemTemplate>
-                          <asp:CheckBox ID="CheckBox2" CausesValidation="True" runat="server" />
+                          <asp:CheckBox ID="CheckBox2"  runat="server" />
                       </ItemTemplate>
                       <ItemStyle HorizontalAlign="Center" />
                   </asp:TemplateField>
@@ -109,7 +112,7 @@
                  <Columns>
                      <asp:TemplateField HeaderText="Select">
                          <ItemTemplate>
-                             <asp:CheckBox ID="CheckBox3" CausesValidation="True" runat="server" />
+                             <asp:CheckBox ID="CheckBox3"  runat="server" />
                          </ItemTemplate>
                          <ItemStyle HorizontalAlign="Center" />
                      </asp:TemplateField>
@@ -150,7 +153,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
                             <ItemTemplate>
-                                <asp:CheckBox ID="CheckBox8" CausesValidation="True" runat="server" />
+                                <asp:CheckBox ID="CheckBox8"  runat="server" />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
@@ -189,7 +192,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Select">
                             <ItemTemplate>
-                                <asp:CheckBox ID="CheckBox11" CausesValidation="True" runat="server" />
+                                <asp:CheckBox ID="CheckBox11" runat="server" />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
@@ -264,10 +267,9 @@
                     <asp:ListItem>2</asp:ListItem>
                 </asp:DropDownList><br /><br />
 
-                
+                <asp:Label ID="Label1" runat="server" ></asp:Label>
                 <asp:Button ID="Button1" runat="server" Text="SUBMIT" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button1_Click" /><br />
-                    <asp:TextBox ID="TextBox1"  runat="server" Height="1" Width="1"></asp:TextBox>
-                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" Font-Size="15" ForeColor="Red"  ControlToValidate="TextBox1" runat="server" ErrorMessage="Select atleast one motherboard"></asp:RequiredFieldValidator>
+                
             </td>
 
             

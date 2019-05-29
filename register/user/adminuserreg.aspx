@@ -108,15 +108,16 @@
                 <div class="card-body">
                     <h2 class="title">User Registration</h2>
                     <form method="POST" runat="server">
-                        <asp:Button ID="Button1" runat="server" Text="COMPANY" OnClick="btn_lo" CssClass="com" />
-                         <asp:Button ID="Button2" runat="server" Text="USER" CssClass="user" />
-                        <asp:Button ID="Button4" runat="server" Text="ADMIN HOME" OnClick="btn_home" CssClass="home"/>
+                        <asp:Button ID="Button1" runat="server" Text="COMPANY" OnClick="btn_lo" CssClass="com" CausesValidation="False" />
+                         <asp:Button ID="Button2" runat="server" Text="USER" CssClass="user" CausesValidation="False" />
+                        <asp:Button ID="Button4" runat="server" Text="ADMIN HOME" OnClick="btn_home" CssClass="home" CausesValidation="False" />
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Username</label>
                                     
                                     <asp:TextBox ID="TextBoxun" runat="server" CssClass="input--style-4" name="first_name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" ControlToValidate="TextBoxun" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                                    
                                 </div>
                             </div>
@@ -125,6 +126,7 @@
                                     <label class="label">Name</label>
                                     
                                     <asp:TextBox ID="TextBoxname" CssClass="input--style-4" runat="server" name="last_name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" ControlToValidate="TextBoxname" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                         </div>
@@ -134,6 +136,7 @@
                                     <label class="label">Password</label>
                                     
                                     <asp:TextBox ID="TextBox3pass" CssClass="input--style-4" type="password" runat="server" name="first_name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" ControlToValidate="TextBox3pass" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -152,6 +155,7 @@
                                     <div class="input-group-icon">
                                         
                                         <asp:TextBox ID="TextBox5bday" type="date" CssClass="day" runat="server" name="birthday"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ForeColor="Red" ControlToValidate="TextBox5bday" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                                         
                                     </div>
                                 </div>
@@ -174,6 +178,7 @@
                                     <label class="label">Email</label>
                                     
                                     <asp:TextBox ID="TextBoxem" type="email" CssClass="input--style-4" runat="server" name=""></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ForeColor="Red" ControlToValidate="TextBoxem" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -181,6 +186,7 @@
                                     <label class="label">Phone Number</label>
                                     
                                     <asp:TextBox ID="TextBoxph" type="text" CssClass="input--style-4" name="phone" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ForeColor="Red" ControlToValidate="TextBoxph" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                         </div>
@@ -199,6 +205,7 @@
                                     <label class="label">Your Answer</label>
                                     
                                     <asp:TextBox ID="TextBoxans" type="text" CssClass="input--style-4" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ForeColor="Red" ControlToValidate="TextBoxans" runat="server" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                         <div class="p-t-15">

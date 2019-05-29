@@ -16,8 +16,9 @@ public partial class Admin_addcompact : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
         
+
+
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -57,11 +58,12 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp = "insert into cpubuildmb(Motherboard,Ram Slots,GPU Slots,Price,productid) values('" + pro + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + rollno + "','" + trr + "')";
                     SqlCommand cmddd = new SqlCommand(ordp, conn);
                     cmddd.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('Motherboard Added');</script>");
 
                 }
                 else
                 {
-                    Response.Write(" <script>window.alert('You should add motherboard'); window.location='addcompact.aspx';</script>");
+                    
                 }
             }
 
@@ -75,12 +77,13 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp1 = "insert into cpubuildram(Ram,Price,productid) values('" + proram + "','" + rollnoram + "','" + trr + "')";
                     SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
                     cmddd1.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('RAM Added');</script>");
                 }
                 else
                 {
 
                 }
-                
+
             }
 
             foreach (GridViewRow row2 in GridView3.Rows)
@@ -93,6 +96,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp2 = "insert into cpubuildgpu(GPU,Price,productid) values('" + progpu + "','" + rollnogpu + "','" + trr + "')";
                     SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
                     cmddd2.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('GPU Added');</script>");
                 }
                 else
                 {
@@ -109,6 +113,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp3 = "insert into cpubuildpro(Processor,Price,productid) values('" + propro + "','" + rollnopro + "','" + trr + "')";
                     SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
                     cmddd3.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('Processor Added');</script>");
                 }
                 else
                 {
@@ -126,6 +131,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp4 = "insert into cpubuildcase(Casee,Price,productid) values('" + procase + "','" + rollnocase + "','" + trr + "')";
                     SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
                     cmddd4.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('Case Added');</script>");
 
                 }
                 else
@@ -144,6 +150,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp5 = "insert into cpubuildsmps(smps,Price,productid) values('" + prosmps + "','" + rollnosmps + "','" + trr + "')";
                     SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
                     cmddd5.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('SMPS Added');</script>");
                 }
                 else
                 {
@@ -156,9 +163,10 @@ public partial class Admin_addcompact : System.Web.UI.Page
         {
             reader.Close();
 
-
             foreach (GridViewRow row in GridView1.Rows)
             {
+                
+
                 CheckBox cbox = (row.Cells[0].FindControl("CheckBox1") as CheckBox);
                 int rollno = Convert.ToInt32(row.Cells[2].Text);
                 string pro = row.Cells[1].Text;
@@ -168,15 +176,23 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp = "insert into cpubuildmb(Motherboard,RamSlots,GPUSlots,Price,productid) values('" + pro + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + rollno + "' ,'" + tr + "')";
                     SqlCommand cmddd = new SqlCommand(ordp, conn);
                     cmddd.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('Motherboard Added');</script>");
 
-                }
+                }                
                 else
                 {
                     
 
-                    RequiredFieldValidator1.ControlToValidate = cbox.Text;
                 }
+
             }
+                    
+
+                
+            
+
+            
+        
 
             foreach (GridViewRow row1 in GridView2.Rows)
             {
@@ -188,6 +204,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp1 = "insert into cpubuildram(Ram,Price,productid) values('" + proram + "','" + rollnoram + "','" + tr + "')";
                     SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
                     cmddd1.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('RAM Added');</script>");
                 }
                 else
                 {
@@ -205,6 +222,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp2 = "insert into cpubuildgpu(GPU,Price,productid) values('" + progpu + "','" + rollnogpu + "','" + tr + "')";
                     SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
                     cmddd2.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('GPU Added');</script>");
                 }
                 else
                 {
@@ -221,6 +239,11 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp3 = "insert into cpubuildpro(Processor,Price,productid) values('" + propro + "','" + rollnopro + "','" + tr + "')";
                     SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
                     cmddd3.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('Processor Added');</script>");
+                }
+                else
+                {
+
                 }
             }
 
@@ -234,6 +257,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp4 = "insert into cpubuildcase(Casee,Price,productid) values('" + procase + "','" + rollnocase + "','" + tr + "')";
                     SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
                     cmddd4.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('CASE Added');</script>");
                 }
                 else
                 {
@@ -251,6 +275,7 @@ public partial class Admin_addcompact : System.Web.UI.Page
                     string ordp5 = "insert into cpubuildsmps(smps,Price,productid) values('" + prosmps + "','" + rollnosmps + "','" + tr + "')";
                     SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
                     cmddd5.ExecuteNonQuery();
+                    Response.Write(" <script>window.alert('SMPS Added');</script>");
                 }
                 else
                 {
