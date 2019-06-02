@@ -33,6 +33,43 @@ public partial class User_product_grid_listsoftware : System.Web.UI.Page
 
 
     }
+    protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+
+
+        if (e.CommandName == "Insert")
+        {
+            Panel1.Visible = true;
+
+
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+
+
+
+            GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
+            Label pro = (Label)row.FindControl("Label1");
+
+
+            string gg = "select * from software where man='" + pro.Text + "'";
+            SqlCommand cmdd = new SqlCommand(gg, conn);
+            SqlDataReader readerr = cmdd.ExecuteReader();
+
+            if (readerr.HasRows)
+            {
+                readerr.Read();
+                Label11.Text = readerr.GetString(3);
+                Label12.Text = readerr.GetString(4);
+                Label13.Text = readerr.GetString(5);
+                Label14.Text = readerr.GetString(6);
+                
+                readerr.Close();
+
+            }
+        
+        }
+    }
 
 
 

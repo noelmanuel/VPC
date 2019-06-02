@@ -89,7 +89,7 @@
                  </asp:TemplateField>
                  <asp:TemplateField HeaderText="Remove From Cart">
                      <ItemTemplate>
-                         <asp:LinkButton ID="LinkButton1" runat="server" BackColor="Red" BorderStyle="None" CommandName="Delete" ForeColor="White" Height="20px" Width="50px">x</asp:LinkButton>
+                         <asp:LinkButton ID="LinkButton1" runat="server" BackColor="Red" BorderStyle="None" CommandName="Delete" ForeColor="White" Height="20px" Width="50px" CausesValidation="False">x</asp:LinkButton>
                      </ItemTemplate>
                      <ItemStyle HorizontalAlign="Center" />
                  </asp:TemplateField>
@@ -118,16 +118,23 @@
                  <tr>
                      <td style="width:35%; border:1px solid #ffd3be; padding:30px; ">
              <span class="spa">Address</span><br />
-             <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" placeholder="House No/Flat"></asp:TextBox><br /><br />
-             <asp:TextBox ID="TextBox3" runat="server" CssClass="txtadd" placeholder="State"></asp:TextBox><br /><br />
-             <asp:TextBox ID="TextBox4" runat="server" CssClass="txtadd" placeholder="District"></asp:TextBox><br /><br />
+             <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" placeholder="House No/Flat"></asp:TextBox><br />
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
+             <asp:TextBox ID="TextBox3" runat="server" CssClass="txtadd" placeholder="State"></asp:TextBox><br />
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox3" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
+             <asp:TextBox ID="TextBox4" runat="server" CssClass="txtadd" placeholder="District"></asp:TextBox><br />
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBox4" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
              <span class="spa">Phone</span><br />
-             <asp:TextBox ID="TextBox2" CssClass="txtadd" runat="server"></asp:TextBox>
+             <asp:TextBox ID="TextBox2" CssClass="txtadd" runat="server"></asp:TextBox><br />
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="TextBox2" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
              <h4>PAYMENT METHOD</h4>
-             <asp:Button ID="Button1"  runat="server" Text="Credit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button1_Click" CssClass="bt" />&nbsp&nbsp&nbsp
-             <asp:Button ID="Button2" runat="server" Text="Debit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button2_Click" CssClass="bt"  /><br /><br />
-             <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" CssClass="bt"  />&nbsp&nbsp&nbsp
-             <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button4_Click"  CssClass="bt" /><br /><br />
+             <asp:Button ID="Button1"  runat="server" Text="Credit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button1_Click" CssClass="bt" CausesValidation="False" />&nbsp&nbsp&nbsp
+             <asp:Button ID="Button2" runat="server" Text="Debit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button2_Click" CssClass="bt"  CausesValidation="False" /><br /><br />
+             <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" CssClass="bt"  CausesValidation="False" />&nbsp&nbsp&nbsp
+             <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button4_Click"  CssClass="bt" CausesValidation="False" /><br /><br />
                          </td>
                      <td style="width:25%; border:1px solid #ffd3be; padding:30px;">
 
