@@ -185,13 +185,13 @@
                     
                      <asp:TemplateField HeaderText="Item List">
                          <ItemTemplate>
-                             <asp:LinkButton ID="LinkButton1" runat="server" BackColor="Red" CommandName="Select" ForeColor="White" CommandArgument="<%# Container.DataItemIndex %>" Height="20px" Width="50px">View</asp:LinkButton>
+                             <asp:LinkButton ID="LinkButton1" runat="server" BackColor="Red" CommandName="Select" ForeColor="White" CommandArgument="<%# Container.DataItemIndex %>" Height="20px" Width="50px" CausesValidation="False">View</asp:LinkButton>
                          </ItemTemplate>
                          <ItemStyle HorizontalAlign="Center" />
                      </asp:TemplateField>
                      <asp:TemplateField HeaderText="Remove">
                          <ItemTemplate>
-                             <asp:LinkButton ID="LinkButton2" runat="server" BackColor="Red" CommandName="Delete" CommandArgument="<%# Container.DataItemIndex %>" ForeColor="White" Height="20px"  Width="50px">X</asp:LinkButton>
+                             <asp:LinkButton ID="LinkButton2" runat="server" BackColor="Red" CommandName="Delete" CommandArgument="<%# Container.DataItemIndex %>" ForeColor="White" Height="20px"  Width="50px" CausesValidation="False">X</asp:LinkButton>
                          </ItemTemplate>
                          <ItemStyle HorizontalAlign="Center" />
                      </asp:TemplateField>
@@ -215,24 +215,36 @@
                         <tr>
                             <td style="vertical-align:top; padding:20px; border:1px solid #efefef; width:1%;">
                                 <span class="spa">Address</span><br />
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" placeholder="House No/Flat"></asp:TextBox><br /><br />
-                                <asp:TextBox ID="TextBox3" runat="server" CssClass="txtadd" placeholder="State"></asp:TextBox><br /><br />
-                                <asp:TextBox ID="TextBox4" runat="server" CssClass="txtadd" placeholder="District"></asp:TextBox><br /><br />
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" placeholder="House No/Flat"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="TextBox1" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
+                                <asp:TextBox ID="TextBox3" runat="server" CssClass="txtadd" placeholder="State"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox3" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
+                                <asp:TextBox ID="TextBox4" runat="server" CssClass="txtadd" placeholder="District"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox4" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
                                 <span class="spa">Phone</span><br />
                                 <asp:TextBox ID="TextBox2" CssClass="txtadd" runat="server"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBox2" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator>
+
                                 <h4>PAYMENT METHOD</h4>
-                                <asp:Button ID="Button1"  runat="server" Text="Credit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button1_Click" CssClass="bt" />&nbsp&nbsp&nbsp
-                                <asp:Button ID="Button2" runat="server" Text="Debit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button2_Click" CssClass="bt"  /><br /><br />
-                                <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" CssClass="bt"  />&nbsp&nbsp&nbsp
-                                <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button4_Click"  CssClass="bt" /><br /><br />
+                                <asp:Button ID="Button1"  runat="server" Text="Credit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button1_Click" CssClass="bt" CausesValidation="False" />&nbsp&nbsp&nbsp
+                                <asp:Button ID="Button2" runat="server" Text="Debit Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button2_Click" CssClass="bt"  CausesValidation="False" /><br /><br />
+                                <asp:Button ID="Button3" runat="server" Text="Cash On Delivery" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button3_Click" CssClass="bt"  CausesValidation="False" />&nbsp&nbsp&nbsp
+                                <asp:Button ID="Button4" runat="server" Text="Gift Card" ForeColor="White" BorderStyle="None" BackColor="Red" Height="40" Width="150" OnClick="Button4_Click"  CssClass="bt" CausesValidation="False" /><br /><br />
                             </td>
                             <td style="vertical-align:top; padding:20px; border:1px solid #efefef; width:5%;">
 
                                 <asp:Panel ID="Panel3" CssClass="bo" runat="server" >
                                 <asp:Image ID="Image1" ImageUrl="~/images/visa.jpg" runat="server" Width="350px" />
                                 <h4>Credit Card Details</h4>
-                                <asp:TextBox ID="TextBox5" CssClass="txtadd" placeholder="Card Number" runat="server"></asp:TextBox><br /><br />
-                                <asp:TextBox ID="TextBox9" CssClass="txtadd" placeholder="Name" runat="server"></asp:TextBox><br /><br />
+                                <asp:TextBox ID="TextBox5" CssClass="txtadd" placeholder="Card Number" runat="server"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="TextBox5" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
+                                <asp:TextBox ID="TextBox9" CssClass="txtadd" placeholder="Name" runat="server"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="TextBox9" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
                                 <span>Expiry</span> &nbsp
                                 <asp:DropDownList ID="DropDownList2" runat="server" Height="30" Width="50">
                                 <asp:ListItem Enabled="False" Selected="True">MM</asp:ListItem>
@@ -252,15 +264,21 @@
                                 </asp:DropDownList>
                                 <asp:DropDownList ID="DropDownList3" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp
                                 <span>CVV</span>&nbsp
-                                <asp:TextBox ID="TextBox6" runat="server" Height="25px" Width="50px"></asp:TextBox><br /><br />
+                                <asp:TextBox ID="TextBox6" runat="server" Height="25px" Width="50px"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="TextBox6" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
                                 <asp:Button ID="Button8" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button8_Click"   />
                             </asp:Panel>
 
              <asp:Panel ID="Panel4" runat="server" CssClass="bo">
                  <asp:Image ID="Image2" ImageUrl="~/images/visa.jpg" runat="server" />
                  <h4>Debit Card Details</h4>
-                 <asp:TextBox ID="TextBox7" CssClass="txtadd" placeholder="Card Number" runat="server"></asp:TextBox><br /><br />
-                 <asp:TextBox ID="TextBox10" CssClass="txtadd" placeholder="Name" runat="server"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox7" CssClass="txtadd" placeholder="Card Number" runat="server"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" ControlToValidate="TextBox7" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
+                 <asp:TextBox ID="TextBox10" CssClass="txtadd" placeholder="Name" runat="server"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator9" ControlToValidate="TextBox10" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
                  <span>Expiry</span> &nbsp
                  <asp:DropDownList ID="DropDownList4" runat="server" Height="30" Width="50">
                      <asp:ListItem Enabled="False" Selected="True">MM</asp:ListItem>
@@ -279,7 +297,9 @@
                  </asp:DropDownList>
                  <asp:DropDownList ID="DropDownList5" runat="server" Height="30" Width="50" ></asp:DropDownList>&nbsp&nbsp 
                  <span>CVV</span>&nbsp
-                 <asp:TextBox ID="TextBox8" runat="server" Height="25px" Width="50px"></asp:TextBox><br /><br />
+                 <asp:TextBox ID="TextBox8" runat="server" Height="25px" Width="50px"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox8" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
                  <asp:Button ID="Button7" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250" OnClick="Button7_Click"  />
              </asp:Panel>
 
@@ -291,7 +311,9 @@
                 
                          <asp:Panel ID="Panel6" runat="server" CssClass="bo">
                              <h4>Enter Your Gift Card</h4>
-                             <asp:TextBox ID="TextBox11" runat="server" CssClass="txtadd" placeholder="Gift card no"></asp:TextBox><br /><br />
+                             <asp:TextBox ID="TextBox11" runat="server" CssClass="txtadd" placeholder="Gift card no"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="TextBox11" runat="server" ForeColor="Red" ErrorMessage="Field Required"></asp:RequiredFieldValidator><br /><br />
+
                              <asp:Button ID="Button6" runat="server" Text="Confirm Order" CssClass="bt" ForeColor="White" BorderStyle="None" BackColor="Red" Height="50" Width="250"  />
 
                          </asp:Panel>

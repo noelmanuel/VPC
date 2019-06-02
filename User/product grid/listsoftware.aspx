@@ -97,8 +97,8 @@
         
 
          <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3>
-         <asp:Label ID="Label23" Font-Bold="true" ForeColor="Red" runat="server" ></asp:Label>
-         
+         <asp:Label ID="Label23" Font-Bold="true" ForeColor="Red" runat="server" Width="300"></asp:Label>
+                            
          </asp:Panel> 
       </td>
       </tr>

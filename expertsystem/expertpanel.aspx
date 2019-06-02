@@ -302,6 +302,7 @@
                     <asp:DropDownList ID="DropDownList10" Width="330px" CssClass="drd" runat="server">
                         <asp:ListItem>Single Monitor Setup</asp:ListItem>
                         <asp:ListItem>Dual Monitor Setup</asp:ListItem>
+                        <asp:ListItem>Multi Monitor Setup</asp:ListItem>
                         
                         
                 </asp:DropDownList><br /><br />

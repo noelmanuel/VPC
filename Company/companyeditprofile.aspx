@@ -68,28 +68,28 @@
                  <table>
                <tr >
                    <td class="boxt">
-                       <asp:LinkButton ID="LinkButton1" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton1_Click">EDIT PROFILE</asp:LinkButton>
+                       <asp:LinkButton ID="LinkButton1" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton1_Click" CausesValidation="False">EDIT PROFILE</asp:LinkButton>
                    </td> &nbsp
 
 
 
                    <td class="boxt">
-                        <asp:LinkButton ID="LinkButton7" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton31_Click">INBOX</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton7" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton31_Click" CausesValidation="False">INBOX</asp:LinkButton>
                    </td> &nbsp
 
                    <td class="boxt">
-                        <asp:LinkButton ID="LinkButton2" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton312_Click">SENT MAIL</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton312_Click" CausesValidation="False">SENT MAIL</asp:LinkButton>
                    </td> &nbsp
 
                </tr>
 
                <tr>
                    <td class="boxt">
-                       <asp:LinkButton ID="LinkButton4" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton4_Click">DELETE ACCOUNT</asp:LinkButton>
+                       <asp:LinkButton ID="LinkButton4" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton4_Click" CausesValidation="False">DELETE ACCOUNT</asp:LinkButton>
                    </td> &nbsp
 
                    <td class="boxt">
-                       <asp:LinkButton ID="LinkButton5" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton5_Click">MESSAGE US</asp:LinkButton>
+                       <asp:LinkButton ID="LinkButton5" CssClass="link" runat="server" Font-Bold="True" OnClick="LinkButton5_Click" CausesValidation="False">MESSAGE US</asp:LinkButton>
                    </td> &nbsp
 
                   
@@ -111,7 +111,7 @@
                <asp:TextBox ID="TextBox1" runat="server" CssClass="txtadd" ></asp:TextBox><br /><br />
 
                <span class="spa">Choose your security question</span><br /><br />
-               <asp:DropDownList ID="DropDownList1" CssClass="txtaddd" runat="server" DataSourceID="SqlDataSource1" DataTextField="usques" DataValueField="usques"></asp:DropDownList><br /><br />
+               <asp:DropDownList ID="DropDownList1" CssClass="txtaddd" runat="server" DataSourceID="SqlDataSource1" DataTextField="compques" DataValueField="compques"></asp:DropDownList><br /><br />
 
                <span class="spa">Answer</span><br /><br />
                <asp:TextBox ID="TextBox2" runat="server" CssClass="txtadd"></asp:TextBox><br /><br />

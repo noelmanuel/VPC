@@ -70,7 +70,7 @@ public partial class User_product_grid_motherboardgrid : System.Web.UI.Page
 
             GridViewRow row = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
             Label pro = (Label)row.FindControl("Label1");
-            
+
 
             string gg = "select * from motherboard where man='" + pro.Text + "'";
             SqlCommand cmdd = new SqlCommand(gg, conn);
@@ -85,13 +85,58 @@ public partial class User_product_grid_motherboardgrid : System.Web.UI.Page
                 Label10.Text = readerr.GetString(6);
                 Label11.Text = readerr.GetString(7);
                 Label12.Text = readerr.GetString(8);
-
+                readerr.Close();
 
             }
-            
 
+            string q35 = "select sli from motherboard where man='" + pro.Text + "'";
+            SqlCommand cmd35 = new SqlCommand(q35, conn);
+            SqlDataReader reader35 = cmd35.ExecuteReader();
+            if (reader35.HasRows)
+            {
+                reader35.Read();
+                string noo35 = reader35.GetValue(0).ToString();
+                reader35.Close();
+                if (noo35 == "Yes" || noo35 == "3-way SLI")
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "This motherboard support SLI technology. Select Nvidia cards for better performance";
+                }
+                else
+                {
+                    string q36 = "select cro from motherboard where man='" + pro.Text + "'";
+                    SqlCommand cmd36 = new SqlCommand(q36, conn);
+                    SqlDataReader reader36 = cmd36.ExecuteReader();
+                    if (reader36.HasRows)
+                    {
+                        reader36.Read();
+                        string noo36 = reader36.GetValue(0).ToString();
+                        reader36.Close();
 
+                        if(noo36=="Yes")
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "This motherboard support Crossfire technology. Select Cards with same architecture for better performance";
+                        }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "This motherboard does not support SLI and CROSSFIRE technologies";
+                        }
+                    }
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Black;
+                        Label23.Text = "Motherboard feature undefined";
+                    }
+                }
 
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "Motherboard feature undefined";
+            }
         }
     }
 }

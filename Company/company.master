@@ -46,7 +46,7 @@
 
                 <div class="option3">
 
-                    <a href="../Guest/Product category.aspx"><img src="/images/ind.jpg" height="35px" width="170px;" style=" margin-top:5px; margin-left:10px;" /></a>
+                    <a href="../Guest/Product category.aspx"><img src="/images/ind.jpg" height="35px" width="160px;" style=" margin-top:5px; margin-left:10px;" /></a>
                 </div>
 
                  <div class="option4">
@@ -70,8 +70,9 @@
                      <td style="width:10%; height:790px; vertical-align:top;">
                         <asp:Image ID="Image1" runat="server" Height="100" Width="209" CssClass="ff" />
                         <asp:Panel ID="Panel1" runat="server">
-                        <asp:FileUpload ID="FileUpload1" runat="server" Height="30" Width="200" />
-                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="img_click" Height="30" Width="200" CssClass="imgbtn" />
+                        <asp:FileUpload ID="FileUpload1" runat="server" Height="30" Width="200" /><br />
+                            
+                        <asp:Button ID="Button1" runat="server" Text="Upload logo" BackColor="Red" ForeColor="White" OnClick="img_click" Height="30" Width="200" CssClass="imgbtn" />
                         </asp:Panel>
                         <br />
                         <asp:Button ID="Button2" runat="server" Text="LOGO CHANGE" Height="50" Width="200" CssClass="imgbtnn" OnClick="Button2_Click" CausesValidation="False" /><br />

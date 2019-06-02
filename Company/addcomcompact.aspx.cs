@@ -61,7 +61,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp = "insert into cpubuildmb(Motherboard,Ram Slots,GPU Slots,Price,author,productid) values('" + pro + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + rollno + "','" + Session["comp"].ToString() + "','" + trr + "')";
                     SqlCommand cmddd = new SqlCommand(ordp, conn);
                     cmddd.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('Motherboard Added');</script>");
+                    
 
                 }
                 else
@@ -80,7 +80,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp1 = "insert into cpubuildram(Ram,Price,author,productid) values('" + proram + "','" + rollnoram + "','" + Session["comp"].ToString() + "','" + trr + "')";
                     SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
                     cmddd1.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('RAM Added');</script>");
+                    
                 }
                 else
                 {
@@ -98,7 +98,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp2 = "insert into cpubuildgpu(GPU,Price,author,productid) values('" + progpu + "','" + rollnogpu + "','" + Session["comp"].ToString() + "','" + trr + "')";
                     SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
                     cmddd2.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('GPU Added');</script>");
+                    
                 }
                 else
                 {
@@ -115,7 +115,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp3 = "insert into cpubuildpro(Processor,Price,author,productid) values('" + propro + "','" + rollnopro + "','" + Session["comp"].ToString() + "','" + trr + "')";
                     SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
                     cmddd3.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('PROCESSOR Added');</script>");
+                    
                 }
                 else
                 {
@@ -133,7 +133,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp4 = "insert into cpubuildcase(Casee,Price,author,productid) values('" + procase + "','" + rollnocase + "','" + Session["comp"].ToString() + "','" + trr + "')";
                     SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
                     cmddd4.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('CASE Added');</script>");
+                    
 
                 }
                 else
@@ -152,13 +152,14 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp5 = "insert into cpubuildsmps(smps,Price,author,productid) values('" + prosmps + "','" + rollnosmps + "','" + Session["comp"].ToString() + "','" + trr + "')";
                     SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
                     cmddd5.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('SMPS Added');</script>");
+                    
                 }
                 else
                 {
 
                 }
             }
+            Response.Write(" <script>window.alert('Build created');</script>");
             conn.Close();
         }
         else
@@ -177,7 +178,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp = "insert into cpubuildmb(Motherboard,RamSlots,GPUSlots,Price,author,productid) values('" + pro + "','" + DropDownList1.SelectedItem + "','" + DropDownList2.SelectedItem + "','" + rollno + "','" + Session["comp"].ToString() + "','" + tr + "')";
                     SqlCommand cmddd = new SqlCommand(ordp, conn);
                     cmddd.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('Motherboard Added');</script>");
+                   
 
                 }
                 else
@@ -196,7 +197,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp1 = "insert into cpubuildram(Ram,Price,author,productid) values('" + proram + "','" + rollnoram + "','" + Session["comp"].ToString() + "','" + tr + "')";
                     SqlCommand cmddd1 = new SqlCommand(ordp1, conn);
                     cmddd1.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('RAM Added');</script>");
+                    
                 }
                 else
                 {
@@ -214,7 +215,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp2 = "insert into cpubuildgpu(GPU,Price,author,productid) values('" + progpu + "','" + rollnogpu + "','" + Session["comp"].ToString() + "','" + tr + "')";
                     SqlCommand cmddd2 = new SqlCommand(ordp2, conn);
                     cmddd2.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('GPU Added');</script>");
+                    
                 }
                 else
                 {
@@ -231,7 +232,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp3 = "insert into cpubuildpro(Processor,Price,author,productid) values('" + propro + "','" + rollnopro + "','" + Session["comp"].ToString() + "','" + tr + "')";
                     SqlCommand cmddd3 = new SqlCommand(ordp3, conn);
                     cmddd3.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('PROCESSOR Added');</script>");
+                    
                 }
                 else
                 {
@@ -249,7 +250,7 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp4 = "insert into cpubuildcase(Casee,Price,author,productid) values('" + procase + "','" + rollnocase + "','" + Session["comp"].ToString() + "','" + tr + "')";
                     SqlCommand cmddd4 = new SqlCommand(ordp4, conn);
                     cmddd4.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('CASE Added');</script>");
+                    
                 }
                 else
                 {
@@ -267,14 +268,14 @@ public partial class Company_addcomcompact : System.Web.UI.Page
                     string ordp5 = "insert into cpubuildsmps(smps,Price,author,productid) values('" + prosmps + "','" + rollnosmps + "','" + Session["comp"].ToString() + "','" + tr + "')";
                     SqlCommand cmddd5 = new SqlCommand(ordp5, conn);
                     cmddd5.ExecuteNonQuery();
-                    Response.Write(" <script>window.alert('SMPS Added');</script>");
+                    
                 }
                 else
                 {
 
                 }
             }
-
+            Response.Write(" <script>window.alert('Build created');</script>");
             conn.Close();
 
         }

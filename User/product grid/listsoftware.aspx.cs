@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 public partial class User_product_grid_listsoftware : System.Web.UI.Page
 {
@@ -67,7 +68,138 @@ public partial class User_product_grid_listsoftware : System.Web.UI.Page
                 readerr.Close();
 
             }
-        
+
+            string major34 = "";
+            string q3 = "select typ from software where man='" + pro.Text + "'";
+            SqlCommand cmd3 = new SqlCommand(q3, conn);
+            SqlDataReader reader3 = cmd3.ExecuteReader();
+            if (reader3.HasRows)
+            {
+                reader3.Read();
+                string noo3 = reader3.GetValue(0).ToString();
+                reader3.Close();
+                
+                if(noo3== "Photography" || noo3== "Design & Illustration")
+                {
+                    
+                    string q4 = "select gpu from makecart where userr ='" + Session["user"].ToString() + "' AND gpu != '" + major34 + "'";
+                    SqlCommand cmd4 = new SqlCommand(q4, conn);
+                    SqlDataReader reader4 = cmd4.ExecuteReader();
+                    if (reader4.HasRows)
+                    {
+                        reader4.Close();
+                        string q5 = "select ram from makecart where userr ='" + Session["user"].ToString() + "' AND ram != '" + major34 + "'";
+                        SqlCommand cmd5 = new SqlCommand(q5, conn);
+                        SqlDataReader reader5 = cmd5.ExecuteReader();
+                        if (reader5.HasRows)
+                        {
+                            reader5.Read();
+                            string noo5 = reader5.GetValue(0).ToString();
+                            reader5.Close();
+                            string q6 = "select siz from ram where man='" + noo5 + "'";
+                            SqlCommand cmd6 = new SqlCommand(q6, conn);
+                            SqlDataReader reader6 = cmd6.ExecuteReader();
+                            if (reader6.HasRows)
+                            {
+                                reader6.Read();
+                                string noo6 = reader6.GetValue(0).ToString();
+                                string resultString6 = Regex.Match(noo6, @"\d+").Value;
+                                int mbmemory6 = int.Parse(resultString6);
+                                reader6.Close();
+                                if(mbmemory6<8)
+                                {
+                                    Label23.ForeColor = System.Drawing.Color.Orange;
+                                    Label23.Text = "Warning: Selected software minimum need 8GB RAM for better performance.";
+                                }
+                                else
+                                {
+                                    Label23.ForeColor = System.Drawing.Color.Black;
+                                    Label23.Text = "No Issues";
+                                }
+                            }
+                            else
+                            {
+                                Label23.ForeColor = System.Drawing.Color.Black;
+                                Label23.Text = "RAM feature undefined";
+                            }
+                        }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Red;
+                            Label23.Text = "Without adding RAM selected software wont work";
+                        }
+                    }
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Orange;
+                        Label23.Text = "Warning: Selected software need graphic card for better quality and other features.";
+
+                    }
+                }
+                else if (noo3 == "Audio & Video")
+                {
+                    string q8 = "select pro from makecart where userr ='" + Session["user"].ToString() + "' AND pro != '" + major34 + "'";
+                    SqlCommand cmd8 = new SqlCommand(q8, conn);
+                    SqlDataReader reader8 = cmd8.ExecuteReader();
+                    if (reader8.HasRows)
+                    {
+                        reader8.Read();
+                        string noo8 = reader8.GetValue(0).ToString();
+                        reader8.Close();
+
+                        string q9 = "select pric from processor where man='" + noo8 + "'";
+                        SqlCommand cmd9 = new SqlCommand(q9, conn);
+                        SqlDataReader reader9 = cmd9.ExecuteReader();
+                        if (reader9.HasRows)
+                        {
+                            reader9.Read();
+                            string noo9 = reader9.GetValue(0).ToString();
+                            reader9.Close();
+                            int proprice = int.Parse(noo9);
+
+                            if(proprice>8000 && proprice<13000)
+                            {
+                                Label23.ForeColor = System.Drawing.Color.Orange;
+                                Label23.Text = "Warning: Selected software may experience low performance issue";
+                            }
+                            else if(proprice < 8000)
+                            {
+                                Label23.ForeColor = System.Drawing.Color.Red;
+                                Label23.Text = "This software wont work on this selected build";
+                            }
+                            else
+                            {
+                                Label23.ForeColor = System.Drawing.Color.Black;
+                                Label23.Text = "No Issues";
+                            }
+
+                        }
+                        else
+                        {
+                            Label23.ForeColor = System.Drawing.Color.Black;
+                            Label23.Text = "Processor feature undefined";
+                        }
+
+                    }
+                    else
+                    {
+                        Label23.ForeColor = System.Drawing.Color.Orange;
+                        Label23.Text = "Warning: Select Processor for testing compactibility";
+                    }
+                }
+                else
+                {
+                    Label23.ForeColor = System.Drawing.Color.Black;
+                    Label23.Text = "No Issues";
+                }
+            }
+            else
+            {
+                Label23.ForeColor = System.Drawing.Color.Black;
+                Label23.Text = "Software feature undefined";
+            }
+
+
         }
     }
 
