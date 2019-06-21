@@ -70,6 +70,8 @@ public partial class User_editprofile : System.Web.UI.Page
             string str4 = "delete from login where usname='" + Session["user"].ToString() + "' AND pass='" + TextBox1.Text + "'";
             SqlCommand cmd4 = new SqlCommand(str4, conn);
             cmd4.ExecuteNonQuery();
+
+            Response.Redirect("~/Default.aspx");
         }
         else
         {

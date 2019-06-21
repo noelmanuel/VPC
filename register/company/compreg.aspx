@@ -207,7 +207,7 @@
                             
                         <div class="p-t-15">
                             
-                            <asp:Button ID="Button3" runat="server" Text="Button" CssClass="subt" onclick="btn_subb"/>
+                            <asp:Button ID="Button3" runat="server" Text="SUBMIT" CssClass="subt" onclick="btn_subb"/>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [compregn]"></asp:SqlDataSource>
                         </div>
                     </form>

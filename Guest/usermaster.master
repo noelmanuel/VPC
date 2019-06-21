@@ -25,8 +25,8 @@
                 <div class="login_box">
                     
                     <asp:LinkButton ID="LinkButton5" OnClick="home5" CssClass="Login" ForeColor="#ff2a00" runat="server" Font-Bold="True" Font-Size="12">HOME</asp:LinkButton>&nbsp&nbsp
-                    <asp:LinkButton ID="LinkButton6" OnClick="home5" CssClass="Login" ForeColor="#ff2a00" runat="server" Font-Bold="True" Font-Size="12">Contact us</asp:LinkButton>&nbsp&nbsp
-                    <asp:LinkButton ID="LinkButton7" OnClick="home5" CssClass="Login" ForeColor="#ff2a00" runat="server" Font-Bold="True" Font-Size="12">About us</asp:LinkButton>&nbsp&nbsp
+                    <asp:LinkButton ID="LinkButton6" OnClick="home51" CssClass="Login" ForeColor="#ff2a00" runat="server" Font-Bold="True" Font-Size="12">Contact us</asp:LinkButton>&nbsp&nbsp
+                    <asp:LinkButton ID="LinkButton7" OnClick="home52" CssClass="Login" ForeColor="#ff2a00" runat="server" Font-Bold="True" Font-Size="12">About us</asp:LinkButton>&nbsp&nbsp
                     
                     
                    

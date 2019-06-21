@@ -90,7 +90,7 @@
                         <span class="sp">Brightness</span><br />
                         <asp:Label ID="Label16" runat="server" ></asp:Label><br /><br />
 
-         <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3>
+         <h3 style="">COMPATIBILITY ISSUES/ WARNING</h3>
          <asp:Label ID="Label23" Font-Bold="true" ForeColor="Red" runat="server" ></asp:Label>
 
          </asp:Panel> 

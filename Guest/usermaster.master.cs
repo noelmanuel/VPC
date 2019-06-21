@@ -103,5 +103,14 @@ public partial class Guest_usermaster : System.Web.UI.MasterPage
         }
     }
 
-    
+
+
+    protected void home51(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Guest/contactus.aspx");
+    }
+    protected void home52(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Guest/aboutus.aspx");
+    }
 }

@@ -88,7 +88,7 @@
                         <asp:Label ID="Label15" runat="server" ></asp:Label><br /><br /><br />
 
 
-         <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3><br />
+         <h3 style="">COMPATIBILITY ISSUES/ WARNING</h3><br />
          <asp:Label ID="Label23" Font-Bold="true" runat="server" ></asp:Label>
 
          </asp:Panel> 

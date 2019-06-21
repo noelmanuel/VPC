@@ -211,7 +211,7 @@
                             </div>
                         <div class="p-t-15">
                             
-                            <asp:Button ID="Button3" runat="server" Text="Button" CssClass="subt" onclick="btn_sub"/>
+                            <asp:Button ID="Button3" runat="server" Text="SUBMIT" CssClass="subt" onclick="btn_sub"/>
                         </div>
                     </form>
                 </div>

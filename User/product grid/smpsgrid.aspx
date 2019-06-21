@@ -94,7 +94,7 @@
          <asp:Label ID="Label83" Font-Bold="true"  ForeColor="#006600"   runat="server" >ADD GPU,PROCESSOR TO CALCULATE POWER CONSUMPTION</asp:Label><br /><br />
 
 
-         <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3>
+         <h3 style="">COMPATIBILITY ISSUES/ WARNING</h3>
          <asp:Label ID="Label23" Font-Bold="true" ForeColor="Red" runat="server" ></asp:Label>
          
          </asp:Panel> 

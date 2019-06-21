@@ -85,7 +85,7 @@
                         <span class="sp">Voltage</span><br />
                         <asp:Label ID="Label16" runat="server"></asp:Label><br /><br /><br />
 
-         <h3 style="">COMPACTIBILITY ISSUES/ WARNING</h3><br />
+         <h3 style="">COMPATIBILITY ISSUES/ WARNING</h3><br />
          <asp:Label ID="Label23" Font-Bold="true" ForeColor="Red" runat="server" ></asp:Label><br />
          <asp:Label ID="Label300" runat="server" ></asp:Label> GB TOTAL MEMORY SIZE
          

@@ -216,7 +216,7 @@ public partial class User_product_grid_ramgrid : System.Web.UI.Page
                                 if(mbmemory<totm)
                                 {
                                     Label23.ForeColor = System.Drawing.Color.Orange;
-                                    Label23.Text = "Not compactiable: Total memory size exceed the motherboard memory";
+                                    Label23.Text = "Not compatible: Total memory size exceed the motherboard memory";
                                     Label300.Text = totm.ToString();
                                 }
                                 else

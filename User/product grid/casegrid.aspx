@@ -90,7 +90,7 @@
                         <asp:Label ID="Label16" runat="server" ></asp:Label><br /><br />
 
          <h3 style="">NOTE:</h3>
-         <asp:Label ID="Label23" Font-Bold="true"  ForeColor="#006600"   runat="server" >If you are choosing two nvidia cards look out for sli connectors for compactibility</asp:Label>
+         <asp:Label ID="Label23" Font-Bold="true"  ForeColor="#006600"   runat="server" >If you are choosing two nvidia cards look out for sli connectors for compatibility</asp:Label>
 
          </asp:Panel> 
       </td>
